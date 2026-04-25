@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { getSession } from '@/lib/auth'
 import { revalidatePath } from 'next/cache'
 import { hash } from 'bcryptjs'
-import { redis } from '@/lib/redis'
+import { getMaintenanceState, setMaintenanceState } from '@/lib/redis'
 import { NextResponse } from 'next/server'
 
 export async function banUser(userId: string, reason?: string) {
@@ -143,13 +143,10 @@ export async function toggleGlobalMaintenance(message: string = 'We are currentl
 
     if (!currentUser?.isModerator) throw new Error('Unauthorized')
 
-    const currentState = await redis.get('system:maintenance')
+    const { state: currentState } = await getMaintenanceState()
     const newState = currentState === 'true' ? 'false' : 'true'
 
-    await redis.set('system:maintenance', newState)
-    if (newState === 'true') {
-        await redis.set('system:maintenance_message', message)
-    }
+    await setMaintenanceState(newState, message)
 
     revalidatePath('/dashboard/moderator')
     return newState === 'true'
@@ -157,8 +154,7 @@ export async function toggleGlobalMaintenance(message: string = 'We are currentl
 
 export async function getGlobalMaintenanceStatus() {
     // Public safe accessor (or just use in RSC)
-    const state = await redis.get('system:maintenance')
-    const message = await redis.get('system:maintenance_message')
+    const { state, message } = await getMaintenanceState()
     return {
         isActive: state === 'true',
         message: message || 'We are currently performing scheduled upgrades to improve your experience.'

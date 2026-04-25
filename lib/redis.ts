@@ -596,3 +596,56 @@ export async function isGameHidden(gameId: string): Promise<boolean> {
     }
     return (await redis.sismember(HIDDEN_GAMES_SET_KEY, gameId)) === 1;
 }
+
+// ============================================================================
+// Maintenance State Functions (for non-Redis fallback)
+// ============================================================================
+
+const MAINTENANCE_FILE = path.join(LOCAL_STORAGE_DIR, 'maintenance.json');
+let localMaintenance: { state: string; message: string } = { state: 'false', message: '' };
+
+async function loadLocalMaintenance(): Promise<void> {
+    try {
+        const data = await fs.readFile(MAINTENANCE_FILE, 'utf-8');
+        localMaintenance = JSON.parse(data);
+    } catch {
+        localMaintenance = { state: 'false', message: '' };
+    }
+}
+
+async function saveLocalMaintenance(): Promise<void> {
+    await fs.writeFile(MAINTENANCE_FILE, JSON.stringify(localMaintenance), 'utf-8');
+}
+
+/**
+ * Get maintenance mode state
+ */
+export async function getMaintenanceState(): Promise<{ state: string; message: string }> {
+    if (!redis) {
+        await initLocalStorage();
+        await loadLocalMaintenance();
+        return localMaintenance;
+    }
+    const state = await redis.get('system:maintenance');
+    const message = await redis.get('system:maintenance_message');
+    return {
+        state: state || 'false',
+        message: message || ''
+    };
+}
+
+/**
+ * Set maintenance mode state
+ */
+export async function setMaintenanceState(state: string, message: string = ''): Promise<void> {
+    if (!redis) {
+        await initLocalStorage();
+        localMaintenance = { state, message };
+        await saveLocalMaintenance();
+        return;
+    }
+    await redis.set('system:maintenance', state);
+    if (state === 'true') {
+        await redis.set('system:maintenance_message', message);
+    }
+}

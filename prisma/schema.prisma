@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String      @id @default(cuid())
+  username          String      @unique
+  passwordHash      String
+  robloxUsername    String?
+  isBanned          Boolean     @default(false)
+  banReason         String?
+  isModerator       Boolean     @default(false)
+  createdAt         DateTime    @default(now())
+  isFakeMaintenance Boolean     @default(false)
+  isShadowBanned    Boolean     @default(false)
+  licenseKey        LicenseKey?
+  discordId         String?     @unique
+  discordUsername   String?
+  ownedThemes       String[]    @default(["default"])
+  badges            Badge[]     @relation("BadgeToUser")
+}
+
+model Badge {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  color       String   @default("#3b82f6")
+  icon        String   @default("award")
+  createdAt   DateTime @default(now())
+  users       User[]   @relation("BadgeToUser")
+}
+
+model LicenseKey {
+  id         String    @id @default(cuid())
+  key        String    @unique
+  isUsed     Boolean   @default(false)
+  maxUses    Int       @default(1)
+  usedCount  Int       @default(0)
+  isActive   Boolean   @default(true)
+  expiresAt  DateTime?
+  lastUsedAt DateTime?
+  metadata   Json      @default("{}")
+  userId     String?   @unique
+  createdAt  DateTime  @default(now())
+  user       User?     @relation(fields: [userId], references: [id])
+}
+
+model Whitelist {
+  id             String   @id @default(cuid())
+  robloxUsername String   @unique
+  discordId      String
+  keyUsed        String?
+  plan           String   @default("free")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model AccessKey {
+  id       String   @id @default(cuid())
+  key      String   @unique
+  issuedBy String
+  issuedAt DateTime @default(now())
+  isUsed   Boolean  @default(false)
+  plan     String
+}

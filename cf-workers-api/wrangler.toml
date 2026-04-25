@@ -1,0 +1,11 @@
+name = "cf-workers-api-2"
+main = "src/index.ts"
+compatibility_date = "2024-12-27"
+compatibility_flags = ["nodejs_compat"]
+account_id = "67404f104b3df9a02fde5d14c76f8ae9"
+
+[vars]
+ALLOWED_ASNS = "8151,22697,16509,136766,11281,14618"
+DISABLE_DISCORD_NOTIFICATIONS = "true"
+REDIS_URL = "rediss://default:AVNS_KGZQaYly58Fzkh1MFCg@valkey-112607b8-cryllix.j.aivencloud.com:10096"
+# DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/..."

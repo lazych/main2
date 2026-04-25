@@ -95,16 +95,20 @@ jobs:
         if [ ! -d minecraft-data/plugins ]; then
           mkdir -p minecraft-data/plugins
         fi
-        # Create a simple plugin list file for reference
-        if [ ! -f minecraft-data/plugins/plugins.yml ]; then
-          cat > minecraft-data/plugins/plugins.yml << EOF
-        # Add your plugins here
-        # Download plugins and place them in this directory
-        # Example: 
-        # - name: EssentialsX
-        #   version: 2.19.4
-        #   jar: EssentialsX-2.19.4.jar
-        EOF
+        
+    - name: Copy plugins from repository
+      run: |
+        echo "Copying plugins from repository to server directory..."
+        if [ -d "plugins" ]; then
+          # Copy all .jar files from repository plugins directory
+          cp plugins/*.jar minecraft-data/plugins/ 2>/dev/null || echo "No .jar files found in plugins directory"
+          echo "Repository plugins copied to server"
+          
+          # List copied plugins
+          echo "Copied plugins:"
+          ls -la minecraft-data/plugins/*.jar 2>/dev/null || echo "No plugins found"
+        else
+          echo "No plugins directory found in repository"
         fi
         
     - name: Build CraftIP client
@@ -169,6 +173,14 @@ jobs:
         # Keep only last 5 backups to save space
         cd minecraft-data/backups
         ls -t | tail -n +6 | xargs -r rm -rf
+        
+        # Trigger repository backup (optional - comment out if not needed)
+        echo "Triggering repository backup workflow..."
+        curl -X POST \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/dispatches \
+          -d '{"event_type":"backup_trigger","client_payload":{"run_id":"${{ github.run_id }}"}}' || echo "Failed to trigger backup"
         
     - name: Keep services alive
       run: |

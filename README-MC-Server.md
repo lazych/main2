@@ -143,6 +143,37 @@ The CraftIP client connects to `localhost:25565` by default. Modify in:
 ./target/release/client localhost:25565
 ```
 
+### Plugin Management
+The workflow automatically handles plugins from your repository:
+
+**Repository Plugins:**
+- Create a `plugins/` directory in your repository
+- Place `.jar` files in this directory
+- Commit and push - they'll be automatically deployed
+
+**Plugin Persistence:**
+- Repository plugins are copied to server on startup
+- Plugins are preserved in cache across restarts
+- Both repository and runtime plugins are backed up
+
+**Example Repository Structure:**
+```
+your-repo/
+├── .github/workflows/
+├── plugins/
+│   ├── EssentialsX-2.19.4.jar
+│   ├── WorldEdit-7.2.10.jar
+│   └── LuckPerms-5.4.72.jar
+├── craftip/
+└── README-MC-Server.md
+```
+
+**Important Notes:**
+- Only use trusted plugin sources
+- Ensure plugin compatibility with your server version
+- Large plugin files increase repository size
+- Plugin configurations are preserved in cache
+
 ## Cost Considerations
 
 ### GitHub Actions Usage

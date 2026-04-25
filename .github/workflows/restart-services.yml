@@ -93,6 +93,17 @@ jobs:
           echo '[]' > minecraft-data/whitelist.json
         fi
         
+        # Copy plugins from repository
+        echo "Copying plugins from repository to server directory..."
+        if [ -d "plugins" ]; then
+          cp plugins/*.jar minecraft-data/plugins/ 2>/dev/null || echo "No .jar files found in plugins directory"
+          echo "Repository plugins copied to server"
+          echo "Copied plugins:"
+          ls -la minecraft-data/plugins/*.jar 2>/dev/null || echo "No plugins found"
+        else
+          echo "No plugins directory found in repository"
+        fi
+        
         # Build CraftIP client
         cd craftip
         cargo build --release --bin client

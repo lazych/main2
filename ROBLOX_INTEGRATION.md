@@ -3,7 +3,7 @@
 This guide explains how to integrate your Cryllix Dashboard with your Roblox game.
 
 ## API Endpoint
-
+ 
 **URL**: `https://your-domain.com/api/roblox/check-user`
 **Method**: `GET`
 **Query Parameter**: `username` (The player's Roblox username)

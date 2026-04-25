@@ -57,6 +57,42 @@ jobs:
       run: |
         echo "Restarting Minecraft server and CraftIP client..."
         
+        # Ensure all required directories exist
+        mkdir -p minecraft-data/world
+        mkdir -p minecraft-data/plugins
+        mkdir -p minecraft-data/logs
+        mkdir -p minecraft-data/backups
+        
+        # Ensure essential files exist (preserve existing ones)
+        if [ ! -f minecraft-data/server.properties ]; then
+          cat > minecraft-data/server.properties << EOF
+        motd=GitHub Actions Minecraft Server
+        difficulty=normal
+        gamemode=survival
+        spawn-protection=0
+        online-mode=false
+        pvp=true
+        allow-flight=false
+        level-type=default
+        generate-structures=true
+        max-players=20
+        level-name=world
+        server-port=25565
+        EOF
+        fi
+        
+        if [ ! -f minecraft-data/eula.txt ]; then
+          echo "eula=true" > minecraft-data/eula.txt
+        fi
+        
+        if [ ! -f minecraft-data/ops.json ]; then
+          echo '[]' > minecraft-data/ops.json
+        fi
+        
+        if [ ! -f minecraft-data/whitelist.json ]; then
+          echo '[]' > minecraft-data/whitelist.json
+        fi
+        
         # Build CraftIP client
         cd craftip
         cargo build --release --bin client
@@ -148,6 +184,16 @@ jobs:
         echo ""
         echo "=== Port Status ==="
         netstat -tlnp | grep :25565 || echo "Port 25565 is not listening"
+        
+        echo ""
+        echo "=== Server Files Status ==="
+        echo "server.properties: $([ -f minecraft-data/server.properties ] && echo 'Exists' || echo 'Missing')"
+        echo "eula.txt: $([ -f minecraft-data/eula.txt ] && echo 'Exists' || echo 'Missing')"
+        echo "ops.json: $([ -f minecraft-data/ops.json ] && echo 'Exists' || echo 'Missing')"
+        echo "whitelist.json: $([ -f minecraft-data/whitelist.json ] && echo 'Exists' || echo 'Missing')"
+        echo "plugins directory: $([ -d minecraft-data/plugins ] && echo 'Exists' || echo 'Missing')"
+        echo "world directory: $([ -d minecraft-data/world ] && echo 'Exists' || echo 'Missing')"
+        echo "backups directory: $([ -d minecraft-data/backups ] && ls minecraft-data/backups | wc -l) backups"
         
         echo ""
         echo "=== Recent Logs ==="

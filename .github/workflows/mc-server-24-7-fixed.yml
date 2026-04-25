@@ -12,7 +12,7 @@ jobs:
   minecraft-server:
     runs-on: ubuntu-latest
     # Keep job running indefinitely (but within reasonable limits)
-    timeout-minutes: 4320  # 3 days instead of 7
+    timeout-minutes: 360  # 6 hours (GitHub Actions limit)
     
     steps:
     - name: Checkout code
@@ -192,9 +192,9 @@ jobs:
     - name: Keep services alive (FIXED)
       run: |
         echo "Starting monitoring loop..."
-        # Add loop counter to prevent infinite loops
+        # Add loop counter to prevent infinite loops (6 hours max)
         LOOP_COUNTER=0
-        MAX_LOOPS=2880  # 3 days * 24 hours * 60 minutes / 30 seconds
+        MAX_LOOPS=720  # 6 hours * 60 minutes * 60 seconds / 30 seconds
         
         while [ $LOOP_COUNTER -lt $MAX_LOOPS ]; do
           # Check if Minecraft server is still running

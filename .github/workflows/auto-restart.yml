@@ -1,0 +1,186 @@
+name: Auto-Restart Minecraft Server
+
+on:
+  schedule:
+    # Restart every 5 hours 50 minutes (before 6-hour limit)
+    - cron: '50 */5 * * *'
+  workflow_dispatch:
+
+jobs:
+  auto-restart:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # 6 hours max
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        
+    - name: Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+      
+    - name: Restore server cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          minecraft-data
+          craftip-logs
+        key: mc-server-cache-v1-${{ github.ref }}
+        restore-keys: |
+          mc-server-cache-v1-
+          
+    - name: Stop existing server (graceful shutdown)
+      run: |
+        echo "Gracefully stopping existing server..."
+        if [ -f minecraft-data/minecraft.pid ]; then
+          PID=$(cat minecraft-data/minecraft.pid 2>/dev/null)
+          if kill -0 $PID 2>/dev/null; then
+            echo "Sending STOP command to Minecraft server (PID: $PID)..."
+            # Send stop command to Minecraft server
+            echo "stop" > /proc/$PID/fd/0 2>/dev/null || kill -TERM $PID
+            
+            # Wait up to 60 seconds for graceful shutdown
+            for i in {1..60}; do
+              if ! kill -0 $PID 2>/dev/null; then
+                echo "Minecraft server stopped gracefully"
+                break
+              fi
+              echo "Waiting for shutdown... ($i/60)"
+              sleep 1
+            done
+            
+            # Force kill if still running
+            if kill -0 $PID 2>/dev/null; then
+              echo "Force killing Minecraft server..."
+              kill -KILL $PID 2>/dev/null || true
+            fi
+          fi
+        fi
+        
+        if [ -f craftip/craftip.pid ]; then
+          PID=$(cat craftip/craftip.pid 2>/dev/null)
+          if kill -0 $PID 2>/dev/null; then
+            echo "Stopping CraftIP client (PID: $PID)..."
+            kill -TERM $PID 2>/dev/null || true
+            sleep 5
+            kill -KILL $PID 2>/dev/null || true
+          fi
+        fi
+        
+    - name: Create pre-restart backup
+      run: |
+        echo "Creating pre-restart backup..."
+        BACKUP_DIR="minecraft-data/backups/pre-restart-$(date +%Y%m%d_%H%M%S)"
+        mkdir -p "$BACKUP_DIR"
+        
+        # Backup critical files
+        cp minecraft-data/server.properties "$BACKUP_DIR/" 2>/dev/null || true
+        cp minecraft-data/ops.json "$BACKUP_DIR/" 2>/dev/null || true
+        cp minecraft-data/whitelist.json "$BACKUP_DIR/" 2>/dev/null || true
+        
+        # Backup world data (quick backup)
+        if [ -d "minecraft-data/world" ]; then
+          # Quick world backup - just level.dat and region files
+          mkdir -p "$BACKUP_DIR/world"
+          cp minecraft-data/world/level.dat "$BACKUP_DIR/world/" 2>/dev/null || true
+          cp -r minecraft-data/world/region "$BACKUP_DIR/world/" 2>/dev/null || true
+        fi
+        
+        echo "Pre-restart backup created: $BACKUP_DIR"
+        
+    - name: Start fresh server
+      run: |
+        echo "Starting fresh server instance..."
+        
+        # Ensure directories exist
+        mkdir -p minecraft-data/world
+        mkdir -p minecraft-data/plugins
+        mkdir -p minecraft-data/logs
+        mkdir -p craftip-logs
+        
+        # Copy plugins from repository
+        if [ -d "plugins" ]; then
+          cp plugins/*.jar minecraft-data/plugins/ 2>/dev/null || echo "No .jar files found"
+        fi
+        
+        # Build CraftIP client
+        cd craftip
+        cargo build --release --bin client
+        
+        # Start Minecraft server
+        cd ../minecraft-data
+        java -Xmx2G -Xms1G -jar server.jar nogui &
+        echo $! > minecraft.pid
+        sleep 30
+        
+        # Wait for server to be ready
+        for i in {1..60}; do
+          if ss -tlnp | grep :25565 > /dev/null; then
+            echo "Minecraft server is ready!"
+            break
+          fi
+          echo "Attempt $i: Server not ready yet..."
+          sleep 5
+        done
+        
+        # Start CraftIP client
+        cd ../craftip
+        ./target/release/client localhost:25565 &
+        echo $! > craftip.pid
+        sleep 10
+        
+        echo "Server restarted successfully!"
+        
+    - name: Keep server running (5h 50m max)
+      run: |
+        echo "Starting monitoring loop (5h 50m max)..."
+        LOOP_COUNTER=0
+        MAX_LOOPS=704  # 5h 50m * 60 * 60 / 30 seconds
+        
+        while [ $LOOP_COUNTER -lt $MAX_LOOPS ]; do
+          # Check if Minecraft server is still running
+          if ! kill -0 $(cat minecraft-data/minecraft.pid 2>/dev/null) 2>/dev/null; then
+            echo "Minecraft server died, restarting..."
+            cd minecraft-data
+            java -Xmx2G -Xms1G -jar server.jar nogui &
+            echo $! > minecraft.pid
+            sleep 30
+          fi
+          
+          # Check if CraftIP client is still running
+          if ! kill -0 $(cat craftip/craftip.pid 2>/dev/null) 2>/dev/null; then
+            echo "CraftIP client died, restarting..."
+            cd craftip
+            ./target/release/client localhost:25565 &
+            echo $! > craftip.pid
+          fi
+          
+          # Show status every 10 minutes
+          if [ $(($(date +%s) % 600)) -lt 30 ]; then
+            echo "=== Status Check ==="
+            echo "Minecraft PID: $(cat minecraft-data/minecraft.pid 2>/dev/null || echo 'Not found')"
+            echo "CraftIP PID: $(cat craftip/craftip.pid 2>/dev/null || echo 'Not found')"
+            ss -tlnp | grep :25565 || echo "Port 25565 not listening"
+            echo "Loop: $LOOP_COUNTER/$MAX_LOOPS"
+            echo "Time remaining: $(((MAX_LOOPS - LOOP_COUNTER) * 30 / 60)) minutes"
+          fi
+          
+          sleep 30
+          LOOP_COUNTER=$((LOOP_COUNTER + 1))
+        done
+        
+        echo "Auto-restart workflow completed - next instance will start automatically"
+        
+    - name: Trigger repository backup before exit
+      run: |
+        echo "Triggering backup before workflow exit..."
+        curl -X POST \
+          -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/dispatches \
+          -d '{"event_type":"backup_trigger","client_payload":{"run_id":"${{ github.run_id }}","reason":"auto_restart"}}' || echo "Failed to trigger backup"

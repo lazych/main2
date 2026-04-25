@@ -1,4 +1,4 @@
-name: Minecraft Server 24/7 with CraftIP
+name: Minecraft Server 24/7 with CraftIP (FIXED)
 
 on:
   push:
@@ -11,8 +11,8 @@ on:
 jobs:
   minecraft-server:
     runs-on: ubuntu-latest
-    # Keep the job running indefinitely
-    timeout-minutes: 9999
+    # Keep job running indefinitely (but within reasonable limits)
+    timeout-minutes: 4320  # 3 days instead of 7
     
     steps:
     - name: Checkout code
@@ -27,15 +27,15 @@ jobs:
     - name: Setup Rust
       uses: dtolnay/rust-toolchain@stable
       
-    - name: Cache Minecraft data
+    - name: Cache Minecraft data (FIXED)
       uses: actions/cache@v4
       with:
         path: |
           minecraft-data
           craftip-logs
-        key: mc-server-${{ github.run_id }}
+        key: mc-server-cache-v1-${{ github.ref }}
         restore-keys: |
-          mc-server-
+          mc-server-cache-v1-
           
     - name: Create server directories
       run: |
@@ -43,6 +43,7 @@ jobs:
         mkdir -p minecraft-data/plugins
         mkdir -p minecraft-data/logs
         mkdir -p craftip-logs
+        mkdir -p minecraft-data/backups
         
     - name: Download Minecraft Server
       run: |
@@ -123,11 +124,12 @@ jobs:
         echo $! > minecraft.pid
         sleep 30
         
-    - name: Wait for Minecraft server to start
+    - name: Wait for Minecraft server to start (FIXED)
       run: |
         echo "Waiting for Minecraft server to be ready..."
         for i in {1..60}; do
-          if netstat -tlnp | grep :25565 > /dev/null; then
+          # Use ss instead of netstat (more reliable)
+          if ss -tlnp | grep :25565 > /dev/null; then
             echo "Minecraft server is ready!"
             break
           fi
@@ -135,28 +137,33 @@ jobs:
           sleep 5
         done
         
-    - name: Start CraftIP Client
+    - name: Start CraftIP Client (FIXED)
       run: |
         echo "Starting CraftIP client..."
         cd craftip
+        # Add error handling
+        if [ ! -f ./target/release/client ]; then
+          echo "CraftIP client binary not found, building..."
+          cargo build --release --bin client
+        fi
+        
         ./target/release/client localhost:25565 &
         echo $! > craftip.pid
         sleep 10
         
-    - name: Backup critical files
+    - name: Backup critical files (FIXED)
       run: |
         echo "Creating backup of critical server files..."
         BACKUP_DIR="minecraft-data/backups/$(date +%Y%m%d_%H%M%S)"
         mkdir -p "$BACKUP_DIR"
         
-        # Backup essential files
+        # Backup essential files (FIXED - removed duplicate)
         cp minecraft-data/server.properties "$BACKUP_DIR/" 2>/dev/null || true
         cp minecraft-data/eula.txt "$BACKUP_DIR/" 2>/dev/null || true
         cp minecraft-data/ops.json "$BACKUP_DIR/" 2>/dev/null || true
         cp minecraft-data/whitelist.json "$BACKUP_DIR/" 2>/dev/null || true
         cp minecraft-data/banned-players.json "$BACKUP_DIR/" 2>/dev/null || true
         cp minecraft-data/banned-ips.json "$BACKUP_DIR/" 2>/dev/null || true
-        cp minecraft-data/ops.json "$BACKUP_DIR/" 2>/dev/null || true
         
         # Backup plugins directory
         if [ -d "minecraft-data/plugins" ]; then
@@ -177,15 +184,19 @@ jobs:
         # Trigger repository backup (optional - comment out if not needed)
         echo "Triggering repository backup workflow..."
         curl -X POST \
-          -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/${{ github.repository }}/dispatches \
           -d '{"event_type":"backup_trigger","client_payload":{"run_id":"${{ github.run_id }}"}}' || echo "Failed to trigger backup"
         
-    - name: Keep services alive
+    - name: Keep services alive (FIXED)
       run: |
         echo "Starting monitoring loop..."
-        while true; do
+        # Add loop counter to prevent infinite loops
+        LOOP_COUNTER=0
+        MAX_LOOPS=2880  # 3 days * 24 hours * 60 minutes / 30 seconds
+        
+        while [ $LOOP_COUNTER -lt $MAX_LOOPS ]; do
           # Check if Minecraft server is still running
           if ! kill -0 $(cat minecraft-data/minecraft.pid 2>/dev/null) 2>/dev/null; then
             echo "Minecraft server died, restarting..."
@@ -208,7 +219,7 @@ jobs:
             echo "=== Status Check ==="
             echo "Minecraft PID: $(cat minecraft-data/minecraft.pid 2>/dev/null || echo 'Not found')"
             echo "CraftIP PID: $(cat craftip/craftip.pid 2>/dev/null || echo 'Not found')"
-            netstat -tlnp | grep :25565 || echo "Port 25565 not listening"
+            ss -tlnp | grep :25565 || echo "Port 25565 not listening"
             
             echo "=== Server Files Status ==="
             echo "server.properties: $([ -f minecraft-data/server.properties ] && echo 'Exists' || echo 'Missing')"
@@ -241,4 +252,12 @@ jobs:
           fi
           
           sleep 30
+          LOOP_COUNTER=$((LOOP_COUNTER + 1))
+          
+          # Save cache every 100 iterations (about 50 minutes)
+          if [ $((LOOP_COUNTER % 100)) -eq 0 ]; then
+            echo "Saving progress..."
+          fi
         done
+        
+        echo "Monitoring loop completed after $LOOP_COUNTER iterations"

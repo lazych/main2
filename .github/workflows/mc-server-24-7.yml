@@ -1,0 +1,162 @@
+name: Minecraft Server 24/7 with CraftIP
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+  schedule:
+    # Run daily to check and restart if needed
+    - cron: '0 2 * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Build and push CraftIP client image
+      uses: docker/build-push-action@v5
+      with:
+        context: ./craftip
+        file: ./craftip/Dockerfile
+        push: true
+        tags: |
+          ghcr.io/${{ github.repository }}/craftip-client:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+        
+    - name: Deploy to server
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          # Create deployment directory
+          mkdir -p ~/mc-server-deployment
+          cd ~/mc-server-deployment
+          
+          # Download docker-compose and startup scripts
+          cat > docker-compose.yml << 'EOF'
+          version: '3.8'
+          
+          services:
+            minecraft:
+              image: itzg/minecraft-server:latest
+              container_name: minecraft-server
+              ports:
+                - "25565:25565"
+              environment:
+                EULA: "TRUE"
+                TYPE: "VANILLA"
+                VERSION: "latest"
+                DIFFICULTY: "normal"
+                SPAWN_PROTECTION: "0"
+                ONLINE_MODE: "false"
+                MOTD: "Welcome to 24/7 Minecraft Server!"
+              volumes:
+                - minecraft-data:/data
+              restart: unless-stopped
+              healthcheck:
+                test: ["CMD", "mc-health"]
+                interval: 30s
+                timeout: 10s
+                retries: 3
+                start_period: 60s
+              
+            craftip-client:
+              image: ghcr.io/${{ github.repository }}/craftip-client:latest
+              container_name: craftip-client
+              depends_on:
+                minecraft:
+                  condition: service_healthy
+              environment:
+                - CRAFTIP_SERVER=${{ secrets.CRAFTIP_SERVER }}
+                - CRAFTIP_PORT=${{ secrets.CRAFTIP_PORT }}
+                - MC_SERVER_HOST=minecraft-server
+                - MC_SERVER_PORT=25565
+              restart: unless-stopped
+              command: ["sh", "-c", "sleep 10 && cargo run --release --bin client -- minecraft-server:25565"]
+              volumes:
+                - ./craftip-logs:/app/logs
+              
+          volumes:
+            minecraft-data:
+          EOF
+          
+          # Create startup script with proper sequencing
+          cat > start-services.sh << 'EOF'
+          #!/bin/bash
+          set -e
+          
+          echo "Starting Minecraft server and CraftIP client..."
+          
+          # Stop existing services
+          docker-compose down || true
+          
+          # Pull latest images
+          docker-compose pull
+          
+          # Start services (CraftIP will wait for MC server to be healthy)
+          docker-compose up -d
+          
+          echo "Services started. Checking status..."
+          sleep 30
+          
+          # Show status
+          docker-compose ps
+          
+          echo "Minecraft server should be available on port 25565"
+          echo "CraftIP client is forwarding to the configured server"
+          EOF
+          
+          chmod +x start-services.sh
+          
+          # Create monitoring script
+          cat > monitor-services.sh << 'EOF'
+          #!/bin/bash
+          
+          echo "=== Service Status ==="
+          docker-compose ps
+          
+          echo ""
+          echo "=== Minecraft Server Logs (last 20 lines) ==="
+          docker-compose logs --tail=20 minecraft
+          
+          echo ""
+          echo "=== CraftIP Client Logs (last 20 lines) ==="
+          docker-compose logs --tail=20 craftip-client
+          
+          echo ""
+          echo "=== Port Check ==="
+          netstat -tlnp | grep :25565 || echo "Port 25565 not found"
+          EOF
+          
+          chmod +x monitor-services.sh
+          
+          # Start the services
+          ./start-services.sh
+          
+          echo "Deployment completed successfully!"
+          
+    - name: Verify deployment
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          cd ~/mc-server-deployment
+          ./monitor-services.sh

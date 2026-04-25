@@ -1,4 +1,4 @@
-name: Restart MC Server Services
+name: MC Server Management
 
 on:
   workflow_dispatch:
@@ -10,39 +10,148 @@ on:
         type: choice
         options:
         - restart
-        - stop
-        - start
         - status
 
 jobs:
-  manage-services:
+  manage-server:
     runs-on: ubuntu-latest
+    timeout-minutes: 9999
     
     steps:
-    - name: Restart services
-      uses: appleboy/ssh-action@v1.0.3
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Java
+      uses: actions/setup-java@v4
       with:
-        host: ${{ secrets.SERVER_HOST }}
-        username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        script: |
-          cd ~/mc-server-deployment
+        distribution: 'temurin'
+        java-version: '17'
+        
+    - name: Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+      
+    - name: Restore cached data
+      uses: actions/cache@v4
+      with:
+        path: |
+          minecraft-data
+          craftip-logs
+        key: mc-server-${{ github.run_id }}
+        restore-keys: |
+          mc-server-
           
-          case "${{ github.event.inputs.action }}" in
-            "restart")
-              echo "Restarting all services..."
-              ./start-services.sh
-              ;;
-            "stop")
-              echo "Stopping all services..."
-              docker-compose down
-              ;;
-            "start")
-              echo "Starting all services..."
-              docker-compose up -d
-              ;;
-            "status")
-              echo "Checking service status..."
-              ./monitor-services.sh
-              ;;
-          esac
+    - name: Stop existing server
+      if: github.event.inputs.action == 'restart'
+      run: |
+        echo "Stopping existing services..."
+        if [ -f minecraft-data/minecraft.pid ]; then
+          kill $(cat minecraft-data/minecraft.pid) 2>/dev/null || true
+        fi
+        if [ -f craftip/craftip.pid ]; then
+          kill $(cat craftip/craftip.pid) 2>/dev/null || true
+        fi
+        sleep 10
+        
+    - name: Restart services
+      if: github.event.inputs.action == 'restart'
+      run: |
+        echo "Restarting Minecraft server and CraftIP client..."
+        
+        # Build CraftIP client
+        cd craftip
+        cargo build --release --bin client
+        
+        # Start Minecraft server
+        cd ../minecraft-data
+        java -Xmx2G -Xms1G -jar server.jar nogui &
+        echo $! > minecraft.pid
+        sleep 30
+        
+        # Wait for server to be ready
+        for i in {1..60}; do
+          if netstat -tlnp | grep :25565 > /dev/null; then
+            echo "Minecraft server is ready!"
+            break
+          fi
+          echo "Attempt $i: Server not ready yet..."
+          sleep 5
+        done
+        
+        # Start CraftIP client
+        cd ../craftip
+        ./target/release/client localhost:25565 &
+        echo $! > craftip.pid
+        
+        echo "Services restarted successfully!"
+        
+    - name: Keep services alive
+      if: github.event.inputs.action == 'restart'
+      run: |
+        echo "Starting monitoring loop..."
+        while true; do
+          # Check if Minecraft server is still running
+          if ! kill -0 $(cat minecraft-data/minecraft.pid 2>/dev/null) 2>/dev/null; then
+            echo "Minecraft server died, restarting..."
+            cd minecraft-data
+            java -Xmx2G -Xms1G -jar server.jar nogui &
+            echo $! > minecraft.pid
+            sleep 30
+          fi
+          
+          # Check if CraftIP client is still running
+          if ! kill -0 $(cat craftip/craftip.pid 2>/dev/null) 2>/dev/null; then
+            echo "CraftIP client died, restarting..."
+            cd craftip
+            ./target/release/client localhost:25565 &
+            echo $! > craftip.pid
+          fi
+          
+          # Show status every 10 minutes
+          if [ $(($(date +%s) % 600)) -lt 30 ]; then
+            echo "=== Status Check ==="
+            echo "Minecraft PID: $(cat minecraft-data/minecraft.pid 2>/dev/null || echo 'Not found')"
+            echo "CraftIP PID: $(cat craftip/craftip.pid 2>/dev/null || echo 'Not found')"
+            netstat -tlnp | grep :25565 || echo "Port 25565 not listening"
+          fi
+          
+          sleep 30
+        done
+        
+    - name: Show status
+      if: github.event.inputs.action == 'status'
+      run: |
+        echo "=== Minecraft Server Status ==="
+        if [ -f minecraft-data/minecraft.pid ]; then
+          PID=$(cat minecraft-data/minecraft.pid 2>/dev/null)
+          if kill -0 $PID 2>/dev/null; then
+            echo "Minecraft server is running (PID: $PID)"
+          else
+            echo "Minecraft server is not running"
+          fi
+        else
+          echo "Minecraft server PID file not found"
+        fi
+        
+        echo ""
+        echo "=== CraftIP Client Status ==="
+        if [ -f craftip/craftip.pid ]; then
+          PID=$(cat craftip/craftip.pid 2>/dev/null)
+          if kill -0 $PID 2>/dev/null; then
+            echo "CraftIP client is running (PID: $PID)"
+          else
+            echo "CraftIP client is not running"
+          fi
+        else
+          echo "CraftIP client PID file not found"
+        fi
+        
+        echo ""
+        echo "=== Port Status ==="
+        netstat -tlnp | grep :25565 || echo "Port 25565 is not listening"
+        
+        echo ""
+        echo "=== Recent Logs ==="
+        if [ -f minecraft-data/logs/latest.log ]; then
+          echo "Last 10 lines of Minecraft log:"
+          tail -10 minecraft-data/logs/latest.log
+        fi

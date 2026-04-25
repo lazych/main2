@@ -1,0 +1,30 @@
+when:
+  event: [push, pull_request]
+
+variables:
+  - &package_base "${CI_FORGE_URL}/api/packages/${CI_REPO_OWNER}/generic/${CI_REPO_NAME}-artifacts/${CI_COMMIT_SHA:0:8}"
+
+steps:
+  - name: running cargo test
+    image: rust
+    environment:
+      CARGO_TERM_COLOR: always
+      COMPILE_VERSION_FILE: ../target/version
+    commands:
+      - cargo check -j 4
+      - cargo test -j 4
+  
+  - name: upload version
+    when:
+      event: push
+      branch: main # only put version there, if it is actually in main
+    image: alpine/curl
+    environment:
+      TOKEN:
+        from_secret: forgejo_token
+      PACKAGE_BASE: *package_base
+    commands: |
+      export URL="$$PACKAGE_BASE/version"
+      curl -H "Authorization: token $${TOKEN}" -X DELETE --silent "$$URL"
+      curl -H "Authorization: token $${TOKEN}" --fail --upload-file "target/version" "$${URL}"
+      echo uploaded at $${URL}

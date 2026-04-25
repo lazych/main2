@@ -1,0 +1,20 @@
+when:
+  - event: cron
+    cron: "scan"
+  - event: [push]
+
+
+steps:
+  - name: scan
+    image: codeberg.org/woodpecker-plugins/trivy:latest
+  - name: notify
+    image: alpine/curl
+    environment:
+      TOKEN:
+        from_secret: telegram_token
+      ID:
+        from_secret: telegram_chat_id
+    commands: |
+      curl -s -X POST "https://api.telegram.org/bot$${TOKEN}/sendMessage" -d chat_id="$${ID}" -d text="CI failed:  $CI_PIPELINE_URL" --silent 2>&1 > /dev/null
+    when:
+      - status: [ failure ]

@@ -1,0 +1,30 @@
+when:
+  - event: push
+    branch: main
+
+variables:
+  - &package_base "${CI_FORGE_URL}/api/packages/${CI_REPO_OWNER}/generic/${CI_REPO_NAME}-artifacts/${CI_COMMIT_SHA:0:8}"
+
+matrix:
+  ARCH:
+    - i686-pc-windows-msvc
+    - x86_64-pc-windows-msvc
+
+steps:
+  - name: build
+    image: codeberg.org/craftip/builder.windows:latest
+    environment:
+      CARGO_TERM_COLOR: always
+    commands: |
+      cargo xwin build --target ${ARCH} --release --bin client-gui
+  - name: upload
+    image: alpine/curl
+    environment:
+      TOKEN:
+        from_secret: forgejo_token
+      PACKAGE_BASE: *package_base
+    commands: |
+      export URL="$$PACKAGE_BASE/${ARCH}.exe"
+      curl -H "Authorization: token $${TOKEN}" -X DELETE --silent "$$URL"
+      curl -H "Authorization: token $${TOKEN}" --fail --upload-file "target/${ARCH}/release/client-gui.exe" "$$URL"
+      echo nightly uploaded at $$URL

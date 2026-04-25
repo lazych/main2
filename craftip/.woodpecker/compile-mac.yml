@@ -1,0 +1,49 @@
+when:
+  - event: push
+    branch: main
+
+variables:
+  - &macos_archs 'x86_64-apple-darwin aarch64-apple-darwin universal2-apple-darwin'
+  - &package_base "${CI_FORGE_URL}/api/packages/${CI_REPO_OWNER}/generic/${CI_REPO_NAME}-artifacts/${CI_COMMIT_SHA:0:8}"
+
+
+steps:
+  - name: build
+    image: ghcr.io/rust-cross/cargo-zigbuild
+    environment:
+      MACOS_ARCHS: *macos_archs
+      CARGO_TERM_COLOR: always
+    commands: |
+      for target in $MACOS_ARCHS; do
+        cargo zigbuild --release --target $target --bin client-gui --manifest-path client-gui/Cargo.toml
+      done
+  - name: upload
+    image: alpine/curl
+    environment:
+      TOKEN:
+        from_secret: forgejo_token
+      MACOS_ARCHS: *macos_archs
+      PACKAGE_BASE: *package_base
+    commands: |
+      for target in $MACOS_ARCHS; do
+        export URL="$$PACKAGE_BASE/$${target}"
+        curl -H "Authorization: token $${TOKEN}" -X DELETE --silent "$$URL"
+        curl -H "Authorization: token $${TOKEN}" --fail --upload-file "target/$${target}/release/client-gui" "$$URL"
+        echo nightly uploaded at $$URL
+      done
+  - name: build dmg
+    image: codeberg.org/jurek/libdmg-hfsplus:latest
+    commands: |
+      export DMG_OUTPUT_PATH="target/CraftIP.dmg"
+      sh ./build/build-mac.sh
+  - name: upload
+    image: alpine/curl
+    environment:
+      TOKEN:
+        from_secret: forgejo_token
+      PACKAGE_BASE: *package_base
+    commands: |
+      export URL="$$PACKAGE_BASE/CraftIP.dmg"
+      curl -H "Authorization: token $${TOKEN}" -X DELETE --silent "$$URL"
+      curl -H "Authorization: token $${TOKEN}" --fail --upload-file "target/CraftIP.dmg" "$${URL}"
+      echo nightly uploaded at $${URL}

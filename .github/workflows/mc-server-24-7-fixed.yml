@@ -113,28 +113,13 @@ jobs:
         if [ ! -d "minecraft-data/world" ] || [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
           echo "World directory is empty, attempting restore from repository..."
 
-          # Check final-backups for world.tar.gz (this is where the workflow stores them)
-          if [ -d "server-backups/final-backups" ]; then
-            LATEST_BACKUP_DIR=$(find server-backups/final-backups -maxdepth 1 -type d -name "final-*" | sort -r | head -1)
-            if [ -n "$LATEST_BACKUP_DIR" ] && [ -f "$LATEST_BACKUP_DIR/world.tar.gz" ]; then
-              echo "Restoring world from: $LATEST_BACKUP_DIR/world.tar.gz"
-              tar -xzf "$LATEST_BACKUP_DIR/world.tar.gz" -C minecraft-data/
-              echo "World restored from repository backup"
-            else
-              echo "No world.tar.gz found in final-backups"
-            fi
-          fi
-
-          # Fallback: check server-backups/worlds for legacy format
-          if [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ] && [ -d "server-backups/worlds" ]; then
-            LATEST_WORLD=$(find server-backups/worlds -name "world-*.tar.gz" | sort -r | head -1)
-            if [ -n "$LATEST_WORLD" ]; then
-              echo "Restoring world from legacy backup: $LATEST_WORLD"
-              tar -xzf "$LATEST_WORLD" -C minecraft-data/
-              echo "World restored from legacy repository backup"
-            else
-              echo "No world backup found in repository"
-            fi
+          # Restore world directly from repo's server-data/world/ directory
+          if [ -d "server-data/world" ] && [ -n "$(ls -A server-data/world 2>/dev/null)" ]; then
+            echo "Restoring world from server-data/world/..."
+            cp -r server-data/world/* minecraft-data/world/
+            echo "World restored from repository"
+          else
+            echo "No world data found in repository"
           fi
         else
           echo "World directory exists, skipping restore"
@@ -325,47 +310,10 @@ jobs:
         
         echo "Monitoring loop completed after $LOOP_COUNTER iterations"
         
-    - name: Final backup before workflow ends
+    - name: Save server files to repository
       if: always()  # Runs even if previous steps failed
       run: |
-        echo "Creating final backup before workflow ends..."
-        
-        # Create final backup directory
-        FINAL_BACKUP="minecraft-data/backups/final-$(date +%Y%m%d_%H%M%S)"
-        mkdir -p "$FINAL_BACKUP"
-        
-        # Backup critical files
-        cp minecraft-data/server.properties "$FINAL_BACKUP/" 2>/dev/null || true
-        cp minecraft-data/eula.txt "$FINAL_BACKUP/" 2>/dev/null || true
-        cp minecraft-data/ops.json "$FINAL_BACKUP/" 2>/dev/null || true
-        cp minecraft-data/whitelist.json "$FINAL_BACKUP/" 2>/dev/null || true
-        cp minecraft-data/banned-players.json "$FINAL_BACKUP/" 2>/dev/null || true
-        cp minecraft-data/banned-ips.json "$FINAL_BACKUP/" 2>/dev/null || true
-        
-        # Backup world data (important!)
-        if [ -d "minecraft-data/world" ]; then
-          echo "Backing up world data..."
-          tar -czf "$FINAL_BACKUP/world.tar.gz" -C minecraft-data world/
-        fi
-        
-        # Backup plugins
-        if [ -d "minecraft-data/plugins" ]; then
-          echo "Backing up plugins..."
-          tar -czf "$FINAL_BACKUP/plugins.tar.gz" -C minecraft-data plugins/
-        fi
-        
-        # Backup player data
-        if [ -d "minecraft-data/playerdata" ]; then
-          echo "Backing up player data..."
-          tar -czf "$FINAL_BACKUP/playerdata.tar.gz" -C minecraft-data playerdata/
-        fi
-        
-        echo "Final backup created: $FINAL_BACKUP"
-        
-    - name: Push final backup to repository
-      if: always()  # Runs even if previous steps failed
-      run: |
-        echo "Pushing final backup to repository..."
+        echo "Saving server files to repository..."
         
         # Configure git
         git config --local user.email "action@github.com"
@@ -377,17 +325,41 @@ jobs:
         # Pull latest changes (repo may have new commits after 5 hours)
         git pull --rebase origin main || true
         
-        # Create server-backups directory if not exists
-        mkdir -p server-backups/final-backups
+        # --- Copy server files directly to repo ---
         
-        # Copy final backup to repository
-        cp -r minecraft-data/backups/final-* server-backups/final-backups/ 2>/dev/null || true
+        # Save world data
+        if [ -d "minecraft-data/world" ] && [ -n "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
+          echo "Saving world data..."
+          mkdir -p server-data/world
+          rm -rf server-data/world/*
+          cp -r minecraft-data/world/* server-data/world/
+        fi
         
-        # Add to git
-        git add server-backups/final-backups/
+        # Save server configs to repo root
+        cp minecraft-data/server.properties server.properties 2>/dev/null || true
+        cp minecraft-data/ops.json ops.json 2>/dev/null || true
+        cp minecraft-data/whitelist.json whitelist.json 2>/dev/null || true
+        cp minecraft-data/banned-players.json banned-players.json 2>/dev/null || true
+        cp minecraft-data/banned-ips.json banned-ips.json 2>/dev/null || true
+        
+        # Save plugins (jars + configs)
+        if [ -d "minecraft-data/plugins" ]; then
+          echo "Saving plugins..."
+          cp -r minecraft-data/plugins/* plugins/ 2>/dev/null || true
+        fi
+        
+        # Save player data
+        if [ -d "minecraft-data/world/playerdata" ]; then
+          echo "Saving player data..."
+          mkdir -p server-data/playerdata
+          cp -r minecraft-data/world/playerdata/* server-data/playerdata/ 2>/dev/null || true
+        fi
+        
+        # Add everything to git
+        git add -A server-data/ plugins/ server.properties ops.json whitelist.json banned-players.json banned-ips.json 2>/dev/null || true
         
         # Commit changes
-        git diff --staged --quiet || git commit -m "Final server backup - $(date +'%Y-%m-%d %H:%M:%S')"
+        git diff --staged --quiet || git commit -m "Server data saved - $(date +'%Y-%m-%d %H:%M:%S')"
         
         # Push to repository (retry once if it fails)
         git push origin main || {
@@ -396,5 +368,4 @@ jobs:
           git push origin main
         } || echo "Push failed after retry"
         
-        echo "Final backup pushed to repository"
-        echo "Server data preserved for next instance"
+        echo "Server files saved to repository"

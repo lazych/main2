@@ -49,10 +49,10 @@ check-updates: true
 # Disable specific worlds
 disabled-worlds:
   # Should we invert the list making it a whitelist rather than a blacklist?
-  invert: false
+  invert: true
   # List your disabled worlds HERE or "worlds: []" to disable
   worlds:
-    - world_nether
+    - world
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | ANTI-WORLD DOWNLOADER                    | 
@@ -87,14 +87,12 @@ scoreboard:
     enabled: true
     rate: 200 # In ticks (20 ticks = 1 second)
 
-  title: "&d&lDeluxeHub 3 &7(%online%/%online_max%)"
+  title: "&d&lGithub actions by Polye &7(%online%/%online_max%)"
   lines:
     - "&7&m----------------------"
     - "&e&lPlayer:"
     - "  &f%player%"
     - ""
-    - "&e&lRank:"
-    - "  &f%vault_rank%"
     - "&7&m----------------------"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -279,14 +277,8 @@ join_leave_messages:
 # Actions executed upon join
 join_events:
   - "[MESSAGE] &8&m+---------------***---------------+"
-  - "[MESSAGE] &r"
-  - "[MESSAGE] &r    &7Welcome, &b&n%player%&r &7to the server"
-  - "[MESSAGE] &r"
-  - "[MESSAGE] &r  &2&lWEBSITE &fwww.examplemc.net"
-  - "[MESSAGE] &r  &3&lSTORE &fstore.examplemc.net"
-  - "[MESSAGE] &r  &9&lDISCORD &fdiscord.examplemc.net"
-  - "[MESSAGE] &r"
-  - "[MESSAGE] &r            &7&oPowered By DeluxeHub"
+  - "[MESSAGE] &r      &7&oPowered By Github"
+  - "[MESSAGE] &r            exploited by polye"
   - "[MESSAGE] &8&m+---------------***---------------+"
   - "[TITLE] &b&lWELCOME;&f%player%;1;2;1"
   - "[SOUND] ENTITY_PLAYER_LEVELUP"

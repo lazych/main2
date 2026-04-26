@@ -371,6 +371,12 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
+        # Unshallow the clone so we can pull/push properly
+        git fetch --unshallow origin main || git fetch origin main
+        
+        # Pull latest changes (repo may have new commits after 5 hours)
+        git pull --rebase origin main || true
+        
         # Create server-backups directory if not exists
         mkdir -p server-backups/final-backups
         
@@ -380,11 +386,15 @@ jobs:
         # Add to git
         git add server-backups/final-backups/
         
-        # Commit changes (fix the multi-line commit message syntax)
+        # Commit changes
         git diff --staged --quiet || git commit -m "Final server backup - $(date +'%Y-%m-%d %H:%M:%S')"
         
-        # Push to repository
-        git push || echo "Push failed (repository may be locked)"
+        # Push to repository (retry once if it fails)
+        git push origin main || {
+          echo "First push failed, retrying after pull..."
+          git pull --rebase origin main
+          git push origin main
+        } || echo "Push failed after retry"
         
         echo "Final backup pushed to repository"
         echo "Server data preserved for next instance"

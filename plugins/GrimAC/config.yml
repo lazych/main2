@@ -171,7 +171,7 @@ Reach:
     threshold: 0.0005
     # Should we cancel hits that we know are impossible?
     # 3.00-3.03 hits may go through but still be flagged, due to packet order limitations
-    block-impossible-hits: true
+    block-impossible-hits: false
     # This will send an additional packet at the end of every tick to increase the likelihood of catching cheats
     # This injects into server's connection list to send a final packet just before the server flushes
     # Enabling this will increase bandwidth usage for all players
@@ -196,7 +196,7 @@ exploit:
 debug-pipeline-on-join: false
 
 # Enables experimental checks
-experimental-checks: false
+experimental-checks: true
 
 reset-item-usage-on-item-update: true
 reset-item-usage-on-attack: true

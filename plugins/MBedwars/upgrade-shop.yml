@@ -12,7 +12,7 @@ file-version: 2
 # - NormalV2
 # - Hypixel
 # - HypixelV2
-layout-name: NormalV2
+layout-name: Hypixel
 
 # You may also display players playing Minecraft's Bedrock Edition a different layout
 # Use "equally" to display the same layout as with the "layout-name" config

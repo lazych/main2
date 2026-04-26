@@ -5,14 +5,14 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
   schedule:
-    # Keep server alive - run every 6 hours
-    - cron: '0 */6 * * *'
+    # Keep server alive - run every 5 hours
+    - cron: '0 */5 * * *'
 
 jobs:
   minecraft-server:
     runs-on: ubuntu-latest
     # Keep job running indefinitely (but within reasonable limits)
-    timeout-minutes: 360  # 6 hours (GitHub Actions limit)
+    timeout-minutes: 300  # 5 hours (safer buffer)
     
     steps:
     - name: Checkout code
@@ -58,8 +58,12 @@ jobs:
         
     - name: Configure server properties
       run: |
-        # Only create server.properties if it doesn't exist (preserve existing config)
-        if [ ! -f minecraft-data/server.properties ]; then
+        # Priority: Repository > Cache > Default
+        if [ -f server.properties ]; then
+          echo "Using repository server.properties"
+          cp server.properties minecraft-data/
+        elif [ ! -f minecraft-data/server.properties ]; then
+          echo "No server.properties found, creating default..."
           cat > minecraft-data/server.properties << EOF
         motd=GitHub Actions Minecraft Server
         difficulty=normal
@@ -74,6 +78,8 @@ jobs:
         level-name=world
         server-port=25565
         EOF
+        else
+          echo "Using cached server.properties"
         fi
         
     - name: Initialize ops.json
@@ -217,9 +223,9 @@ jobs:
     - name: Keep services alive (FIXED)
       run: |
         echo "Starting monitoring loop..."
-        # Add loop counter to prevent infinite loops (6 hours max)
+        # Add loop counter to prevent infinite loops (5 hours max)
         LOOP_COUNTER=0
-        MAX_LOOPS=720  # 6 hours * 60 minutes * 60 seconds / 30 seconds
+        MAX_LOOPS=600  # 5 hours * 60 minutes * 60 seconds / 30 seconds
         
         while [ $LOOP_COUNTER -lt $MAX_LOOPS ]; do
           # Check if Minecraft server is still running
@@ -254,8 +260,8 @@ jobs:
             echo "plugins directory: $([ -d minecraft-data/plugins ] && echo 'Exists' || echo 'Missing')"
             echo "world directory: $([ -d minecraft-data/world ] && echo 'Exists' || echo 'Missing')"
             
-            # Create backup every 12 hours
-            if [ $(($(date +%s) % 43200)) -lt 30 ]; then
+            # Create backup every 5 hours (matches workflow duration)
+            if [ $(($(date +%s) % 18000)) -lt 30 ]; then
               echo "=== Creating Scheduled Backup ==="
               BACKUP_DIR="minecraft-data/backups/$(date +%Y%m%d_%H%M%S)"
               mkdir -p "$BACKUP_DIR"

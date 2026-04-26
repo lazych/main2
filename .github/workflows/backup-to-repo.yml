@@ -1,4 +1,4 @@
-name: Backup Server Data to Repository
+name: 📁 Backup Files to Repository (NO SERVER)
 
 on:
   workflow_dispatch:
@@ -194,13 +194,14 @@ jobs:
         git add server-backups/
         
         # Commit changes
-        git commit -m "📦 Server backup - $(date +%Y-%m-%d)
+        git commit -m "� File backup - $(date +%Y-%m-%d)
         
-        - World data backup
-        - Player data backup
-        - Plugin configurations backup
-        - Server settings backup
+        - World files copied
+        - Config files copied  
+        - Plugin files copied
+        - Settings files copied
         
+        NOTE: This is FILE BACKUP only - no server created!
         Workflow: ${{ github.run_id }}"
         
         # Push to repository

@@ -1,0 +1,908 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww11
+#########################
+
+
+
+###########################
+## Miscellaneous
+###########################
+prefix: '&3[Bedwar]'
+configurations_reload_start: '&aCấu hình hiện đang tải lại!'
+configurations_reload_end: '&aCấu hình đã được nạp lại sau &2{time} giây'
+configurations_reload_alreadyloading: '&cCấu hình hiện đang được tải lại!'
+info_madeby: Được làm bởi
+info_specialthanks: Special thanks
+info_website: Trang web
+info_version: Phiên bản
+info_newestversion: Phiên bản mới nhất
+page: Trang
+help: Trợ giúp
+team: Đồng đội
+none: không
+unknown_page: '&cTrang không xác định &4{page}'
+unknown_argument: '&cTham số không xác định &4{arg}'
+unknown_block: '&cKhối không xác định &4{block}'
+unknown_place: '&cNơi không xác định &4{place}'
+unknown_spawner: '&cSpawner &4{spawner} &ckhông tồn tại'
+version_new: '&aMột phiên bản mới đã được tìm thấy! &2{version}'
+version_nonew: '&cKhông tìm thấy phiên bản mới nào!'
+error_occurred: '&cĐã xảy ra lỗi!'
+error_occurred_syntax: '&cLỗi cú pháp: &6{message}'
+no_permissions: '&cBạn không có quyền để làm điều này!'
+no_permissions_specific: '&cMake sure that you either have the &4{perm} &cpermission
+  or OP'
+onlyas_player: '&cLệnh chỉ hoạt động với người chơi trong game!'
+not_ingame: '&cBạn không ở trong vòng!'
+not_ingame_player: '&4{player} &ckhông ở trong một vòng!'
+not_supported: '&cĐây không hỗ trợ phiên bản của bạn! Vui lòng cập nhật lên phiên
+  bản &4{version} &choặc cao hơn'
+color_yellow: vàng
+color_orange: cam
+color_red: đỏ
+color_blue: xanh dương
+color_magenta: magenta
+color_lightblue: xanh dương
+color_cyan: xanh lá mạ
+color_lightgreen: xanh lá nhạt
+color_green: xanh lá cây
+color_purple: tím
+color_pink: hồng
+color_white: trắng
+color_lightgray: xám nhạt
+color_gray: xám
+color_brown: nâu
+color_black: đen
+missing_worldeditpoints: '&cThiếu điểm lưu worldedit!'
+saved_arena: '&aĐấu trường &2{arena}&a đã được lưu!'
+saved_bed: '&aBed đã lưu cho nhóm {colorcode}{color} &aTrên đấu trường &2{arena}'
+bed_notinside_arena: '&cKhông thể đặt bed vì vị trí này không thuộc phòng nào cả.
+  Dùng lệnh "/bw arena setcorners" hoặc "/bw arena setworld" để đặt khu vực cho phòng.'
+exists_arena: '&cĐấu trường &4{arena} &cđã tồn tại!'
+spawner_bronze: đồng
+spawner_iron: sắt
+spawner_iron_plural: Iron
+spawner_gold: vàng
+spawner_gold_plural: Gold
+spawner_diamond: Diamond
+spawner_diamond_plural: Diamonds
+spawner_emerald: Emerald
+spawner_emerald_plural: Emeralds
+added_spawner: Urdu
+specialblock_added: '&aThêm một khối đặc biệt kiểu &2 {type}'
+specialblock_alreadyadded: '&cĐã có một khối kiểu &4{type}&c Đập để loại bỏ nó'
+specialblock_removed: '&6Removed special block of type &e{type}'
+removed_spawners: '&2{number} &aspawners have been removed from {arena}!'
+start_round: '&aVòng đấu đang bắt đầu.'
+stop_round: '&aVòng đấu đã bị dừng.'
+kicked_player: '&aKick thành công &2{player} &akhỏi &2{arena}'
+kicked_player_toplayer: '&cBạn đã bị đuổi khỏi vòng đấu này!'
+list_arenas: '&eTất cả vòng đấu: &6'
+list_arenas_local: '&eLocal arenas: &6'
+list_arenas_remote: '&cRemote arenas: &6'
+only_betamember: '&cGiờ bạn có thể tham gia khi bedwar đang trong chế độ beta!'
+notavailable_color: '&cMàu không xác định &4{color}'
+joinmessage_stopped: '&cĐấu trường này hiện đang đừng lại!'
+joinmessage_reseting: '&cĐấu trường này hiện đang khởi động lại!'
+joinmessage_full: '&cĐấu trường này đã đầy!'
+joinmessage_running: '&cĐấu trường này hiện đang chạy!'
+joinmessage_alreadyinside: '&cBạn đã ở trong đấu trường này rồi!'
+joinmessage: '&6{player} &eđã tham gia vòng này.'
+leavemessage: '&6{player} &eđã thoát vòng này.'
+notfound_player: '&4{player} &chiện không tìm thấy!'
+notfound_arena: '&cKhông có đấu trường nào tên &4{arena}&c!'
+notfound_arena_loading: '&6(Đấu trường hiện đang khởi động)'
+notfound_arena_validpicker: '&cThere''s no arena matching the picker: &4{picker}'
+notfound_author: '&cKhông có tác giả nào tên &4{author}&c!'
+get_bed: '&aBạn đã có giường {colorcode}{color}'
+getallbeds: '&aAll beds of the arena &2{arena}&a were given to you'
+countdown_start: '&6Đếm ngược sẽ bắt đầu!'
+countdown_stop: '&6Đếm ngược đã dừng lại!'
+countdown_counting: '&6Vòng này sẽ bắt đầu trong &e{number} &6giây!'
+countdown_changed: '&6Đếm ngược đã được thay đổi xuống &e{number} &6giây!'
+countdown_voting_counting: '&6Bầu chọn đấu trường sẽ kết thúc trong &e{number} &6giây!'
+toofew_materials: '&cBạn không có đủ nguyên liệu để mua!'
+no_inventory_space: '&cYour inventory is already full!'
+tooless_players: '&cCó rất ít người chơi trong vòng này!'
+needmore_players_than: '&cBạn cần có thêm &4{amount}&c người chơi!'
+win_money: '&6Bạn đã thắng &e{number}&6$!'
+player_notingameanymore: '&4{player} &chiện không online!'
+player_notfound: '&4{player} &chiện không tìm thấy!'
+player_cheating: '&6{player} &eđã bị kick vì nghi vấn cheat!'
+player_loosing: '&6{player} &eđã thua vòng này!'
+players: Người chơi
+team_won: '&eĐội {colorcode}{color} &eđã giành chiến thắng!'
+team_notaddedyet: '&cĐội {teamcolor}{team} &cchưa được thêm vào trận đấu &4{arena}&c!'
+changeteam_full: '&7Đội {colorcode}{color} &7đã đủ ngườil!'
+changeteam_alreadyinside: '&7Bạn đã gia nhập vào đội {colorcode}{color}&7!'
+changeteam_changed: '&7Bạn đang là thành viên của đội {colorcode}{color}'
+changeteam_none: '&7You left your team and will be assigned to a random one'
+changed_postitions: '&aVị trí đã được thay đổi!'
+changed_lobbylocation: '&aVị trí lobby của đấu trường &2{arena} đã được thay đổi!'
+changed_teamspawn: '&aVị trí hồi sinh của đội {colorcode}{color} &ađã được thay đổi!'
+changed_arenaworld: '&aThế giới của đấu trường &2{arena} &ađã chuyển thành &2{world}'
+spawn_ranking: '&aBảng thành tích tại vị trí &2{place} &ađã được tạo!'
+changed_gamedonelocation: '&2gamedonelocation &ađã thay đổi thành công!'
+insidearena_gamedonelocation:
+- '&cThe hub position is inside the arena &4{arena}&c!'
+- '&cPlace it somewhere else - namely where you are supposed to get teleported to
+  when you leave the match'
+stats_info_entry: '&7{name}: &b{value}'
+stat_default_rank: Xếp hạng
+stat_default_win_streak: Current win streak
+stat_default_top_win_streak: Top win streak
+stat_default_won: Thắng
+stat_default_lost: Thua
+stat_default_wl: Thắng/Thua
+stat_default_roundsplayed: 'Vòng đã chơi: &e'
+stat_default_kills: Giết
+stat_default_kill_streak: Current kill streak
+stat_default_top_kill_streak: Top kill streak
+stat_default_finalkills: Final kills
+stat_default_deaths: Chết
+stat_default_finaldeaths: Final Deaths
+stat_default_kd: K/D
+stat_default_final_kd: Final K/D
+stat_default_bedsdestroyed: Giường đã phá hủy
+stat_default_bedslost: Beds lost
+stat_default_playtime: Thời gian chơi
+destroyed_bed_title: ''
+destroyed_bed_subtitle: '&fGiường của đội {teamcolor}{team} &fđã bị phá hủy bởi &7{player}&f!'
+destroyed_bed_subtitle_playerless: '{teamcolor}{team}&f''s bed has been destroyed!'
+destroyed_bed_own_title: ''
+destroyed_bed_own_subtitle: '&fGiường của bạn đã bị đánh sập bởi &7{player}&f!'
+destroyed_bed_chat: '%Prefix% %Destroyed_Bed_SubTitle%'
+destroyed_bed_chat_left: '%Prefix% {teamcolor}{team}&f''s bed has been destroyed as
+  they left the game.'
+destroyed_bed_chat_leftignoredrejoin: '%Prefix% {teamcolor}{team}&f''s bed has been
+  destroyed as they left and didn''t rejoin in time.'
+number_notone: '&4{number} &ckhông phải là số!'
+stats_by: Stat của {player}
+gui_achievements_title: '&6Thành tựu'
+gui_selectteam_title: '&6Chọn đồng đội'
+gui_spectator_teleporter: '&eDịch chuyển'
+gui_votearena_title: '&6Bầu chọn cho một đấu trường'
+gui_votearena_votes: '&b{number} &3bầu chọn'
+enabled_arena: '&2{arena} &ađã được &2bật!'
+disabled_arena: '&2{arena} &ađã được &4tắt!'
+disabling_gracefully_arena: '&eDisabling running match within &6{arena} &egracefully,
+  it may take a short moment...'
+create_arena: '&2{arena} &ađã được tạo thành công!'
+remove_arena: '&2{arena} &ađã được loại bỏ thành công!'
+usage: '&6Cách dùng: &e{usage}'
+search_update: Tìm kiếm cập nhật...
+offline_updateservice: Hệ thống cập nhật có vẻ đang offline!
+inwork_job: Công việc này hiện đang được thực hiện!
+newupdate: Bản cập nhật mới đã tìm thấy
+nonewupdate: Hiện tại không có bản cập nhật nào cả!
+arena_hastobestopped:
+- '&cThe arena &4{arena}&c has to be stopped!'
+- '&6You may use the following command: &e{command}'
+arena_joinissue_worlddoesntexists: '&cĐấu trường &4{arena}&c đã gặp vấn đề: Thế giới
+  không tồn tại!'
+fixproblemsbeforeenabled: '&cVui lòng sưa những lỗi này trước khi bật'
+use_trueorfalse: '&cDùng <true/false>!'
+reseting_now: '&2Phòng {arena} &ađang được khởi tạo lại!'
+reseting_start_failed: '&cKhông thể khởi tạo lại phòng &4{arena}'
+reseting_start_failed_alreadyrunning: '&cQuá trình khởi động lại trận đấu &4{arena}&c
+  thất bại vì có một trận khác đang chạy'
+locateplayer_notinarena: '&4{player} &cis online, but is not inside an arena.'
+locateplayer_inarena:
+- '&3======= &b{player} &3======='
+- '&2Server: &a{server}'
+- '&2Activity: &a{activity}'
+- '&2Arena: &a{arena}'
+- '&2Arena Status: &a{arena-status} ({arena-players}/{arena-max-players})'
+locateplayer_click_to_spectate: '&e&lClick here to spectate {player}'
+notsameworld_arena: '&cYou are not in the world of &4{arena} &c(&4{world}&c)!'
+problem_arena_world: '&cThere is a problem with the world of the arena &4{arena}&c!'
+fixproblemwith: '&eFix this problem with: &6'
+spawned_lobbyvillager: '&2lobbyvillager &ahas been successfully spawned!'
+spawned_teamselectvillager: '&2teamselectvillager &ahas been successfully spawned!'
+spawned_dealer: '&2Thương Gia &ađã được triệu hồi!'
+spawned_upgradedealer: '&2Thợ Xây &ađã được triệu hồi!'
+notlooking_atsign: '&cYou''re not looking at a sign!'
+notlooking_atplayerhead: '&cYou''re not looking at a player head!'
+sign_lobby: '&eLobby'
+sign_running: '&6Running'
+sign_stopped: '&cStopped'
+sign_reseting: '&aReseting'
+enabled: Enabled
+disabled: Disabled
+notallowed_beddestroy: '&cYou''re not allowed to destroy your own bed!'
+notallowed_selectcolor: '&cYou''re not allowed to select the color {colorcode}{color}&c!'
+lobby_item_achievements: '&6Thành tựu'
+lobby_item_forcestart: '&eForce start'
+lobby_item_leave: '&cLeave'
+lobby_item_leave_use: '&aYou will be teleported back to the lobby in {time} seconds'
+lobby_item_leave_cancel: '&c&lTeleport Canceled'
+lobby_item_selectteam: '&eSelect team'
+lobby_item_votearena: '&eVote for an arena'
+lobby_printmapinfo_arenaname: Arena Name
+lobby_printmapinfo_buildby: Build by
+spectator_item_teleporter: '&eDịch chuyển'
+spectator_item_changespeed: '&eThay Đổi Tốc Độ'
+spectator_item_leave: '&cLeave'
+spectator_item_nextround: '&6Thay Đổi Phòng'
+arrow_damage: '{targetcolor}{target} &eis now at &c{health} &ehealth'
+trap: '&eSomeone walked over your trap!'
+magicmilk_use: '&eTraps will not be able to detect your for {time} seconds!'
+teleporter: '&eTeleporting you in a few seconds...'
+teleporter_failed: '&cTeleportation has been stopped!'
+bridge_notenoughmaterials: '&cYou need more materials of &4{material}&c!'
+give_spawner: '&aGave &2{amount}&a of &2{spawner}&a to &2{target}'
+teleport_success: '&aYou were successfully teleported to the arena &2{arena}'
+lobby_waiting: '&6Waiting for &e{amount}&6...'
+lobby_enough: '&6There''re enough players in this round!'
+alreadyinside_arena: '&cYou''re already inside an arena!'
+noarenaforparty: '&cThere isn''t enough space available for all your party members'
+requires_worldedit: '&4WorldEdit &cis required for that!'
+crashmessage_missingbed: Missing bed locations
+crashmessage_missingteamspawn: Missing team-spawnpoints
+crashmessage_missinglobbylocation: Missing lobby location
+crashmessage_missinggamedonelocation: Missing hub-position
+crashmessage_missinggameworld: Game world hasn't been set
+crashmessage_missingcorners: Corners haven't been set
+crashmessage_uppercorneroutofbounds: Upper corner is greater than the worlds's max
+  height
+crashmessage_lowercorneroutofbounds: Lower corner is less than the worlds's min height
+crashmessage_worldtypearenainmainworld: The arena's regeneration type is WORLD, and
+  the arena's world is the server's main world
+crashmessage_notloadedgameworld: Game world isn't loaded
+crashmessage_matchareacolliding: Match area collides with other arenas
+crashmessage_gamedonelocationinterfering: Your hub-position is within the match area
+regeneration_done: '&aThe arena &2{arena} &ahas been successfully regenerated after
+  &2{time} seconds&a!'
+regeneration_stopped: '&cThe regeneration of &4{arena}&c has been cancelled after
+  &4{time} seconds'
+regeneration_fail: '&cRegeneration of &4{arena}&c has failed: &4{error}'
+worldedit_changed: '&aChanged the position {id} to &2x{x} y{y} z{z}'
+getpositionaxe: '&aGave you the &2position axe'
+tracker_trackedplayer: '&aThis compass is now looking at the nearest tracked enemy.'
+tracker_reusedelay: '&cWait &4{time} seconds&c until you can use a tracker again!'
+tracker_failed_onlyone: '&4Failed to track nearest enemy: &cYou are the only player
+  in this round!'
+spectator_join: '&6You''re now a spectator!'
+spectator_leave: '&6You''re not a spectator anymore.'
+spectator_howtoquit: '&eLeave this round using the command &6/bw leave'
+recalculatestats_done: '&aDone after &2{time} seconds&a.'
+endlobby_counting: '&6Teleporting you in &e{number} seconds &6to the lobby'
+endlobby_bigtitle_win: '&6Victory!'
+endlobby_smalltitle_win: '&7Your team won this round!'
+endlobby_bigtitle_lose: '&cDefeat'
+endlobby_smalltitle_lose: '{teamcolor}&l{team} &fwon this round!'
+endlobby_bigtitle_nobody: ''
+endlobby_smalltitle_nobody: '&c&nNobody &fwon this round.'
+arenavoting_noavailablearenas: '&cThere''s no arena left. Sorry!'
+arenavoting_arenasupdated: '&6The arenas in the arena voting has been updated.'
+arenavoting_recount_noarenatovote: '&cReseting the countdown: There''s no arena to
+  vote for!'
+arenavoting_end: '&6The following arena won the voting: &e{arena}'
+arenavoting_recount_toofewplayers: '&cCần thêm &4{number}&c người chơi để bắt đầu
+  chiến đấu!'
+arenavoting_minplayers: Min. players
+forcestart_already: '&cGame is already starting!'
+scoreboard_arenaname: Khu vực
+scoreboard_arenamode: Chế độ
+scoreboard_players: Người chơi
+scoreboard_arena: Khu vực
+scoreboard_stats: Thống kê
+scoreboard_gamestats: Thông tin trận đấu
+scoreboard_yourteam: Đội của bạn
+scoreboard_teams: Đội
+bed_onlydestroyablewith_tnt: '&cYou can only destroy this bed with tnt!'
+itemspawner_hologram_title: '{spawner} &fspawning in &7{time} &fseconds!'
+maxplayers: Max. players
+lobby_countdowntitle_goodluck: '&6Good Luck!'
+minishop_title: '{title}&7 disappears in &8{time}seconds'
+arenatype_notsupported: '&cThis is not supported for the type &4{type}&c of the arena
+  &4{name}'
+arena_autosavedblocks: '&eCác khối trong phòng đấu đã được tự động lưu lại!'
+ranking_unranked: Unranked
+wait_allarenasloaded: '&cHãy đợi cho đến khi tất cả phòng chơi được tải xong!'
+please_savearena: '&6Hãy chắn rằng phòng chơi của bạn được lưu bằng lệnh: &e/bw arena
+  saveblocks <tên phòng>'
+getsetuptool: '&aGave you the &2setup tool'
+onetimepurchase: '&cBạn chỉ được phép mua 1 lần!'
+arenasgui_title: '&bPhòng đấu'
+arena_collidingarena:
+- '&cHãy thay đổi vị trí phòng chơi.'
+- '&cKhu vực giao với phòng đấu: &4{arena}'
+- '&6Để thay đổi vị trí, hãy dùng lệnh: &e{command}'
+backup_list: '&6File sao lưu'
+backup_create_success: '&aĐã tạo 1 bản sao lưu có tên &2{name}&a - Tốn &2{time} &agiây'
+backup_create_exists: '&cĐã có bản sao lưu tên &4{name}'
+backup_delete_success: '&aĐã xóa bản sao lưu &2{name}'
+backup_unknown: '&cBản sao lưu &4{name} không tồn tại'
+backup_restore_success: '&aĐã khôi phục từ bản sao lưu &2{name}&a - Tốn &2{time}&a
+  giây'
+backup_restore_ask:
+- '&6Bạn có chắc chắn muốn khôi phục bản sao lưu &e{name}&6?'
+- '&6Nếu muốn, hãy gõ lại câu lệnh trên trong 10 giây'
+scoreboard_bedstate_alive: '&aSố giường còn lại'
+scoreboard_bedstate_destroyed: '&cSố giường bị phá'
+death_spectate_respawnin_bigtitle: '&cYOU DIED!'
+death_spectate_respawnin_smalltitle: '&6Hồi sinh trong &e{time} &6giây'
+spectator_changearena_noneavailable: '&cHết phòng đấu!'
+spectatoradd_failed_missinglocation: '&cBạn không thể vào chế độ khán giả, vì không
+  có điểm nào để dịch chuyển bạn đến.'
+saveblocks_fail_players: '&4Không thể lưu các khối: &cĐang có người chơi trong thế
+  giới.'
+createarena_fail_mainworld: '&cKhông thể tạo trận đấu với cùng loại thế giới với thế
+  giới chính của bạn!'
+saveblocks_start: '&6Đã bắt đầu tiến trình lưu dữ liệu cho phòng &e{arena}&6. Thời
+  gian ước tính: &e{time}'
+saveblocks_fail_alreadyrunning: '&4Không thể lưu: &cTiến trình đang chạy!'
+saveblocks_fail_notstopped: '&4Không thể lưu: &cNó không dừng. (Dừng lại ngay với
+  lệnh /bw arena setenabled {arena} false)'
+saveblocks_fail_unknown: '&4Không thể lưu map: &cMột lỗi {type} đã xảy ra'
+regeneration_fail_savingblocks: '&4Không thể bắt đầu trình khởi tạo: &cHệ thống đang
+  lưu map.'
+deathmessage_killed_1: '{teamcolor}{player} &7đã bị giết bởi &8{killerteamcolor}{killer}
+  &cvới &4❤{heartpercent}%'
+deathmessage_killed_2: '{teamcolor}{player} &7đã thua cuộc  &8{killerteamcolor}{killer}
+  &cvới &4❤{heartpercent}%'
+deathmessage_killed_3: '{teamcolor}{player} &7đã giết bởi &8{killerteamcolor}{killer}
+  &cvới &4❤{heartpercent}%'
+deathmessage_void_1: '{teamcolor}{player} &7đã rơi khỏi thế giới'
+deathmessage_void_2: '{teamcolor}{player} &7rơi xuống một cây cầu và vẫn đang rơi'
+deathmessage_explosion_1: '{teamcolor}{player} &7đã bị nổ thành từng mảnh'
+deathmessage_explosion_2: '{teamcolor}{player} &7đã bị nổ chết'
+deathmessage_fall_1: '{teamcolor}{player} &7đã ngã chết'
+deathmessage_fall_2: '{teamcolor}{player} &7đã rơi xuống vực'
+deathmessage_fire_1: '{teamcolor}{player} &7đã bị thiêu chết'
+deathmessage_fire_2: '{teamcolor}{player} &7đã bị thiêu sống'
+deathmessage_default_1: '{teamcolor}{player} &7đã chết'
+spectator: Khán giả
+itemshop: Vật phẩm
+motd_loading: Đang tải...
+toggle_display_spawner_enable: '&eSpawners of the arena &6{arena} &eare now being
+  displayed for everyone. Repeat the command to disable it'
+toggle_display_spawner_disable: '&eSpawners of the arena &6{arena} &ewon''t be displayed
+  anymore'
+teamchest_title: Rương của đội {team}
+playerprivateinventory_title: Ender Chest
+placeholderapi_stats_loading: Đang chờ ...
+tnt_destroybed_name: TNT
+timer_ending_soon: '&eTrận đấu sẽ kết thúc vào {minutes} phút'
+timer_ending: '&eTrận đấu sẽ kết thúc trong {seconds} giây'
+command_blocked: '&cYou may not execute this command while playing Bedwars'
+cancel: Cancel
+apply: Apply
+authors: Authors
+nobody: Nobody
+customname_isenabled: Custom name is enabled
+customname: Custom name
+displayingname: Displaying name
+list_spawners: '&6Amount of spawners added to the arena {arena}: &e{spawners}'
+noarenaatpos: '&cThere''s no arena at your current position'
+multiplearenasatpos: '&cThere are multiple arenas at your current position: &4{arenas}'
+notinsidearena: '&cYou''re not inside the arena &4{arena}'
+arenaname_contains_illegalchars: '&cThe arena name contains illegal characters'
+teamspawn_notyet: '&cThe spawn point of &4{team}&c hasn''t been set yet for &4{arena}'
+holo_add: '&aAdded a hologram at &2{coord}'
+holo_list: '&6Holograms in {world}: &e{holos}'
+holo_remove: '&aRemoved the hologram at &2{coord}'
+holo_removenotfound: '&cThere''s no hologram at the given coordinates in the world
+  &4{world}'
+holo_removeall: '&aRemoved &2{amount}&a holograms in world &2{world}'
+unknown_world: '&cThere''s no world with the name &4{world}'
+addon_load_not: '&cThe given file is not an addon'
+addon_load_already: '&cThe given addon is already loaded'
+addon_load_unknown: '&cFile does not exist. Make sure to place it under &4{folder}'
+addon_load: '&aLoaded addon &2{addon}'
+addon_unload_notfound: '&cThere''s no addon with the name &4{addon}'
+addon_unload_notaddon: '&4{plugin}&c is a plugin, but not an addon'
+addon_unload: '&aUnloaded addon &2{addon}'
+item_error_missinghandlerorcommand: '&4Please report this error to an admin: &cThe
+  item {item} is missing an handler or a command. Nothing is happening on use.'
+arenasgui_list: ArenasGUI Layouts
+arenasgui_by: By
+arenasgui_openfor: '&eOpened arenasgui layout &6{layout}&e for &6{player}'
+unknown_layout: '&cUnknown layout &4{layout}'
+migration_start: '&eStarted migration of &6{origin}&e...'
+migration_success: '&aSuccessfully migrated &2{origin}&a in &2{time}'
+migration_failure: '&cFailed to migrate &4{origin}&c after {time}: &4{error}'
+migration_failure_alreadyrunning: '&cA migration process with the same origin is already
+  running'
+playerdeath_cause_elimination: Elimination
+rejoin_trying: '&eWe''re checking the previously played match...'
+rejoin_alreadytrying: '&cYou''re already trying to rejoin your lastly played match!
+  Please wait a bit'
+rejoin_failed_notactive: '&6You''re too late, the match isn''t running anymore'
+rejoin_failed_teamdead: '&6You can''t rejoin the active match as your team has been
+  eliminated'
+rejoin_failed_unknown: '&6We tried to let you in, but we may not due to internal rules'
+rejoin_success: '&aThe match is still running! We''re now re-adding you to the match...'
+rejoin_success_global: '&6{player} &ehas rejoined the {teamcolor}{team}&e''s team
+  and is now a part of the match'
+hubpos_inactive_bungee: '&6Hub Positions &eare not active as you''re solving it via
+  BungeeCord'
+arenaconvert_onlyspecifctypes: '&cYou may only change the regeneration type of the
+  arena &4{arena}&c to &4{types}'
+arenaconvert_done: '&aChanged the regeneration type of &2{arena}&a from {prev} to
+  &2{new}'
+arenaproblem_savingblocks: '&cThe arena is currently saving its blocks. Try it again
+  in a few seconds'
+teamchat_enabled_hint: '&eYour team members are the only ones who are going to see
+  your message. Begin it with "&6&l{tag}&e" to write globally'
+teamchat_disabled_solo_hint: '&eYour message will be visible for all players (even
+  without a prefix) as you are playing solo'
+remotearena_unsupportedoperation: '&cYou may not perform the given operation to remote
+  arenas'
+connecting_server: '&eYou are about to connect with the server'
+remoteteleport_fail: '&cIt it is not possible to teleport to the server'
+tphubfail_nohub: '&cWe failed to teleport you to the hub as no server is available'
+try_again_shortly: '&ePlease try again shortly'
+server_full: '&cThe server is full'
+spectate_fail: '&cWe failed to add you as an spectator (Reason: {reason})'
+join_fail: '&cWe failed adding you to the arena (Reason: {reason})'
+erroraction_arenacloned: '&cYou may not perform that for cloned arenas'
+arenabulk_performingaction: '&eThe action is being executed for &6{amount} arenas'
+invalidatecache_alreadyempty: '&eThe player-data-cache is already empty'
+invalidatecache: '&eFollowing locally cached info has been cleared: &6{stats} stats&e,
+  &6{achievements} achievements&e and &6{properties} properties'
+playerdata_info_fetchtime: Fetch time
+playerdata_info_earnedachievements: Earned achievements
+playerdata_info_stats: Thống kê
+playerdata_info_game_stats: Game Stats
+playerdata_info_properties: Properties
+playerdata_notfound: '&cWe couldn''t find any data for &4{target}'
+playerdata_stats_resetallplayer_warning:
+- '&4!!!WARNING!!!'
+- '&cAre you really sure you want to reset &4ALL stats&c for &4&lALL&c players who
+  have EVER played? If so, then please write the same command within the next {sec}
+  seconds. &nYou might want to create a backup.'
+playerdata_stats_resetplayer_warning:
+- '&4!!!WARNING!!!'
+- Are you really sure you want to reset &4ALL stats&c for the player &4&l{player}&c.
+  If so, then please write the same command within the next {sec} seconds.
+playerdata_stats_resetplayer_complete: '&aThe stats for {player} have successfully
+  been reset!'
+playerdata_stats_resetallplayer_complete: '&aThe stats of all players on the server/network
+  have been reset after {time}!'
+playerdata_stats_modify_complete: '&aSuccessfully updated ''{stat}'' to ''{new-val}''
+  for {player}. The player may need to re-log for rankings to update'
+playerdata_stats_modify_fail: '&cWe were unable to update the stat ''{stat}'' for
+  {player}!'
+playerdata_stats_notfound: '&cUnable to find a stats set called ''{stat}'''
+identifyarena_none: '&cThere is no arena at the given position'
+identifyarena_found: '&eFound arena &6{arena}'
+initsetup_welcome:
+- '&6Welcome welcome!'
+- '&eTo make the setup of &lMarcely''s Bedwars &eas easy as possible, we offer you
+  the opportunity to set it up via a web interface (using your browser).'
+- '&eNote that this is only for the initial setup. You can always configure anything
+  later on.'
+initsetup_web: I want to use the fancy web interface (Click or type command {cmd})
+initsetup_simple: I would rather just configure everything myself (Click or type command
+  {cmd})
+initsetup_connecting: '&ePlease wait a little bit, we are preparing it for you.'
+initsetup_connection_failure:
+- '&cSorry, but we could not connect to our service. A firewall may be blocking it.'
+- '&cPlease type the &4/mbedwars &ccommand and try again or skip the whole process
+  if it keeps failing.'
+initsetup_ready: '&eVisit this URL to start the setup process: &6{url}'
+initsetup_finish: '&eEverything is ready, have fun! Visit &6{url} &efor further help'
+click: '*Click*'
+members: Members
+no_members: No members
+antiabuse_statsnotcounted: '&cCertain stats weren''t counted as we detected potential
+  abuse. Please play fair!'
+player_trigger_upgradetrap_bigtitle: '&cTRAP TRIGGERED!'
+player_trigger_upgradetrap_smalltitle: '&fYour trap has been set off!'
+player_trigger_upgradetrap_chat: '&cSomeone has triggered one of your team''s traps!'
+achievement_get_title: New achievement!
+
+
+###########################
+## Setup GUI
+###########################
+setupgui_nextpage: Next page
+setupgui_prevpage: Previous page
+setupgui_goback: Go back
+setupgui_yousure: Are you sure?
+setupgui_noarenascreated: No arena has been created as of now
+setupgui_mainbutton_modify: Modify created arenas
+setupgui_mainbutton_create: Create a new arena
+setupgui_mainbutton_misc_tools: Misc tools
+setupgui_misctools_spawn_dealer:
+- Spawn Dealer
+- You can remove it by punching.
+setupgui_misctools_spawn_upgradedealer:
+- Spawn Upgrade Dealer
+- You can remove it by punching.
+setupgui_misctools_displayarenasatpos:
+- Identify an arena
+- Uses your current position.
+setupgui_misctools_setuptool:
+- Obtain the Setup Tool
+- Right click the item while holding in hand to use it.
+- Useful for quickly setting up arenas.
+setupgui_misctools_setcorner_1:
+- Set first corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_misctools_setcorner_2:
+- Set second corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_category_actions: Actions
+setupgui_category_modify: Modify
+setupgui_category_spawners: Spawners
+setupgui_category_teams: Đội
+setupgui_category_weather:
+- Weather
+- 'Active: {weather}'
+setupgui_category_time:
+- Time
+- 'Active: {time}'
+setupgui_button_enable: Enable
+setupgui_button_disable: Disable
+setupgui_button_regenerate: Regenerate all blocks
+setupgui_button_teleport: Teleport into the arena
+setupgui_button_enter: Enter the game
+setupgui_button_enterspectator: Spectate the game
+setupgui_button_configure: Configure
+setupgui_button_setlobby:
+- Set the lobby spawn
+- Uses your current position
+setupgui_button_rename: Change the name
+setupgui_button_saveblocks: Save all blocks & entities
+setupgui_button_setgameworld:
+- Set the game world
+- Uses your current world
+setupgui_button_saveregioncorners:
+- Save arena corners
+- Make sure to set the corners using {tool}
+setupgui_button_modifyregioncorners:
+- Set arena corner positions
+- Uses your current position
+- ''
+- 'Left Click: Mark Corner 1'
+- 'Right Click: Mark Corner 2'
+setupgui_button_setspectatorspawn:
+- Set the spawn point for spectators
+- Uses your current position
+setupgui_button_properties: Properties
+setupgui_button_delete: Delete the arena
+setupgui_button_removeallspawners: Remove all added spawners
+setupgui_button_displayspawners:
+- Show all spawners
+- Adds a small hologram above any spawner
+setupgui_button_undisplayspawners: Hide all spawners
+setupgui_button_getallbeds: Obtain the bed of every team
+setupgui_spawnerbutton_obtainitems: '&fObtain {amount} items of {spawner}'
+setupgui_spawnerbutton_add:
+- '&fAdd a {spawner} &fspawner'
+- Uses your current position
+setupgui_spawnerbutton_removeall: '&fRemove all {spawner} &fspawners'
+setupgui_teambutton_obtainbed: '&fObtain {team} &fbed'
+setupgui_teambutton_teleportspawn: '&fTeleport to the {team}&f''s spawn point'
+setupgui_teambutton_setspawn:
+- '&fSet the spawn point for {team}'
+- Uses your current position
+setupgui_removearena_yes: '&a&lYES&f, remove the arena &l{arena}'
+setupgui_removearena_no: '&c&lNO&f, keep the arena &l{arena}'
+setupgui_create_type_region:
+- Region
+- Restrict the arena with a border.
+- Players will see a visual effect of the border and won't be able to leave it.
+- By this you're also able to create multiple arenas in a single world.
+- Please visit the wiki for more detailed information.
+setupgui_create_type_world:
+- World
+- There's no border and uses the whole world for the game.
+- Easier to set-up but can be more heavy during regeneration.
+- Please visit the wiki for more detailed information.
+setupgui_create_type_voting:
+- Voting
+- Not an actual arena in which you play.
+- Instead only uses its lobby to vote in it.
+- Players will be teleported to arenas of the type World or Region after the voting
+  has ended.
+- Please visit the wiki for more detailed information.
+setupgui_create_title: Create a new arena
+setupgui_configure_title: Configure arena
+setupgui_configure_auto_detect_teams_complete: '&6{amount} &epotential teams have
+  been detected using your current position'
+setupgui_configure_playersperteam2:
+- '&6Max Players:'
+- '&7Current Max Players Per Team: &f{amount}'
+- '&7Current Max Arena Players: &f{total-max-players}'
+setupgui_configure_minplayers:
+- '&6Min Players: &f{amount}'
+- '&7Amount of players required to start'
+setupgui_configure_totalplayers: '&6Max amount of total players in the arena: &f{amount}'
+setupgui_configure_arenasbelowinpool: '&3&l⇩ &bArenas inside the voting pool &3&l⇩'
+setupgui_configure_noarenasinpool: '&cNo arenas in the pool'
+setupgui_clicktorename: Click to rename
+setupgui_rename_title: Rename arena
+setupgui_confirm_action: '&6Confirm your action by clicking the button within the
+  next few seconds again'
+setupgui_configure_minplayers_toolow: ONLY FOR TESTING. With this, you may start a
+  match without any other player.
+setupgui_button_modifyregioncorners_reminder_save: '&eDon''t forget to click on the
+  "save arena corners" button, otherwise your changes won''t get applied.'
+setupgui_spawnerbutton_removenearbyspawners:
+- '&fRemove all nearby {spawner} &fspawners'
+- Uses your current position
+setupgui_remotearena_info:
+- '&c[REMOTE]'
+- Managed by &o{server}
+
+
+###########################
+## Setup Tool
+###########################
+setuptool_freebuild: Place/Break blocks freely
+setuptool_spawner: Place/Edit spawner
+setuptool_selectteam: Select team
+setuptool_bed: Place bed
+setuptool_spawnpoint: Place spawn point
+setuptool_dealer: Spawn/Kill dealer
+setuptool_notinsidearena: '&cMust be inside an arena. &6&lClick here &cto manage arenas.
+  Teleport yourself to it and use the tool item again'
+setuptool_activated: '&aActivated &esetup tool for &6{arena}'
+setuptool_deactivated: '&cDeactivated &esetup tool. &6&lClick here &eto open the arena''s
+  setup GUI'
+setuptool_selecttype: Select type
+setuptool_placeagainconfirm: Place again to confirm
+setuptool_type_dealer: Dealer
+setuptool_type_upgradedealer: Upgrade Dealer
+setuptool_teamcomponent_bed: Bed
+setuptool_teamcomponent_spawnpoint: Spawn Point
+setuptool_spawnpoint_preview:
+- '&f&lSpawn Point Preview'
+- '{team}'
+- '&fDisappears in {time}'
+
+
+###########################
+## Shop Layouts
+###########################
+shop_d_hypixel_available: '&8Available'
+shop_d_hypixel_clicktobrowse: '&eClick to browse!'
+shop_d_hypixel_items: '&8Items'
+shop_d_hypixel_clicktopurchase: '&eClick to purchase!'
+shop_d_hypixel_maxed: '&aMAXED!'
+shop_d_hypixel_unlocked: '&aUNLOCKED'
+shop_d_hypixel_cost: '&7Chi phí: &f{color}{amount} {type}'
+shop_d_hypixel_goback: '&aGo Back'
+shop_d_hypixel_tooexpensive: '&cBạn không có đủ {type}!'
+shop_d_hivemc_clicktoview: '&b{icon} Click to view &l{item}'
+shop_d_hivemc_goback: '&c&lGo back'
+shop_d_hivemc_returntomenu: '&7Return to menu'
+shop_d_hivemc_clicktogoback: '&b{icon} Click to go back'
+shop_d_hivemc_clicktobuy: '&b{icon} Click to buy'
+shop_d_hivemc_cost: '&6Chi phí'
+shop_d_rewinside_shoptype_new: You are using the new and improved shop
+shop_d_rewinside_shoptype_old: You are using the old shop
+shop_d_rewinside_shoptype_switch: Click here to switch between the versions
+shop_d_bergwerklabs_currentpage: '&bTrang hiện tại'
+shop_d_bergwerklabs_changepage: '&bTrang {page}'
+shop_d_bergwerklabs_buy: '&aMua &7&o<Click chuột trái>'
+shop_d_bergwerklabs_buy_tooexpensive: '&7Không đủ nguyên liệu!'
+shop_d_hypixelv2_clicktoview: '&eClick để xem!'
+shop_d_hypixelv2_seperator_categories: '&8⬆&7 Loại'
+shop_d_hypixelv2_seperator_items: '&8⬇&7 Vật phẩm'
+shop_d_hypixelv2_quickbuy_pageitem: '&bQuick Buy'
+shop_d_hypixelv2_quickbuy_emptyslot_name: '&cEmpty slot!'
+shop_d_hypixelv2_quickbuy_emptyslot_description:
+- '&7This is a Quick Buy Slot!'
+- '&bSneak Click &7any item in'
+- '&7the shop to add it here.'
+shop_d_hypixelv2_quickbuy_menu_title: Adding to Quick Buy...
+shop_d_hypixelv2_quickbuy_menu_set: '&eClick to set!'
+shop_d_hypixelv2_quickbuy_menu_replace: '&eClick to replace!'
+shop_d_hypixelv2_quickbuy_menu_representing: '&eAdding item to Quick Slot!'
+shop_d_hypixelv2_quickbuy_add_item: '&bSneak click to add to Quick Buy'
+shop_d_hypixelv2_quickbuy_remove_item: '&bSneak click to remove from Quick Buy'
+
+
+###########################
+## Achievements
+###########################
+achievements_name_ragequit: Rage quit
+achievements_name_winround: Winner
+achievements_name_loseround: Loser
+achievements_name_ownbeddestroyed: Traitor!
+achievements_name_bestbow: OP Bow
+achievements_name_userescueplatform: That was close!
+achievements_name_useendepearl: Enderman
+achievements_name_useminishop: Shopping Mama
+achievements_name_killsomeonewithbow: Katniss
+achievements_name_winin3minutes: Already over?!
+achievements_name_killsomeonewithhalfaheart: Lucky strike
+achievements_name_win100rounds: Champion
+achievements_name_usebridge: Bridge constructor
+achievements_name_useguarddog: Police guard
+achievements_name_effectmagnetshoes: Magnetic force
+achievements_name_useteleporter: Beam me up, scotty!
+achievements_name_usetntsheep: Boom, boom, baby!
+achievements_name_usetracker: I am going to find you. And kill you.
+achievements_name_placetrap: Mine
+achievements_name_runovertrap: IT'S A TRAP!
+achievements_name_spend200resources: Wealthy
+achievements_name_rankingintop3: E-Sports player
+achievements_name_goodkd: Professional player
+achievements_name_highplaytime: '#NoLife'
+achievements_name_writeggatend: gg
+achievements_name_winwithoutbed: Không Cần Giường
+achievements_name_die10secsafterbeddestruction: You didn't!
+achievements_name_optaineveryachievement: Addicted
+achievements_name_usefireball: Bùm !!!
+achievements_name_useinvispotion: Ghost Walker
+achievements_text_ragequit: Leave a running round
+achievements_text_winround: Win at least one round
+achievements_text_loseround: Lose one round
+achievements_text_ownbeddestroyed: Destroy your own bed
+achievements_text_bestbow: Buy the best bow
+achievements_text_userescueplatform: Use a rescue platform
+achievements_text_useendepearl: Use an enderpearl
+achievements_text_useminishop: Use a minishop
+achievements_text_killsomeonewithbow: Kill someone with a bow
+achievements_text_winin3minutes: Win a round in 3 minutes
+achievements_text_killsomeonewithhalfaheart: Kill an enemy with half a heart
+achievements_text_win100rounds: Win 100 rounds
+achievements_text_usebridge: Use the bridge-item
+achievements_text_useguarddog: Giống một khi con chó bảo vệ
+achievements_text_effectmagnetshoes: Khi đôi giày nam châm của bạn chặn được một cú
+  bật lùi
+achievements_text_useteleporter: Sử dụng thiết bị dịch chuyển một lần
+achievements_text_usetntsheep: Nuôi một lần một con cừu với TNT trên đó bởi tntsheep-item
+achievements_text_usetracker: Sử dụng thiết bị theo dõi một lần
+achievements_text_placetrap: Xây dựng một lần một cái bẫy
+achievements_text_runovertrap: Kích hoạt một cái bẫy bằng cách chạy qua nó
+achievements_text_spend200resources: Spend 200 or more resources in the shop
+achievements_text_rankingintop3: Ở trong Top 3 trong bảng xếp hạng
+achievements_text_goodkd: Có K/D 'cao hơn 5.0
+achievements_text_highplaytime: Chơi tối thiểu 5 giờ
+achievements_text_writeggatend: Chat gg khi kết thúc trận đấu
+achievements_text_winwithoutbed: Chiến thắng với giường đã bị phá
+achievements_text_die10secsafterbeddestruction: Die 10 seconds after your bed has
+  been destroyed
+achievements_text_optaineveryachievement: Obtain every achievement
+achievements_text_useinvispotion: Drink an invisibility potion
+achievements_text_usefireball: Bạn chỉ có thể sử dụng một lần một quả cầu lửa
+
+
+###########################
+## Shop
+###########################
+shop_buygroup_buy_lowertier: '&cBạn đã có một vật chất lượng tốt hơn'
+shop_player_not_in_running_arena: '&cYou''re not in a running arena!'
+shop_price: 'Price: &7{number} {spawnercolor}{spawnertype}'
+shop_page_block: Block
+shop_page_food: Food
+shop_page_armor: Armor
+shop_page_sword: Sword
+shop_page_bow: Bow
+shop_page_pickaxe: Pickaxe
+shop_page_potion: Potion
+shop_page_special: Special
+shop_page_extra: Extra
+shop_item_hardenedclay: Hardened Clay
+shop_item_endstone: Endstone
+shop_item_chest: Chest
+shop_item_enderchest: Enderchest
+shop_item_ladder: Ladder
+shop_item_web: Web
+shop_item_apple: Apple
+shop_item_grilledpork: Grilled pork
+shop_item_cake: Cake
+shop_item_goldenapple: Golden apple
+shop_item_leatherhelmet: Leather helmet
+shop_item_leatherleggings: Leather leggings
+shop_item_leatherboots: Leather boots
+shop_item_chainmailchestplatelvl1: Chainmail chestplate &7LVL 1
+shop_item_chainmailchestplatelvl2: Chainmail chestplate &7LVL 2
+shop_item_chainmailchestplatelvl3: Chainmail chestplate &7LVL 3
+shop_item_knockbackstick: Knockback stick
+shop_item_swordlvl1: Sword &7LVL 1
+shop_item_swordlvl2: Sword &7LVL 2
+shop_item_swordlvl3: Sword &7LVL 3
+shop_item_bowlvl1: Bow &7LVL 1
+shop_item_bowlvl2: Bow &7LVL 2
+shop_item_bowlvl3: Bow &7LVL 3
+shop_item_arrow: Arrow
+shop_item_pickaxelvl1: Pickaxe &7LVL 1
+shop_item_pickaxelvl2: Pickaxe &7LVL 2
+shop_item_pickaxelvl3: Pickaxe &7LVL 3
+shop_item_potionswiftness: Thuốc mệt mỏi
+shop_item_potionregeneration: Thuốc tăng phục hồi máu
+shop_item_potionhealing: Thuốc hồi máu
+shop_item_potionstrength: Thuốc tăng sức mạnh
+shop_item_enderpearl: Enderpearl
+shop_item_teleporter: Teleporter
+shop_item_minishop: Minishop
+shop_item_rescueplatform: Rescue platform
+shop_item_tntsheep: TNT sheep
+shop_item_magnetshoes: Magnet Shoes
+shop_item_trap: Bẫy
+shop_item_bridge: Bridge
+shop_item_guarddog: Guard Dog
+shop_item_tracker: Tracker
+shop_item_fishingrod: Fishing Rod
+shop_item_snowball: Snowball
+shop_item_fireball: Quả cầu lửa
+shop_item_magicmilk: Magic Milk
+shop_item_tnt: TNT
+
+
+###########################
+## Upgrade Shop
+###########################
+upgradeshop: Nâng cấp
+upgradeshop_buy_upgrade_broadcast: '&e{player} đã nâng cấp &6&e{upgrade}&e lên &6LVL
+  {newlvl}'
+upgradeshop_buy_trap_broadcast: '&e{player} purchased &6{upgrade}'
+upgradeshop_toofew_materials: '&cYou don''t have enough materials to buy this!'
+upgradeshop_max_upgrade: '&cYou have already purchased this upgrade'
+upgradeshop_buystate_purchasable: '&eClick to purchase!'
+upgradeshop_buystate_not_purchasable: '&cYou don''t have enough {price-type}&c!'
+upgradeshop_buystate_maximum: '&aUNLOCKED'
+upgradeshop_queuedtrap_icon:
+- '&aTrap #{queue-level}: {trap-name}'
+- '&7This trap will trigger'
+- '&7immediately after an'
+- '&7intruder enters your base'
+- ' '
+- '&7Note that is the intruder'
+- '&7Is using Magic Milk, this'
+- '&7trap may not trigger'
+upgradeshop_unqueuedtrap_icon:
+- '&cTrap #{queue-level}: No Trap!'
+- '&7Purchasing a trap will'
+- '&7queue it here. Its cost'
+- '&7may scale based on the'
+- '&7number of traps queued'
+upgradeshop_hypixel_separator:
+- '&8⬆ &7Purchasable'
+- '&8⬇ &7Traps Queue'
+upgradeshop_hypixel_traps_menu_button:
+- '&eBuy a trap'
+- '&7Purchased traps will be'
+- '&7queued below'
+- ' '
+- '&eUpgrades'
+upgradeshop_hypixel_back_button:
+- '&eReturn to Upgrades'
+- '&7Go back to view upgrades'
+- '&7and traps queue'
+- ' '
+- '&eClick to return!'
+upgradeshop_name_protection: Armor Protection
+upgradeshop_description_protection: Increases armor protection
+upgradeshop_name_featherfall: Feather Fall
+upgradeshop_description_featherfall: Gain less fall damage
+upgradeshop_name_haste: Haste
+upgradeshop_description_haste: All players in your team permanently gain the haste
+  effect
+upgradeshop_name_healrange: Nâng cấp hồi máu
+upgradeshop_description_healrange: Hồi máu khi ở trong đảo của bạn
+upgradeshop_name_sworddamage: Kiếm sắc bén
+upgradeshop_description_sworddamage: Tăng sát thương của kiếm
+upgradeshop_name_spawnermultiplier: Tăng tỉ lệ sinh sản
+upgradeshop_description_spawnermultiplier: Tăng tỉ lệ spawn trong đảo của bạn
+upgradeshop_name_enemyalarmtrap: Alarm Trap
+upgradeshop_description_enemyalarmtrap: Removes Invisibility from infiltrating player
+upgradeshop_name_counteroffensivetrap: Counter Offensive Trap
+upgradeshop_description_counteroffensivetrap: Gives Speed II and Jump II too all team
+  members for 15 seconds
+upgradeshop_name_enemyminingfatigue: Đào chậm
+upgradeshop_description_enemyminingfatigue: Gây hiệu ứng đào chậm cho kẻ địch khi
+  tiến gần giường
+upgradeshop_name_enemytrap: Bẫy
+upgradeshop_description_enemytrap: Gives blind and slowness effect to the attacker
+upgradeshop_trapremove_lore: '&eRight Click to remove! &8(No refund)'
+upgradeshop_trapremove: '&eRemoved &6{trap} &efrom the queue'
+
+
+###########################
+## Custom
+###########################
+mustserverjoinfromhub: '&cYou must join an arena from the hub'
+arena_joinissue_votingparticipating: '&cYou may not join this arena right now. It
+  is a part of an active voting pool'
+rejoin_failed_notparticipating: '&6You didn''t participate in any match yet'

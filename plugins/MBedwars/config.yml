@@ -1,0 +1,1484 @@
+version: 5.5.7
+
+# 888b     d888 888888b.                 888                                               
+# 8888b   d8888 888  "88b                888                                              
+# 88888b.d88888 888  .88P                888                                               
+# 888Y88888P888 8888888K.   .d88b.   .d88888 888  888  888  8888b.  888d888 .d8888b        
+# 888 Y888P 888 888  "Y88b d8P  Y8b d88" 888 888  888  888     "88b 888P"   88K        
+# 888  Y8P  888 888    888 88888888 888  888 888  888  888 .d888888 888     "Y8888b.      
+# 888   "   888 888   d88P Y8b.     Y88b 888 Y88b 888 d88P 888  888 888          X88      
+# 888       888 8888888P"   "Y8888   "Y88888  "Y8888888P"  "Y888888 888      88888P' 
+#                                                 ______  ______
+#                                                / ____/ / ____/
+#                 .--.--..-----..----.          /___ \  /___ \
+#                 |  |  ||  -__||   _| __      ____/ / ____/ /
+#                  \___/ |_____||__|  |__|    /_____(_)_____/
+
+# Thank you for choosing Marcely's Bedwars!
+# Having trouble getting it set up? Looking for a tutorial?
+# Check out the official Wiki: https://wiki.mbedwars.com/
+############################################################################
+
+
+
+
+# The messages, which the plugin is sending to the player, will be taken of that file (located in the 'languages' folder)
+# If 'language-per-player' is also enabled then this language is also automatically the default language for players whose language hasn't been created
+language-file: english.yml
+
+# Enabling this will cause the plugin to load every messages file of the 'folder'
+# The plugin will then automatically send the message in the language of the player
+# The RAM usage will increase as every message from every language has to be kept in memory
+# A few messages, such as those in the scoreboard, may remain in the same language as 'language-file'
+language-per-user: false
+
+# An addition to "language-per-user": Players require the permission mbedwars.langperuser for it to work
+# "language-per-user" must be set to true as well when using this feature
+language-per-user-requires-permission: false
+
+# If this config is enabled then only people with the permission 'mbedwars.beta' will be able to join
+beta: false
+
+# If this config is enabled then the world's time will be fixed to (day light)
+# This effect is only noticeable for playing players and spectators
+# NOTE: Time can be individually set per arena. This will define the default behavior for new arenas.
+always-day: true
+
+# If this config is enabled then the world won't rain for playing players and spectators anymore
+# NOTE: Weather can be individually set per arena. This will define the default behavior for new arenas.
+no-rain: true
+
+# Enabling this config causes the plugin to save the players inventory before they enter an arena
+# Once they leave the arena their inventory will be replaced by the saved one
+# If disabled then their inventory won't change causing them to keep the items they got from bedwars
+# Because of that it's not recommended to disable it, unless you decide to e.g. use "inventory-clear" or don't want the plugin to replace the items from your hub
+inventory-backup: true
+
+# Enable/disable if it shall clear the players inventory after he left an arena
+# This config has no effect when "inventory-backup" is enabled
+inventory-clear: true
+
+# If this config is enabled, people can't change their gamemode to creative or enable flying
+anticheat-enabled: false
+
+# Setting this to false causes the "player x left the arena" message to not getting displayed on final death (forcefully left because he got destroyed)
+leavemessage-at-end: true
+
+# Players will leave the round if they're using one of these commands
+hubcommands:
+- /l
+- /leave
+- /spawn
+- /hub
+
+# Decide whether you agree with sharing certain details that may be used for statistics of global interest
+# We use them to identify the aspects on which we should put more focus on (such as bugs etc) and to possibly share them with the community
+# Note that disabling this config won't disable the update checker and the depdendency downloader, as they are required for the general functionality of the plugin
+# We collect the following info:
+# Errors/warnings caused by this plugin, Server version (Same info as from "/version" command), Player counts (Total & playing Bedwars, current & max), 
+# Created arena count, Used storage type (Only the type, no credentials), Configured language, IP/MAC (Used to aggregate clients by Country), 
+# Active plugins (Used to identify errors caused by compatibility issues)
+metrics: false
+
+# Whether or not a player alone on a team (with a bed) is able to rejoin a game if they get disconnected/leave
+solo-rejoin-enabled: false
+
+# How many seconds a solo player has to rejoin before their bed will automatically be destroyed, and their team eliminated.
+solo-rejoin-time: 30
+
+# If this config is enabled, the player's name will be colored (works via packets (you won't see the color of players if they're in an other team))
+player-color: true
+
+# The server will automatically restart itself if this config is enabled and when an arena ends
+restart-oncearenaend: false
+
+# Players will get kicked if they're teleporting themselves more than 12 blocks away from their location while they're in a playing round
+# Admins will still be permitted to teleport
+kick-outofarena: true
+
+# Players will get kicked if they're teleporting themself within a lobby
+kick-outofarena-lobby: true
+
+# Disabling this will remove the message which is coming when a player is entering or leaving the server
+# If true, this plugin won't make any changes to these messages
+server-joinquitmessage-enabled: true
+
+# Setting this to false will (almost) completely disable the use of actionbar messages
+actionbar-enabled: true
+
+# The message which will be displayed in the actionbar
+# "actionbar-enabled" must be set to true for this
+# Placeholders: {team-color}, {team-display-name}, {team-players}, {players-per-team}
+actionbar-ingame-text: '{team-color}{team-display-name} &8[&7{team-players}/{players-per-team}&8]'
+
+# Will hide players that aren't in the round from playing players
+# Spectators are also getting hidden
+# Spectators will only see themself and players inside the round
+# Special case if "endlobby-tptolobby" is enabled: Spectators will become visible after the round has ended
+tab-removenonplayers: false
+
+# Will hide playing players and spectators for non-playing players
+# Nobody will see spectators when this is enabled
+tab-removeplayers: false
+
+# With this config set to false, no mobs (animals and monsters) are going to spawn within the arenas
+# Most plugins shouldn't be affected by this
+natural-mob-spawning-enabled: false
+
+# Define the cases in which it's okay that a mob spawns
+# Complete list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+# Note that not all spawn reasons exist in older versions
+natural-mob-spawning-reasons-whitelist:
+- SHOULDER_ENTITY
+- SHEARED
+- EXPLOSION
+- SPAWNER_EGG
+- COMMAND
+- CUSTOM
+- SLIME_SPLIT
+- DEFAULT
+
+# This config is required if you are using upgrades, as it sets the radius of a base's size
+# Center points are both the bed's position and the team spawn point, everything in either of their radius will be considered as part of the base
+# This is the radius, not diameter! And it has a circular shape, not cubic
+upgrade-spawnsize: 15
+
+# If this config is disabled then the hunger level of the players won't change (Only ingame)
+hunger: true
+
+# Increasing this value will increase the amount of the damage players will take from falling
+fall-damage-multiplier: 1.0
+
+# Disabling this causes the player to not being able to interact with specific materials that open a GUI (and flower pots)
+# These include: crafting table, anvil, dropper, dispenser, furnace, beacon, hopper, enchanting table, smoker,
+#   fletching table,  blast furnace, stonecutter, smithing table, cartography table, brewing stands, signs, flower pots
+interacting-gui: false
+
+# Disabling this causes the player to not being able to interact with specific materials physically
+# These include: buttons, levers, doors, trapdoors
+interacting-physical: true
+
+# (1.13+ only) setting this to false will prevent players from stripping logs with an axe
+logs-strippable: false
+
+# The message that'll be sent when a player is receiving an achievement
+# Placeholders: {name}, {description}
+earnachievement-message:
+- '&7&m========================='
+- '&6           &l%Achievement_get_title%'
+- '&f{name}: '
+- '&d {description}'
+- '&7&m========================='
+
+# Disable/enable the auto teambalance in the lobby
+# It tries to make the teams as fair as possible
+# Warning: Disabling this will make it possible for all players to join the same, single team (thereby having no enemies)
+# It is only recommended to disable this if you have your own implementation or play with people you trust
+teambalance: true
+
+# If this config is enabled then the configs which start with 'giveitems-on-' will work
+giveitems-on-enabled: false
+
+# Specify here which items should be given on round start
+# 'giveitems-on-enabled' has to be enabled for that!
+giveitems-on-roundstart:
+- wooden_sword
+- apple 5
+
+# Specify here which armor items should be set to the inventory slots on round start
+# 'giveitems-on-enabled' has to be enabled for that!
+giveitems-on-roundstart-armor:
+- leather_boots
+- leather_leggings
+- leather_helmet
+
+# Specify here which items should be given on respawn
+# 'giveitems-on-enabled' has to be enabled for that!
+giveitems-on-respawn:
+- wooden_axe
+- apple 4
+
+# Specify here which armor items should be set to the inventory slots on respawn
+# 'giveitems-on-enabled' has to be enabled for that!
+giveitems-on-respawn-armor:
+- leather_helmet
+
+# Specify here which potion effects the player shall gain after he respawns
+# "giveitems-on-enabled" has no effect to this
+# Usage: <potion effect name>:<duration in ticks (20 ticks = 1 sec):<level>
+giveeffects-on-respawn:
+- DAMAGE_RESISTANCE:140:2
+- FAST_DIGGING:200:3
+
+# If false, players won't be able to move or drop the armor in their inventory
+armor-interactable: true
+
+# This command gets executed when a round starts
+executeon-roundstart: ''
+
+# Configure the way commands added to "blocked-commands" will be treated
+# You may choose between:
+#  - DISABLED: The config has no effect
+#  - BLACKLIST: The specific commands will be permitted
+#  - WHITELIST: All commands, apart from these, will be blocked
+#
+# Admins may bypass restrictions by having the permission "mbedwars.bypassblockedcommands"
+blocked-commands-mode: BLACKLIST
+
+# These commands will be blocked / permitted for players and spectators
+# Configure the exact behaviour using the "blocked-commands-mode" config
+# Syntax: /<command>
+# Example: /tpa
+#  -> This will block all variants of "/tpa", including "/TpA" or "/tpa player123"
+blocked-commands:
+- /sethome
+- /enderchest
+- /lock
+- /tpahere
+- /tpaccept
+- /tpa
+
+# The armor is naturally visible when having the invisibility potion effect
+# This config allows you to hide the players armor when set to true
+invisibility-hides-armor: true
+
+# If this config is enabled, the particles of the invisibility potion effect will be removed
+# The config "invisibility-hides-armor" has to be enabled for this to work
+invisibility-hides-armor-remove-particles: false
+
+# You may spawn further potion particles while a player is invisible
+# The greater the value, the more particles are being spawned
+# The config "invisibility-hides_armor_remove-particles" has to be enabled and "invisibility-hides-armor" has to be disabled for this to work
+invisibility-hides-armor-extra-particles-count: 4
+
+# Team chests can be opened by all players of the team, from any chest of the configured type inside the arena
+# Some people may prefer to use regular chests as team chests
+teamchest-enabled: true
+
+# Specify which chest variant shall be used as the team chest
+# You may decide between ENDER_CHEST and CHEST
+teamchest-block: chest
+
+# If true, players will not be able to purchase items from the shop outside of the arena
+# This could be useful for allowing players to edit their QuickBuy in lobbies
+block-purchases-outside-running-arenas: false
+
+# By default, if an item will not fit into a players inventory, it will drop on the ground next to them
+# This will prevent players from purchasing items that would not fit in their inventory
+block-purchases-when-inventory-full: false
+
+# [FOR DEVS] Define whether MBedwars should respect other plugin's event cancellations
+# The events that are being affected by this config are: BlockPlace, BlockBreak, EntityDamage, EntityDamageByEntity
+# If this is set to true, then the plugin will not execute any actions if one of the events has been cancelled by another plugin
+# It is recommended to keep this at false, as it may otherwise cause unexpected behaviour
+# One purpose of this config is to fix potential conflicts with anti cheats
+respect-event-cancellations: false
+
+
+# ========== LOBBY ==========
+
+# The countdown time that should be set when using forcestart
+forcestart-time: 10
+
+# false: The force-start lobby item and the command "/bw forcestart" requires the minimum players count to be fulfilled
+# true: The force-start lobby item and the command "/bw forcestart" may be used, even if they are the only ones in the arena
+forcestart-ignoreminplayers: false
+
+# This calculation is being used when the countdown in the lobby is starting.
+# Changing this value to low is dangerous.
+# Placeholder: {teams}, {teamplayers}
+lobby-countdownstart-calculation: ({teamplayers} + {teams}) * 10 + 1
+
+# How many seconds a player has to wait before before being sent back to the lobby after
+# clicking the leave item. They can cancel the leave by clicking again in this time.
+# Set to 0 to make it instant
+lobby-leaveitem-time: 0
+
+# Automatically shorten the countdown when the percentage of players in the arena is reached
+# This feature is useful to reduce the wait time when there are enough players in the arena
+# Set it to 101 to disable this feature
+auto-shorten-countdown-percent: 70
+
+# Related to "auto-shorten-countdown-percent"
+# This is the time in seconds that the countdown will be shortened to when the percentage of players is reached
+auto-shorten-countdown-time: 15
+
+# If true, particle animations will be played when a player joins or leaves an arenas lobby
+lobby-join-leave-particles: true
+
+# The expbar is being animated in case this config is enabled
+# Animations include the remaining time slowly decreasing on the exp bar
+# and the level displaying the amount of seconds left to start
+lobby-exbar-animation: true
+
+# Enables the 'lobby-printmapinfo-lines' functionality, through which players receive a chat message before the game starts
+# Use 'lobby-printmapinfo-time' to specify at which countdown time it shall be sent
+lobby-printmapinfo-enabled: true
+
+# The lines which will be printed before the game begins
+# 'lobby-printmapinfo-enabled' must be set to true
+# Placeholder: {arena}, {madeby}, {players}, {maxplayers}, {teams}, {teamsize}
+# You can use ^# to create space
+lobby-printmapinfo-lines: []
+
+# Specify the lobby countdown time at which the map info shall be printed
+# 'lobby-printmapinfo-enabled' must be set to true
+lobby-printmapinfo-time: 0
+
+# These titles which will be displayed at the given second until the game ends
+# Placeholders: {arena}, {madeby}, {players}, {maxplayers}, {teams}, {teamsize}
+lobby-countdowntitles:
+  '0': '&4⓿'
+  '1': '&4➀'
+  '2': '&c➁'
+  '3': '&6➂'
+  '4': '&e④'
+  '5': '&e⑤'
+  '10': '&b{arena}'
+
+# If this config is enabled and if a player is changing than he will wear the dyed item 'lobby-team-onchange-wearcloth-material'
+lobby-team-onchange-wearcloth-enabled: true
+
+# The armor that the player will wear
+# 'lobby-team-onchange-wearcloth-enabled' has to be enabled for this
+lobby-team-onchange-wearcloth-materials:
+- leather_chestplate
+
+# If the stats should be shown in the endlobby
+lobby-endstats-enabled: true
+
+# If the time until the player is getting kicked should be shown in the endlobby
+endlobby-show-kick-time: true
+
+# How long the players should remain in the endlobby state until they get kicked out
+# Making the value of this config is dangerous and can cause unexpected and unwanted problems
+endlobby-countdown-time: 90
+
+# Whether or not players are able to fly in endlobby
+endlobby-flying: false
+
+# Setting this to true causes all remaining players and spectators to get teleported back to the lobby during the endlobby phase
+# By this their inventory gets cleared up, spectators become visible again, etc.
+# If set to false then the players and spectators are staying where they already are and don't get moved back
+# This set to false can be useful when using the lobbybreak feature
+endlobby-tptolobby: true
+
+# If the lobby should get destroyed after the arena starts
+# NOTE: If your lobby is outside of your arena, this config will have no effect
+lobbybreak-enabled: false
+
+# The radius at which the blocks will get destroyed with the lobby point being at the middle
+# 'lobbybreak-enabled' has to be enabled for this
+lobbybreak-radius: 15
+
+
+# ========== ARENA VOTING ==========
+
+# Set the maximum amount of arenas which should get voted
+arenavoting-maxarenas: 3
+
+
+# ========== AUTOMATED ARENA CLONING ==========
+
+# This feature *automatically* creates duplicates of arenas, whereby there are always arenas available for one to join.
+# After a cloned arena has gone through a match, it will be deleted and a new one is being generated. It is safe to disable this config later on, trashed worlds will be cleaned up automatically.
+#
+# It works with both REGION and WORLD arenas:
+# - In case your arena is a WORLD, a new world is being temporarily created while the arena exists. This occurs with every cloned arena, meaning that you might experience a large increase in worlds count and RAM usage
+# - If your arena is instead a REGION, all cloned match areas are being collected in a single world. There's an offset with each one, meaning that they won't collide with each other
+#
+# One thing regarding arena's lobby: It is recommended for them to be inside the match area, otherwise they won't be moved for cloned arenas.
+# If the lobby is outside of the match area, players joining the same kind of arenas might see each other.
+# In this case, it *might* make sense to enable "tab-removenonplayers" as the players from the other arenas won't be seen with that.
+auto-cloning-enabled: false
+
+# Define the names of the arenas that shall be excluded from auto cloning
+auto-cloning-excluded-arenas:
+- second-excluded-arena
+- first-excluded-arena
+
+# Amount of cloned arenas that are waiting for players (arenas in LOBBY state) shall be provided for each arena
+auto-cloning-lobby-arenas-count: 1
+
+# Related to config "auto-cloning_lobby-arenas-count"
+# Setting this to true results to new cloned arenas being provided once arenas in LOBBY state are full
+auto-cloning-lobby-arenas-exclude-full: false
+
+# Which modes (players per team) shall be provided for an arena type
+# Basically, you may auto assign certain players per team for cloned arenas
+# If a mode is not specified for an arena, that arena will only be cloned to the same player count
+# It only makes sense to have the same amount or less modes as specified within the "auto-cloning-lobby-arenas-count" config
+#
+# Left side: Arena picker (see https://s.marcely.de/mbww15). Define the arenas for which the modes apply to
+# Right side: The modes that shall be provided for the given arenas
+auto-clone-mode-types:
+  '[teams=4]':
+  - '3'
+  - '4'
+  '[teams=8]':
+  - '1'
+  - '2'
+
+# Amount of clones of an arena that may exist during the same time
+# Use -1 to not have any limit
+auto-cloning-max-per-arena: -1
+
+# The prefix which the newly created worlds shall have
+# It is not recommended to change this after auto-cloning has been enabled. Or better yet, keep this config as it is
+# It is very important that you understand that these worlds are being deleted automatically and that you may lose something when acting careless
+auto-cloning-world-prefix: MBedwars-autoclone-
+
+
+# ========== BED ==========
+
+# If this config is enabled, players can destroy the bed of their team
+ownbed-destroyable: false
+
+# Set the block that should be destroyed in a round
+bed-block: minecraft:white_bed
+
+# The plugin will automatically dye the beds to the corresponding team's color when enabled
+bed-block-dye: true
+
+# The itemspawner that'll be dropped when a player is destroying a bed
+bed-drops-type: gold
+
+# The amount of the materials that will be dropped once a player destroyed a bed (it'll take the material of the spawner by the config 'bed-drops-type')
+bed-drops-amount: 4
+
+# If it's possible to break the bed with TNT or other kinds of explosions (like a fireball, TNT Sheep etc.)
+bed-destroyableby-tnt: true
+
+# Enabling this config will it make so that players will not be able to break beds by hand
+# They then MUST use TNT or something that causes an explosion (like a fireball) to break it
+# Make sure "bed-destroyableby-tnt" is set to true, otherwise this config won't have any effect
+bed-onlydestroyablewith-tnt: false
+
+# Enabling this config will spawn a hologram above every living bed with the message of the config 'bed-hologram-message-alive'
+bed-hologram-enabled: true
+
+# The message which is being displayed as a hologram above the bed when it's not broken. 'bed-hologram-enabled' has to be enabled for this!
+# Placeholders: {teamcolor}, {team}, {heart}
+bed-hologram-message-alive: '{teamcolor}{team}'
+
+# Disabling this will cause that the player won't be able to interact with the bed block which you've placed during set-up
+# This will cause the 'You can only sleep at night' message to not appear
+bed-interactable: false
+
+
+# ========== SPAWNERS ==========
+
+# If this config is enabled, iron and gold will make particles once they spawn
+itemspawner-effect: true
+
+# If this config is enabled, iron and gold will make a sound when they spawn
+itemspawner-sound: true
+
+# If this config is enabled, all itemspawners will automatically center in the block you place them in.
+# Set this to false if you want to be able to set an exact position.
+itemspawner-auto-center: true
+
+# The height of the item spawner holograms
+spawnerhologram-height: 0.5
+
+# The animation speed of the item spawner holograms
+spawnerhologram-speed: 5
+
+# Enabling this will cause the holograms of the spawners that are located within the players base to get hidden
+# Use the config "upgrade-spawnsize" to specify the radius of the team spawn
+spawnerhologram-hide-playerbase: false
+
+# "Smart Item Sharing" is a system that causes dropped items to be shared between players equally
+# The vanilla minecraft system works by preferring one player while others don't obtain anything
+# This only works with items that itemspawners drop
+smart-item-sharing-enabled: true
+
+
+# ========== STATISTICS ==========
+
+# Display their statistics when they're writing /stats while they're inside an arena
+allowcommand-stats: true
+
+# Addition to "allowcommand-stats": Allow them to do that even when they're not in an arena
+allowcommand-stats-global: false
+
+# The statistic which the ranking order will be calculated by
+ranking-sortation: bedwars:wl
+
+# How frequently (in minutes) the rank of the player shall be calculated
+# Setting this to -1 will also completely disable the automatic calculation. You must use /bw tools recalcstats instead to update them
+recalculate-ranking-auto-period: 15
+
+# How should the playing time be displayed
+# Placeholders: {days}, {hours}, {minutes}, {seconds}. Will take them from the configs below
+display-counting-time: '{days} {hours} {minutes} {seconds}'
+
+# What it should insert for placeholders in "display-counting-time"
+display-counting-time-entry-days: '{value}d'
+display-counting-time-entry-hours: '{value}h'
+display-counting-time-entry-minutes: '{value}m'
+display-counting-time-entry-seconds: '{value}s'
+
+# If true, we will only insert the "display-counting-time-entry-*" placeholders when they're not equal to 0
+display-counting-time-entry-only-nonnull: true
+
+# Used to enable a system that prevents player from repeatedly obtaining stats by abusing the system
+# This includes playing a 1v1 with an alt and to make him leave immediately (whereby your main gets a win counted)
+# Additionally, it stops counting kills for players likely to using multiple accounts to artificially boost their kills count
+stats-antiabuse-enabled: true
+
+# See "stats-antiabuse-enabled" to enable this feature and what it is about
+# With the ones in the following in particular, stats don't get counted if the past x rounds were won within y minutes
+stats-antiabuse-count-round-min-duration: 5.0
+stats-antiabuse-count-wins-count: 2
+
+# See "stats-antiabuse-enabled" to enable this feature and what it is about
+# With the ones in the following in particular, stats don't get counted if a player's past x kills occurred against the same team within y minutes
+stats-antiabuse-count-kills-min-duration: 1.0
+stats-antiabuse-count-kills-count: 3
+
+
+# ========== BLOCK BREAK/PLACE ==========
+
+# What should happen with weird/unusual block drops
+# (like web that drops string or ender chests that drop obsidian)
+# Possible options:
+#  - KEEP = Don't change the drops
+#  - REPLACE_WITH_BLOCK_MATERIAL = Replace the drops with the broken block
+#  - REMOVE = Remove the drops completely, so that they drop nothing at all
+unusual-blockdrops-handling: REPLACE_WITH_BLOCK_MATERIAL
+
+# Setting this to false cancels block spreading, this includes e.g.:
+# - Fire spreading / Fire breaking blocks. It does not prevent fire from existing in the first place
+# - Mushrooms spreading
+block-spreading-enabled: false
+
+# Setting this to false cancels block forming, this includes e.g.:
+# - Snow forming due to a snow storm (this may even happen even if no-rain is enabled)
+# - Ice forming in a snowy Biome like Taiga or Tundra
+# - Obsidian / Cobblestone forming due to contact with water
+# - Concrete forming due to mixing of concrete powder and water
+block-forming-enabled: false
+
+# If this config is enabled, leaves will not decay inside arenas
+prevent-leaves-decay: true
+
+# If this config is disabled, the configs which start with 'notbuildableradius-' won't work
+notbuildableradius-enabled: false
+
+# The radius in which players aren't to place/break blocks around shops and upgrade shops (0 = disable)
+notbuildableradius-dealers: 3
+
+# The radius in which players aren't to place/break blocks at team spawnpoints (0 = disable)
+notbuildableradius-teamspawn: 3
+
+# The radius in which players aren't to place/break blocks at itemspawners (0 = disable)
+notbuildableradius-itemspawner: 3
+
+# Prevents water from flowing into the notbuildableradius
+notbuildableradius-permit-block-liquidflow: true
+
+# If this config is enabled, and a player is buying for example wool, the wool will be dyed to his team-color
+dye-block: true
+
+# If enabled, blocks will be redyed to a teams color when they are picked up.
+# Note: This has no effect if "dye-block" is disabled.
+redye-blocks-onpickup: true
+
+# By default (this config set to true), only specific block materials are placeable. This includes the ones available in the shop.
+# You may add your own ones to the whitelist using the "placeableblock-whitelist" config.
+# However, you can completely disable the whitelist by setting this config to false. By this all materials become breakable & placeable.
+# Keep in mind that non-material related configs, such as "destroyblock-builtbyplayers", can still have an effect on limiting the blocks that are breakable.
+placeableblock-whitelist-enabled: true
+
+# In this config you're able to add blocks that players can place
+# Purchasable blocks are automatically in this list
+# Example: placeableblock-whitelist: wood, dark_oak_door, cake
+placeableblock-whitelist: []
+
+# If this config is disabled, players can't trample on wheat anymore
+destroyable-farmland: true
+
+# Players will be able to extinguish fire by left clicking on it
+destroyable-fire: true
+
+# This config will cause players to only be able to destroy blocks which have been placed by other players in the arena.
+# By which it's not possible to break the arena.
+destroyblock-builtbyplayers: true
+
+# Whether hanging entities (like paintings, item frames, leashes, etc.) are interactable and breakable
+# See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Hanging.html "All Known Subinterfaces" for what counts as hanging
+hanging-interactable: false
+
+# If this config is enabled, floor foliage (flowers, grass, saplings, ...) won't get in the way of players (during pvp)
+# This means that restrictions for destruction of foliage will be lifted and they won't drop anything
+floor-foliage-simplified-destruction: true
+
+
+# ========== EXPLOSIVES ==========
+
+# TNT will get ignited automatically on place
+tnt-autoignite: true
+
+# The time in seconds until the auto-ignited TNT explodes
+# It's not recommended to modify the value too much as it might break the animation
+# Requires tnt-autoignite to be enabled
+tnt-fuse-time: 3.0
+
+# The yield/size of the explosion that the auto-ignited TNT will cause
+# Requires tnt-autoignite to be enabled
+tnt-yield: 4.0
+
+# Explosions won't break any blocks if this config is disabled
+explosion-canbreakblocks: true
+
+# If this config is enabled then explosions will only break blocks placed by players
+# Make sure to also set "explosion-canbreakblocks" to true, otherwise this config won't have any effect
+explosion-canbreakblocks-breakby-player: true
+
+# Inter alia these blocks won't get broken by tnt or creepers
+explosion-blocks-blacklist: []
+
+# Entities that will not take damage from explosions
+explosion-entities-blacklist:
+- ITEM_FRAME
+
+# Increasing this value will increase how far the player will get pushed away from explosives such as TNT, but excluding fireballs
+# It works by multiplying the velocity at the given axis with the value configured below
+# You may configure the knockback for the xz-axis and the y-axis
+# 0 = No knockback | 1 = Default | 2 = Knockback 2x greater | 3.5 = Knockback 3.5x greater | ...
+explosive-multiplier-knockback-y: 0.9
+explosive-multiplier-knockback-xz: 1.2
+
+# This amount is being added to the velocity at the y axis before it is being multiplied with the values above
+# 0 is the default vanilla value
+explosive-add-knockback-y: 0.8
+
+# The velocity at the given axis are being limited to the value configured below
+explosive-max-knockback-y: 2.0
+
+# Increasing this value will increase the amount of the damage players will get from explosives such as tnt
+explosive-multiplier-damage: 0.1
+
+# Increasing this value will increase how far the player will get pushed away from a fireball
+# It works by multiplying the velocity at the given axis with the value configured below
+# You may configure the knockback for the xz-axis and the y-axis
+# 0 = No knockback | 1 = Vanilla | 2 = Knockback 2x greater | 3.5 = Knockback 3.5x greater | ...
+fireball-multiplier-knockback-y: 0.9
+fireball-multiplier-knockback-xz: 1.2
+
+# This amount is being added to the velocity at the y axis before it is being multiplied with the values above
+# 0 is the default vanilla value
+fireball-add-knockback-y: 0.8
+
+# The velocity at the given axis are being limited to the value configured below
+fireball-max-knockback-y: 2.0
+
+# Specify a custom knockback multiplier dealt to enemies at all xyz-axis
+# The fireball_*_knockback_* configs from above are only applied if the shooter hits himself (fireball jumping)
+# If you want to have enemies and shooters to have the same knockback, set this to 0.0
+fireball-multiplier-knockback-enemy: 1.3
+
+# The multiplied amount of damage the shooter will take when he hits himself with the fireball he shot
+# 1 = vanilla, 0 = none, 2 = 2x damage
+fireball-multiplier-damage: 0.1
+
+# The multiplied amount of damage enemies will receive when hit by a fireball
+# 1 = vanilla, 0 = none, 2 = 2x damage
+fireball-multiplier-damage-enemies: 0.3
+
+# Configure whether or not the fireball shall fly straight
+fireball-fly-straight: true
+
+# This config defines the fly speed of a fireball
+# Setting this config too low can cause an error. Default is 1.0
+fireball-fly-speed: 2.0
+
+# If this config is enabled, the fireball is gonna fly at a constant speed
+# With this disabled, the fireball will accelerate over time as how it is in vanilla
+fireball-fly-speed-constant: true
+
+# The yield/size of the explosion that the fireball will cause
+fireball-yield: 3.5
+
+# If set to true, players using the fireball while in air and looking down will cause the fireball to ignite immediately
+# With that, they may basically perform double jumps
+fireball-air-jump: false
+
+# The amount of ticks after usage until the fireball ignites
+# This config is only relevant when "fireball-air-jump" is enabled
+fireball-air-jump-ticks: 3
+
+# Affects configs: explosion-blocks-blacklist, tnt-canbreakblocks-breakby-player
+# Setting this to true will allow only affected blocks to be destroyed by explosions (fireball, tnt), and not blocks covered by blast-proof blocks
+# Illustration: [D][O]  X
+# X is the explosion, [D] is a regular block and [O] is blast-proof. There is a chance [D] will be destroyed when this config set to false
+# This config requires additional complex math and may cause lag
+explosion-raycheck: true
+
+# If this config is enabled, the explosives (TNT, Fireball etc.) will destroy nearby items
+explosion-destroys-items: false
+
+
+# ========== DEATH ==========
+
+# If this config is enabled, particles will be created at the location a player dies
+particles-ondeath: true
+
+# Tries to not to display the "You died!" screen when enabled
+# Enhanced support for 1.15+: Screen will be skipped altogether
+# There is a super short flicker on 1.14 and older due to technical limitations
+death-skipscreen: true
+
+# Players will enter the spectator mode for a short time when they die
+death-spectate-enabled: true
+
+# Whether or not players should stay where they are when they die to spectate, or go to the spectator spawn point
+death-spectate-at-death-location: true
+
+# Addition to the "death-spectate-enabled" config:
+# Configure how long the player shall stay as a spectator
+death-spectate-time: 5
+
+# Will display the "respawn in" message as a title and not above the hotbar
+death-spectate-respawnmsg-astitle: true
+
+# Define the amount of seconds respawn players won't be able to take damage from enemies after respawning
+# In case the respawned player attempts to attack, the respawn protection will be removed immediately
+# 0 or less disables the respawn protection
+respawn-protection: 0
+
+# When enabled: Players will instantly die when they touch water
+diein-water: false
+
+# Define what method should be used to determine when a player shall be auto-killed when he is falling out of the arena
+# Possible options are:
+# - DISABLED: He will slowly earn damage as known from vanilla
+# - BOTTOM_ARENA_BORDER: The player will die when he reaches the bottom of the arena
+# - VOID: The player will die when he obtains void damage (-70 blocks below world end)
+# - Y_LEVEL: The player will die when he reaches a certain y level (see config "diein-boundary-y-level")
+diein-boundary-method: BOTTOM_ARENA_BORDER
+
+# The y level at which a player will die
+# This config is only relevant when "diein-boundary-method" is set to Y_LEVEL
+diein-boundary-y-level: 0
+
+# No items and exp will be dropped in case a player dies during a match
+# Note: This config has no effect in case "drop-only-itemspawner" is active
+no-drops: true
+
+# Players will only drop the spawner items that they were previously carrying
+# Experience will be dropped as well, in case he has any
+# This config has a greater priority than the "no-drops" config
+drop-only-itemspawner: true
+
+# Killers will automatically pick up the drops of their victims when enabled
+# If there is no killer, no items and exp will drop at all
+drops-killer-auto-pickup: false
+
+# If a player dies in the void shortly after their bed is destroyed, their death is rewarded as a kill to the bed destroyer
+# The time is defined by the config "rage-quit-auto-detect"
+reward-recent-deaths-to-bed-destroyer: true
+
+# If a player leaves to try and prevent a damager from getting a kill, the damager will get the kill anyway
+# This config will also detect if a player leaves after a bed is destroyed, and rewards the kill to the bed destroyer
+rage-quit-auto-detect: true
+
+# The time in seconds after getting damaged / his bed destroyed in which a player is considered to have rage quit, in case he leaves
+# This config is only relevant when "rage-quit-auto-detect" is enabled
+rage-quit-auto-detect-max-time: 15
+
+
+# ========== DEATH MESSAGE ==========
+
+# It'll completely remove the deathmessage. Any other 'deathmessage-*' won't have any affect if enabled!
+deathmessage-remove: false
+
+# If this config is enabled, death-messages by playing players won't be visible for players who aren't playing
+deathmessage-private: true
+
+# If this config is enabled, death-messages will be changed
+deathmessage-custom-enabled: true
+
+# How the custom deathmessages has to look like
+# Placeholder: {player}, {killer}, {team}, {teamcolor}, {killerteam}, {killerteamcolor}, {heartpercent} (0-100), {heartvisibleamount} (0-10), {heartamount} (0-20)
+deathmessage-custom-killed:
+- '&b%DeathMessage_Killed_1%'
+- '&b%DeathMessage_Killed_2%'
+- '&b%DeathMessage_Killed_3%'
+
+# Placeholder for any of these: {player}, {team}, {teamcolor}
+deathmessage-custom-void:
+- '&b%DeathMessage_Void_1%'
+- '&b%DeathMessage_Void_2%'
+deathmessage-custom-explosion:
+- '&b%DeathMessage_Explosion_1%'
+- '&b%DeathMessage_Explosion_2%'
+deathmessage-custom-fall:
+- '&b%DeathMessage_Fall_1%'
+- '&b%DeathMessage_Fall_2%'
+deathmessage-custom-fire:
+- '&b%DeathMessage_Fire_1%'
+- '&b%DeathMessage_Fire_2%'
+deathmessage-custom-default:
+- '&b%DeathMessage_Default_1%'
+
+
+# ========== PRIZE ==========
+
+# If this config is enabled prizes will be given to the winners & losers
+prize-enabled: false
+
+# The command that'll be executed for every player who wins a round
+# Uses also vault to identify if he earned money and will send him a message with the amount
+# Arguments: {name}, {uuid}
+prize-commands:
+- eco give {name} 15
+
+# The command that'll be executed for every player who loses a round
+# Arguments: {name}, {uuid}
+prize-loser-commands:
+- eco give {name} 5
+
+
+# ========== PERFORMANCE ==========
+
+# This config essentially allows you to regulate how often you want stuff to get updated
+# It has slight effect on gameplay, thus at least "Normal" is recommended for the best experience
+#
+# Options:
+#  - Very_Low: Animations will look worse but performance will be better
+#  - Low
+#  - Normal: Looking good and not having to sacrifice too much performance
+#  - High
+#  - Ultra: Animations will look great but might decrease performance
+#
+# Things it's affecting:
+#  - Animation fluency of itemspawner holograms
+#  - Animation fluency of expbar in lobby
+#  - Frequency of border getting updated/displayed
+#  - Frequency of upgrade's base effects getting updated
+#  - Frequency of enemies getting checked for entering traps
+performance: Normal
+
+# Change the regeneration speed of an arena
+# Only works for arenas who have region as the regeneration type
+# The value basically defines the percentage of a tick that'll be used to process it
+# 100% will consume the whole tick and by that cause lags. 1% won't cause any lag, but it'll take way longer for it to finish
+regeneration-speed-percentage: 15.0
+
+# How many arenas can get regenerated at the same time
+# The arena is getting added to a queue when the configured amount gets reached
+# World arenas always get regenerated at once to avoid the server from freezing -> this config only has effect on region arenas
+regeneration-amount-at-the-same-time: 2
+
+# Use a more optimized regenerator for region arenas
+# With this, we have noticed an ~40x improvement in the regeneration speed for larger arenas
+# Note that it will still use the legacy way for older stored region files. You will be warned in the console in that case
+regeneration-region-efficient: true
+
+# Also store and regenerate biomes for region arenas (1.15+ only)
+# !! Regeneration time increases by 30 times with this enabled!
+# Note that you must save the blocks again after you enabled this (/mbedwars arena saveblocks <arena>)
+# You may use "/mbedwars arena saveblocks *" (keep the star) to execute this automatically for all of your arenas
+# Also note that you must save the blocks again after you disabled this, otherwise you won't notice a difference for the arenas with biomes included
+regeneration-region-store-biomes: false
+
+# [Experimental] Cloned worlds usually their auto-save disabled for improved performance
+# On modern paper this may cause memory leaks due to their chunk system rewrite (called Sunrise)
+# With 1.19 - 1.21.3, auto-save is always enabled to avoid such memory leaks
+# With 1.21.4+, this config attempts to disable auto-save again by applying hacks to fix the memory leaks
+# Keep this config set to true if you are OK with helping us out in case memory leaks occur
+# If you just want to have a stable server, set this to false
+regeneration-disable-autosave-modern-paper: false
+
+# Will store & regenerate worlds using the SlimeWorldManager when enabled.
+# SlimeWorldManager does not have to be faster than our format. You might want to test between region, world and swm and check what fits you the best.
+# Only works for arenas whose type is "world". You can check whether or not an arena is using the format using "/bw arena info <arena name>".
+# Make sure that the world is already loaded by SWM, otherwise the plugin will keep it in our format.
+# Furthermore, disabling SlimeWorldManager causes arenas that currently are in use of the format to break.
+# To migrate to or from the format use "/bw arena saveblocks <arena name>". Make sure that your arena is clean, you might want to run "/bw arena regenerate <arena name>" beforehand.
+slimeworldmanager-enabled: true
+
+# A border at the corner of region arenas will be displayed if this config is enabled
+border: true
+
+# Define whether you want to use an alternative border renderer that uses a lot less traffic
+# The disadvantage is that it won't look as pretty
+# "border" must be set to true for this to function in the first place
+border-efficent-alternative: false
+
+
+# ========== INGAME/ROUND TIMER ==========
+
+# If this config is enabled then an arena will automatically stop after a countdown has stopped
+timer-enabled: true
+
+# The amount of time until an arena will end by itself (in seconds)
+timer: 1800
+
+
+# ========== SPECTATING ==========
+
+# If this config is enabled, people who aren't playing can spectate a running game
+spectating: true
+
+# Dead players will automatically enter the spectator mode if this config is enabled
+spectator-autojoin: true
+
+# The types of speed that the player can choose with the ChangeSpeed item
+# Each type should be build like this: <name>:<speed>
+# The default speed is 1, the max value is 10
+spectator-changespeed-types:
+- '&21:1.0'
+- '&a2:1.5'
+- '&63:2.0'
+- '&c4:2.5'
+- '&45:3.0'
+
+# If this config is disabled, players will not see the teleporter GUI when they are in death spectate
+spectator-tp-gui-visible-on-death-spectate: true
+
+# If spectators should have the night vision effect
+spectator-nightvision: false
+
+# With this config enabled, spectators may right click ingame players/entities to spectate within their POV
+spectator-permit-other-player-view: true
+
+# If this config is enabled, spectators may not surpass the arena's border
+# This only has an effect for region arenas. Even with this disabled, they will be restricted by the world's min and max height to avoid complications
+# Generally, you don't want to disable this, unless you are certain there is only a single arena in the world and otherwise its all void
+spectator-restricted-by-border: true
+
+
+# ========== SPECIAL ITEMS ==========
+
+# If this config is enabled, players won't be able to buy special items, unless they're allowed to buy them.
+# The permission for each special item is: mbedwars.specialitem.<special item id>
+# List of IDs: https://s.marcely.de/mbww3
+specialitem-requiredpermission: false
+
+# The material of the item for each special item
+teleporter-item: gunpowder
+minishop-item: villager_spawn_egg
+rescueplatform-item: slime_block
+tntsheep-item: sheep_spawn_egg
+magneticshoes-item: chainmail_boots
+trap-item: stone_pressure_plate
+bridge-item: blue_dye
+guarddog-item: wolf_spawn_egg
+fireball-item: fire_charge
+magic-milk-item: milk_bucket
+
+# If this config is enabled, players will have to wait a few seconds until they will be teleported
+teleporter-countdown-enabled: true
+
+# The time the player will have to wait until he will be teleported (in seconds)
+teleporter-countdown: 5
+
+# The speed of the MiniShop
+minishop-speed: 0.2
+
+# The time in seconds until the MiniShop will disappear
+minishop-existence-time: 20
+
+# The width of the rescue platform
+rescueplatform-width: 2
+
+# The material that will be placed when using the rescue platform
+rescueplatform-material: minecraft:slime_block
+
+# If players should take damage when landing on the rescue platform
+rescueplatform-nodamage: true
+
+# If the rescue platform should get destroyed automatically after a specified time
+rescueplatform-autobreak-enabled: false
+
+# The time in seconds when the rescue platform should get destroyed
+rescueplatform-autobreak-time: 10
+
+# The difference in the y-coordinate between the player and the spawning rescue platform
+# It's recommended to have it at least at -2, otherwise it's likely that the player won't reach it
+rescueplatform-y-difference: -2
+
+# The speed of the TNT Sheep
+tntsheep-speed: 0.33
+
+# Adjusts the damage dealt by a TNT Sheep
+tntsheep-damage-multiplier: 1.0
+
+# The time in seconds until the TNT on the TNT sheep explodes
+# It's not recommended to modify the value too much as it might break the animation
+tntsheep-fuse-time: 5.0
+
+# The maximum length of the bridge
+bridge-maxlength: 16
+
+# Whether or not the player actually needs "bridge-material" in his inventory to build a bridge
+# Setting this to false will also cause them to not be taken from the inventory
+bridge-needsmaterials: true
+
+# The material that will be placed
+# It'll also take this block from the players' inventory when "bridge-needsmaterials" is enabled
+bridge-material: minecraft:white_terracotta
+
+# The time a player has to wait until he can use the tracker again (0 = instantly)
+tracker-delay: 10.0
+
+# Specify here which potion effects the player shall gain after stepping on an enemy trap
+# Usage: <potion effect name>:<duration in ticks (20 ticks = 1 sec):<level>
+effects-given-on-trap-trigger:
+- SLOW:160:3
+- BLINDNESS:80:2
+
+# Wether traps are resistant to explosions or not
+traps-resistant-to-explosions: false
+
+# The entitytype of the guarddog
+# Full list of types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+guarddog-type: WOLF
+
+# The amount of health with which the guarddog will spawn
+guarddog-health: 20
+
+# If this is true, guard dogs will remain around it's team's bed to fight off enemies
+guarddog-stay-at-base: true
+
+# If this is true, guard dogs won't take damage from teammates
+guarddog-prevent-team-damage: true
+
+# Can be used to increase, or decrease the damage dealt by guard dogs
+guarddog-damage-multiplier: 1.0
+
+# How many seconds a guard dog will live for. Set to -1 to make them live forever (until killed by a player).
+guarddog-alive-duration: -1
+
+# The text displayed over a guard dog's head when a player looks at them
+# Placeholders: {team-color} {team} {seconds-lived} {seconds-left}
+guarddog-display-name: ''
+
+# Set how long magic milk lasts
+magic-milk-duration: 25
+
+
+# ========== GUIS ==========
+
+# The material of each team in the select team gui
+gui-selectteam-teammaterial: white_wool
+
+# The order in which teams will display on the team select GUI
+gui-selectteam-sortation: []
+
+# The lore lines of each team material in the select team gui
+# Placeholders: {eachplayer}, {players}, {allplayers}, {maxplayers}, {teams}, {maxplayersperteam}
+gui-selectteam-teammaterial-lore:
+- '&7%Members%:'
+- '{eachplayer}'
+
+# Same as the "gui-selectteam-teammaterial-lore" config, only that this one is being disabled when there are no members in the team
+gui-selectteam-teammaterial-lore-empty:
+- '&7%No_Members%'
+
+# The {eachplayer} placeholder for the config gui-selectteam-teammaterial-lore
+# Adds new lines between the original line that included the {eachplayer} placeholder for each member of the team
+# Placeholders: {name}
+gui-selectteam-teammaterial-lore-eachplayer: '&7- &f{name}'
+
+# The background material in the select team gui
+gui-selectteam-backgroundmaterial: air
+
+# If the select team gui should be centered
+gui-selectteam-centered: true
+
+# The text that will be used for the items within the achievements GUI, varying between if the achievements has been earned or not
+# Available placeholders: {name}, {description}, {earn-date}
+gui-achievements-text-unearned:
+- '&c{name}'
+- ' &7&l????'
+gui-achievements-text-earned:
+- '&a{name}'
+- ' &f{description}'
+- ''
+- '&7&o{earn-date}'
+
+# The materials that will be used in the achievements GUI, varying between if the achievements has been earned or not
+gui-achievements-material-unearned: gray_dye
+gui-achievements-material-earned: lime_dye
+
+# The background material in the achievements gui
+gui-achievements-backgroundmaterial: air
+
+# If the achievements gui should be centered
+gui-achievements-centered: false
+
+# The background material in the spectator teleport gui
+gui-spectatortp-backgroundmaterial: air
+
+# If the spectator teleport gui should be centered
+gui-spectatortp-centered: false
+
+
+# ========== CUSTOM MOTD ==========
+
+# If this config is enabled, this plugin will change the motd
+motd-enabled: false
+
+# Type in here the name of your arena to make more multiple placeholders possible
+motd-arena: ''
+
+# How the motd has to look like (motd-enabled has to be true)
+# Placeholders: {arena}, {players}, {maxplayers}, {status}, {statusname}
+motd-line1: '&bBedwars &3{arena} {status}'
+motd-line2: '{players}/{maxplayers}'
+
+
+# ========== SIGN ==========
+
+# Configurations for the antispam at a sign you can create with "/bw spawn joinarenasign <arena>"
+sign-antispam-enabled: true
+sign-antispam-delay: 1.0
+
+# The text of the lines by the sign you can create with "/bw spawn joinarenasign <arena>"
+# Placeholders: {arena}, {status}, {players}, {maxplayers}, {teams}, {teamsize}
+sign-line1: '&9{arena}'
+sign-line2: '&7------------------'
+sign-line3: '{status}'
+sign-line4: '&e{players}&7 / &e{maxplayers}'
+
+# A block will be placed under each sign with the material of 'signblock-material' and the color of 'signblock-color-*' if this config is enabled
+signblock-enabled: false
+
+# The material of the block
+signblock-material: minecraft:white_terracotta
+
+# The color of the block at the specific states
+signblock-color-stopped: RED
+signblock-color-lobby: YELLOW
+signblock-color-running: ORANGE
+signblock-color-reseting: RED
+
+# The text of the lines of the stats sign which you can create with "/bw spawn rankingsign <place>"
+# Placeholders: {player}, {rank}, {kd}, {wl}, {winstreak}, {wins}, {loses}, {kills}, {deaths}, {bedsdestroyed}, {roundsplayed}, {playtime}, {finalkills}
+statssign-line1: '&8&m--&r &8#{rank} &8&m--'
+statssign-line2: '&l{player}'
+statssign-line3: '&c&l{wl}'
+statssign-line4: W/L
+
+
+# ========== SCOREBOARD ==========
+
+# If this config is disabled, players aren't getting a scoreboard (black box at the right from their screen)
+scoreboard-enabled: true
+
+# The look of the heart on the scoreboard during different team states
+# The placeholder is available as {heart} in the eachteam line of the scoreboard
+# Placeholders: {playersremaining}
+scoreboard-heart-alive: '&c❤'
+scoreboard-heart-bed-gone: '&c{playersremaining}'
+scoreboard-heart-dead: '&7❤'
+
+# This placeholder is available as {team-indicator} in the eachtime line of the scoreboard. 
+# Can be used to indicate the players team
+scoreboard-team-indicator-placeholder: '&7You'
+
+# Whether the ingame scoreboard should display empty teams or not
+scoreboard-ingame-display-emptyteams: false
+
+# The order in which teams will display on the scoreboard
+eachteam-sortation:
+- RED
+- BLUE
+- LIGHT_GREEN
+- YELLOW
+- CYAN
+- WHITE
+- PINK
+- GRAY
+
+
+# ========== CHAT ==========
+
+# If this config is enabled, every title-message will be sent to the player in the chat
+# Read more about titles right here: http://minecraft.gamepedia.com/Commands#title
+title-inchat: false
+
+# Bukkit plugins listen to so called "events". The order of each plugin is determined by priorities.
+# This config changes the priority in which the plugin listens to the chat event.
+# You may choose between the priorities: LOWEST, LOW, NORMAL, HIGH, HIGHEST, MONITOR (not recommended)
+# LOWEST gets called first, MONITOR the last.
+# If you aren't having any conflicts with other plugin (because your e.g. not using a chat plugin), then you should leave this config as it is.
+chat-event-listener-priority: HIGH
+
+# If this config is enabled, player will have to write <teamchat-public-prefix> to write with other teams
+# The chat prefix will get disabled if there is only one person on the team
+teamchat-enabled: true
+
+# What prefix players have to write before their message to chat with other teams
+# Examples:
+# Hello mates - only visible for team mates
+# @hello others! - visible for everyone
+teamchat-public-prefix: '@'
+
+# The prefix that will be added to the message to make the people know that he's writing globally
+# With "customchatmessage-enabled" set to true: Replaces {public-prefix} placeholder with this one (allowing you to add it anywhere in the message)
+# It being set to false: Adds this behind the message written
+teamchat-public-prefix-msg: '&7[ALL] '
+
+# Whenever a player sends a message, the plugin is going to hint them once every few days on how write globally
+# The messages that will get send are "TeamChat_Enabled_Hint" and "TeamChat_Disabled_Solo_Hint" (found in the messages file)
+teamchat-hint-enabled: true
+
+# If this config is enabled, chat-messages are getting changed as specified at customchatmessage-message
+customchatmessage-enabled: false
+
+# Change the chat-messages (customchatmessage-enabled has to be enabled for this)
+# You may use PlaceholderAPI placeholders as well. Note that not all may work due to the chat being an async operation.
+# We'd recommend to just use the following placeholders:
+#  - {teamcolor} - The color code of the player's team
+#  - {public-prefix} - The value of "teamchat-public-prefix-msg" if he wrote globally or empty
+#  - {team} - The name of the player's team
+#  - {team-initials} - The initials of the player's team
+#  - {chat} - Whatever would have been shown before MBedwars would change it (Contains everything, such as the player's name, the message, etc.)
+#  - {essentialsgroupmanager} - Players group (Requires EssentialsGroupManager)
+#  - {name} - The display name of the player
+#  - {message} - The message that has been written
+customchatmessage-message: '{public-prefix}&7[{teamcolor}{team}&7] &f{chat}'
+
+# Same as "customchatmessage-message", but while the arena is in the lobby state
+# Use "EQUALLY" to use the same message as ingame
+customchatmessage-message-lobby: EQUALLY
+
+# What should be used for the {team} placeholder if the player isn't in a team
+customchatmessage-message-placeholder-team-none: /
+
+# What should be used for the {teamcolor} placeholder if the player isn't in a team
+customchatmessage-message-placeholder-teamcolor-none: '&c'
+
+# If this config is enabled, custom-chat-messages are only getting changed for playing players
+customchatmessage-onlyfor-players: true
+
+# If this config is enabled, chat-messages by an spectator are getting changed as specified at customchatmessage-message
+# Affects even without "customchatmessage-enabled" being enabled
+customchatmessage-spectator-enabled: true
+
+# If this config is disabled, chat-messages by an spectator will only be visible for other spectators
+customchatmessage-spectator-public: false
+
+# Change the chat-messages by a spectator (customchatmessage-spectator-enabled has to be enabled for this)
+# You may use PlaceholderAPI placeholders as well. Note that not all may work due to the chat being an async operation.
+# We'd recommend to just use the following placeholders:
+#  - {chat} - Whatever would have been shown before MBedwars would change it (Contains everything, such as the player's name, the message, etc.)
+#  - {essentialsgroupmanager} - Players group (Requires EssentialsGroupManager)
+#  - {name} - The display name of the player
+#  - {message} - The message that has been written
+customchatmessage-spectator-message: '&7<Spectator> &f{chat}'
+
+# If this config is enabled, messages by players who aren't playing won't be visible for players who are playing
+chat-others-unvisible: false
+
+# If enabled then messages by playing players will be hidden for players who aren't playing (except spectators) in the same arena
+chat-playing-private: false
+
+
+# ========== HOLOGRAMS & ENTITY TYPES ==========
+
+# The name of the dealer you can spawn with "/bw spawn dealer" or within "/bw arena setupgui"
+# It's possible to have multiple lines by simply splitting the lines through a \n
+# Note that "/bw reload" won't have any effect. You must restart your server after a change
+dealer-title: '&eDEALER'
+upgradedealer-title: '&6UPGRADES'
+
+# Allow players to left click on the dealer to open the shop, by default only right click is permitted.
+# This is always enabled for bedrock players for compatibility reasons.
+dealer-left-click-openshop: false
+
+# Whether or not it should open the shop when you click on a villager that you didn't spawn with "/bw spawn dealer"
+villager-interact-openshop: true
+
+# Run a command when you interact a villager that you did not spawn with "/bw spawn dealer". Leave it empty to disable
+# Placeholders: {player}, {playeruuid}, {entityid}
+villager-interact-runcommand: ''
+
+# True: The console will execute 'villager-interact-runcommand'
+# False: It'll act like if the player wrote the command
+villager-interact-runcommand-asop: false
+
+# You can change the hologram types for the dealer, hub and teamselect here.
+# Wiki entry: https://s.marcely.de/mbww4
+# You can choose between:
+#  - Villager
+#  - NPC[<UUID from owner of skin>]
+#  - NPC[self]
+#  - ArmorStand{<Parameters>}
+entitytype-dealer: Villager
+entitytype-arenasguistatue: Villager
+entitytype-teamselect: Villager
+entitytype-upgradedealer: Villager
+
+# The vertical spacing factor between the hologram title lines.
+# This applies to stats holos, dealers, spawners, and more.
+# Only available for 1.19.3 and older, since newer versions use display entities instead of armor stands
+hologram-title-vertical-spacings: 1.0
+
+
+# ========== PLACEHOLDERS ==========
+
+# This string will be used for the provided PAPI placeholders whenever the player is not inside an arena
+placeholderapi-not-inside-arena: ''
+
+# Create custom mode placeholders to how many players are in certain arenas
+# Example: Config -> 'bigArena: [teams=12]' PAPI Placeholder -> '%mbedwars_players-in-mode-bigArena%'
+# Read more about arena pickers: https://s.marcely.de/mbww15
+player-picker-placeholder:
+  all: '[]'
+  quads: '[players_per_team=4]'
+  doubles: '[players_per_team=2]'
+  trios: '[players_per_team=3]'
+  solos: '[players_per_team=1]'
+
+# Create custom mode placeholders to how many players are in certain arenas
+# Example: Config -> 'bigArena: [teams=12]' PAPI Placeholder -> '%mbedwars_players-in-mode-bigArena%'
+# Read more about arena pickers: https://s.marcely.de/mbww15
+# The format of the dates which are being used
+dateformat: dd.MM.yyyy
+
+# The value that %mbedwars_playerarena-current-team-color% returns if a player does not have a team
+placeholderapi-no-team-color: ''
+
+# How player names should be formatted throughout the plugin
+# AUTO - Returns the player nick if one exists, otherwise returns the player's name
+# DISPLAY_NAME - Returns the player's display name
+# REAL_NAME - Returns the player's unformatted name
+players-public-displayed-name: AUTO
+
+# The ip for the placeholder {ip} in the scoreboard
+ip-display: anarchy.jsx.pm
+
+# Allows you to display all of the teams, in the current arena, in a horizontal line.
+# To use this feature, simply add this placeholder into the ingame scoreboard config file: {teamsleft}
+# Placeholders: {team}, {teamcolor} {playersremaining}
+scoreboard-ingame-teamsleft: '{teamcolor}▣'
+scoreboard-ingame-teamsleft-bed-gone: '{teamcolor}{playersremaining}'
+scoreboard-ingame-teamsleft-dead: '{teamcolor}X'
+
+
+# ========== PLUGIN: PvPLevels ==========
+
+# Enabling this will give players a specified amount of exp if they do something special like breaking a bed
+# Requires of course the plugin PvPLevels
+pvplevels-enabled: true
+
+# The amount of exp that'll be given for doing an event
+pvplevels-exp-win: 100
+pvplevels-exp-lose: 60
+pvplevels-exp-beddestroy: 20
+pvplevels-exp-killplayer: 5
+pvplevels-exp-killplayer-final: 7
+pvplevels-exp-killplayer-lastinteam: 8
+
+
+# ========== PLUGIN: DKCoins/NickAPI (Coins) ==========
+
+# Enabling this will give players a specified amount of coins if they do something special as breaking a bed
+# Obviously requires DKCoins or NickAPI installed
+coins-enabled: true
+
+# The amount of coins that'll be given for doing an event
+coins-give-win: 100
+coins-give-lose: 60
+coins-give-beddestroy: 20
+coins-give-killplayer: 5
+coins-give-killplayer-final: 7
+coins-give-killplayer-lastinteam: 8
+
+
+# ========== PLUGIN: Parties/PaF etc. ==========
+
+# Make members of a party follow their leader if he joins an arena
+# This is for any plugin that has a party system that is hooked into this plugin
+# See the wiki for more info: https://s.marcely.de/mbww18
+parties-member-follow-enabled: true
+
+
+# ========== AUTOMATIC JOIN ==========
+
+# If this config is enabled, people will automatically join an arena if they're joining the server.
+# IMPORTANT: It's NOT recommended to use this with BungeeCord. We recommend you to use the BungeeCord Addon!
+autojoin-enabled: false
+
+# Specify the arena they will enter (autojoin-enabled has to be enabled for this)
+# Did you enable "voting" and would like to make people automatically spectate the active match?
+# Or did you enable "voting" and would like to auto-start a new arena with your active Cloud System?
+# Then you might want to insert the following: %best_prefer_non_voting[status=3 | type="voting"]%
+# Read more about arena pickers: https://s.marcely.de/mbww15
+autojoin-arena: ''
+
+# Enable this if you don't actually want to make the player automatically join an arena,
+# but instead would like to only send him back using the below configs
+# If this config is set to true, then the config "autojoin-arena" has no use
+autojoin-only-send-back: false
+
+# Specify the way how the player should be send back.
+# You can choose between 'Kick', 'BungeeCord' and 'Nothing'.
+autojoin-way: Kick
+
+# Make sure to fill this if you chose BungeeCord above.
+# Remember: This won't work with the BungeeCord Add-On
+autojoin-way-bungeecord-lobby: name_of_lobby
+
+
+# ========== CLOUDSYSTEM ==========
+
+# If config is enabled, this plugin will send the arena data which has been specified in the config 'cloudsystem-arena' to the CloudSystem
+# Currently supported CloudSystems: CloudSystemIO, CaveCloud, CloudNetV2, CloudNetV3, TimoCloud, ReformCloud
+# Wiki page: https://s.marcely.de/mbww6
+cloudsystem-enabled: false
+
+# Specify here which arena should be send to the CloudSystem
+cloudsystem-arena: ''
+
+# What the extra field should be.
+# If the config does not have an extra field, the motd will be set with the extra.
+# You can choose between:
+#  - NONE
+#  - ARENA
+#  - TEAMS_X_TEAMPLAYERS
+cloudsystem-extra: ARENA
+
+
+# ========== STORAGE ==========
+
+# Define where exactly player-data (and some general data) shall be stored at
+# Viable options are:
+# - LOCAL
+# - MYSQL
+# - MARIADB
+# - MICROSOFT_SQL
+# - MONGODB
+# Note that you may always migrate using the "/bw tools migrate service" command
+storage-type: LOCAL
+
+# The settings of your SQL database
+sql-host: localhost
+sql-port: 3306
+sql-database: mbedwars
+sql-user: root
+sql-password: '123456'
+
+# Do not change it unless you actually know what you are doing. Things might break if you are not cautious
+# This config has no effect for MICROSOFT_SQL
+sql-parameters: ?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+
+# These configs are explicit to MICROSOFT_SQL
+sql-mssql-encrypt: true
+sql-mssql-integrated-security: false
+
+# The settings of your MongoDB database
+mongodb-host: localhost
+mongodb-port: 27017
+mongodb-use-ssl: false
+mongodb-database: mbedwars
+mongodb-authenticate: false
+mongodb-authdb: admin
+mongodb-user: root
+mongodb-password: '123456'

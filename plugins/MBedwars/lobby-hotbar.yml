@@ -1,0 +1,37 @@
+########################
+# Visit the wiki page for further info: https://s.marcely.de/mbww8
+########################
+
+view-achievements: # The unique id of this item. Is not bound to the type of the handler, just has to be unique from others.
+  name: '%Lobby_Item_Achievements%' # Will be shown when the player holds it on his hand / moves with his cursor over it
+  slot: 0 # The slot at which it's located at. Can go from 0 up to 8. 0 is the very left one.
+  handler: 'bedwars:view_achievements' # The handler of the item that determines what exactly happens when the item is being used.
+  item: 'nether_star' # The item stack that'll be placed at the given slot.
+
+select-team:
+  name: '%Lobby_Item_SelectTeam%'
+  slot: 1
+  handler: 'bedwars:select_team'
+  item: 'leather_boots'
+
+vote-arena:
+  name: '%Lobby_Item_VoteArena%'
+  slot: 1
+  handler: 'bedwars:vote_arena'
+  item: 'red_bed'
+
+force-start:
+  name: '%Lobby_Item_ForceStart%'
+  slot: 4
+  handler: 'bedwars:force_start'
+  item: 'clock'
+
+leave:
+  name: '%Lobby_Item_Leave%'
+  slot: 8
+  handler: 'bedwars:leave'
+  item: 'redstone'
+
+# You're able to add custom items by simply copy & pasting the existing ones
+# Only make sure that there aren't multiple items with the same id
+# Furthmore, you might want to check out the API for adding your custom handlers

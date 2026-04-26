@@ -1,0 +1,31 @@
+########################
+# Visit the wiki page for further info: https://s.marcely.de/mbww14
+########################
+
+view-players: # The unique id of this item. Is not bound to the type of the handler, just has to be unique from others.
+  name: '%Spectator_Item_Teleporter%' # Will be shown when the player holds it on his hand / moves with his cursor over it
+  slot: 0 # The slot at which it's located at. Can go from 0 up to 8. 0 is the very left one.
+  handler: 'bedwars:view_players' # The handler of the item that determines what exactly happens when the item is being used.
+  item: 'clock' # The item stack that'll be placed at the given slot.
+
+change-speed:
+  name: '%Spectator_Item_ChangeSpeed%'
+  slot: 1
+  handler: 'bedwars:change_speed'
+  item: 'arrow'
+
+change-arena:
+  name: '%Spectator_Item_NextRound%'
+  slot: 7
+  handler: 'bedwars:next_round'
+  item: 'oak_boat'
+
+leave:
+  name: '%Spectator_Item_Leave%'
+  slot: 8
+  handler: 'bedwars:leave'
+  item: 'redstone'
+
+# You're able to add custom items by simply copy & pasting the existing ones
+# Only make sure that there aren't multiple items with the same id
+# Furthmore, you might want to check out the API for adding your custom handlers

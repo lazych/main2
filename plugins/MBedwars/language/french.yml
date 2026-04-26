@@ -1,0 +1,950 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww11
+#########################
+
+
+
+###########################
+## Miscellaneous
+###########################
+prefix: '&3[Bedwars]'
+configurations_reload_start: '&aReload en cours !'
+configurations_reload_end: '&aLes configurations ont été rechargées après &2{time}
+  secondes'
+configurations_reload_alreadyloading: '&aLes configurations se rechargent déjà !'
+info_madeby: Crée par
+info_specialthanks: Remercîments
+info_website: Site web
+info_version: Version
+info_newestversion: Version la plus récente
+page: Page
+help: Aide
+team: Équipe
+none: rien
+unknown_page: '&cPage inconnue &4{page}'
+unknown_argument: '&cArgument inconnu &4{arg}'
+unknown_block: '&4Bloc inconnu &4{block}'
+unknown_place: '&4Place inconnue &4{place}'
+unknown_spawner: '&cSpawner inconnue &4{spawner}'
+version_new: '&aUne nouvelle version a été trouvée ! &2{version}'
+version_nonew: '&cAucune nouvelle version disponible !'
+error_occurred: '&cUne erreur est apparue !'
+error_occurred_syntax: '&cUne erreur de syntaxe est survenue : &6{message}'
+no_permissions: '&cVous n''avez pas les bonnes permissions !'
+no_permissions_specific: '&cMake sure that you either have the &4{perm} &cpermission
+  or OP'
+onlyas_player: '&cCela ne fonctionne seulement qu''en tant un joueur !'
+not_ingame: '&cVous n''êtes pas en jeu !'
+not_ingame_player: '&4{player}&c n''est pas dans une partie !'
+not_supported: '&cCeci n''est pas supporté pour votre version ! Mettez à jour à la
+  version &4{version} &cou plus'
+color_yellow: jaune
+color_orange: Orange
+color_red: rouge
+color_blue: bleu
+color_magenta: magenta
+color_lightblue: bleu clair
+color_cyan: cyan
+color_lightgreen: vert clair
+color_green: vert
+color_purple: violet
+color_pink: rose
+color_white: blanc
+color_lightgray: gris clair
+color_gray: gris
+color_brown: marron
+color_black: noir
+missing_worldeditpoints: '&cZone WorldEdit manquante !'
+saved_arena: '&aL''arène &2{arena}&a a été sauvegardé !'
+saved_bed: '&aÉquipe {colorcode}{color}&a dans l''arène &2{arena} &aest sauvegardé'
+bed_notinside_arena: '&cImpossible d''ajouter le lit car il n''y a pas d''arène à
+  cet endroit. Utilisez "/bw arena setcorners" ou "/bw arena setworld" pour le réaligner.'
+exists_arena: '&cL''arène &4{arena} &cest déjà existante !'
+spawner_bronze: bronze
+spawner_iron: fer
+spawner_iron_plural: Iron
+spawner_gold: or
+spawner_gold_plural: Gold
+spawner_diamond: Diamant
+spawner_diamond_plural: Diamonds
+spawner_emerald: Émeraude
+spawner_emerald_plural: Emeralds
+added_spawner: '&aLe spawner &2{spawnertype}&aa bien été ajouté sur l''arène &2{arena}!'
+specialblock_added: '&aAjout d''un bloc spécial de type &2{type}'
+specialblock_alreadyadded: '&cIl y a déjà un bloc de type &4{type}&c. Cassez-le pour
+  l''enlever'
+specialblock_removed: '&6Suppression du bloc spécial de type &e{type}'
+removed_spawners: Les &2{number} &aspawners ont été retirés de {arena} !
+start_round: '&aLa manche commence maintenant.'
+stop_round: '&aLa manche a été arrêtée.'
+kicked_player: '&aVous venez d''exclure &2{player} &ade &2{arena}'
+kicked_player_toplayer: '&cVous avez été exclu de la partie !'
+list_arenas: '&eArènes: &6'
+list_arenas_local: '&eArènes locales : &6'
+list_arenas_remote: '&cArènes distantes : &6'
+only_betamember: '&cVous n''êtes pas autorisé à rejoindre une partie de BedWars quand
+  celle ci est en bêta !'
+notavailable_color: '&cCouleur inconnue &4{color}'
+joinmessage_stopped: '&cCette arène est actuellement arrêtée!'
+joinmessage_reseting: '&cCette arène est actuellement en train de réinitialiser !'
+joinmessage_full: '&cCette arène est actuellement pleine !'
+joinmessage_running: '&cLa partie est déjà en cours !'
+joinmessage_alreadyinside: '&cVous êtes déjà dans une arène !'
+joinmessage: '&6{player}&e à rejoint la partie.'
+leavemessage: '&6{player}&e a quitté la partie.'
+notfound_player: '&4{player}&c n''a pas été trouvé !'
+notfound_arena: '&cIl n''y aucune arène du nom de &4{arena}&c !'
+notfound_arena_loading: '&6(L''arene est en train de charger)'
+notfound_arena_validpicker: '&cThere''s no arena matching the picker: &4{picker}'
+notfound_author: '&cIl n''y aucun auteur du nom de &4{author}&c !'
+get_bed: '&aVous avez le lit de {colorcode}{color}'
+getallbeds: '&aTous les lits de l''arène &2{arena}&a vous ont été donnés'
+countdown_start: '&6Le décompte commence !'
+countdown_stop: '&6Le décompte est arrêté !'
+countdown_counting: '&6La partie commence dans &e{number} &6secondes !'
+countdown_changed: '&6Le décompte à été changé à &e{number} &6secondes !'
+countdown_voting_counting: '&6Le vote pour une arène se fini dans &e{number} &6secondes
+  !'
+toofew_materials: '&cVous n''avez pas assez de matériaux pour acheter ceci !'
+no_inventory_space: '&cYour inventory is already full!'
+tooless_players: '&cIl n''y a pas assez de joueurs dans cette partie !'
+needmore_players_than: '&cVous avez besoin de plus de joueurs que &4{amount}&c !'
+win_money: '&6Vous avez gagné &e{number}$ !'
+player_notingameanymore: '&4{player}&c n''est plus en partie !'
+player_notfound: '&4{player}&c n''a pas été trouvé !'
+player_cheating: '&6{player} &ea été exclu parce qu''il a triché !'
+player_loosing: '&6{player} &e à perdu cette partie !'
+players: Joueurs
+team_won: '&eL''équipe {colorcode}{color}&e à gagné cette partie !'
+team_notaddedyet: '&cL''équipe {teamcolor}{team} &cn''a pas encore été ajoutée à l''arène
+  &4{arena}&c !'
+changeteam_full: '&7L''équipe {colorcode}{color}&7 est déjà pleine !'
+changeteam_alreadyinside: '&7Vous êtes déjà membre de l''équipe {colorcode}{color}&7
+  !'
+changeteam_changed: '&7Vous jouez maintenant dans l''équipe {colorcode}{color} &7'
+changeteam_none: '&7You left your team and will be assigned to a random one'
+changed_postitions: '&aLes positions ont été modifiées avec succès !'
+changed_lobbylocation: '&aLes coordonnés du lobby de l''arène &2{arena} &aont bien
+  été changé !'
+changed_teamspawn: '&aLa position d''apparition de l''équipe {colorcode}{color} &aa
+  été modifiée avec succès !'
+changed_arenaworld: '&aLe monde de l''arène &2{arena} &aa été changé en &2{world}'
+spawn_ranking: '&aUne statue de classement à la place&2 {place}&a a été créée avec
+  succès !'
+changed_gamedonelocation: '&aLa &2position du lobby&a à bien été changé !'
+insidearena_gamedonelocation:
+- '&cThe hub position is inside the arena &4{arena}&c!'
+- '&cPlace it somewhere else - namely where you are supposed to get teleported to
+  when you leave the match'
+stats_info_entry: '&7{name}: &b{value}'
+stat_default_rank: Rang
+stat_default_win_streak: Séries de victoires actuelles
+stat_default_top_win_streak: Meilleure série de victoires
+stat_default_won: Victoire
+stat_default_lost: Défaite
+stat_default_wl: W/L
+stat_default_roundsplayed: Parties jouées
+stat_default_kills: Éliminations
+stat_default_kill_streak: Série de meurtres en cours
+stat_default_top_kill_streak: Meilleure série d'éliminations
+stat_default_finalkills: Élimination Final
+stat_default_deaths: Morts
+stat_default_finaldeaths: Morts définitives
+stat_default_kd: K/D
+stat_default_final_kd: K/D Final
+stat_default_bedsdestroyed: Lits détruits
+stat_default_bedslost: Lits perdus
+stat_default_playtime: Temps joué
+destroyed_bed_title: ''
+destroyed_bed_subtitle: '&fLe lit de l''équipe {teamcolor}{team} &fa été détruit par
+  &7{player}&f !'
+destroyed_bed_subtitle_playerless: '{teamcolor}{team}&f''s bed has been destroyed!'
+destroyed_bed_own_title: ''
+destroyed_bed_own_subtitle: '&fVotre lit a été détruit par &7{player}&f !'
+destroyed_bed_chat: '%Prefix% %Destroyed_Bed_SubTitle%'
+destroyed_bed_chat_left: '%Prefix% {teamcolor}{team}&f''s bed has been destroyed as
+  they left the game.'
+destroyed_bed_chat_leftignoredrejoin: '%Prefix% {teamcolor}{team}&f''s bed has been
+  destroyed as they left and didn''t rejoin in time.'
+number_notone: '&4{number} &cn''est pas un nombre !'
+stats_by: Statistiques par {player}
+gui_achievements_title: '&6Succès'
+gui_selectteam_title: '&6Choisis ton équipe'
+gui_spectator_teleporter: '&eSe téléporter'
+gui_votearena_title: '&6Voter pour une arène'
+gui_votearena_votes: '&b{number} &3de votes'
+enabled_arena: '&aL''arène &2{arena} &aest actuellement &2activée !'
+disabled_arena: '&aL''arène &2{arena} est actuellement &2 désactivée !'
+disabling_gracefully_arena: '&eDésactivation du match en cour dans &6{arena} &egracieusement,
+  cela peut prendre un petit moment...'
+create_arena: '&aL''arène &2{arena} &aa bien été crée !'
+remove_arena: '&aL''arène &2{arena} &aa bien été supprimée !'
+usage: '&6Utilisation: &e{usage}'
+search_update: Recherche d'une mise à jour...
+offline_updateservice: Le service de mise à jour est probablement hors ligne !
+inwork_job: Ce travail est déjà en cours !
+newupdate: Une nouvelle mise à jour à été trouvée
+nonewupdate: Il n'y a actuellement aucune mise à jour pour ce plugin !
+arena_hastobestopped:
+- '&cL''arène &4{arena}&c doit être arrêtée !'
+- '&6Vous pouvez utiliser la commande suivante : &e{command}'
+arena_joinissue_worlddoesntexists: '&cL''arène &4{arena}&c a un problème : Le monde
+  n''existe pas !'
+fixproblemsbeforeenabled: '&cVeuillez corriger ces problèmes avant d''activer'
+use_trueorfalse: '&cUtilisez <true/false> !'
+reseting_now: '&2{arena} &a est en train d''être régénéré !'
+reseting_start_failed: '&cÉchec du démarrage de la régénération de l''arène &4{arena}'
+reseting_start_failed_alreadyrunning: '&cImpossible de démarrer le processus de régénération
+  de l''arène &4{arena}&c, un autre processus est déjà en cours d''exécution'
+locateplayer_notinarena: '&4{player} &cis online, but is not inside an arena.'
+locateplayer_inarena:
+- '&3======= &b{player} &3======='
+- '&2Server: &a{server}'
+- '&2Activity: &a{activity}'
+- '&2Arena: &a{arena}'
+- '&2Arena Status: &a{arena-status} ({arena-players}/{arena-max-players})'
+locateplayer_click_to_spectate: '&e&lClick here to spectate {player}'
+notsameworld_arena: '&cVous n''êtes pas dans le monde de l''arène &4{arena}&c (&4{world}&c)
+  !'
+problem_arena_world: '&cIl y a un problème avec le monde de l''arène &4{arena}&c !'
+fixproblemwith: '&eCorriger ce problème avec: &6'
+spawned_lobbyvillager: '&2Le LobbyVillager&a est bien apparus !'
+spawned_teamselectvillager: '&2Le Villageois du choix d''équipes &aest bien apparus
+  !'
+spawned_dealer: '&2Le Vendeur&a est bien apparus !'
+spawned_upgradedealer: '&2Le Vendeur d''amélioration&a est bien apparus !'
+notlooking_atsign: '&cVous ne regardez pas une pancarte !'
+notlooking_atplayerhead: '&cVous ne regardez pas la tête d''un joueur !'
+sign_lobby: '&eLobby'
+sign_running: '&6En cours'
+sign_stopped: '&cArrêté'
+sign_reseting: '&aRemise à zéro'
+enabled: Activé
+disabled: Désactivé
+notallowed_beddestroy: '&cVous n’êtes pas autorisé à détruire votre propre lit !'
+notallowed_selectcolor: '&cVous n’êtes pas autorisé à choisir la couleur {colorcode}{color}
+  & !'
+lobby_item_achievements: '&6Succès'
+lobby_item_forcestart: '&eForcer le démarrage'
+lobby_item_leave: '&cQuitter'
+lobby_item_leave_use: '&aVous serez téléporté dans le lobby dans {time}'
+lobby_item_leave_cancel: '&c&lTéléportation annulée'
+lobby_item_selectteam: '&6Choisir une équipe'
+lobby_item_votearena: '&6Voter pour une arène'
+lobby_printmapinfo_arenaname: Nom de l’arène
+lobby_printmapinfo_buildby: Construit par
+spectator_item_teleporter: '&eSe téléporter'
+spectator_item_changespeed: '&eChanger la vitesse'
+spectator_item_leave: '&cQuitter'
+spectator_item_nextround: '&6Changer d''arène'
+arrow_damage: '{targetcolor}{target} &eest maintenant à &c{health}'
+trap: '&eQuelqu''un a marché sur votre piège !'
+magicmilk_use: '&eLe piège ne pourra pas vous détecter pendant {time} secondes !'
+teleporter: '&eVous serez téléporté dans quelques secondes...'
+teleporter_failed: '&cTéléportation arrêtée !'
+bridge_notenoughmaterials: '&cVous avez besoin de plus de &4{material}&c !'
+give_spawner: '&2{amount} {spawner}&a ont été donnés à &2{target}'
+teleport_success: '&aVous avez été téléporté avec succès dans l''arène &2{arena}'
+lobby_waiting: '&6En attente de &e{amount} &6joueurs ...'
+lobby_enough: '&6Il y a assez de joueurs dans cette partie !'
+alreadyinside_arena: '&cVous êtes déjà dans une arène !'
+noarenaforparty: '&cThere isn''t enough space available for all your party members'
+requires_worldedit: '&4WorldEdit &cest requis pour cela !'
+crashmessage_missingbed: Emplacements de lits manquants
+crashmessage_missingteamspawn: Zone d'apparition des équipes manquant
+crashmessage_missinglobbylocation: Emplacement de Lobby manquant
+crashmessage_missinggamedonelocation: Position du hub non défini
+crashmessage_missinggameworld: Le monde du jeu n'a pas été défini
+crashmessage_missingcorners: Les coins n'ont pas été définis
+crashmessage_uppercorneroutofbounds: Le coin supérieur est supérieur à la hauteur
+  maximale du monde
+crashmessage_lowercorneroutofbounds: Le coin inférieur est inférieur à la hauteur
+  maximale du monde
+crashmessage_worldtypearenainmainworld: Le type de régénération est WORLD et le monde
+  de l'arène est le monde principal du serveur
+crashmessage_notloadedgameworld: Game world isn't loaded
+crashmessage_matchareacolliding: La zone de match entre en collision avec d'autres
+  arènes
+crashmessage_gamedonelocationinterfering: La position de la lobby est dans une arène
+regeneration_done: '&aL''arène &2{arena} &aa été régénérée avec succès après &2{time}
+  secondes&a !'
+regeneration_stopped: '&cLa régénération de &4{arena}&c a été annulée après &4{time}
+  secondes'
+regeneration_fail: '&cLa regénération de &4{arena}&c a échoué: &4{error}'
+worldedit_changed: '&aLa position {id} a été changée en &2x{x} y{y} z{z}'
+getpositionaxe: '&aLa &2hache de position &avous a été donné'
+tracker_trackedplayer: '&aCette boussole regarde maintenant l''ennemi suivis le plus
+  proche.'
+tracker_reusedelay: '&cAttendez &4{time} secondes&c avant que vous puissiez de nouveau
+  utiliser un tracker !'
+tracker_failed_onlyone: '&4Échec du suivi de l''ennemi le plus proche : &cVous êtes
+  le seul joueur de cette partie !'
+spectator_join: '&6Vous êtes maintenant un spectateur !'
+spectator_leave: '&6Vous n''êtes plus un spectateur.'
+spectator_howtoquit: '&eQuitter cet partie en utilisant la commande &6/bw leave'
+recalculatestats_done: '&aTerminé après &2{time} secondes&a.'
+endlobby_counting: '&6Vous allez être téléporté dans &e{number} secondes &6au lobby'
+endlobby_bigtitle_win: '&6Victoire !'
+endlobby_smalltitle_win: '&7Votre équipe a gagné cette manche !'
+endlobby_bigtitle_lose: '&cDéfaite'
+endlobby_smalltitle_lose: '{teamcolor}&l{team} &fa gagné cette partie !'
+endlobby_bigtitle_nobody: ''
+endlobby_smalltitle_nobody: '&c&nPersonne &fn''a gagné ce tour.'
+arenavoting_noavailablearenas: '&cIl n''y a plus d''arène. Désolé !'
+arenavoting_arenasupdated: '&6Les arènes votable ont été mises à jour.'
+arenavoting_recount_noarenatovote: '&cRemise à zéro du compte à rebours : il n''y
+  a pas d''arène pour laquelle voter!'
+arenavoting_end: '&6L''arène suivante a gagné le vote : &e{arena}'
+arenavoting_recount_toofewplayers: '&cIl faut &4{number}&c joueurs en plus pour jouer
+  dans cette arène !'
+arenavoting_minplayers: Joueurs minimum
+forcestart_already: '&cLa partie commence déjà !'
+scoreboard_arenaname: Arène
+scoreboard_arenamode: Mode
+scoreboard_players: Joueurs
+scoreboard_arena: Arène
+scoreboard_stats: Statistiques
+scoreboard_gamestats: Statistiques du match
+scoreboard_yourteam: Votre équipe
+scoreboard_teams: Équipes
+bed_onlydestroyablewith_tnt: '&cVous pouvez détruire ce lit qu''avec de la TNT !'
+itemspawner_hologram_title: '{spawnercolor}{spawner} &fspawn dans &7{time} &fsecondes!'
+maxplayers: Joueurs max
+lobby_countdowntitle_goodluck: '&6Bonne chance !'
+minishop_title: '{title}&7 disparaît dans &8{time} secondes'
+arenatype_notsupported: '&cCe n''est pas pris en charge pour le type &4{type}&c de
+  l''arène &4{name}'
+arena_autosavedblocks: '&eLes blocs à l''intérieur de l''arène ont été automatiquement
+  enregistrés !'
+ranking_unranked: Non classé
+wait_allarenasloaded: '&cAttendez jusqu''à ce que chaque arène ait été chargée avec
+  succès !'
+please_savearena: '&6Assurez-vous de sauvegarder votre arène avec: &e/bw arena saveblocks
+  <nom d''arène>'
+getsetuptool: '&aL''outil de &2setup&a vous a été donné'
+onetimepurchase: '&cVous n''êtes autorisé à acheter ceci qu''une seule fois !'
+arenasgui_title: '&bArènes'
+arena_collidingarena:
+- '&cVeuillez changer l''emplacement de votre arène.'
+- '&cL''arène ce croise avec l''arène &4{arena}'
+- '&6Pour changer d''emplacement, utilisez la commande suivante : &e{command}'
+backup_list: '&6Fichiers de sauvegarde'
+backup_create_success: '&aUne sauvegarde a été créée avec le nom &2{name}&a après
+  &2{time} &asecondes'
+backup_create_exists: '&cIl y a déjà une sauvegarde avec le nom &4{name}'
+backup_delete_success: '&aUne sauvegarde avec le nom &2{name} a été supprimée'
+backup_unknown: '&cSauvegarde inconnue &4{name}'
+backup_restore_success: '&aRestauration réussie de la sauvegarde &2{name}&a après
+  &2{time}&a secondes'
+backup_restore_ask:
+- '&6Êtes-vous vraiment sûr de vouloir restaurer la sauvegarde &e{name}&6?'
+- '&6Si c''est le cas, veuillez réécrire la même commande dans les 10 prochaines secondes'
+scoreboard_bedstate_alive: '&aEn vie'
+scoreboard_bedstate_destroyed: '&cDétruit'
+death_spectate_respawnin_bigtitle: '&cTU ES MORT !'
+death_spectate_respawnin_smalltitle: '&6Réapparaître dans &e{time} &6secondes'
+spectator_changearena_noneavailable: '&cAucune arène libre n''est disponible !'
+spectatoradd_failed_missinglocation: '&cImpossible de vous ajouter en tant que spectateur,
+  car il n''y a pas d''emplacements disponibles pour vous téléporter.'
+saveblocks_fail_players: '&4Échec de la sauvegarde des blocs : &cIl y a des joueurs
+  dans le monde.'
+createarena_fail_mainworld: '&cIl n''est pas possible de créer une arène dans votre
+  monde principal !'
+saveblocks_start: '&6Démarrage de l''opération de sauvegarde de blocs pour l''arène
+  &e{arena}&6. Temps estimé : &e{time}'
+saveblocks_fail_alreadyrunning: '&4Échec de l''enregistrement des blocs: &cL''opération
+  est déjà en cours d''exécution.'
+saveblocks_fail_notstopped: '&4Échec de la sauvegarde des blocs: &cL''arène n''est
+  pas arrêté. (Arrêtez-la avec /bw arena setenabled {arena} false)'
+saveblocks_fail_unknown: '&4Échec de la sauvegarde des blocs: &cUne erreur bizarre
+  de type {type} est survenue'
+regeneration_fail_savingblocks: '&4Impossible de démarrer la régénération : &cIl est
+  actuellement en train de sauvegarder des blocs.'
+deathmessage_killed_1: '{teamcolor}{player} &7a été tué par &8{killerteamcolor}{killer}
+  &cavec &4❤{heartpercent}%'
+deathmessage_killed_2: '{teamcolor}{player} &7a perdu un combat contre &8{killerteamcolor}{killer}
+  &cavec &4❤{heartpercent}%'
+deathmessage_killed_3: '{teamcolor}{player} &7a été tué par &8{killerteamcolor}{killer}
+  &cavec &4❤{heartpercent}%'
+deathmessage_void_1: '{teamcolor}{player} &7est tombé hors du monde'
+deathmessage_void_2: '{teamcolor}{player} &7est tombé d''un pont et est toujours en
+  train de tomber'
+deathmessage_explosion_1: '{teamcolor}{player} &7a explosé en dizaines de morceaux'
+deathmessage_explosion_2: '{teamcolor}{player} &7a explosé'
+deathmessage_fall_1: '{teamcolor}{player} &7a cassé toutes ses jambes'
+deathmessage_fall_2: '{teamcolor}{player} &7a fait une terrible chute'
+deathmessage_fire_1: '{teamcolor}{player} &7a été brûlé à mort'
+deathmessage_fire_2: '{teamcolor}{player} &7a été brûlé vivant'
+deathmessage_default_1: '{teamcolor}{player} &7est mort'
+spectator: Spectateur
+itemshop: Magasin d'items
+motd_loading: Chargement ...
+toggle_display_spawner_enable: '&eLes spawners de l''arène &6{arena} &esont maintenant
+  affichés pour tout le monde. Répétez la commande pour le désactiver'
+toggle_display_spawner_disable: '&eSpawners de l''arène &6{arena} &ene seront plus
+  affichés.'
+teamchest_title: Coffre de l'équipe {team}
+playerprivateinventory_title: Ender Chest
+placeholderapi_stats_loading: Chargement ...
+tnt_destroybed_name: TNT
+timer_ending_soon: '&eLa partie se terminera dans {minutes} minutes'
+timer_ending: '&eLe match se termine dans {seconds} secondes'
+command_blocked: '&cVous ne pouvez pas exécuter cette commande lorsque vous jouez
+  en Bedwars'
+cancel: Annuler
+apply: Appliquer
+authors: Auteurs
+nobody: Personne
+customname_isenabled: Le nom personnalisé est activé
+customname: Nom personnalisé
+displayingname: Nom d'affichage
+list_spawners: '&6Nombre de spawners ajoutés à l''arène {arena} : &e{spawners}'
+noarenaatpos: '&cIl n''y a pas d''arène à votre position actuelle'
+multiplearenasatpos: '&cIl y a plusieurs arènes à votre position actuelle : &4 {arenas}'
+notinsidearena: '&cVous n''êtes pas dans l''arène &4 {arena}'
+arenaname_contains_illegalchars: '&cLe nom de l''arène contient des charactères interdits'
+teamspawn_notyet: '&cLe point d''apparition de &4{team}&c n''a pas encore été défini
+  pour &4{arena}'
+holo_add: '&aAjout d''un hologramme à&2 {coord}'
+holo_list: '&6Hologrammes dans {world}: &e{holos}'
+holo_remove: '&aEnlèvement de l''hologramme à &2 {coord}'
+holo_removenotfound: '&cIl n''y a pas d''hologramme aux coordonnées indiquées dans
+  le monde &4{world}'
+holo_removeall: '&aEnlèvement de &2{amount} &ahologrammes dans le monde &2{world}'
+unknown_world: '&cIl n''y a pas de monde avec le nom &4 {world}'
+addon_load_not: '&cLe fichier donné n''est pas un addon'
+addon_load_already: '&cLe module a déjà été chargé'
+addon_load_unknown: '&cLe fichier n''existe pas. Assurez-vous de le placer dans &4
+  {folder}'
+addon_load: '&aL''addon &2{addon}&aa été chargé'
+addon_unload_notfound: '&cIl n''y a aucun addon avec le nom &4{addon}'
+addon_unload_notaddon: '&4{plugin}&c est un plugin et non un addon'
+addon_unload: '&aL''addon &2{addon}&aa été déchargé'
+item_error_missinghandlerorcommand: '&4Veuillez signaler cette erreur à un administrateur :
+  &cIl manque un gestionnaire ou une commande à l''item {item}. Rien ne se passe lors
+  de l''utilisation.'
+arenasgui_list: Mise en page de l'interface ArenasGUI
+arenasgui_by: Par
+arenasgui_openfor: '&eOuverture de la mise en page de l''interface utilisateur de
+  l''arène &6{layout}&e pour &6{player}'
+unknown_layout: '&cMise en page inconnue &4{layout}'
+migration_start: '&eMigration commencé de &6{origin}&e...'
+migration_success: '&aMigration réussie &2{origin}&a en &2{time} '
+migration_failure: '&cÉchec de la migration &4{origin}&c après {time}: &4{error}'
+migration_failure_alreadyrunning: '&cLe processus de migration avec la même origine
+  est déjà en cours d''exécution'
+playerdeath_cause_elimination: Élimination
+rejoin_trying: '&eNous vérifions le match joué précédemment...'
+rejoin_alreadytrying: '&cVous êtes déjà en train d''essayer de rejoindre votre dernier
+  match joué ! Merci de patienter un peu'
+rejoin_failed_notactive: '&6Trop tard, le match n''est plus en cours'
+rejoin_failed_teamdead: '&6Vous ne pouvez pas rejoindre le match actif car votre équipe
+  a été éliminée'
+rejoin_failed_unknown: '&6Nous avons essayé de vous laisser entrer, mais il se peut
+  que ce ne soit pas le cas en raison de règles internes'
+rejoin_success: '&aLe match est toujours en cours ! Nous vous remettons dans la partie...'
+rejoin_success_global: '&6{player}&ea rejoint l''équipe des {teamcolor}{team}&e et
+  fait maintenant partie du match'
+hubpos_inactive_bungee: '&6Les positions du hub &ene sont pas actives car vous les
+  résolvez via BungeeCord'
+arenaconvert_onlyspecifctypes: '&cVous ne pouvez changer le type de régénération de
+  l''arène &4{arena}&c qu''en &4{types}'
+arenaconvert_done: '&aLe type de régénération de &2{arena}& a a été changé de {prev}
+  à &2{new}'
+arenaproblem_savingblocks: '&cL''arène est en train de sauvegarder ses blocs. Réessayez
+  dans quelques secondes'
+teamchat_enabled_hint: '&eLes membres de votre équipe sont les seuls à voir votre
+  message. Commencez par "&6&l{tag}&e" pour écrire globalement'
+teamchat_disabled_solo_hint: '&eVotre message sera visible par tous les joueurs (même
+  sans préfixe) car vous jouez en solo.'
+remotearena_unsupportedoperation: '&cVous ne pouvez pas effectuer l''opération donnée
+  dans les arènes éloignées'
+connecting_server: '&eVous êtes sur le point de vous connecter au serveur'
+remoteteleport_fail: '&cCe n''est pas possible de se téléporter sur le serveur'
+tphubfail_nohub: '&cNous n''avons pas pu vous téléporter vers le hub car aucun serveur
+  n''est disponible'
+try_again_shortly: '&eVeuillez réessayer sous peu'
+server_full: '&cLe serveur est plein'
+spectate_fail: '&cNous n''avons pas réussi à vous ajouter en tant que spectateur (Raison :
+  {reason})'
+join_fail: '&cNous n''avons pas pu vous ajouter dans l''arène (Raison : {reason})'
+erroraction_arenacloned: '&cVous ne pouvez pas effectuer cela pour les arènes clonées'
+arenabulk_performingaction: '&eL''action est en cours d''exécution pour &6{amount}
+  arènes'
+invalidatecache_alreadyempty: '&eLe cache de données du joueur est déjà vide'
+invalidatecache: '&eLes informations mises en cache localement suivantes ont été effacées :
+  &6 {stats} stats&e, &6achievements&e et &6propriétés {achievements} {properties}'
+playerdata_info_fetchtime: Heure de récupération
+playerdata_info_earnedachievements: Réalisations gagnées
+playerdata_info_stats: Statistiques
+playerdata_info_game_stats: Statistiques du match
+playerdata_info_properties: Propriétés
+playerdata_notfound: '&cNous n''avons trouvé aucune donnée pour &4{target}'
+playerdata_stats_resetallplayer_warning:
+- '&4 ! ! ! AVERTISSEMENT ! ! !'
+- '&cÊtes-vous vraiment sûr de vouloir réinitialiser &4TOUTES les stats&c pour &4&lTOUS
+  &cles joueurs qui ont DÉJÀ joué ? Si c''est le cas, veuillez écrire la même commande
+  dans les {sec} secondes qui suivent. &nVous souhaiterez peut-être créer une sauvegarde.'
+playerdata_stats_resetplayer_warning:
+- '&4!!!ATTENTION!!!'
+- Êtes-vous vraiment sur de vouloir réinitialiser &4TOUS les statistiques&c pour le
+  joueur &4&l{player}&c. Si c'est le cas, écrivez la même commande dans les {sec}
+  secondes qui suivent.
+playerdata_stats_resetplayer_complete: '&aLes statistique du joueur {player} ont été
+  réinitialisées {time}!'
+playerdata_stats_resetallplayer_complete: '&aLes statistiques de tous les joueurs
+  du serveur/proxy ont été réinitialisées après {time} !'
+playerdata_stats_modify_complete: '&aSuccessfully updated ''{stat}'' to ''{new-val}''
+  for {player}. The player may need to re-log for rankings to update'
+playerdata_stats_modify_fail: '&cImpossible de mettre à jour la statistique ''{stat}''
+  pour {player}!'
+playerdata_stats_notfound: '&cLa statistique ''{stat}'' n''existe pas'
+identifyarena_none: '&cAucune arène trouvée'
+identifyarena_found: '&eFound arena &6{arena}'
+initsetup_welcome:
+- '&6 Bienvenue !'
+- '&Pour rendre la configuration de &lMarcely''s Bedwars aussi simple que possible,
+  nous vous offrons la possibilité de le configurer via une interface Web (à l''aide
+  de votre navigateur).'
+- '&eNotez que cela ne concerne que la configuration initiale. Vous pourrez toujours
+  configurer quoi que ce soit ultérieurement.'
+initsetup_web: Je veux utiliser l'interface web (Click ou tape la commande {cmd})
+initsetup_simple: Je voudrais juste configurer tout par moi-même (Click ou tape la
+  commande {cmd})
+initsetup_connecting: '&eAttendez un petit peu pendant que nous travaillons.'
+initsetup_connection_failure:
+- '&cDésolé, mais nous n''avons pas pu nous connecter à notre service. Un pare-feu
+  le bloque peut-être.'
+- '&cTapez la commande &4/mbedwars &c et réessayez ou ignorez l''ensemble du processus
+  s''il continue d''échouer.'
+initsetup_ready: '&eVisitez cette URL pour commencer la configuration: &6{url}'
+initsetup_finish: '&eTout est bon! Visitez &6{url} &epour plus d''informations.'
+click: '*Click*'
+members: Members
+no_members: No members
+antiabuse_statsnotcounted: '&cCertaines statistiques n''ont pas été prises en compte
+  car nous avons détecté des abus potentiels. S''il vous plaît, jouez normalement !'
+player_trigger_upgradetrap_bigtitle: '&cPIÈGE ACTIVÉ !'
+player_trigger_upgradetrap_smalltitle: '&fVotre piège a été déclenché !'
+player_trigger_upgradetrap_chat: '&cQuelqu'' un a déclenché l''un des pièges de votre
+  équipe !'
+achievement_get_title: Nouveaux succès !
+
+
+###########################
+## Setup GUI
+###########################
+setupgui_nextpage: Page suivante
+setupgui_prevpage: Page précédente
+setupgui_goback: Retour
+setupgui_yousure: Êtes-vous sûr(e) ?
+setupgui_noarenascreated: Aucune arène n'a été créée pour le moment
+setupgui_mainbutton_modify: Modifier les arènes créées
+setupgui_mainbutton_create: Créer une nouvelle arène
+setupgui_mainbutton_misc_tools: Outils
+setupgui_misctools_spawn_dealer:
+- Distributeur Spawn
+- Vous pouvez le retirer en le tapant.
+setupgui_misctools_spawn_upgradedealer:
+- Revendeur Spawn Upgrade
+- Vous pouvez le retirer en le tuant.
+setupgui_misctools_displayarenasatpos:
+- Identifier une arène
+- Utilise votre position actuelle.
+setupgui_misctools_setuptool:
+- Obtain the Setup Tool
+- Right click the item while holding in hand to use it.
+- Useful for quickly setting up arenas.
+setupgui_misctools_setcorner_1:
+- Définir le premier angle
+- Utilise votre position actuelle.
+- Utile lors de la configuration d'une arène du type région.
+setupgui_misctools_setcorner_2:
+- Définir le deuxième angle
+- Utilise votre position actuelle.
+- Utile lors de la configuration d'une arène de type région.
+setupgui_category_actions: Actions
+setupgui_category_modify: Modifier
+setupgui_category_spawners: Spawneurs
+setupgui_category_teams: Équipes
+setupgui_category_weather:
+- Weather
+- 'Active: {weather}'
+setupgui_category_time:
+- Time
+- 'Active: {time}'
+setupgui_button_enable: Activer
+setupgui_button_disable: Désactiver
+setupgui_button_regenerate: Régénérer tous les blocs
+setupgui_button_teleport: Téléportation dans l'arène
+setupgui_button_enter: Entrer dans la partie
+setupgui_button_enterspectator: Regarder la partie
+setupgui_button_configure: Configurer
+setupgui_button_setlobby:
+- Réglez le spawn du lobby
+- Utilise votre position actuelle
+setupgui_button_rename: Changer le nom
+setupgui_button_saveblocks: Enregistrer tous les blocs et entités
+setupgui_button_setgameworld:
+- Réglez le monde du jeu
+- Utilise ton monde actuel
+setupgui_button_saveregioncorners:
+- Enregistrez les coins de l'arène
+- Assurez-vous de régler les coins à l'aide de {tool}
+setupgui_button_modifyregioncorners:
+- Définir la position des coins de l'arène
+- Utilise votre position actuelle
+- ''
+- 'Clic gauche : Marque le 1er coin'
+- 'Clic droit : Marque le 2nd coin'
+setupgui_button_setspectatorspawn:
+- Fixer le point de réapparition pour les spectateurs
+- Utilise votre position actuelle
+setupgui_button_properties: Properties
+setupgui_button_delete: Supprimer l'arène
+setupgui_button_removeallspawners: Supprimer tous les spawneurs ajoutés
+setupgui_button_displayspawners:
+- Afficher tous les géniteurs
+- Ajoute un petit hologramme au-dessus de n'importe quel géniteur
+setupgui_button_undisplayspawners: Masquer tous les spawneurs
+setupgui_button_getallbeds: Obtenir le lit de chaque équipe
+setupgui_spawnerbutton_obtainitems: '&fObtenir {amount} item de {spawner}'
+setupgui_spawnerbutton_add:
+- '&fAjouter un {spawner} &fspawner'
+- Utilise votre position actuelle
+setupgui_spawnerbutton_removeall: '&fSupprimer tous les spawners {spawner}'
+setupgui_teambutton_obtainbed: '&fObtenir le lit de l''équipe {team}'
+setupgui_teambutton_teleportspawn: '&fTéléportation vers le point d''apparition de
+  l''équipe {team} '
+setupgui_teambutton_setspawn:
+- '&fDéfinir le point de réapparition pour les {team}'
+- Utilise votre position actuelle
+setupgui_removearena_yes: '&a&lOUI&f, suprimer l''arène &l{arena}'
+setupgui_removearena_no: '&c&lNON&f, garder l''arène &l{arena}'
+setupgui_create_type_region:
+- Région
+- Restreignez l'arène avec une bordure.
+- Les joueurs verront un effet visuel de la bordure et ne pourront pas la quitter.
+- Ainsi, vous pouvez également créer plusieurs arènes dans un même monde.
+- Veuillez consulter le wiki pour plus d'informations.
+setupgui_create_type_world:
+- Monde
+- Il n'y a pas de frontière et utilise le monde entier pour le jeu.
+- Plus facile à installer mais peut être plus lourd lors de la régénération.
+- Veuillez consulter le wiki pour plus d'informations.
+setupgui_create_type_voting:
+- Voter
+- Ce n'est pas une véritable arène dans laquelle vous jouez.
+- Au lieu de cela, utilise son lobby uniquement pour voter.
+- Les joueurs seront téléportés vers des arènes de type Monde ou Région une fois le
+  vote terminé.
+- Veuillez consulter le wiki pour plus d'informations.
+setupgui_create_title: Créer une nouvelle arène
+setupgui_configure_title: Configurer l'arène
+setupgui_configure_auto_detect_teams_complete: '&6{amount} &epotential teams have
+  been detected using your current position'
+setupgui_configure_playersperteam2:
+- '&6Nombre maximum de joueurs :'
+- '&7Nombre maximum actuel de joueurs par équipe : &f {amount}'
+- '&7Nombre de joueur maximum actuel de l''arène : &f {total-max-players}'
+setupgui_configure_minplayers:
+- '&6Nombre de joueurs minimum : &f{amount}'
+- '&7Nombre de joueurs requis pour commencer'
+setupgui_configure_totalplayers: '&6Nombre maximum de joueurs dans l''arène: &f{amount}'
+setupgui_configure_arenasbelowinpool: '&3&l⇩ &bArène qui est possible de voter &3&l⇩'
+setupgui_configure_noarenasinpool: '&cAucune arène dans le vote'
+setupgui_clicktorename: Cliquez pour renommer
+setupgui_rename_title: Renommer l'arène
+setupgui_confirm_action: '&6Confirmez votre action en cliquant à nouveau sur le bouton
+  dans les prochaines secondes'
+setupgui_configure_minplayers_toolow: UNIQUEMENT POUR LES TESTS. Ainsi, vous pouvez
+  commencer un match sans aucun autre joueur.
+setupgui_button_modifyregioncorners_reminder_save: '&eN''oubliez pas de cliquer sur
+  le bouton « Enregistrer les coins de l''arène », sinon vos modifications ne seront
+  pas appliquées.'
+setupgui_spawnerbutton_removenearbyspawners:
+- '&fSupprimer tous les &fspawners à proximité {spawner}'
+- Utilise votre position actuelle
+setupgui_remotearena_info:
+- '&c[REMOTE]'
+- Géré par &o{server}
+
+
+###########################
+## Setup Tool
+###########################
+setuptool_freebuild: Place/Break blocks freely
+setuptool_spawner: Place/Edit spawner
+setuptool_selectteam: Select team
+setuptool_bed: Place bed
+setuptool_spawnpoint: Place spawn point
+setuptool_dealer: Spawn/Kill dealer
+setuptool_notinsidearena: '&cMust be inside an arena. &6&lClick here &cto manage arenas.
+  Teleport yourself to it and use the tool item again'
+setuptool_activated: '&aActivated &esetup tool for &6{arena}'
+setuptool_deactivated: '&cDeactivated &esetup tool. &6&lClick here &eto open the arena''s
+  setup GUI'
+setuptool_selecttype: Select type
+setuptool_placeagainconfirm: Place again to confirm
+setuptool_type_dealer: Dealer
+setuptool_type_upgradedealer: Upgrade Dealer
+setuptool_teamcomponent_bed: Bed
+setuptool_teamcomponent_spawnpoint: Spawn Point
+setuptool_spawnpoint_preview:
+- '&f&lSpawn Point Preview'
+- '{team}'
+- '&fDisappears in {time}'
+
+
+###########################
+## Shop Layouts
+###########################
+shop_d_hypixel_available: '&8Disponible'
+shop_d_hypixel_clicktobrowse: '&eCliquer pour naviguer !'
+shop_d_hypixel_items: '&8Items'
+shop_d_hypixel_clicktopurchase: '&eCliquer pour acheter !'
+shop_d_hypixel_maxed: '&aMAXIMUM !'
+shop_d_hypixel_unlocked: '&aDEBLOQUÉ'
+shop_d_hypixel_cost: '&7Coût: &f{color}{amount} {type}'
+shop_d_hypixel_goback: '&aRetour'
+shop_d_hypixel_tooexpensive: '&cVous n''avez pas assez de {type} !'
+shop_d_hivemc_clicktoview: '&b{icon} Cliquez pour voir &l{item}'
+shop_d_hivemc_goback: '&c&lRetour'
+shop_d_hivemc_returntomenu: '&7Retourner au menu'
+shop_d_hivemc_clicktogoback: '&b{icon} Cliquez pour revenir en arrière'
+shop_d_hivemc_clicktobuy: '&b{icon} Cliquez pour acheter'
+shop_d_hivemc_cost: '&6Coût'
+shop_d_rewinside_shoptype_new: Vous utilisez la nouvelle boutique améliorée
+shop_d_rewinside_shoptype_old: Vous utilisez l'ancienne boutique
+shop_d_rewinside_shoptype_switch: Cliquez ici pour basculer entre les versions
+shop_d_bergwerklabs_currentpage: '&bPage actuelle'
+shop_d_bergwerklabs_changepage: '&bPage {page}'
+shop_d_bergwerklabs_buy: '&aAcheter &7&o<Clic Gauche>'
+shop_d_bergwerklabs_buy_tooexpensive: '&7Trop cher !'
+shop_d_hypixelv2_clicktoview: '&eCliquez pour voir !'
+shop_d_hypixelv2_seperator_categories: '&8⬆&7 Catégories'
+shop_d_hypixelv2_seperator_items: '&8⬇&7 Items'
+shop_d_hypixelv2_quickbuy_pageitem: '&bAchat rapide'
+shop_d_hypixelv2_quickbuy_emptyslot_name: '&cEmplacement vide!'
+shop_d_hypixelv2_quickbuy_emptyslot_description:
+- '&7Ceci est un emplacement d''achat rapide!'
+- '&bSneak Clic &7n''importe quel objet dans'
+- '&7la boutique pour l''ajouter ici.'
+shop_d_hypixelv2_quickbuy_menu_title: Ajouté au raccourcis d'achats...
+shop_d_hypixelv2_quickbuy_menu_set: '&eCliquez pour sélectionner!'
+shop_d_hypixelv2_quickbuy_menu_replace: '&eCliquez pour remplacer!'
+shop_d_hypixelv2_quickbuy_menu_representing: '&eAjout de l''objet dans l''emplacement
+  rapide'
+shop_d_hypixelv2_quickbuy_add_item: '&bSneak click to add to Quick Buy'
+shop_d_hypixelv2_quickbuy_remove_item: '&bSneak click pour enlever des achats rapides'
+
+
+###########################
+## Achievements
+###########################
+achievements_name_ragequit: Rage Quit
+achievements_name_winround: Vainqueur
+achievements_name_loseround: Perdant
+achievements_name_ownbeddestroyed: Traître !
+achievements_name_bestbow: Arc OP
+achievements_name_userescueplatform: C'était juste !
+achievements_name_useendepearl: Enderman
+achievements_name_useminishop: Épicerie avec Maman
+achievements_name_killsomeonewithbow: Katniss Everdeen est en toi !
+achievements_name_winin3minutes: Déjà fini !?
+achievements_name_killsomeonewithhalfaheart: Coup de Chance
+achievements_name_win100rounds: Championne
+achievements_name_usebridge: Constructeur de pont
+achievements_name_useguarddog: Garde de la police
+achievements_name_effectmagnetshoes: Force magnétique
+achievements_name_useteleporter: Beam me up, scotty !
+achievements_name_usetntsheep: Boom, boom, baby !
+achievements_name_usetracker: Je vous trouverai et je vous tuerai.
+achievements_name_placetrap: Mine
+achievements_name_runovertrap: C'EST UN PIÈGE !
+achievements_name_spend200resources: Wealthy
+achievements_name_rankingintop3: Joueur E-Sport
+achievements_name_goodkd: Joueur professionnel
+achievements_name_highplaytime: '#Pas_De_Vie'
+achievements_name_writeggatend: GG
+achievements_name_winwithoutbed: Je ne peux pas toucher ça
+achievements_name_die10secsafterbeddestruction: Tu n'as pas osé !
+achievements_name_optaineveryachievement: Addict
+achievements_name_usefireball: Piou Piou !
+achievements_name_useinvispotion: Semelles givrantes
+achievements_text_ragequit: Quitter une partie en cours
+achievements_text_winround: Gagner au moins une partie
+achievements_text_loseround: Perdre une partie
+achievements_text_ownbeddestroyed: Détruire votre propre lit
+achievements_text_bestbow: Achète le meilleur arc
+achievements_text_userescueplatform: Utiliser la plate-forme de sauvetage
+achievements_text_useendepearl: Utiliser une ender pearl
+achievements_text_useminishop: Utiliser le mini shop
+achievements_text_killsomeonewithbow: Tuer quelqu'un avec un arc
+achievements_text_winin3minutes: Gagner une partie en 3 minutes
+achievements_text_killsomeonewithhalfaheart: Tuer un ennemi avec un demi-cœur
+achievements_text_win100rounds: Gagner 100 parties
+achievements_text_usebridge: Utiliser le pont
+achievements_text_useguarddog: Utiliser le chien de garde
+achievements_text_effectmagnetshoes: Utilisez des chaussures aimantées pour vous défendre
+  du kb
+achievements_text_useteleporter: Utiliser le téléporteur
+achievements_text_usetntsheep: Utiliser un Mouton TNT
+achievements_text_usetracker: Utiliser le traqueur
+achievements_text_placetrap: Met un piège
+achievements_text_runovertrap: Activer un piège en allant dans une base ennemie
+achievements_text_spend200resources: Dépenser plus de 200 ressources dans le shop
+achievements_text_rankingintop3: Être dans le Top 3 du classement
+achievements_text_goodkd: Avoir un K/D supérieur ou égal à 5.0
+achievements_text_highplaytime: Jouer au moins 5 heures
+achievements_text_writeggatend: Dire "GG" à la fin d'une partie
+achievements_text_winwithoutbed: Gagner avec le lit détruit
+achievements_text_die10secsafterbeddestruction: Mourrez 10 secondes après la destruction
+  de votre lit
+achievements_text_optaineveryachievement: Obtenir tous les succès
+achievements_text_useinvispotion: Boire une potion d'invisibilité
+achievements_text_usefireball: Utiliser une boule de feu
+
+
+###########################
+## Shop
+###########################
+shop_buygroup_buy_lowertier: '&cVous avez déjà un objet de qualité supérieur'
+shop_player_not_in_running_arena: '&cVous n''êtes pas dans une arène de course !'
+shop_price: 'Prix : &7{number} {spawnercolor}{spawnertype}'
+shop_page_block: Bloc
+shop_page_food: Nourriture
+shop_page_armor: Armure
+shop_page_sword: Épée
+shop_page_bow: Arc
+shop_page_pickaxe: Pioche
+shop_page_potion: Potion
+shop_page_special: Spécial
+shop_page_extra: Suppléments
+shop_item_hardenedclay: Argile durcie
+shop_item_endstone: Pierre de l'End
+shop_item_chest: Coffre
+shop_item_enderchest: Coffre de l'End
+shop_item_ladder: Échelle
+shop_item_web: Toile d’araignée
+shop_item_apple: Pomme
+shop_item_grilledpork: Porc grillé
+shop_item_cake: Gâteau
+shop_item_goldenapple: Pomme dorée
+shop_item_leatherhelmet: Casque en cuir
+shop_item_leatherleggings: Jambières en cuir
+shop_item_leatherboots: Bottes en cuir
+shop_item_chainmailchestplatelvl1: Plastron en maille &7NIV 1
+shop_item_chainmailchestplatelvl2: Plastron en maille &7NIV 2
+shop_item_chainmailchestplatelvl3: Plastron en maille &7NIV 3
+shop_item_knockbackstick: Bâton de recul
+shop_item_swordlvl1: Épée &7NIV 1
+shop_item_swordlvl2: Épée &7NIV 2
+shop_item_swordlvl3: Épée &7NIV 3
+shop_item_bowlvl1: Arc &7NIV 1
+shop_item_bowlvl2: Arc &7NIV 2
+shop_item_bowlvl3: Arc &7NIV 3
+shop_item_arrow: Flèche
+shop_item_pickaxelvl1: Pioche &7NIV 1
+shop_item_pickaxelvl2: Pioche &7NIV 2
+shop_item_pickaxelvl3: Pioche &7NIV 3
+shop_item_potionswiftness: Potion de rapidité
+shop_item_potionregeneration: Potion de Régénération
+shop_item_potionhealing: Potion de soin
+shop_item_potionstrength: Potion de force
+shop_item_enderpearl: Perle de l'End
+shop_item_teleporter: Téléporteur
+shop_item_minishop: Mini-Magasin
+shop_item_rescueplatform: Plate-forme de sauvetage
+shop_item_tntsheep: Mouton TNT
+shop_item_magnetshoes: Chaussures aimantées
+shop_item_trap: Piège
+shop_item_bridge: Pont
+shop_item_guarddog: Chien de Garde
+shop_item_tracker: Traqueur
+shop_item_fishingrod: Canne à pêche
+shop_item_snowball: Boule de neige
+shop_item_fireball: Boule de Feu
+shop_item_magicmilk: Lait magique
+shop_item_tnt: TNT
+
+
+###########################
+## Upgrade Shop
+###########################
+upgradeshop: Magasin d'améliorations
+upgradeshop_buy_upgrade_broadcast: '&e{player} a mis à jour &6&e{upgrade}&e vers le
+  &6LVL {newlvl}'
+upgradeshop_buy_trap_broadcast: '&e{player} purchased &6{upgrade}'
+upgradeshop_toofew_materials: '&cVous n''avez pas assez d''argent pour l''acheter
+  !'
+upgradeshop_max_upgrade: '&cVous avez déjà acheté cette mise à niveau'
+upgradeshop_buystate_purchasable: '&eCliquez pour acheter !'
+upgradeshop_buystate_not_purchasable: '&cVous n''en avez pas assez ! {price-type}
+  !'
+upgradeshop_buystate_maximum: '&aDÉBLOQUÉ'
+upgradeshop_queuedtrap_icon:
+- '&aPiège #{queue-level} : {trap-name}'
+- '&7Ce piège se déclenchera'
+- '&7immédiatement après qu''un'
+- '&7intrus entrera dans votre base'
+- ' '
+- '&7Notez qu''il s''agit de l''intrus'
+- '&7Utilisation du lait magique, ce'
+- '&7piège ne peut pas se déclencher'
+upgradeshop_unqueuedtrap_icon:
+- '&cPiège #{queue-level} : Pas de piège !'
+- '&7L''achat d''un piège le'
+- '&7mettra en file d''attente ici. Son coût'
+- '&7est basée sur le'
+- '&7nombre de pièges en file d''attente'
+upgradeshop_hypixel_separator:
+- '&8⬆ &7Achetable'
+- '&8⬇ &7File d''attente des pièges'
+upgradeshop_hypixel_traps_menu_button:
+- '&eAcheter un piège'
+- '&7Le piège acheté sera mis'
+- '&7en file d''attente ci-dessous'
+- ' '
+- '&eAméliorations'
+upgradeshop_hypixel_back_button:
+- '&eRevenir aux améliorations'
+- '&7Revenir pour voir les améliorations'
+- '&7et la file d''attente des pièges'
+- ''
+- '&eCliquez pour revenir !'
+upgradeshop_name_protection: Protection de l'armure
+upgradeshop_description_protection: Augmente la protection de l'armure
+upgradeshop_name_featherfall: Feather Fall
+upgradeshop_description_featherfall: Gain less fall damage
+upgradeshop_name_haste: Célérité
+upgradeshop_description_haste: Tous les joueurs de votre équipe bénéficient de façon
+  permanente de l'effet célérité
+upgradeshop_name_healrange: Station de soin
+upgradeshop_description_healrange: Vous soigne dans votre base
+upgradeshop_name_sworddamage: Tranchant
+upgradeshop_description_sworddamage: Augmente les dégâts de l'épée
+upgradeshop_name_spawnermultiplier: Multiplicateur d'apparition
+upgradeshop_description_spawnermultiplier: Augmente le taux d'apparition des matériaux
+  dans votre base
+upgradeshop_name_enemyalarmtrap: Piège d'alarme
+upgradeshop_description_enemyalarmtrap: Supprime l'invisibilité du joueur infiltré
+upgradeshop_name_counteroffensivetrap: Piège contre-offensif
+upgradeshop_description_counteroffensivetrap: Donne Vitesse II et Saut II à tous les
+  membres de l'équipe pendant 15 secondes
+upgradeshop_name_enemyminingfatigue: Fatigue minière
+upgradeshop_description_enemyminingfatigue: Diminue la vitesse de minage des ennemis
+  qui entrent dans votre base
+upgradeshop_name_enemytrap: Piège
+upgradeshop_description_enemytrap: Donne un effet d'aveuglement et de lenteur à l'attaquant
+upgradeshop_trapremove_lore: '&eRight Click to remove! &8(No refund)'
+upgradeshop_trapremove: '&eRemoved &6{trap} &efrom the queue'
+
+
+###########################
+## Custom
+###########################
+mustserverjoinfromhub: '&cYou must join an arena from the hub'
+arena_joinissue_votingparticipating: '&cVous ne pouvez pas rejoindre cette arène pour
+  le moment. Il fait partie d''un groupe de votes actif'
+rejoin_failed_notparticipating: '&6Vous n''avez encore participé à aucun match'

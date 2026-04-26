@@ -1,0 +1,37 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww19
+#########################
+
+
+######## Shop #######
+shop:
+  global:
+    gui-title: '%ItemShop%'
+    gui-title-as-page: true
+    gui-titles-by-page: {}
+  normal:
+    separator-material: blue_stained_glass_pane
+  rewinside:
+    shop-variant: CUSTOMIZABLE
+  hypixelv2:
+    quickbuy-enabled: true
+    quickbuy-icon: nether_star
+    quickbuy-empty-icon: red_stained_glass_pane
+    quickbuy-generate-automatic: true
+    quickbuy-default-items: []
+    gui-height: 6
+    seperator-material-inactive: gray_stained_glass_pane
+    seperator-material-active: green_stained_glass_pane
+
+
+######## Upgrade Shop #######
+upgrade-shop:
+  global:
+    gui-title: '%UpgradeShop%'
+    unqueued-trap-icon: light_gray_stained_glass
+  hypixel:
+    trap-menu-icon: ladder
+  hypixelv2:
+    gui-offset-top: 1
+    gui-height: 6
+    seperator-material: gray_stained_glass_pane

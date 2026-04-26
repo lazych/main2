@@ -1,0 +1,916 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww11
+#########################
+
+
+
+###########################
+## Miscellaneous
+###########################
+prefix: '&3 [Bedwars]'
+configurations_reload_start: '&aA konfigurációk újratöltenek!'
+configurations_reload_end: '&aA konfigurációk újratöltöttek  &2{time} másodperc alatt!'
+configurations_reload_alreadyloading: A konfigurációk éppen újratöltenek
+info_madeby: Készítette
+info_specialthanks: Special thanks
+info_website: Weboldal
+info_version: Verzió
+info_newestversion: Legújabb verzió
+page: Oldal
+help: Súgó
+team: Csapat
+none: Semmi
+unknown_page: '&cIsmeretlen oldal &4{page}'
+unknown_argument: '&cÉrvénytelen parancs &4{arg}'
+unknown_block: '&cÉrvénytelen blokk &4{block}'
+unknown_place: '&cIsmeretlen hely &4{place}'
+unknown_spawner: '&cIsmeretlen spawner &4 {spawner}'
+version_new: '&aEgy új verzió érhető el! &2{version}'
+version_nonew: '&cNem található új verzió!'
+error_occurred: '&cEgy hiba lépett fel!'
+error_occurred_syntax: '&cEgy szintaktikai hiba lépett fel: &6{message}'
+no_permissions: '&cNincs hozzá jogod.'
+no_permissions_specific: '&cMake sure that you either have the &4{perm} &cpermission
+  or OP'
+onlyas_player: '&cEz csak játékosként működik!'
+not_ingame: '&cNem vagy játékba!'
+not_ingame_player: '&4{player} &cnincs játékban!'
+not_supported: '&cEz egy nem támogatott a verziódnál! Kérlek használj &4{version}
+  &cverziót vagy magasabbat!'
+color_yellow: Sárga
+color_orange: Narancssárga
+color_red: Piros
+color_blue: Kék
+color_magenta: magenta
+color_lightblue: Világoskék
+color_cyan: Cián
+color_lightgreen: Világoszöld
+color_green: Zöld
+color_purple: Lila
+color_pink: Rózsaszín
+color_white: Fehér
+color_lightgray: Világosszürke
+color_gray: Szürke
+color_brown: Barna
+color_black: Fekete
+missing_worldeditpoints: '&cHiányzó worldedit pontok!'
+saved_arena: '&aAréna &2{arena}&a el lett mentve!'
+saved_bed: '&aÁgy elmentve a csapat {colorcode}{color} &anek az aréna &2{arena}ban'
+bed_notinside_arena: '&cNem sikerült hozzáadni az ágyat, mivel ezen a helyen nincs
+  aréna. Használd a „/bw arena setcorners” vagy a „/bw arena setworld” parancsot,
+  hogy újraigazítsd'
+exists_arena: '&cAz aréna &4{arena} &cmár létezik!'
+spawner_bronze: Bronz
+spawner_iron: Vas
+spawner_iron_plural: Iron
+spawner_gold: Arany
+spawner_gold_plural: Gold
+spawner_diamond: Gyémánt
+spawner_diamond_plural: Diamonds
+spawner_emerald: Smaragd
+spawner_emerald_plural: Emeralds
+added_spawner: '&aSpawner &2{spawnertype} &asikeresen hozzáadva a/az &2 {arena}-ba!'
+specialblock_added: '&aSpeciális blokk:&2 {type} &ahozzáadva'
+specialblock_alreadyadded: '&cMár van egy&4 {type}&c típusú blokk. Törd ki, hogy eltávolítsd
+  el'
+specialblock_removed: '&6Speciális blokk: &e{type} &6eltávolítva'
+removed_spawners: '&2{number} &aSpawner el lett eltávolítva {arena}-ból/ből!'
+start_round: '&aA játék elkezdődött.'
+stop_round: '&aA játék leállt.'
+kicked_player: '&aSikeresen kickelted &2{player}&at az aréna &2{arena}&aból!'
+kicked_player_toplayer: '&cKirúgtak a játékból!'
+list_arenas: '&eÖsszes arénák: &6'
+list_arenas_local: '&eHelyi arénák: &6'
+list_arenas_remote: '&cTávoli arénák: &6'
+only_betamember: '&cNincs jogod belépni amíg a bedwaes bétában van!'
+notavailable_color: '&cIsmeretlen szín &4{color}'
+joinmessage_stopped: '&cAz aréna éppen le van állítva!'
+joinmessage_reseting: '&cAz aréna éppen resetelődik!'
+joinmessage_full: '&cEz az aréna tele van!'
+joinmessage_running: '&cEz az aréna már fut!'
+joinmessage_alreadyinside: '&cMár az arénában vagy!'
+joinmessage: '&6{player} &ebelépett a játékba.'
+leavemessage: '&6{player} &ekilépett a játékból.'
+notfound_player: '&4{player} &cjátékos nem található!'
+notfound_arena: '&cNincs ilyen nevű aréna: &4{arena}&c!'
+notfound_arena_loading: '&6(Az aréna éppen betölt)'
+notfound_arena_validpicker: '&cThere''s no arena matching the picker: &4{picker}'
+notfound_author: '&cNincs olyan készítő hogy &4{author}&c!'
+get_bed: '&aKiütötted {colorcode}{color}&aágyát'
+getallbeds: '&aMinden ágyat ebben az arénában: &2{arena}&a megkaptál'
+countdown_start: '&6A visszaszámlálás most indul!'
+countdown_stop: '&6A visszaszámlálás leállítva!'
+countdown_counting: '&6A játék &e{number} &6mp múlva indul!'
+countdown_changed: '&6A visszaszámlálás átállítva &e{number} &6mp-re!'
+countdown_voting_counting: '&6Az aréna szavazás &e{number} &6mp-en belül lezárul!'
+toofew_materials: '&cNincs elég alapanyagod, hogy ezt meg tudd venni!'
+no_inventory_space: '&cYour inventory is already full!'
+tooless_players: '&cNincs elég játékos az indításhoz!'
+needmore_players_than: '&cTöbbjátékosra van szükség, mint: &4{amount}&c!'
+win_money: '&6Nyertél &e{number}&6$-t!'
+player_notingameanymore: '&4{player} &cmár nincs játékban!'
+player_notfound: '&4{player} &cnem található!'
+player_cheating: '&6{player} &eki lett rúgva csalás miatt!'
+player_loosing: '&6{player} &evesztett!'
+players: Játékosok
+team_won: '&eA {colorcode}{color} &ecsapat megnyerte a játékot!'
+team_notaddedyet: '&cA {teamcolor}{team} &cmég nincs hozzáadva a(z) &4{arena}&c játéktérhez!'
+changeteam_full: '&7A {colorcode}{color} &7csapat már megtelt!'
+changeteam_alreadyinside: '&7Beléptél a {colorcode}{color}&7 csapatba!'
+changeteam_changed: '&7Mostmár a  {colorcode}{color} &7csapatban játszol.'
+changeteam_none: '&7You left your team and will be assigned to a random one'
+changed_postitions: '&aA pozíciók megváltoztak!'
+changed_lobbylocation: '&aA belépő pontja a(z) &2{arena} &aarénának megváltozott!'
+changed_teamspawn: '&aA {colorcode}{color} &acsapat kezdési pontja sikeresen megváltozott!'
+changed_arenaworld: '&aAz aréna világa &2{arena} &amegváltozott &2{world}'
+spawn_ranking: '&aEgy rangsor szobor &2{place} helyen &asikeresen lespawnolt!'
+changed_gamedonelocation: '&aA &2játék befejezési helye &asikeresen megváltozott!'
+insidearena_gamedonelocation:
+- '&cThe hub position is inside the arena &4{arena}&c!'
+- '&cPlace it somewhere else - namely where you are supposed to get teleported to
+  when you leave the match'
+stats_info_entry: '&7{name}: &b{value}'
+stat_default_rank: Rang
+stat_default_win_streak: Nyerési széria
+stat_default_top_win_streak: Top win streak
+stat_default_won: Győzelem
+stat_default_lost: Vereség
+stat_default_wl: Gy/V
+stat_default_roundsplayed: Játszott menetek
+stat_default_kills: Ölések
+stat_default_kill_streak: Current kill streak
+stat_default_top_kill_streak: Top kill streak
+stat_default_finalkills: Végső ölések
+stat_default_deaths: Halálok
+stat_default_finaldeaths: Final Deaths
+stat_default_kd: Ö/H
+stat_default_final_kd: Final K/D
+stat_default_bedsdestroyed: Kiütött ágyak
+stat_default_bedslost: Beds lost
+stat_default_playtime: Játékkal töltött odő
+destroyed_bed_title: ''
+destroyed_bed_subtitle: '&fA {teamcolor}{team} csapat &fágyát kitörte&7 {player}&f!'
+destroyed_bed_subtitle_playerless: '{teamcolor}{team}&f''s bed has been destroyed!'
+destroyed_bed_own_title: ''
+destroyed_bed_own_subtitle: '&fAz ágyad megsemmisült &7{player} &f által!'
+destroyed_bed_chat: '%Prefix% %Destroyed_Bed_SubTitle%'
+destroyed_bed_chat_left: '%Prefix% {teamcolor}{team}&f''s bed has been destroyed as
+  they left the game.'
+destroyed_bed_chat_leftignoredrejoin: '%Prefix% {teamcolor}{team}&f''s bed has been
+  destroyed as they left and didn''t rejoin in time.'
+number_notone: '&4{number} &cnem egy szám!'
+stats_by: 'Statisztika: {player}'
+gui_achievements_title: '&6Teljesítmények'
+gui_selectteam_title: '&6Csapat kiválasztása'
+gui_spectator_teleporter: '&eTeleportálás'
+gui_votearena_title: '&6Szavazás egy arénára'
+gui_votearena_votes: '&b{number} &3szavazat'
+enabled_arena: '&2{arena} &abe lett kapcsolva!'
+disabled_arena: '&2{arena} &aki lett kapcsolva!'
+disabling_gracefully_arena: '&eDisabling running match within &6{arena} &egracefully,
+  it may take a short moment...'
+create_arena: '&2{arena} &asikeresen létrehozva!'
+remove_arena: '&2{arena} &asikeresen el lett távolítva!'
+usage: '&6Használat: &e{usage}'
+search_update: Frissítés keresése...
+offline_updateservice: A frissítés szolgáltatás lehet hogy offline!
+inwork_job: Ez a munka már használatban van.
+newupdate: Egy új frissítés elérhető!
+nonewupdate: Éppen nincs frissítés erre a forrásra!
+arena_hastobestopped:
+- '&cThe arena &4{arena}&c has to be stopped!'
+- '&6You may use the following command: &e{command}'
+arena_joinissue_worlddoesntexists: '&cEnnek az arénának: &4{arena} &c van egy hibája:
+  A világ nem létezik!'
+fixproblemsbeforeenabled: '&cKérlek, javítsd ki ezeket a problémákat mielőtt engedélyeznéd'
+use_trueorfalse: '&cHasználd <true/false>!'
+reseting_now: '&2{arena} &a most generálódik!'
+reseting_start_failed: '&cNem sikerült elindítani az aréna regenerálódását &4{arena}'
+reseting_start_failed_alreadyrunning: '&cNem sikerült elindítani az aréna regenerálódását
+  &4{arena} &c, mivel már egy másik fut'
+locateplayer_notinarena: '&4{player} &cis online, but is not inside an arena.'
+locateplayer_inarena:
+- '&3======= &b{player} &3======='
+- '&2Server: &a{server}'
+- '&2Activity: &a{activity}'
+- '&2Arena: &a{arena}'
+- '&2Arena Status: &a{arena-status} ({arena-players}/{arena-max-players})'
+locateplayer_click_to_spectate: '&e&lClick here to spectate {player}'
+notsameworld_arena: '&cTe nem a vagy az &4{arena}&c aréna (&4 {world} világjában&c)!'
+problem_arena_world: '&cVan egy probléma a világgal az &4{arena}&carénában!'
+fixproblemwith: '&eJavítsd ki ezt a problémát: &6'
+spawned_lobbyvillager: '&2LobbyVillager &asikeresen létrehozva!'
+spawned_teamselectvillager: '&2Csapatválasztó falusi &asikeresen létrehozva!'
+spawned_dealer: '&2Kereskedő &asikeresen létrehozva!'
+spawned_upgradedealer: '&2Fejleszthető kereskedő &asikeresen sikeresen létrehozva!'
+notlooking_atsign: '&cNem egy táblára nézel!'
+notlooking_atplayerhead: '&cNem nézel egy játékos fejére!'
+sign_lobby: '&eLobby'
+sign_running: '&6Futás'
+sign_stopped: '&cMegállt'
+sign_reseting: '&aVisszaállítás'
+enabled: Engedélyezve
+disabled: Letiltva
+notallowed_beddestroy: '&cNem törheted ki a saját ágyad!'
+notallowed_selectcolor: '&cNem választhatod ki ezt a színt {colorcode}{color}&c!'
+lobby_item_achievements: '&6Teljesítmények'
+lobby_item_forcestart: '&eKényszerített indítás'
+lobby_item_leave: '&cKilépés'
+lobby_item_leave_use: '&aYou will be teleported back to the lobby in {time} seconds'
+lobby_item_leave_cancel: '&c&lTeleport Canceled'
+lobby_item_selectteam: '&eVálassz egy csapatot'
+lobby_item_votearena: '&eSzavazz egy arénára'
+lobby_printmapinfo_arenaname: Aréna neve
+lobby_printmapinfo_buildby: Építette
+spectator_item_teleporter: '&eTeleportálás'
+spectator_item_changespeed: '&eSebesség megváltoztatása'
+spectator_item_leave: '&cKilépés'
+spectator_item_nextround: '&6Aréna megváltoztatása'
+arrow_damage: '{targetcolor}{target} &eis now at &c{health} &ehealth'
+trap: '&eValaki belesétált a csapdádba!'
+magicmilk_use: '&eTraps will not be able to detect your for {time} seconds!'
+teleporter: '&eTeleportálás másodperceken belül...'
+teleporter_failed: '&cTeleportálás megszakítva!'
+bridge_notenoughmaterials: '&cTöbb anyagra van szükséged &4 {material}-ból/ből &c!'
+give_spawner: '&aGave &2{amount}&a of &2{spawner}&a to &2{target}'
+teleport_success: '&aSikeresen elteleportálva az arénába &2{arena}'
+lobby_waiting: '&6Várakozás &e{amount}&6...'
+lobby_enough: '&6Elég játékos van ebben a körben!'
+alreadyinside_arena: '&cMár egy arénában vagy!'
+noarenaforparty: '&cThere isn''t enough space available for all your party members'
+requires_worldedit: '&4WorldEdit-re &cvan szükséged ehhez!'
+crashmessage_missingbed: Hiányzó ágy helyszínek
+crashmessage_missingteamspawn: Hiányzó csapat-spawnpontok
+crashmessage_missinglobbylocation: Hiányzó lobby helyszín
+crashmessage_missinggamedonelocation: Hiányzó játék végi helyszín
+crashmessage_missinggameworld: A játék világa nincs beállítva
+crashmessage_missingcorners: A sarkok nincsenek beállítva
+crashmessage_uppercorneroutofbounds: Upper corner is greater than the worlds's max
+  height
+crashmessage_lowercorneroutofbounds: Lower corner is less than the worlds's max height
+crashmessage_worldtypearenainmainworld: The arena's regeneration type is WORLD, and
+  the arena's world is the server's main world
+crashmessage_notloadedgameworld: Game world isn't loaded
+crashmessage_matchareacolliding: Match area collides with other arenas
+crashmessage_gamedonelocationinterfering: Your hub-position is within the match area
+regeneration_done: '&aAz aréna &2{arena} &asikeresen regenerálódott &2{time} másodperc
+  alatt&a!'
+regeneration_stopped: '&cA/Az &4 {arena}&c regenerálása &4{time} másodperc után megszakítva'
+regeneration_fail: '&cRegeneration of &4{arena}&c has failed: &4{error}'
+worldedit_changed: '&aMegváltoztattad a pozíciót {id} &2x{x} y{y} z{z} erre'
+getpositionaxe: '&aKaptál egy jelölő fejszét'
+tracker_trackedplayer: '&aEz az iránytű most a legközelebbi ellenséget mutatja.'
+tracker_reusedelay: '&cVárj &4{time} másodpercet&c, amíg újra használhatod a nyomkövetőt!'
+tracker_failed_onlyone: '&4Nem sikerült nyomon követni a legközelebbi ellenséget:
+  &cTe vagy az egyetlen játékos ebben a körben!'
+spectator_join: '&6Most megfigyelő vagy!'
+spectator_leave: '&6Már nem vagy megfigyelő!'
+spectator_howtoquit: '&eHagyd el ezt a kör &6/bw leave &e parancs használatával'
+recalculatestats_done: '&aKész &2{time} másodperc &aután.'
+endlobby_counting: '&6Teleportálás a lobbyba &e{number} másodpercen belül.'
+endlobby_bigtitle_win: '&6Victory!'
+endlobby_smalltitle_win: '&7Your team won this round!'
+endlobby_bigtitle_lose: '&cDefeat'
+endlobby_smalltitle_lose: '{teamcolor}&l{team} &fnyerte ezt a kört!'
+endlobby_bigtitle_nobody: ''
+endlobby_smalltitle_nobody: '&c&nNobody &fwon this round.'
+arenavoting_noavailablearenas: '&cNem maradt aréna. Sajnálom!'
+arenavoting_arenasupdated: '&6Az arénák az aréna szavazásban frissítve lettek.'
+arenavoting_recount_noarenatovote: '&cVisszaállítási a visszaszámlálás: Nincs aréna
+  amire lehetne szavazni!'
+arenavoting_end: '&6A következő aréna nyerte meg a szavazást: &e{arena}'
+arenavoting_recount_toofewplayers: '&cMég &4{number}&c játékos kell, hogy elinduljon
+  a játék'
+arenavoting_minplayers: Min. játékosok
+forcestart_already: '&cA játék már elkezdődött!'
+scoreboard_arenaname: Aréna
+scoreboard_arenamode: Mód
+scoreboard_players: Játékosok
+scoreboard_arena: Aréna
+scoreboard_stats: Statisztikák
+scoreboard_gamestats: Játék statisztika
+scoreboard_yourteam: Csapatod
+scoreboard_teams: Csapatok
+bed_onlydestroyablewith_tnt: '&cCsak az ágyat tudod elpusztítani tntvel!'
+itemspawner_hologram_title: '{spawnercolor}{spawner} &fspawnol &7 {time} &fmásodpercen
+  belül!'
+maxplayers: Max. játékosok
+lobby_countdowntitle_goodluck: '&6Sok szerencsét!'
+minishop_title: '{title}&7 eltűnik &8{time} másodpercen belül'
+arenatype_notsupported: '&cEz nem támogatott a &4{type}&c típusú arénában &4{name}'
+arena_autosavedblocks: '&block-ok az arénában automatikusan mentésre kerültek!'
+ranking_unranked: Rangsorolatlan
+wait_allarenasloaded: '&Várj, amíg minden aréna sikeresen be van töltve!'
+please_savearena: '&6Ügyelj arra, hogy mentsd el az arénánát következő parancsal:
+  &e/bw arena saveblocks <aréna neve>'
+getsetuptool: '&aOdaadtam a &2beállító eszközt'
+onetimepurchase: '&cEzt csak egyszer vásárolhatod meg!'
+arenasgui_title: '&bArénák'
+arena_collidingarena:
+- '&cKérlek, változtasd meg az aréna helyét.'
+- '&cEz keresztezi ezt az arénát: &4{arena}'
+- '&6A hely megváltoztatásához használja a következő parancsot: &e{command}'
+backup_list: '&6Biztonsági mentés fájlok'
+backup_create_success: '&aBiztonsági mentés elkészítve&2{name} &anéven &2{time} &amásodperc
+  alatt'
+backup_create_exists: '&cMár van egy &4{name} nevű biztonsági másolat'
+backup_delete_success: '&aTörölve &2{name} nevű biztonsági másolat'
+backup_unknown: '&cIsmeretlen biztonsági mentés &4{name}'
+backup_restore_success: '&aSikeresen visszaállítottad a &2{name} &abiztonsági mentést&2
+  {time} &amásodperc alatt'
+backup_restore_ask:
+- '&6Biztos hogy, vissza szeretnéd állítani a &e{name}&6 biztonsági mentést?'
+- '&6Ha igen, akkor kérlek írd be ugyanezt a parancsot a 10 másodpercen belül'
+scoreboard_bedstate_alive: '&aÉletben'
+scoreboard_bedstate_destroyed: '&cElpusztult'
+death_spectate_respawnin_bigtitle: '&cYOU DIED!'
+death_spectate_respawnin_smalltitle: '&6Újjászületés a &e{time} &6másodpercen belül'
+spectator_changearena_noneavailable: '&cNem áll szabad aréna rendelkezésre'
+spectatoradd_failed_missinglocation: '&cNem sikerült hozzáadni nézőként, mivel nincsenek
+  elérhető pontok, ahova teleportálhatsz.'
+saveblocks_fail_players: '&4Nem sikerült elmenteni a blokkokat: &cVannak játékosok
+  a világon.'
+createarena_fail_mainworld: '&cNem lehet létrehozni egy arénát a fő világban'
+saveblocks_start: '&6Elindult blokkok mentése az arénában &e{arena}&6. Becsült idő:
+  &e{time}'
+saveblocks_fail_alreadyrunning: '&4Nem sikerült menteni a blokkokat: &cmentés már
+  fut.'
+saveblocks_fail_notstopped: '&4Nem sikerült menteni a blokkokat: &cAz aréna nincs
+  leállítva. (Állítsd le a /bw arena setenabled {arena} false)'
+saveblocks_fail_unknown: '&4Nem sikerült elmenteni a blokkokat: &cfurcsa hibába ütköztünk
+  {type} típusú'
+regeneration_fail_savingblocks: '&4Nem sikerült elindítani a regenerálást: &cAz aréna
+  éppen blokkokat ment.'
+deathmessage_killed_1: '{teamcolor}{player} &7meghalt &8{killerteamcolor}{killer}
+  &7keze által &4❤{heartpercent}%&c-os életerővel'
+deathmessage_killed_2: '{teamcolor}{player} &7elvesztette a harcot &8{killerteamcolor}{killer}
+  &7ellen &4 ❤ {heartpercent}%&c-os életerővel'
+deathmessage_killed_3: '{teamcolor}{player} &7meggyilkolta &8 {killerteamcolor}{killer}&7-t
+  &4 ❤ {heartpercent}%&c-os életerővel'
+deathmessage_void_1: '{teamcolor}{player} &7kiesett a világból'
+deathmessage_void_2: '{teamcolor}{player} &7leesett egy hídról, és még mindig esik'
+deathmessage_explosion_1: '{teamcolor}{player} &7felrobbant tucatnyi darabbra'
+deathmessage_explosion_2: '{teamcolor}{player} &7felrobbant'
+deathmessage_fall_1: '{teamcolor}{player} &7eltörte az összes lábát'
+deathmessage_fall_2: '{teamcolor}{player} &7lezuhant egy magas helyről'
+deathmessage_fire_1: '{teamcolor}{player} &7halára égett'
+deathmessage_fire_2: '{teamcolor}{player} &7elégett élve'
+deathmessage_default_1: '{teamcolor}{player} &7meghalt'
+spectator: Megfigyelő
+itemshop: Tárgy bolt
+motd_loading: Betöltés…
+toggle_display_spawner_enable: '&eA spawnerek ebben az arénában &6 {arena} &emostantól
+  mindenki számára megjelenik. Ismételd meg a parancsot a letiltáshoz'
+toggle_display_spawner_disable: '&eA spawnerek ebben az arénában &6{arena} &enem jelennek
+  meg többé'
+teamchest_title: '{team} csapat ládája'
+playerprivateinventory_title: Ender Chest
+placeholderapi_stats_loading: Betöltés…
+tnt_destroybed_name: TNT
+timer_ending_soon: '&eA játék véget ér {minutes} perc múlva'
+timer_ending: '&eA mérkőzés {seconds} másodperc múlva véget ér'
+command_blocked: '&cLehet, hogy nem hajthatod végre ezt a parancsot játék közben'
+cancel: Mégse
+apply: Alkalmaz
+authors: Szerzők
+nobody: Senki
+customname_isenabled: Az egyéni név engedélyezve van
+customname: Egyedi név
+displayingname: Név megjelenítése
+list_spawners: '&6Az arénában {arena} &6hozzáadott spawnerek száma:&e {spawners}'
+noarenaatpos: '&cNincs aréna a jelenlegi pozíciódban'
+multiplearenasatpos: '&cTöbb aréna van az aktuális pozíciódban: &4{arenas}'
+notinsidearena: '&cNem az arénában &4{arena}'
+arenaname_contains_illegalchars: '&cAz aréna neve illegális karaktereket tartalmaz'
+teamspawn_notyet: '&cA &4{team} &ccsapat spawn pontja még nincs beállítva a &4{arena}-ban/-ben'
+holo_add: '&Hozzáadtál egy hologramot a &2{coord}'
+holo_list: '&6Hologramok itt {world}: &e {holos}'
+holo_remove: '&aEltávolítottad a hologramot &2{coord}'
+holo_removenotfound: '&cNincs hologram a megadott világ koordinátáin &4{world}'
+holo_removeall: '&aEltávolítottam &2{amount} &ahologramot a világban &2{world}'
+unknown_world: '&cNincs olyan világ, amelynek neve &4{world}'
+addon_load_not: '&cA megadott fájl nem bővítmény'
+addon_load_already: '&cA megadott bővítmény már be van töltve'
+addon_load_unknown: '&cA fájl nem létezik. Győződj meg róla, hogy a &4{folder}-ba
+  helyezted.'
+addon_load: '&aBővítmény betöltve &2{addon}'
+addon_unload_notfound: '&cNincs bővítmény &4{addon} &cnéven'
+addon_unload_notaddon: '&4{plugin}&c is a plugin, but not an addon'
+addon_unload: '&aBővítmény kikapcsolva &2{addon}'
+item_error_missinghandlerorcommand: '&4Jelentsd ezt a hibát egy adminnak: &cA/Az {item}
+  tárgynak hiányzik egy kezelője vagy egy parancsa. Semmi sem történik a használatakor.'
+arenasgui_list: ArénaGUI elrendezések
+arenasgui_by: Által
+arenasgui_openfor: '&megnyitva az arénagui elrendezés &6{layout} &e&6{player}-nak/nek'
+unknown_layout: '&cIsmeretlen elrendezés &4{layout}'
+migration_start: '&eElkezdődött az adatok konvertálás a/az &6{origin}&e-ból/ből...'
+migration_success: '&aSikeresen átkonvertáltad &2{origin} &aösszesen &2{time} &amásodperc
+  alatt'
+migration_failure: '&cNem sikerült átkonvertálni &4{origin} &4{time} &cmásodperc után:
+  &4 {error}'
+migration_failure_alreadyrunning: '&cMár fut egy átkonvertálási feladat ugyanilyen
+  forrással'
+playerdeath_cause_elimination: Elimináció
+rejoin_trying: '&eLeellenőrizzük a folyamatban lévő játékot...'
+rejoin_alreadytrying: '&cMár próbálsz újra csatlakozni a legutóbb játszott meccsedhez!
+  Kérlek, várj egy kicsit'
+rejoin_failed_notactive: '&6Túl késő, a meccs már véget ért'
+rejoin_failed_teamdead: '&6Nem csatlakozhatsz újra az folyamatban levő mérkőzéshez,
+  mivel a csapatod kiesett'
+rejoin_failed_unknown: '&6Megpróbáltunk visszaengedni, de lehet, hogy ez nem lehetséges
+  ez a belső szabályok miatt'
+rejoin_success: '&aA mérkőzés még mindig folyamatban van! Most visszacsatlakoztatunk
+  a meccshez...'
+rejoin_success_global: '&6{player} &eújra csatlakozott a {teamcolor}{team} &e csapathoz,
+  és most újra a mérkőzés része'
+hubpos_inactive_bungee: '&6Hub pozíciók &enem aktívak, mivel BungeeCord segítségével
+  oldod meg'
+arenaconvert_onlyspecifctypes: '&cA/az &4{arena} &caréna regenerációs típusait csak
+  &4{types}&c-ra/re változtathatod meg'
+arenaconvert_done: '&aMegváltoztattad a/az &2{arena} &aaréna regenerációs típusát
+  {prev}-ról/ről &2{new}&a-ra/re'
+arenaproblem_savingblocks: '&cAz aréna jelenleg elmenti a blokkokat. Próbáld meg újra
+  néhány másodperc múlva'
+teamchat_enabled_hint: '&eCsak a csapatod tagjai fogják látni az üzeneted. Kezd az
+  üzeneted "&6&l{tag}&e", hogy globálisan írd ki'
+teamchat_disabled_solo_hint: '&eAz üzeneted minden játékos számára látható lesz (előtag
+  nélkül is), mert szólóban játszol'
+remotearena_unsupportedoperation: '&cLehet, hogy nem hajthatod végre az adott műveletet
+  távoli arénák számára'
+connecting_server: '&eCsatlakozni készülsz a kiszolgálóhoz'
+remoteteleport_fail: '&cNem lehet teleportálni a kiszolgálóra'
+tphubfail_nohub: '&cNem sikerült átteleportálni a hubba, mivel nem áll rendelkezésre
+  kiszolgáló'
+try_again_shortly: '&eKérlek próbáld újra rövidesen'
+server_full: '&cA kiszolgáló megtelt'
+spectate_fail: '&cNem sikerült hozzáadni téged nézőként (Ok: {reason})'
+join_fail: '&cNem sikerült hozzáadni az arénához (Ok: {reason})'
+erroraction_arenacloned: '&cEzt nem hajthatod végre klónozott arénák esetén'
+arenabulk_performingaction: '&eThe action is being executed for &6{amount} arenas'
+invalidatecache_alreadyempty: '&eThe player-data-cache is already empty'
+invalidatecache: '&eFollowing locally cached info has been cleared: &6{stats} stats&e,
+  &6{achievements} achievements&e and &6{properties} properties'
+playerdata_info_fetchtime: Fetch time
+playerdata_info_earnedachievements: Earned achievements
+playerdata_info_stats: Statisztikák
+playerdata_info_game_stats: Játék statisztika
+playerdata_info_properties: Properties
+playerdata_notfound: '&cWe couldn''t find any data for &4{target}'
+playerdata_stats_resetallplayer_warning:
+- '&4!!!WARNING!!!'
+- '&cAre you really sure you want to reset &4ALL stats&c for &4&lALL&c players who
+  have EVER played? If so, then please write the same command within the next {sec}
+  seconds. &nYou might want to create a backup.'
+playerdata_stats_resetplayer_warning:
+- '&4!!!WARNING!!!'
+- Are you really sure you want to reset &4ALL stats&c for the player &4&l{player}&c.
+  If so, then please write the same command within the next {sec} seconds.
+playerdata_stats_resetplayer_complete: '&aThe stats for {player} have successfully
+  been reset!'
+playerdata_stats_resetallplayer_complete: '&aThe stats of all players on the server/network
+  have been reset after {time}!'
+playerdata_stats_modify_complete: '&aSuccessfully updated ''{stat}'' to ''{new-val}''
+  for {player}. The player may need to re-log for rankings to update'
+playerdata_stats_modify_fail: '&cWe were unable to update the stat ''{stat}'' for
+  {player}!'
+playerdata_stats_notfound: '&cUnable to find a stats set called ''{stat}'''
+identifyarena_none: '&cThere is no arena at the given position'
+identifyarena_found: '&eFound arena &6{arena}'
+initsetup_welcome:
+- '&6Welcome welcome!'
+- '&eTo make the setup of &lMarcely''s Bedwars &eas easy as possible, we offer you
+  the opportunity to set it up via a web interface (using your browser).'
+- '&eNote that this is only for the initial setup. You can always configure anything
+  later on.'
+initsetup_web: I want to use the fancy web interface (Click or type command {cmd})
+initsetup_simple: I would rather just configure everything myself (Click or type command
+  {cmd})
+initsetup_connecting: '&ePlease wait a little bit, we are preparing it for you.'
+initsetup_connection_failure:
+- '&cSorry, but we could not connect to our service. A firewall may be blocking it.'
+- '&cPlease type the &4/mbedwars &ccommand and try again or skip the whole process
+  if it keeps failing.'
+initsetup_ready: '&eVisit this URL to start the setup process: &6{url}'
+initsetup_finish: '&eEverything is ready, have fun! Visit &6{url} &efor further help'
+click: '*Click*'
+members: Members
+no_members: No members
+antiabuse_statsnotcounted: '&cCertain stats weren''t counted as we detected potential
+  abuse. Please play fair!'
+player_trigger_upgradetrap_bigtitle: '&cTRAP TRIGGERED!'
+player_trigger_upgradetrap_smalltitle: '&fYour trap has been set off!'
+player_trigger_upgradetrap_chat: '&cSomeone has triggered one of your team''s traps!'
+achievement_get_title: Új teljesítmény!
+
+
+###########################
+## Setup GUI
+###########################
+setupgui_nextpage: Következő oldal
+setupgui_prevpage: Előző oldal
+setupgui_goback: Vissza
+setupgui_yousure: Biztos vagy benne?
+setupgui_noarenascreated: Jelenleg egyetlen arénát sem hoztak létre
+setupgui_mainbutton_modify: Létrehozott arénák módosítása
+setupgui_mainbutton_create: Új aréna létrehozása
+setupgui_mainbutton_misc_tools: Misc tools
+setupgui_misctools_spawn_dealer:
+- Spawn Dealer
+- You can remove it by punching.
+setupgui_misctools_spawn_upgradedealer:
+- Spawn Upgrade Dealer
+- You can remove it by punching.
+setupgui_misctools_displayarenasatpos:
+- Identify an arena
+- Uses your current position.
+setupgui_misctools_setuptool:
+- Obtain the Setup Tool
+- Right click the item while holding in hand to use it.
+- Useful for quickly setting up arenas.
+setupgui_misctools_setcorner_1:
+- Set first corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_misctools_setcorner_2:
+- Set second corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_category_actions: Műveletek
+setupgui_category_modify: Módosítás
+setupgui_category_spawners: Spawnerek
+setupgui_category_teams: Csapatok
+setupgui_category_weather:
+- Weather
+- 'Active: {weather}'
+setupgui_category_time:
+- Time
+- 'Active: {time}'
+setupgui_button_enable: Engedélyezés
+setupgui_button_disable: Letiltás
+setupgui_button_regenerate: Az összes blokk újragenerálása
+setupgui_button_teleport: Teleportálj az arénába
+setupgui_button_enter: Belépés a játékba
+setupgui_button_enterspectator: Játék megfigyelése
+setupgui_button_configure: Konfigurálás
+setupgui_button_setlobby:
+- Állítsd be a lobby-t
+- Jelenlegi pozíciódat használja
+setupgui_button_rename: Név módosítása
+setupgui_button_saveblocks: Az összes blokk és entitás mentése
+setupgui_button_setgameworld:
+- Állítsd be a játék világát
+- A jelenlegi világodat használja
+setupgui_button_saveregioncorners:
+- Aréna sarkok elmentése
+- Győződj meg róla, hogy a sarkokat a {tool} használatával állítod be
+setupgui_button_modifyregioncorners:
+- Aréna sarokpozícióinak beállítása
+- Jelenlegi pozíciódat használja
+- ''
+- 'Bal kattintás: Sarok 1 megjelöleése'
+- 'Jobb klikk: Sarok 2 megjelölése'
+setupgui_button_setspectatorspawn:
+- Állítsd be a spawn pontot a nézők számára
+- Jelenlegi pozíciódat használja
+setupgui_button_properties: Properties
+setupgui_button_delete: Az aréna törlése
+setupgui_button_removeallspawners: Az összes hozzáadott spawner eltávolítása
+setupgui_button_displayspawners:
+- Az összes spawner megjelenítése
+- Egy kis hologramot ad hozzá bármelyik spawnernél
+setupgui_button_undisplayspawners: Az összes spawner elrejtése
+setupgui_button_getallbeds: Szerezd meg minden csapat ágyát
+setupgui_spawnerbutton_obtainitems: '&fKapjon {amount} tételek {spawner}'
+setupgui_spawnerbutton_add:
+- '&f{spawner}&f spawner hozzáadása'
+- Jelenlegi pozíciódat használja
+setupgui_spawnerbutton_removeall: '&fÖsszes {spawner} &fspawner eltávolítása'
+setupgui_teambutton_obtainbed: '&f{team} &fágyának megszerzése'
+setupgui_teambutton_teleportspawn: '&fTeleportálás a {team} &fcsapat spawn pontjára'
+setupgui_teambutton_setspawn:
+- '&fÁllítsd be a {team} csapat spawn pontját'
+- Jelenlegi pozíciódat használja
+setupgui_removearena_yes: '&a&lIgen&f, távolítja az arénát &l{arena}'
+setupgui_removearena_no: '&c&lNEM&f, megtartja az arénát &l{arena}'
+setupgui_create_type_region:
+- Régió
+- Korlátozza az arénát egy határral.
+- A játékosok láthatják a határ vizuális hatását, és nem fogják tudni elhagyni.
+- Ezzel több arénát is létrehozhatsz egyetlen világban.
+- Kérlek látogass el a wikire további részletekért.
+setupgui_create_type_world:
+- Világ
+- Nincsen határ, az egész világot felhasználja a játékhoz.
+- Könnyebb beállítani, de a regeneráció során több erőforrást igényelhet.
+- Kérlek látogass el a wikire további részletekért.
+setupgui_create_type_voting:
+- Szavazás
+- Nem egy igazi arénában ahol lehet játszani.
+- Ehelyett csak a lobbyt használja a szavazáshoz.
+- A játékosok teleportálódnak az aréna Világába vagy Régiójába miután a szavazás véget
+  ért.
+- Kérlek látogass el a wikire további részletekért.
+setupgui_create_title: Új aréna létrehozása
+setupgui_configure_title: Aréna beállítása
+setupgui_configure_auto_detect_teams_complete: '&6{amount} &epotential teams have
+  been detected using your current position'
+setupgui_configure_playersperteam2:
+- '&6Maximum játékosok:'
+- '&7Jelenlegi maximum játékos csapatonként: &f{amount}'
+- '&7Jelenlegi maximum játékosok az arénában: &f{total-max-players}'
+setupgui_configure_minplayers:
+- '&6Minimum játékosok: &f{amount}'
+- '&7Az indításhoz szükséges játékosok száma'
+setupgui_configure_totalplayers: '&6Maximum játékos az arénában: &f{amount}'
+setupgui_configure_arenasbelowinpool: '&3&l⇩ &bArénák a szavazhatók &3&l⇩'
+setupgui_configure_noarenasinpool: '&cNincsenek szavazható arénák'
+setupgui_clicktorename: Átnevezéséhez kattints
+setupgui_rename_title: Aréna átnevezése
+setupgui_confirm_action: '&6Erősítsd meg a műveletet a következő néhány másodpercen
+  belül ismét a gombra kattintva'
+setupgui_configure_minplayers_toolow: CSAK TESZTELÉSRE. Ezzel, elkezdhetsz egy mérkőzést
+  más játékos nélkül.
+setupgui_button_modifyregioncorners_reminder_save: '&eNe felejts el rákattintani az
+  „aréna sarkok mentése” gombra, különben a módosítások nem lesznek alkalmazva.'
+setupgui_spawnerbutton_removenearbyspawners:
+- '&fAz összes közeli {spawner} &fidéző eltávolítása'
+- Jelenlegi pozíciódat használja
+setupgui_remotearena_info:
+- '&c [TÁVOLI]'
+- '&o{server} &ráltal kezelt'
+
+
+###########################
+## Setup Tool
+###########################
+setuptool_freebuild: Place/Break blocks freely
+setuptool_spawner: Place/Edit spawner
+setuptool_selectteam: Select team
+setuptool_bed: Place bed
+setuptool_spawnpoint: Place spawn point
+setuptool_dealer: Spawn/Kill dealer
+setuptool_notinsidearena: '&cMust be inside an arena. &6&lClick here &cto manage arenas.
+  Teleport yourself to it and use the tool item again'
+setuptool_activated: '&aActivated &esetup tool for &6{arena}'
+setuptool_deactivated: '&cDeactivated &esetup tool. &6&lClick here &eto open the arena''s
+  setup GUI'
+setuptool_selecttype: Select type
+setuptool_placeagainconfirm: Place again to confirm
+setuptool_type_dealer: Dealer
+setuptool_type_upgradedealer: Upgrade Dealer
+setuptool_teamcomponent_bed: Bed
+setuptool_teamcomponent_spawnpoint: Spawn Point
+setuptool_spawnpoint_preview:
+- '&f&lSpawn Point Preview'
+- '{team}'
+- '&fDisappears in {time}'
+
+
+###########################
+## Shop Layouts
+###########################
+shop_d_hypixel_available: '&8Elérhető'
+shop_d_hypixel_clicktobrowse: '&eKattints böngészéshez!'
+shop_d_hypixel_items: '&8Tárgyak'
+shop_d_hypixel_clicktopurchase: '&eKattintás a vásárláshoz!'
+shop_d_hypixel_maxed: '&aMAXED!'
+shop_d_hypixel_unlocked: '&aUNLOCKED'
+shop_d_hypixel_cost: '&7Költség: &f m{color}{amount} {type}'
+shop_d_hypixel_goback: '&aMenj vissza'
+shop_d_hypixel_tooexpensive: '&cNincs elég {type}-d!'
+shop_d_hivemc_clicktoview: '&b{icon} Kattints ide a/az &l{item} megtekintéséhez'
+shop_d_hivemc_goback: '&c&menj vissza'
+shop_d_hivemc_returntomenu: '&7Visszatérés a menübe'
+shop_d_hivemc_clicktogoback: '&b{icon} Kattints ide a visszalépéshez'
+shop_d_hivemc_clicktobuy: '&b{icon} Kattints ide a vásárláshoz'
+shop_d_hivemc_cost: '&6Költség'
+shop_d_rewinside_shoptype_new: Te az új és továbbfejlesztett üzletet használod
+shop_d_rewinside_shoptype_old: Te a régi boltot használod
+shop_d_rewinside_shoptype_switch: Kattints ide a verziók közötti váltáshoz
+shop_d_bergwerklabs_currentpage: '&bAktuális oldal'
+shop_d_bergwerklabs_changepage: '&bOldal {page}'
+shop_d_bergwerklabs_buy: '&aVásárlás &7&o<Ball klikk>'
+shop_d_bergwerklabs_buy_tooexpensive: '&7Túl drága!'
+shop_d_hypixelv2_clicktoview: '&eKattintás a megtekintéshez!'
+shop_d_hypixelv2_seperator_categories: '&8 ⬆ &7 Kategóriák'
+shop_d_hypixelv2_seperator_items: '&8 ⬇ &7 Tárgyak'
+shop_d_hypixelv2_quickbuy_pageitem: '&bGyors vásárlás'
+shop_d_hypixelv2_quickbuy_emptyslot_name: '&cÜres slot!'
+shop_d_hypixelv2_quickbuy_emptyslot_description:
+- '&7Ez egy gyors vásárlás slot!'
+- '&bLopakodás kattintás &7bármelyik tágyon'
+- '&7a boltban, hogy add ide.'
+shop_d_hypixelv2_quickbuy_menu_title: Hozzáadás a gyors vásárláshoz...
+shop_d_hypixelv2_quickbuy_menu_set: '&eKlikk a beállításhoz!'
+shop_d_hypixelv2_quickbuy_menu_replace: '&eKlikk a kicseréléshez!'
+shop_d_hypixelv2_quickbuy_menu_representing: '&eHozzáadás a gyors slot-hoz'
+shop_d_hypixelv2_quickbuy_add_item: '&bSneak click to add to Quick Buy'
+shop_d_hypixelv2_quickbuy_remove_item: '&bSneak click to remove from Quick Buy'
+
+
+###########################
+## Achievements
+###########################
+achievements_name_ragequit: Rage kilépés
+achievements_name_winround: Győztes
+achievements_name_loseround: Vesztes
+achievements_name_ownbeddestroyed: Szerencsétlen
+achievements_name_bestbow: OP
+achievements_name_userescueplatform: Ez közel volt!
+achievements_name_useendepearl: Enderman
+achievements_name_useminishop: Bevásárló Mama
+achievements_name_killsomeonewithbow: Katniss
+achievements_name_winin3minutes: Máris vége?
+achievements_name_killsomeonewithhalfaheart: Szerencsés csapás
+achievements_name_win100rounds: Bajnok
+achievements_name_usebridge: Hídépítő
+achievements_name_useguarddog: Rendőrségi őr
+achievements_name_effectmagnetshoes: Mágnes erő
+achievements_name_useteleporter: Sugározz fel, Scotty!
+achievements_name_usetntsheep: Bumm, bumm, bébi!
+achievements_name_usetracker: Meg foglak találni. És megöllek.
+achievements_name_placetrap: Csapda
+achievements_name_runovertrap: EZ EGY CSAPDA!
+achievements_name_spend200resources: Gazdag
+achievements_name_rankingintop3: E-Sport játékos
+achievements_name_goodkd: Profi játékos
+achievements_name_highplaytime: '#NoLife'
+achievements_name_writeggatend: GG
+achievements_name_winwithoutbed: Nem érintessz meg
+achievements_name_die10secsafterbeddestruction: Nem te tetted!
+achievements_name_optaineveryachievement: Függő
+achievements_name_usefireball: Pew pew!
+achievements_name_useinvispotion: Sétáló Szellem
+achievements_text_ragequit: Elhagysz egy arénát míg játék van
+achievements_text_winround: Nyerj meg legalább egy kört
+achievements_text_loseround: Veszíts el egy kört
+achievements_text_ownbeddestroyed: Ha az ágyad elpusztul
+achievements_text_bestbow: Építsd meg a legjobb íjat
+achievements_text_userescueplatform: Használd egyszer a mentőplatformot
+achievements_text_useendepearl: Használj egy enderpearlt
+achievements_text_useminishop: Használd egyszer a miniboltot
+achievements_text_killsomeonewithbow: Ölj meg valakit íjjal
+achievements_text_winin3minutes: Nyerj meg egy kört 3 perc alatt
+achievements_text_killsomeonewithhalfaheart: Ölj meg egy ellenséget fél szívvel
+achievements_text_win100rounds: Nyerj 100 kört
+achievements_text_usebridge: Használd egyszer a hídelemet
+achievements_text_useguarddog: Szaporíts egy őr kutyát
+achievements_text_effectmagnetshoes: Amikor a mágneses cipőid megvédtek egyszer egy
+  visszalökéstől
+achievements_text_useteleporter: Használd egyszer a teleportáló-t
+achievements_text_usetntsheep: Szaporíts egy birkát egy TNT-vel a TNT sheep-elemmel
+achievements_text_usetracker: Használd egyszer a nyomkövetőt
+achievements_text_placetrap: Építs egyszer egy csapdát
+achievements_text_runovertrap: Aktiválj be egy csapádt azzal, hogy átfutsz rajta
+achievements_text_spend200resources: Költs el 200-at vagy több nyersanyagot a boltban
+achievements_text_rankingintop3: Legyél a TOP 3 a rangsorban
+achievements_text_goodkd: Legyen a K/D értéked magasabb, mint 5.0
+achievements_text_highplaytime: Játssz legalább 5 órát
+achievements_text_writeggatend: Írj „GG” -t a játék végén
+achievements_text_winwithoutbed: Nyerj úgy, hogy az ágyad elpusztult
+achievements_text_die10secsafterbeddestruction: Halj meg 10 másodperccel azután, hogy
+  az ágyad elpusztult
+achievements_text_optaineveryachievement: Minden eredményt érj el
+achievements_text_useinvispotion: Igyál egy láthatatlanság bájitalt
+achievements_text_usefireball: Használd egyszer a tűzgolyót
+
+
+###########################
+## Shop
+###########################
+shop_buygroup_buy_lowertier: '&cMár ennél magasabb szintű tágyad van'
+shop_player_not_in_running_arena: '&cYou''re not in a running arena!'
+shop_price: 'Ár: &7{number} {spawnercolor}{spawnertype}'
+shop_page_block: Blokk
+shop_page_food: Étel
+shop_page_armor: Páncél
+shop_page_sword: Kard
+shop_page_bow: Íj
+shop_page_pickaxe: Csákány
+shop_page_potion: Bájital
+shop_page_special: Speciális
+shop_page_extra: Extra
+shop_item_hardenedclay: Edzett agyag
+shop_item_endstone: Végkő
+shop_item_chest: Láda
+shop_item_enderchest: Enderláda
+shop_item_ladder: Létra
+shop_item_web: Háló
+shop_item_apple: Alma
+shop_item_grilledpork: Grillezett sertéshús
+shop_item_cake: Torta
+shop_item_goldenapple: Arany alma
+shop_item_leatherhelmet: Bőr sisak
+shop_item_leatherleggings: Bőr nadrág
+shop_item_leatherboots: Bőr csizma
+shop_item_chainmailchestplatelvl1: Lánc mellvért &7LVL 1
+shop_item_chainmailchestplatelvl2: Lánc mellvért &7LVL 2
+shop_item_chainmailchestplatelvl3: Lánc mellvért &7LVL 3
+shop_item_knockbackstick: Visszalökés bot
+shop_item_swordlvl1: Kard &7LVL 1
+shop_item_swordlvl2: Kard &7LVL 2
+shop_item_swordlvl3: Kard &7LVL 3
+shop_item_bowlvl1: Íj &7LVL 1
+shop_item_bowlvl2: Íj &7LVL 2
+shop_item_bowlvl3: Íj &7LVL 3
+shop_item_arrow: Nyíl
+shop_item_pickaxelvl1: Csákány &7LVL 1
+shop_item_pickaxelvl2: Csákány &7LVL 2
+shop_item_pickaxelvl3: Csákány &7LVL 3
+shop_item_potionswiftness: A gyorsaság bájitala
+shop_item_potionregeneration: Regeneráció bájitala
+shop_item_potionhealing: Gyógyítás bájitala
+shop_item_potionstrength: Az erő bájitala
+shop_item_enderpearl: Enderszem
+shop_item_teleporter: Teleportáló
+shop_item_minishop: Minibolt
+shop_item_rescueplatform: Mentőplatform
+shop_item_tntsheep: TNT bárány
+shop_item_magnetshoes: Mágnes cipők
+shop_item_trap: Csapda
+shop_item_bridge: Híd
+shop_item_guarddog: Őrző kutya
+shop_item_tracker: Nyomkövető
+shop_item_fishingrod: Horgászbot
+shop_item_snowball: Hógolyó
+shop_item_fireball: Tűzgolyó
+shop_item_magicmilk: Magic Milk
+shop_item_tnt: TNT
+
+
+###########################
+## Upgrade Shop
+###########################
+upgradeshop: Fejlesztési bolt
+upgradeshop_buy_upgrade_broadcast: '&e{player} fejlesztette a &6&e{upgrade} &6LVL
+  {newlvl}-ra/-re'
+upgradeshop_buy_trap_broadcast: '&e{player} purchased &6{upgrade}'
+upgradeshop_toofew_materials: '&cYou don''t have enough materials to buy this!'
+upgradeshop_max_upgrade: '&cYou have already purchased this upgrade'
+upgradeshop_buystate_purchasable: '&eKattintás a vásárláshoz!'
+upgradeshop_buystate_not_purchasable: '&cYou don''t have enough {price-type}&c!'
+upgradeshop_buystate_maximum: '&aUNLOCKED'
+upgradeshop_queuedtrap_icon:
+- '&aTrap #{queue-level}: {trap-name}'
+- '&7This trap will trigger'
+- '&7immediately after an'
+- '&7intruder enters your base'
+- ' '
+- '&7Note that is the intruder'
+- '&7Is using Magic Milk, this'
+- '&7trap may not trigger'
+upgradeshop_unqueuedtrap_icon:
+- '&cTrap #{queue-level}: No Trap!'
+- '&7Purchasing a trap will'
+- '&7queue it here. Its cost'
+- '&7may scale based on the'
+- '&7number of traps queued'
+upgradeshop_hypixel_separator:
+- '&8⬆ &7Purchasable'
+- '&8⬇ &7Traps Queue'
+upgradeshop_hypixel_traps_menu_button:
+- '&eBuy a trap'
+- '&7Purchased traps will be'
+- '&7queued below'
+- ' '
+- '&eUpgrades'
+upgradeshop_hypixel_back_button:
+- '&eReturn to Upgrades'
+- '&7Go back to view upgrades'
+- '&7and traps queue'
+- ' '
+- '&eClick to return!'
+upgradeshop_name_protection: Armor Protection
+upgradeshop_description_protection: Increases armor protection
+upgradeshop_name_featherfall: Feather Fall
+upgradeshop_description_featherfall: Gain less fall damage
+upgradeshop_name_haste: Haste
+upgradeshop_description_haste: All players in your team permanently gain the haste
+  effect
+upgradeshop_name_healrange: Gyógyító állomás
+upgradeshop_description_healrange: Gyógyít a bázisodon
+upgradeshop_name_sworddamage: Élesség
+upgradeshop_description_sworddamage: Növeli a kard sebzést
+upgradeshop_name_spawnermultiplier: Spawner szorzó
+upgradeshop_description_spawnermultiplier: Növeli a spanwer termelékenységét a bázisodon
+upgradeshop_name_enemyalarmtrap: Alarm Trap
+upgradeshop_description_enemyalarmtrap: Removes Invisibility from infiltrating player
+upgradeshop_name_counteroffensivetrap: Counter Offensive Trap
+upgradeshop_description_counteroffensivetrap: Gives Speed II and Jump II too all team
+  members for 15 seconds
+upgradeshop_name_enemyminingfatigue: Bányász fáradság
+upgradeshop_description_enemyminingfatigue: Csökkenti a bányászás sebességet a bázisodba
+  belépő ellenségek számára
+upgradeshop_name_enemytrap: Csapda
+upgradeshop_description_enemytrap: Gives blind and slowness effect to the attacker
+upgradeshop_trapremove_lore: '&eRight Click to remove! &8(No refund)'
+upgradeshop_trapremove: '&eRemoved &6{trap} &efrom the queue'
+
+
+###########################
+## Custom
+###########################
+mustserverjoinfromhub: '&cYou must join an arena from the hub'
+arena_joinissue_votingparticipating: '&cYou may not join this arena right now. It
+  is a part of an active voting pool'
+rejoin_failed_notparticipating: '&6You didn''t participate in any match yet'

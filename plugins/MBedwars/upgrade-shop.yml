@@ -1,0 +1,224 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww10
+#########################
+
+# Do not change this
+file-version: 2
+
+# Change the layout of the shop here
+# The purpose of a layout configure how the upgrade shop displays all the upgrades
+# You are able to choose between:
+# - Normal
+# - NormalV2
+# - Hypixel
+# - HypixelV2
+layout-name: NormalV2
+
+# You may also display players playing Minecraft's Bedrock Edition a different layout
+# Use "equally" to display the same layout as with the "layout-name" config
+layout-name-bedrock: equally
+
+upgrades:
+  sharpness:
+    levels:
+      lvl-1:
+        icon: iron_sword
+        handler: bedwars:sharpness
+        amplifier: 1.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 8
+  protection:
+    levels:
+      lvl-1:
+        icon: iron_chestplate
+        handler: bedwars:armor_protection
+        amplifier: 1.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 4
+      lvl-2:
+        icon: iron_chestplate
+        handler: bedwars:armor_protection
+        amplifier: 2.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 8
+      lvl-3:
+        icon: iron_chestplate
+        handler: bedwars:armor_protection
+        amplifier: 3.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 12
+      lvl-4:
+        icon: iron_chestplate
+        handler: bedwars:armor_protection
+        amplifier: 4.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 16
+  haste:
+    levels:
+      lvl-1:
+        icon: golden_pickaxe
+        handler: bedwars:haste
+        amplifier: 1.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 2
+      lvl-2:
+        icon: golden_pickaxe
+        handler: bedwars:haste
+        amplifier: 2.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 4
+  spawner-multiplier:
+    levels:
+      lvl-1:
+        icon: furnace
+        handler: bedwars:spawner_multiplier
+        amplifier: 1.5
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 2
+      lvl-2:
+        icon: furnace
+        handler: bedwars:spawner_multiplier
+        amplifier: 2.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 4
+      lvl-3:
+        icon: furnace
+        handler: bedwars:spawner_multiplier
+        amplifier: 2.5
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 6
+      lvl-4:
+        icon: furnace
+        handler: bedwars:spawner_multiplier
+        amplifier: 3.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 8
+  heal-pool:
+    levels:
+      lvl-1:
+        icon: beacon
+        handler: bedwars:heal_pool
+        amplifier: 1.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 1
+  feather-fall:
+    levels:
+      lvl-1:
+        icon: diamond_boots
+        handler: bedwars:feather_fall
+        amplifier: 1.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 1
+      lvl-2:
+        icon: diamond_boots
+        handler: bedwars:feather_fall
+        amplifier: 2.0
+        duration: 0
+        price:
+          spawner: diamond
+          amount: 2
+  regular-trap:
+    price-auto-scale: true
+    repeatable-level:
+      icon: tripwire_hook
+      handler: bedwars:regular_trap
+      amplifier: 1.0
+      duration: 10
+      price:
+        spawner: diamond
+        amount: 1
+  counter-offensive-trap:
+    price-auto-scale: true
+    repeatable-level:
+      icon: feather
+      handler: bedwars:counter_offensive_trap
+      amplifier: 1.0
+      duration: 15
+      price:
+        spawner: diamond
+        amount: 1
+  alarm-trap:
+    price-auto-scale: true
+    repeatable-level:
+      icon: redstone_torch
+      handler: bedwars:alarm_trap
+      amplifier: 1.0
+      duration: 0
+      price:
+        spawner: diamond
+        amount: 1
+  mining-fatigue-trap:
+    price-auto-scale: true
+    repeatable-level:
+      icon: wooden_pickaxe
+      handler: bedwars:mining_fatigue_trap
+      amplifier: 1.0
+      duration: 8
+      price:
+        spawner: diamond
+        amount: 1
+
+
+# The max amount of traps a team can own at one time
+max-traps-queueable: 3
+
+# The minimum time between a teams trap triggers
+trap-trigger-queue-duration: 15
+
+# Whether players are able to remove bought traps
+# This will display an additional lore line in the shop
+# Only the original buyer of the trap may remove it. No spawners are being given back/refunded
+trap-removable: true
+
+# Colors used to build upgrade icons (names, and lore)
+upgrade-name-purchased-color: GREEN
+upgrade-name-purchasable-color: YELLOW
+upgrade-name-cannot-purchase-color: RED
+upgrade-levels-purchased-color: GREEN
+upgrade-levels-unpurchased-color: GRAY
+
+# The levels placeholder displays all the levels with an upgrade
+upgrade-levels-placeholder-format: '{purchase-color}Tier {level}: {level-name} {level-roman},
+  &b{price-amount} {price-type}'
+
+# Lore format used in the shop for upgrades with more than one level
+upgrade-multi-level-lore:
+- '&7{description}'
+- ' '
+- '{levels}'
+- ' '
+- '{buy-state}'
+
+# Lore format used in the shop for upgrades with a single level
+upgrade-single-level-lore:
+- '&7{description}'
+- ' '
+- '&7Cost: &b{price-amount} {price-type}'
+- ' '
+- '{buy-state}'

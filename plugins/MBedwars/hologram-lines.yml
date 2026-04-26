@@ -1,0 +1,25 @@
+# ########################
+# Visit the wiki page for further info
+# ########################
+
+# The hologram lines that will appear with the Stats Hologram
+stats-hologram-lines:
+  - "&3&lBedwars &b&lStats"
+  - ""
+  - "&6%Stat_Default_Rank%: &e{rank}"
+  - "&6%Stat_Default_Won%: &e{wins}"
+  - "&6%Stat_Default_Lost%: &e{loses}"
+  - "&6%Stat_Default_WL%: &e{wl}"
+  - "&6%Stat_Default_Kills%: &e{kills}"
+  - "&6%Stat_Default_Deaths%: &e{deaths}"
+  - "&6%Stat_Default_KD%: &e{kd}"
+  - "&6%Stat_Default_BedsDestroyed%: &e{bedsdestroyed}"
+  - "&6%Stat_Default_PlayTime%: &e{playtime}"
+
+# The hologram lines that will appear with the Ranking Hologram
+ranking-hologram-lines:
+  - "&2&l{rank}"
+  - "&6&n{player}"
+  - ""
+  - "&3%Stat_Default_WL%: &b{wl}"
+  - "&3%Stat_Default_KD%: &b{kd}"

@@ -1,0 +1,848 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww11
+#########################
+
+
+
+###########################
+## Miscellaneous
+###########################
+prefix: '&3[起床战争]'
+configurations_reload_start: '&a配置文件正在重新加载！'
+configurations_reload_end: '&a配置文件重新加载,用时 &2{time} &a秒.'
+configurations_reload_alreadyloading: '&c设置已载入完成!'
+info_madeby: 制作者
+info_specialthanks: Special thanks
+info_website: 官方网站
+info_version: 版本
+info_newestversion: 最新版本
+page: 页
+help: 帮助
+team: 队
+none: 无
+unknown_page: '&c未知页面 &4{page}'
+unknown_argument: '&c未知参数 &4{arg}'
+unknown_block: '&c未知方块 &4{block}'
+unknown_place: '&c未知地点 &4{place}'
+unknown_spawner: '&c未知生成器 &4{spawner}'
+version_new: '&a有新版本可供下载! &2{version}'
+version_nonew: '&c已是最新版本!'
+error_occurred: '&a发生一个意外错误!'
+error_occurred_syntax: '&c发生了一个错误: &6{message}'
+no_permissions: '&c你没有对应的权限!'
+no_permissions_specific: '&cMake sure that you either have the &4{perm} &cpermission
+  or OP'
+onlyas_player: '&c此命令只对玩家有效!'
+not_ingame: '&c你不在一个游戏中!'
+not_ingame_player: '&4{player} &c不在这一轮游戏中!'
+not_supported: '&c不支援这个版本! 请更新至 &4{version} &或更高'
+color_yellow: 黄
+color_orange: 橙
+color_red: 红
+color_blue: 蓝
+color_magenta: magenta
+color_lightblue: 浅蓝
+color_cyan: 青
+color_lightgreen: 浅绿
+color_green: 绿
+color_purple: 紫
+color_pink: 粉
+color_white: 白
+color_lightgray: 浅灰
+color_gray: 灰
+color_brown: 棕
+color_black: 黑
+missing_worldeditpoints: '&c缺失创世神选择点，请使用创世神选择两个点进行标记'
+saved_arena: '&a房间 &2{arena}&a 已保存!'
+saved_bed: '&a在该房间&2{arena}中&a保存了{colorcode}{color}队的床 '
+bed_notinside_arena: '&c未能添加床，因为这个位置不是任意一个房间的区域。使用“/bw arena setcorners "设置区域[两个角]
+  或 “/bw arena setworld”设置区域[整个世界]'
+exists_arena: '&c这个区域 &4{arena} &c已经存在!'
+spawner_bronze: 铜锭
+spawner_iron: 铁锭
+spawner_iron_plural: 铁锭
+spawner_gold: 金锭
+spawner_gold_plural: 金锭
+spawner_diamond: 钻石
+spawner_diamond_plural: 钻石
+spawner_emerald: 绿宝石
+spawner_emerald_plural: 绿宝石
+added_spawner: '&a已成功在地图 &2{arena} &a中添加了 &2 {spawnertype} 资源生成点！'
+specialblock_added: '&a添加了一个 &2{type} &a类型的块'
+specialblock_alreadyadded: '&c 已经有一个类型为 &4 {type} &c 的块。请打碎并移除它。'
+specialblock_removed: '&6删除了 &e{type} &6类型的块'
+removed_spawners: '&2{number} &a个生成器已从 {arena} 中删除!'
+start_round: '&a游戏目前正在启动!'
+stop_round: '&a游戏已被停止!'
+kicked_player: '&a成功踢出玩家 &2{player} &a从 &2{arena}'
+kicked_player_toplayer: '&c你被踢出了该房间!'
+list_arenas: '&e所有房间: &6'
+list_arenas_local: '&e本地游戏区域: &6'
+list_arenas_remote: '&c远程游戏区域: &6'
+only_betamember: '&c你不能在测试阶段进入起床战争!'
+notavailable_color: '&c未知的颜色 &4{color}'
+joinmessage_stopped: '&c该房间已被停止!'
+joinmessage_reseting: '&c该房间正在重置!'
+joinmessage_full: '&c该房间已满!'
+joinmessage_running: '&c该房间已经开始!'
+joinmessage_alreadyinside: '&c你已经在一个房间里了!'
+joinmessage: '&6{player} &e加入了游戏.'
+leavemessage: '&6{player} &e离开了游戏.'
+notfound_player: '&c找不到玩家 &4{player} !'
+notfound_arena: '&c房间 &4{arena} &c不存在!'
+notfound_arena_loading: '&6(房间正在加载)'
+notfound_arena_validpicker: '&cThere''s no arena matching the picker: &4{picker}'
+notfound_author: '&c找不到作者&4{author}&c!'
+get_bed: '&a你夺取了 {colorcode}{color} 的床'
+getallbeds: '&a已经给您区域 &2{arena}&a 中所有的床。'
+countdown_start: '&6倒计时开始!'
+countdown_stop: '&6倒计时停止!'
+countdown_counting: '&6该房间将在 &e{number} &6 秒后开启!'
+countdown_changed: '&6倒计时被修改到 &e{number} &6秒!'
+countdown_voting_counting: '&6房间投票将在 &e{number} &6秒后结束!'
+toofew_materials: '&c你没有足够的物品购买这个!'
+no_inventory_space: '&c你的背包已满!'
+tooless_players: '&c该房间玩家数量过少!'
+needmore_players_than: '&c你还需要 &4{amount}&c 个以上的玩家!'
+win_money: '&6你获得了 &e{number}&6$!'
+player_notingameanymore: '&4{player} &c离开一个游戏了！'
+player_notfound: '&c找不到玩家 &4{player} !'
+player_cheating: '&6{player} &e因为失去了母亲而离开了游戏！'
+player_loosing: '&6{player} &e输了这局游戏!'
+players: 玩家
+team_won: '&e {colorcode}{color} &e队赢得了这局游戏!'
+team_notaddedyet: '&c {teamcolor}{team} &c队 &4{arena}&c并没有在&4{arena}&c房间中添加!'
+changeteam_full: '&7 {colorcode}{color} &7队伍已满！'
+changeteam_alreadyinside: '&7您已经是 {colorcode}{color}&7 队伍的成员！'
+changeteam_changed: '&7您正在 {colorcode}{color} &7团队中!'
+changeteam_none: '&7You left your team and will be assigned to a random one'
+changed_postitions: '&a位置修改成功!'
+changed_lobbylocation: '&a房间的大厅位置 &2{arena} &a已成功更改！'
+changed_teamspawn: '&a {colorcode}{color} &a队伍的出生位置已成功更改！'
+changed_arenaworld: '&a房间&2{arena} &a的世界成功更改为 &2{world}'
+spawn_ranking: '&a排行榜 &2{place} &a 已成功生成！'
+changed_gamedonelocation: '&a已成功更改&2游戏结束传送位置！'
+insidearena_gamedonelocation:
+- '&c中心位置位于比赛场地 &4{arena} &c内!'
+- '&c将其放置在别处——即你离开比赛后应被传送至的位置'
+stats_info_entry: '&7{name}: &b{value}'
+stat_default_rank: 排名
+stat_default_win_streak: 连胜
+stat_default_top_win_streak: 最高连胜
+stat_default_won: 获胜
+stat_default_lost: 战败
+stat_default_wl: 胜/负：
+stat_default_roundsplayed: 游玩次数
+stat_default_kills: 击杀数
+stat_default_kill_streak: 当前连杀
+stat_default_top_kill_streak: 最高连杀
+stat_default_finalkills: 最终击杀数
+stat_default_deaths: 死亡数
+stat_default_finaldeaths: 最终死亡
+stat_default_kd: 击杀/死亡
+stat_default_final_kd: 最终 K/D
+stat_default_bedsdestroyed: 床摧毁数
+stat_default_bedslost: 被毁床数
+stat_default_playtime: 游戏时间
+destroyed_bed_title: ''
+destroyed_bed_subtitle: '{teamcolor}{team} &f队的床被&7{player}&f破坏！'
+destroyed_bed_subtitle_playerless: '{teamcolor}{team} &f队的床已经被摧毁!'
+destroyed_bed_own_title: ''
+destroyed_bed_own_subtitle: '&f您的床已被 &7{player}&f摧毁！'
+destroyed_bed_chat: '%Prefix% %Destroyed_Bed_SubTitle%'
+destroyed_bed_chat_left: '%Prefix% {teamcolor}{team}&f队的床因他们离开游戏而摧毁.'
+destroyed_bed_chat_leftignoredrejoin: '%Prefix% {teamcolor}{team}&f的床已被摧毁，因为他们离开且未及时重新加入。'
+number_notone: '&4{number} &c不是数字！'
+stats_by: '{player} 的战绩'
+gui_achievements_title: '&6成就'
+gui_selectteam_title: '&6选择队伍'
+gui_spectator_teleporter: '&e传送'
+gui_votearena_title: '&6地图投票'
+gui_votearena_votes: '&b{number} &3票'
+enabled_arena: '&2{arena} &a目前&2启用！'
+disabled_arena: '&2{arena} &a目前&2禁用！'
+disabling_gracefully_arena: '&e正在停止 &6{arena} &e场地内进行的游戏，这可能需要一小会儿……'
+create_arena: '&2{arena} &a成功创建!'
+remove_arena: '&2{arena} &a成功移除!'
+usage: '&6用法: &e{usage}'
+search_update: 正在搜索更新……
+offline_updateservice: 更新服务连接失败!
+inwork_job: 此任务已在处理中！
+newupdate: 发现一个新的更新
+nonewupdate: 此资源目前没有更新！
+arena_hastobestopped:
+- '&c游戏 &4{arena} &c被迫停止！'
+- '&6你可以执行以下命令: &e{command}'
+arena_joinissue_worlddoesntexists: '&c游戏区域 &4{arena} &c出现问题：世界不存在！'
+fixproblemsbeforeenabled: '&c请在启用前修复这些问题'
+use_trueorfalse: '&c使用 <true/false>！'
+reseting_now: '&2{arena} &a正在重载！'
+reseting_start_failed: '&c房间 &4{arena} 重置失败'
+reseting_start_failed_alreadyrunning: '&c&4{arena} 房间重置失败 &c原因: 正在进行游戏'
+locateplayer_notinarena: '&4{player} &c当前在线，但不在竞技场内。'
+locateplayer_inarena:
+- '&3======= &b{player} &3======'
+- '&2服务器：&a {server}'
+- '&2活动：&a {activity}'
+- '&2竞技场: &a {arena}'
+- '&2竞技场状态：&a {arena-status} (/) {arena-players} {arena-max-players}'
+locateplayer_click_to_spectate: '&e&l 点击观看 {player}'
+notsameworld_arena: '&c你不在 &4{arena} &c(&4{world}&c)的世界里！'
+problem_arena_world: '&c世界 &4{arena} &c存在问题 !'
+fixproblemwith: '&e修复这个问题: &6'
+spawned_lobbyvillager: '&2大厅NPC &a成功生成!'
+spawned_teamselectvillager: '&2队伍选择NPC &a成功生成!'
+spawned_dealer: '&2物品商人&a已成功生成！'
+spawned_upgradedealer: '&2升级商人&a 已成功生成！'
+notlooking_atsign: '&c你的视线没有指向牌子！'
+notlooking_atplayerhead: '&c您没有看着一个玩家的脑袋!'
+sign_lobby: '&e大厅'
+sign_running: '&6正在运行'
+sign_stopped: '&c已停止'
+sign_reseting: '&a正在重置'
+enabled: 已启用
+disabled: 已禁用
+notallowed_beddestroy: '&c你不允许摧毁你自己的床！'
+notallowed_selectcolor: '&c你不允许选择队伍 {colorcode}{color}&c!'
+lobby_item_achievements: '&6成就'
+lobby_item_forcestart: '&e强制开始'
+lobby_item_leave: '&c退出'
+lobby_item_leave_use: '&a你将在 {time} 秒后传送至游戏大厅。'
+lobby_item_leave_cancel: '&c&l传送已取消'
+lobby_item_selectteam: '&6选择队伍'
+lobby_item_votearena: '&6地图投票'
+lobby_printmapinfo_arenaname: 房间名
+lobby_printmapinfo_buildby: 建筑师
+spectator_item_teleporter: '&e传送'
+spectator_item_changespeed: '&e修改速度'
+spectator_item_leave: '&c退出'
+spectator_item_nextround: '&6更改房间'
+arrow_damage: '{targetcolor}{target} &eis now at &c{health} &ehealth'
+trap: '&e陷阱触发!有人在你基地周围!'
+magicmilk_use: '&e你在接下来的 {time} 秒内不会触发陷阱！'
+teleporter: '&e你将在几秒钟内进行传送...'
+teleporter_failed: '&c传送已取消！'
+bridge_notenoughmaterials: '&c你需要更多的 &4{material}&c!'
+give_spawner: '&aGave &2{amount}&a of &2{spawner}&a to &2{target}'
+teleport_success: '&a你被成功地传送到竞技场 &2{arena}'
+lobby_waiting: '&6等待&e{amount}&6...'
+lobby_enough: '&c该房间玩家数量过少!'
+alreadyinside_arena: '&c您已经在一个房间里了!'
+noarenaforparty: '&c当前没有足够的空间容纳您所有的队伍成员'
+requires_worldedit: '&c你需要插件&4WorldEdit&c来工作!'
+crashmessage_missingbed: 缺少床的位置
+crashmessage_missingteamspawn: 缺少团队出生点
+crashmessage_missinglobbylocation: 缺少大厅位置
+crashmessage_missinggamedonelocation: 缺少游戏结束返回位置
+crashmessage_missinggameworld: 游戏世界尚未设置
+crashmessage_missingcorners: 角落尚未设置
+crashmessage_uppercorneroutofbounds: 上角大于世界的最大高度
+crashmessage_lowercorneroutofbounds: 下角小于世界的最小高度
+crashmessage_worldtypearenainmainworld: 游戏场地的重载类型为 WORLD（整个世界），但其在服务器的默认主世界中。
+crashmessage_notloadedgameworld: 游戏世界未加载
+crashmessage_matchareacolliding: 该游戏区域与其他游戏区域重合
+crashmessage_gamedonelocationinterfering: 你设置的大厅位置在游戏区域内。
+regeneration_done: '&a房间 &2{arena} &a在 &2{time} 秒后成功重置！'
+regeneration_stopped: '&c&4{arena}&c 的重置命令已在 &4{time} 秒后被取消'
+regeneration_fail: '&c重新生成 &4{arena}&c 失败：&4{error}'
+worldedit_changed: '&a将位置 {id} 更改为&2x{x} y{y} z{z}'
+getpositionaxe: '&a给予你 &2选点工具'
+tracker_trackedplayer: '&a此指南针现在正在跟踪最近的敌人。'
+tracker_reusedelay: '&c在 &4{time} 秒后你才能再次使用追踪器！'
+tracker_failed_onlyone: '&4追踪最近的敌人失败：&c你是本轮中唯一的玩家！'
+spectator_join: '&6你现在是旁观者'
+spectator_leave: '&6您不再是旁观者'
+spectator_howtoquit: '&e使用命令 &6/bw leave 离开这个房间'
+recalculatestats_done: '{time} 秒后&a完成'
+endlobby_counting: '&6你将在 &e{number} 秒&6后传送到大厅中'
+endlobby_bigtitle_win: '&6胜利！'
+endlobby_smalltitle_win: '&7你的队伍在本场游戏中获胜！'
+endlobby_bigtitle_lose: '&c落败……'
+endlobby_smalltitle_lose: '{teamcolor}&l{team} &f获胜！'
+endlobby_bigtitle_nobody: ''
+endlobby_smalltitle_nobody: '&c&n无人&f在本场游戏中获胜……'
+arenavoting_noavailablearenas: '&c没有空余的房间。抱歉！'
+arenavoting_arenasupdated: '&6该房间的投票已更新。'
+arenavoting_recount_noarenatovote: '&c重置倒计时：没有可投票的地图！'
+arenavoting_end: '&6下面的地图赢得了投票 &e{arena}'
+arenavoting_recount_toofewplayers: '&c还需要 &4{number}&c 个玩家来开始游戏！'
+arenavoting_minplayers: 最少玩家数量
+forcestart_already: '&c游戏已经开始！'
+scoreboard_arenaname: 房间
+scoreboard_arenamode: 模式
+scoreboard_players: 玩家数
+scoreboard_arena: 房间
+scoreboard_stats: 状态
+scoreboard_gamestats: 游戏状态
+scoreboard_yourteam: 你的队伍
+scoreboard_teams: 队伍
+bed_onlydestroyablewith_tnt: '&c你只能用TNT摧毁这张床！'
+itemspawner_hologram_title: '{spawnercolor}{spawner} &f将生成于 &7{time} &f秒!'
+maxplayers: 最多玩家数量
+lobby_countdowntitle_goodluck: 祝你好运！
+minishop_title: '{title} &7将在 &8{time} 秒&7后消失'
+arenatype_notsupported: '&c不支持&4{type}&c 的类型 &4{name}'
+arena_autosavedblocks: '&e房间地图已自动保存！'
+ranking_unranked: 非排位
+wait_allarenasloaded: '&c等到每个房间都成功加载！'
+please_savearena: '&6确定保存房间：&e/bw arena saveblocks <arena name>'
+getsetuptool: '&a已给予您 &2设置工具'
+onetimepurchase: '&c你只能购买一次！'
+arenasgui_title: '&b房间'
+arena_collidingarena:
+- '&c请更改游戏场地的位置。'
+- '&c该游戏场地范围与 &4{arena} 冲突了！'
+- '&6要更改位置，请使用以下命令：&e{command}'
+backup_list: '&6备份文件'
+backup_create_success: '&a创建了一个名为&2{name}&a 的备份 用时&2{time} &a秒'
+backup_create_exists: '&c已有一个名为&4{name} 的备份'
+backup_delete_success: '&a删除了名为&2{name} 的备份'
+backup_unknown: '&c未知备份 &4{name}'
+backup_restore_success: '&a成功恢复备份 &2{name}&a 用时 &2{time}&a 秒'
+backup_restore_ask:
+- '&6您确定要恢复备份 &e{name} &6吗？'
+- '&6如果是，请在 10 秒内重复相同的命令'
+scoreboard_bedstate_alive: '&a存活'
+scoreboard_bedstate_destroyed: '&c已摧毁'
+death_spectate_respawnin_bigtitle: '&c你死了！'
+death_spectate_respawnin_smalltitle: '&6将在 &e{time} &6秒后重生'
+spectator_changearena_noneavailable: '&c没有空闲的房间！'
+spectatoradd_failed_missinglocation: '&c将您添加为观察者失败，因为没有可用的观察者传送点。'
+saveblocks_fail_players: '&4无法保存世界: &c该世界上有玩家。'
+createarena_fail_mainworld: '&c无法在您的主世界中创建一个房间！'
+saveblocks_start: '&6已开始保存房间 &e{arena}&6. 预计时间: &e{time}'
+saveblocks_fail_alreadyrunning: '&4房间保存失败: &c保存操作已在运行。'
+saveblocks_fail_notstopped: '&4保存世界失败：&c它没有被禁用 (使用 /bw arena setenabled {房间名} false
+  来禁用)'
+saveblocks_fail_unknown: '&4保存块失败：&c未知的错误 {type} 类型'
+regeneration_fail_savingblocks: '&4无法重置世界: &c正在进行保存操作。'
+deathmessage_killed_1: '{teamcolor}{player} &7被 &8{killerteamcolor}{killer} &7击杀 &c剩下
+  &4❤{heartpercent}%'
+deathmessage_killed_2: '{teamcolor}{player} &7输了与&8{killerteamcolor}{killer}  &7的一场战斗&c剩下
+  &4❤{heartpercent}%'
+deathmessage_killed_3: '{teamcolor}{player} &7被 &8{killerteamcolor}{killer} &7谋杀 &c剩下
+  &4❤{heartpercent}%'
+deathmessage_void_1: '{teamcolor}{player} &7掉入了虚空'
+deathmessage_void_2: '{teamcolor}{player} &7从桥上摔了下来'
+deathmessage_explosion_1: '{teamcolor}{player} &7原地爆炸了'
+deathmessage_explosion_2: '{teamcolor}{player} &7爆炸了'
+deathmessage_fall_1: '{teamcolor}{player} &7被四分五裂'
+deathmessage_fall_2: '{teamcolor}{player} &7从一个高地落下'
+deathmessage_fire_1: '{teamcolor}{player} &7被烧死了'
+deathmessage_fire_2: '{teamcolor}{player} &7如火如荼'
+deathmessage_default_1: '{teamcolor}{player} &7突然去世'
+spectator: 观察者
+itemshop: 物品商店
+motd_loading: 正在加载...
+toggle_display_spawner_enable: '&6{arena} &e的所有生成器正在 向大家显示，再次执行此指令以关闭'
+toggle_display_spawner_disable: '&6{arena} &e的所有生成器已停止 向大家显示'
+teamchest_title: '{team}的团队箱子'
+playerprivateinventory_title: 末影箱
+placeholderapi_stats_loading: 正在加载...
+tnt_destroybed_name: 炸药
+timer_ending_soon: '&e游戏将在 {minutes} 分钟后结束'
+timer_ending: '&e比赛将在 {seconds} 秒后结束'
+command_blocked: '&c您不能在游戏过程中使用此指令'
+cancel: 取消
+apply: 应用
+authors: 作者
+nobody: 未知
+customname_isenabled: 自定义名字已启用
+customname: 自定义名字
+displayingname: 显示名字
+list_spawners: '&6游戏区域 {arena} 内的生成器数量: &e{spawners}'
+noarenaatpos: '&c您当前的位置内没有任何游戏区域'
+multiplearenasatpos: '&c在您当前的位置内又多个游戏区域: &4{arenas}'
+notinsidearena: '&c您不在竞技场 &4{arena} &c内'
+arenaname_contains_illegalchars: '&c房间名内含有非法字符'
+teamspawn_notyet: '&4{team}&c 的出生点在 &4{arena} &c尚未被设置'
+holo_add: '&a在 &2{coord} &a添加了一个全息影像'
+holo_list: '&6{world} 内的全息影像数: &e{holos}'
+holo_remove: '&a移除了在 &2{coord} &a的全息影像'
+holo_removenotfound: '&c在 &4{world} &c内的指定位置上 没有全息影像'
+holo_removeall: '&a已移除 &2{amount} &a个 &2{world} &a内的全息影像'
+unknown_world: '&c没有名字为 &4{world} &c的世界'
+addon_load_not: '&c指定的文件不是可用的扩展！'
+addon_load_already: '&c已加载指定的扩展！'
+addon_load_unknown: '&c文件不存在，请确保其在目录 &4{folder} &c下。'
+addon_load: '&a成功加载了 &2{addon} 扩展！'
+addon_unload_notfound: '&c没有名为 &4 {addon} 的扩展！'
+addon_unload_notaddon: '&c文件 &4{plugin} &c是一个插件，而非扩展。'
+addon_unload: '&a成功卸载了 &2{addon} &a扩展！'
+item_error_missinghandlerorcommand: '&4请将以下错误报告给管理员: &c物品 {item} 缺少一个触发器或者一个指令. 使用时并不会出现任何效果.'
+arenasgui_list: 房间选择页 格式列表
+arenasgui_by: 来自
+arenasgui_openfor: '&e为 &6{player} &e打开了界面 &6{layout}'
+unknown_layout: '&c未知页面 &4{layout}'
+migration_start: '&e已开始从 &6{origin} &e的转换...'
+migration_success: '&a成功从 &2{origin}&a 转换，耗时 &2{time}'
+migration_failure: '&c在 &4{origin}&c 的转换中耗时 {time} 并失败: &4{error}'
+migration_failure_alreadyrunning: '&c来自同一源头的转换进程 正在进行中'
+playerdeath_cause_elimination: 淘汰
+rejoin_trying: '&e我们正在检查您参加过的游戏是否还在进行中...'
+rejoin_alreadytrying: '&c您已经申请了重新加入游戏，请等待一会!'
+rejoin_failed_notactive: '&6您来晚了，您之前玩过的一局游戏已结束.'
+rejoin_failed_teamdead: '&6您无法加入本场游戏，因为您原先所在的队伍已被淘汰.'
+rejoin_failed_unknown: '&6我们正在尝试让您重新加入游戏，但是发生了未知错误.'
+rejoin_success: '&a该场次的游戏还在进行中！正在将您重新传送到该游戏中……'
+rejoin_success_global: '&6{player} &e已重新连接并加入到 {teamcolor}{team}&e队伍中'
+hubpos_inactive_bungee: '&6大厅位置 &e并未激活因为您在使用 BungeeCord群组'
+arenaconvert_onlyspecifctypes: '&c你只能将 &4{arena}&c 的重生成方式改为 &4{types}'
+arenaconvert_done: '&a已将 &2{arena}&a 的重生成方式从 {prev} 改为 &2{new}'
+arenaproblem_savingblocks: '&c该游戏区域的方块正在保存中， 请在几秒后重试'
+teamchat_enabled_hint: '&e只有您的队友将看到您刚刚发的信息， 在您想说的话前加上 "&6&l{tag}&e" 即可喊话'
+teamchat_disabled_solo_hint: '&e您的信息将被所有玩家看到 (哪怕没有加上喊话前缀) 因为您正在玩单人模式'
+remotearena_unsupportedoperation: '&c你不可以对该远程房间进行操作'
+connecting_server: '&e您即将与该服务器连接'
+remoteteleport_fail: '&c无法传送到该服务器'
+tphubfail_nohub: '&c由于没有空余的大厅，我们无法将您传送到大厅'
+try_again_shortly: '&e请在短时间内重试'
+server_full: '&c该服务器已满'
+spectate_fail: '&c我们无法将您设置成一名旁观者 (原因: {reason})'
+join_fail: '&c我们无法让您加入到到该房间 (原因: {reason})'
+erroraction_arenacloned: '&c您不能对克隆游戏区域进行该操作'
+arenabulk_performingaction: '&e正在对 &6 {amount} 个游戏区域执行操作'
+invalidatecache_alreadyempty: '&e玩家数据缓存已经为空！'
+invalidatecache: '&e已清除以下本地缓存数据: &6{stats} 份统计数据, &6{achievements} 份成就数据, &6{properties}
+  份属性设置。'
+playerdata_info_fetchtime: 获取时间
+playerdata_info_earnedachievements: 完成的成就
+playerdata_info_stats: 状态
+playerdata_info_game_stats: 游戏状态
+playerdata_info_properties: 目标属性
+playerdata_notfound: '&c未找到目标 &4{target} &c的任何信息……'
+playerdata_stats_resetallplayer_warning:
+- '&4!!!警告!!!'
+- '&c您确定要重置&4所有玩家&c的&4&l全部&c统计数据吗？这些数据包括所有曾经参与游戏的玩家？如果是，请在接下来的{sec}秒内再次输入相同的指令。&n建议您提前创建备份。'
+playerdata_stats_resetplayer_warning:
+- '&4!!!警告!!!'
+- '&c你是否确定重置玩家 &4&l{player} &c的&4所有数据&c？若是，请在接下来的 {sec} 秒内重新执行相同的命令。'
+playerdata_stats_resetplayer_complete: '&aThe stats for {player} have successfully
+  been reset!'
+playerdata_stats_resetallplayer_complete: '&a服务器（网络）上的所有玩家统计数据已在 {time} 内成功重置！'
+playerdata_stats_modify_complete: '&aSuccessfully updated ''{stat}'' to ''{new-val}''
+  for {player}. The player may need to re-log for rankings to update'
+playerdata_stats_modify_fail: '&cWe were unable to update the stat ''{stat}'' for
+  {player}!'
+playerdata_stats_notfound: '&cUnable to find a stats set called ''{stat}'''
+identifyarena_none: '&c在给定的位置上没有竞技场'
+identifyarena_found: '&e找到竞技场 &6{arena}'
+initsetup_welcome:
+- '&6欢迎!'
+- '&e为了让 &lMarcely''s Bedwars &e的设置尽可能便捷，我们为您提供了通过网页界面（使用浏览器）进行配置的选项。'
+- '&e提示：这仅用于初始设置。以后你可以随时配置任何东西。'
+initsetup_web: 我想使用漂亮的Web界面（点击或键入命令{cmd}）
+initsetup_simple: 我宁愿自己配置所有内容（点击或键入命令{cmd}）
+initsetup_connecting: '&e请稍等片刻，我们正在为您准备'
+initsetup_connection_failure:
+- '&cSorry，但我们无法连接到我们的服务。防火墙可能阻止了它。'
+- '&c请键入 &4/mbedwars &ccommand 然后重试或者如果一直失败则跳过整个过程。'
+initsetup_ready: '&e访问以下网址以开始设置过程：&6{url}'
+initsetup_finish: '&e一切准备就绪，玩得开心！访问&6{url}&e获取更多帮助'
+click: '*点击*'
+members: Members
+no_members: No members
+antiabuse_statsnotcounted: '&c由于检测到潜在的滥用行为，部分统计数据未被计入。请规范游戏行为！'
+player_trigger_upgradetrap_bigtitle: '&c陷阱已触发！'
+player_trigger_upgradetrap_smalltitle: '&f你的陷阱已被触发！'
+player_trigger_upgradetrap_chat: '&c有人触发了你队伍的陷阱！'
+achievement_get_title: 新成就!
+
+
+###########################
+## Setup GUI
+###########################
+setupgui_nextpage: 下一页
+setupgui_prevpage: 上一页
+setupgui_goback: 返回
+setupgui_yousure: 你确定吗?
+setupgui_noarenascreated: 目前为止暂无已创建的房间
+setupgui_mainbutton_modify: 修改已创建的房间
+setupgui_mainbutton_create: 创建新的房间
+setupgui_mainbutton_misc_tools: Misc tools
+setupgui_misctools_spawn_dealer:
+- 生成交易商
+- 你可以通过徒手攻击将其移除。
+setupgui_misctools_spawn_upgradedealer:
+- 生成升级交易商
+- 你可以通过徒手攻击将其移除
+setupgui_misctools_displayarenasatpos:
+- 确定竞技场
+- 使用您当前的位置。
+setupgui_misctools_setuptool:
+- 获取安装工具
+- 手里拿着物品右键点击即可使用。
+- 对于快速设置竞技场很有用。
+setupgui_misctools_setcorner_1:
+- 设定第一个角
+- 使用您当前的位置。
+- 在设置区域竞技场时很有用。
+setupgui_misctools_setcorner_2:
+- 设定第二个角
+- 使用您当前的位置。
+- 在设置区域竞技场时很有用。
+setupgui_category_actions: 操作
+setupgui_category_modify: 修改
+setupgui_category_spawners: 生成器
+setupgui_category_teams: 队伍
+setupgui_category_weather:
+- 天气
+- 活跃：{weather}
+setupgui_category_time:
+- 时间
+- 活跃：{time}
+setupgui_button_enable: 启用
+setupgui_button_disable: 禁用
+setupgui_button_regenerate: 重新生成所有方块
+setupgui_button_teleport: 传送至游戏区域内
+setupgui_button_enter: 加入游戏
+setupgui_button_enterspectator: 观战该游戏
+setupgui_button_configure: 配置
+setupgui_button_setlobby:
+- 设置等待大厅出生点
+- 使用你当前的位置
+setupgui_button_rename: 更改名字
+setupgui_button_saveblocks: 保存所有方块 & 实体
+setupgui_button_setgameworld:
+- 设置游戏世界
+- 使用你当前所在的世界
+setupgui_button_saveregioncorners:
+- 保存游戏区域范围
+- 请确保使用 {tool} 来设置范围
+setupgui_button_modifyregioncorners:
+- 设置游戏区域范围角点
+- 使用你当前的位置
+- ''
+- 左键点击：标记第一个角点
+- 右键点击：标记第二个角点
+setupgui_button_setspectatorspawn:
+- 为旁观者设置出生点
+- 使用你当前的位置
+setupgui_button_properties: 目标属性
+setupgui_button_delete: 删除房间
+setupgui_button_removeallspawners: 删除所有已添加的生成器
+setupgui_button_displayspawners:
+- 展示所有生成点
+- 在所有生成器上方展示一个小小的全息字
+setupgui_button_undisplayspawners: 隐藏显示所有生成器
+setupgui_button_getallbeds: 获取所有队伍的床
+setupgui_spawnerbutton_obtainitems: '&f获得 {amount} 个 {spawner} 的资源'
+setupgui_spawnerbutton_add:
+- '&f添加一个 {spawner} &f生成点'
+- 使用你当前的位置
+setupgui_spawnerbutton_removeall: '&f移除所有 {spawner} &f的生成器'
+setupgui_teambutton_obtainbed: '&f获得了 {team} &f队伍的床'
+setupgui_teambutton_teleportspawn: '&f传送到 {team}&f 队伍的出生点'
+setupgui_teambutton_setspawn:
+- '&f为 {team} 设置出生点'
+- 使用你当前的位置
+setupgui_removearena_yes: '&a&l是&f, 删除房间 &l{arena}'
+setupgui_removearena_no: '&c&l否&f, 保留房间 &l{arena}'
+setupgui_create_type_region:
+- 区域
+- 使用世界边界限制游戏区域
+- 所有玩家都会看到边界并且无法离开
+- 这样您还可以在单个世界内创建多个游戏区域
+- 请查阅文档以获得更多信息
+setupgui_create_type_world:
+- 世界
+- 游戏没有边界，而是使用整个世界。
+- 设置时会更加方便但是在重置时会更费性能
+- 请访问文档了解更多信息
+setupgui_create_type_voting:
+- 投票
+- 不是一个真正可供游玩的游戏区域
+- 相反，只使用它的大厅在里面投票。
+- 投票结束后，玩家将被传送到对应的游戏区域
+- 请访问文档以获得更多信息
+setupgui_create_title: 创建一个新房间
+setupgui_configure_title: 设置房间
+setupgui_configure_auto_detect_teams_complete: '&e检测到&6{amount}&e个潜在队伍正在利用你的当前位置'
+setupgui_configure_playersperteam2:
+- '&6最高玩家数'
+- '&7当前每队最高玩家数：&f{amount}'
+- '&7当前游戏最高玩家数：&f{total-max-players}'
+setupgui_configure_minplayers:
+- '&6最少玩家数: &f{amount}'
+- '&7开始游戏所需的玩家数量'
+setupgui_configure_totalplayers: '&6该房间内的最高玩家数: &f{amount}'
+setupgui_configure_arenasbelowinpool: '&3&l⇩ &b投票池内的房间 &3&l⇩'
+setupgui_configure_noarenasinpool: '&c投票池内没有房间'
+setupgui_clicktorename: 点击重命名
+setupgui_rename_title: 重命名房间
+setupgui_confirm_action: '&6若要确认您的操作，请在接下来的几秒内 再次点击该按钮'
+setupgui_configure_minplayers_toolow: 仅供测试. 使用本功能，您可以在房间内 玩家不足至最小玩家数的情况下强行开始游戏.
+setupgui_button_modifyregioncorners_reminder_save: '&e不要忘记点击 "保存房间范围" 按钮，否则设置将不会被应用.'
+setupgui_spawnerbutton_removenearbyspawners:
+- 移除所有附近的 {spawner} &f生成点
+- 使用你当前的位置
+setupgui_remotearena_info:
+- '&c[远程]'
+- 由 &o{server} 管理
+
+
+###########################
+## Setup Tool
+###########################
+setuptool_freebuild: 自由放置/打破方块
+setuptool_spawner: 放置/编辑生成器
+setuptool_selectteam: 选择队伍
+setuptool_bed: 放置床
+setuptool_spawnpoint: 放置重生点
+setuptool_dealer: 生成/击杀交易商
+setuptool_notinsidearena: '&c必须位于比赛场地内！&6&l点击此处&c以管理比赛场地。传送至比赛场地并再次使用此工具物品'
+setuptool_activated: '&a已激活 &e对 &6{arena} %e的设置工具'
+setuptool_deactivated: '&c已停用 &e设置工具. &6&l顶级这里 &e以打开竞技场的设置 GUI'
+setuptool_selecttype: 选择类型
+setuptool_placeagainconfirm: 再次放置以确认
+setuptool_type_dealer: 交易商
+setuptool_type_upgradedealer: 升级交易商
+setuptool_teamcomponent_bed: 床
+setuptool_teamcomponent_spawnpoint: 重生点
+setuptool_spawnpoint_preview:
+- '&f&l出生点预览'
+- '{team}'
+- '&f消失在 {time}'
+
+
+###########################
+## Shop Layouts
+###########################
+shop_d_hypixel_available: '&8可用'
+shop_d_hypixel_clicktobrowse: '&e点击浏览'
+shop_d_hypixel_items: '&8物品'
+shop_d_hypixel_clicktopurchase: 点击购买！
+shop_d_hypixel_maxed: '&a达到上限!'
+shop_d_hypixel_unlocked: '&a已解锁'
+shop_d_hypixel_cost: '&7花费: &f{color}{amount} {type}'
+shop_d_hypixel_goback: '&a返回'
+shop_d_hypixel_tooexpensive: '&c你没有足够的 {type}！'
+shop_d_hivemc_clicktoview: '&b{icon} 点击查看 &l{item}'
+shop_d_hivemc_goback: '&c&l返回'
+shop_d_hivemc_returntomenu: '&7返回菜单'
+shop_d_hivemc_clicktogoback: '&b{icon} 点击返回'
+shop_d_hivemc_clicktobuy: '&b{icon} 单击以购买'
+shop_d_hivemc_cost: '&6花费'
+shop_d_rewinside_shoptype_new: 您正在使用新的和改进过的商店
+shop_d_rewinside_shoptype_old: 您正在使用旧的商店
+shop_d_rewinside_shoptype_switch: 单击此处以切换版本
+shop_d_bergwerklabs_currentpage: '&b当前页面'
+shop_d_bergwerklabs_changepage: '&b页面 {page}'
+shop_d_bergwerklabs_buy: '&7&o<点击>&a购买'
+shop_d_bergwerklabs_buy_tooexpensive: '&7太贵了!'
+shop_d_hypixelv2_clicktoview: '&e点击查看！'
+shop_d_hypixelv2_seperator_categories: '&8⬆&7 类别'
+shop_d_hypixelv2_seperator_items: '&8⬇&7 物品'
+shop_d_hypixelv2_quickbuy_pageitem: '&b快速购买'
+shop_d_hypixelv2_quickbuy_emptyslot_name: '&c空槽!'
+shop_d_hypixelv2_quickbuy_emptyslot_description:
+- '&7 这是一个快速购买槽！'
+- '&b蹲下并点击 &7任何物品'
+- '&7即可将其添加到这'
+shop_d_hypixelv2_quickbuy_menu_title: 添加到快速购买...
+shop_d_hypixelv2_quickbuy_menu_set: '&e点击设定!'
+shop_d_hypixelv2_quickbuy_menu_replace: '&e点击替换!'
+shop_d_hypixelv2_quickbuy_menu_representing: '&e添加物品到快速购买槽!'
+shop_d_hypixelv2_quickbuy_add_item: '&bSneak click to add to Quick Buy'
+shop_d_hypixelv2_quickbuy_remove_item: '&bSneak click to remove from Quick Buy'
+
+
+###########################
+## Achievements
+###########################
+achievements_name_ragequit: 离开
+achievements_name_winround: 赢家
+achievements_name_loseround: 败家
+achievements_name_ownbeddestroyed: 不幸
+achievements_name_bestbow: OP 弓
+achievements_name_userescueplatform: 就差一点!
+achievements_name_useendepearl: 末影人
+achievements_name_useminishop: 购物奶奶
+achievements_name_killsomeonewithbow: 狩猎开始
+achievements_name_winin3minutes: 已经结束了？！
+achievements_name_killsomeonewithhalfaheart: 幸运的一击
+achievements_name_win100rounds: 冠军
+achievements_name_usebridge: 搭桥者
+achievements_name_useguarddog: 警卫
+achievements_name_effectmagnetshoes: 磁力
+achievements_name_useteleporter: 带我飞吧，史考提！
+achievements_name_usetntsheep: 直面爆炸吧！
+achievements_name_usetracker: 我要找到你，扑倒你!
+achievements_name_placetrap: 采矿
+achievements_name_runovertrap: 这!这是陷阱!
+achievements_name_spend200resources: 小有资产
+achievements_name_rankingintop3: E-Sports 玩家
+achievements_name_goodkd: 职业选手
+achievements_name_highplaytime: '#无游戏，不人生'
+achievements_name_writeggatend: GG
+achievements_name_winwithoutbed: 不能碰这个
+achievements_name_die10secsafterbeddestruction: 你不能!
+achievements_name_optaineveryachievement: 这玩意有点上头
+achievements_name_usefireball: 开火!
+achievements_name_useinvispotion: 灵魂行者
+achievements_text_ragequit: 离开一个正在运行的房间
+achievements_text_winround: 赢一回合游戏
+achievements_text_loseround: 输一回合游戏
+achievements_text_ownbeddestroyed: 如果您的床被摧毁了
+achievements_text_bestbow: 造出最好的弓
+achievements_text_userescueplatform: 使用一次救援平台
+achievements_text_useendepearl: 使用一次末影珍珠
+achievements_text_useminishop: 使用一次迷你商店
+achievements_text_killsomeonewithbow: 用弓杀死某个玩家
+achievements_text_winin3minutes: 在 3 分钟内赢得一轮比赛
+achievements_text_killsomeonewithhalfaheart: 在生命值仅剩余半颗心时击杀玩家
+achievements_text_win100rounds: 赢得100轮比赛
+achievements_text_usebridge: 使用一次搭桥工具
+achievements_text_useguarddog: 使用一次看门狗
+achievements_text_effectmagnetshoes: 用你的磁力靴抵抗一次击退
+achievements_text_useteleporter: 使用一次传送器
+achievements_text_usetntsheep: 生成一次TNT羊
+achievements_text_usetracker: 使用一次追踪器
+achievements_text_placetrap: 建立一个陷阱
+achievements_text_runovertrap: 触发陷阱并且逃跑
+achievements_text_spend200resources: 在商店中花费至少 200 个资源物品
+achievements_text_rankingintop3: 在此排名中获得前三
+achievements_text_goodkd: K/D 高达 5.0
+achievements_text_highplaytime: 玩至少 5 小时
+achievements_text_writeggatend: 在游戏结束时发GG
+achievements_text_winwithoutbed: 在你的床被摧毁后仍然获得胜利
+achievements_text_die10secsafterbeddestruction: 在您的床被摧毁后死亡10秒
+achievements_text_optaineveryachievement: 获得所有种类的成就
+achievements_text_useinvispotion: 饮用一瓶隐身药水
+achievements_text_usefireball: 使用一次火球!
+
+
+###########################
+## Shop
+###########################
+shop_buygroup_buy_lowertier: '&c你已经拥有了一个更高级的物品。'
+shop_player_not_in_running_arena: '&c当前不在一个正在运行的竞技场中！'
+shop_price: '价格: &7{number} {spawnercolor}{spawnertype}'
+shop_page_block: 方块
+shop_page_food: 食物
+shop_page_armor: 装甲
+shop_page_sword: 剑
+shop_page_bow: 弓
+shop_page_pickaxe: 镐子
+shop_page_potion: 药水
+shop_page_special: 杂项
+shop_page_extra: 扩展
+shop_item_hardenedclay: 硬化粘土
+shop_item_endstone: 末地石
+shop_item_chest: 箱子
+shop_item_enderchest: 末影箱
+shop_item_ladder: 梯子
+shop_item_web: 蜘蛛网
+shop_item_apple: 苹果
+shop_item_grilledpork: 熟猪肉
+shop_item_cake: 蛋糕
+shop_item_goldenapple: 金苹果
+shop_item_leatherhelmet: 皮革头盔
+shop_item_leatherleggings: 皮革裤腿
+shop_item_leatherboots: 皮革靴子
+shop_item_chainmailchestplatelvl1: 锁链胸甲 &7LVL 1
+shop_item_chainmailchestplatelvl2: 锁链胸甲 &7LVL 2
+shop_item_chainmailchestplatelvl3: 锁链胸甲 &7LVL 3
+shop_item_knockbackstick: 击退棒
+shop_item_swordlvl1: 剑&7LVL 1
+shop_item_swordlvl2: 剑&7LVL 2
+shop_item_swordlvl3: 剑 &7LVL 3
+shop_item_bowlvl1: 弓&7LVL 1
+shop_item_bowlvl2: 弓&7LVL 2
+shop_item_bowlvl3: 弓&7LVL 3
+shop_item_arrow: 箭
+shop_item_pickaxelvl1: 镐子 &7LVL 1
+shop_item_pickaxelvl2: 镐子 &7LVL 2
+shop_item_pickaxelvl3: 镐子 &7LVL 3
+shop_item_potionswiftness: 速度药水
+shop_item_potionregeneration: 再生药水
+shop_item_potionhealing: 治疗药水
+shop_item_potionstrength: 力量药水
+shop_item_enderpearl: 末影珍珠
+shop_item_teleporter: 传送器
+shop_item_minishop: 迷你商店
+shop_item_rescueplatform: 救援平台
+shop_item_tntsheep: TNT羊
+shop_item_magnetshoes: 磁力靴子
+shop_item_trap: 陷阱
+shop_item_bridge: 桥
+shop_item_guarddog: 看门狗
+shop_item_tracker: 跟踪器
+shop_item_fishingrod: 钓鱼竿
+shop_item_snowball: 雪球
+shop_item_fireball: 火球
+shop_item_magicmilk: 魔法牛奶
+shop_item_tnt: 炸药
+
+
+###########################
+## Upgrade Shop
+###########################
+upgradeshop: 升级商店
+upgradeshop_buy_upgrade_broadcast: '&e{player} 将升级 &6&e{upgrade}&e 到 &6等级 {newlvl}'
+upgradeshop_buy_trap_broadcast: '&e{player} purchased &6{upgrade}'
+upgradeshop_toofew_materials: '&c你没有足够的资源以升级此项目！'
+upgradeshop_max_upgrade: '&c你已购买了此升级！'
+upgradeshop_buystate_purchasable: 点击购买！
+upgradeshop_buystate_not_purchasable: '&c你没有足够的 {price-type}！'
+upgradeshop_buystate_maximum: '&a已解锁'
+upgradeshop_queuedtrap_icon:
+- '&a陷阱 #{queue-level}: {trap-name}'
+- '&7当入侵者进入你的基地时，'
+- '&7此陷阱将会立即激活。'
+- ''
+- ''
+- '&7请注意:'
+- '&7如果入侵者饮用了魔法牛奶，'
+- '&7此陷阱或许不会被其激活。'
+upgradeshop_unqueuedtrap_icon:
+- '&c陷阱 #{queue-level}: 无陷阱'
+- '&7购买陷阱后，陷阱将会进入下面的队列中。'
+- '&7请注意：'
+- '&7购买新陷阱的花费可能受队列中'
+- '&7待激活的陷阱个数进行相应的缩放。'
+upgradeshop_hypixel_separator:
+- '&8⬆ &7可购买'
+- '&8⬇ &7陷阱队列'
+upgradeshop_hypixel_traps_menu_button:
+- '&e购买一个陷阱'
+- '&7已购买的陷阱将会加入'
+- '&7下方的队列中'
+- ' '
+- '&e升级'
+upgradeshop_hypixel_back_button:
+- '&e返回至升级商店！'
+- '&7返回以浏览所有的升级选项，'
+- '&7或查看当前待激活的陷阱队列。'
+- ' '
+- '&e点击此处返回！'
+upgradeshop_name_protection: 保护附魔
+upgradeshop_description_protection: 提高护甲的保护附魔等级。
+upgradeshop_name_featherfall: 摔落保护
+upgradeshop_description_featherfall: 减少坠落伤害
+upgradeshop_name_haste: 急迫
+upgradeshop_description_haste: 给予全体队员永久的急迫效果。
+upgradeshop_name_healrange: 治愈池
+upgradeshop_description_healrange: 在基地里获得生命回复效果
+upgradeshop_name_sworddamage: 锋利
+upgradeshop_description_sworddamage: 增加武器的伤害
+upgradeshop_name_spawnermultiplier: 资源点升级
+upgradeshop_description_spawnermultiplier: 加快资源产出速度
+upgradeshop_name_enemyalarmtrap: 警报陷阱
+upgradeshop_description_enemyalarmtrap: 移除潜入玩家的隐身效果
+upgradeshop_name_counteroffensivetrap: 反攻陷阱
+upgradeshop_description_counteroffensivetrap: 给予全体队员持续 15 秒的速度 II 与跳跃提升 II 效果。
+upgradeshop_name_enemyminingfatigue: 挖掘疲劳陷阱
+upgradeshop_description_enemyminingfatigue: 给予在基地里的敌人挖掘疲劳效果
+upgradeshop_name_enemytrap: 陷阱
+upgradeshop_description_enemytrap: 给予下一个入侵者失明与缓慢效果。
+upgradeshop_trapremove_lore: '&e右键点击以移除！&8（不退款）'
+upgradeshop_trapremove: '&e从队列中移除了 &6{trap}'
+
+
+###########################
+## Custom
+###########################
+mustserverjoinfromhub: '&cYou must join an arena from the hub'
+arena_joinissue_votingparticipating: '&c你暂时无法加入此游戏。它是一张可用的投票候选地图……'
+rejoin_failed_notparticipating: '&6你暂未加入任何游戏……'

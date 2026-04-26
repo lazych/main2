@@ -1,0 +1,893 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww11
+#########################
+
+
+
+###########################
+## Miscellaneous
+###########################
+prefix: '&3[Bedwars]'
+configurations_reload_start: '&aNastavení se restartuje!'
+configurations_reload_end: '&aNastavovací soubory byly načteny po &2{time} sekund'
+configurations_reload_alreadyloading: '&cKonfigurace se restartují!'
+info_madeby: Vytvořil
+info_specialthanks: Special thanks
+info_website: Web
+info_version: Verze
+info_newestversion: Nejnovější verze
+page: Strana
+help: Nápověda
+team: Tým
+none: Žádný
+unknown_page: '&cNeznámá stránka &4{page}'
+unknown_argument: '&cNeznámý příkaz &4{arg}'
+unknown_block: '&cNeznámý blok &4{block} '
+unknown_place: '&cNeznámé místo &4{place}'
+unknown_spawner: '&cNeznámý spawner &4{spawner}'
+version_new: '&aByla nalezena nová verze! &2{version}'
+version_nonew: '&cNebyly nalezeny žádné nové verze!'
+error_occurred: Vyskytla se chyba!
+error_occurred_syntax: '&cByla nalezena chyba: &6{message}'
+no_permissions: '&cNemáš správná práva!'
+no_permissions_specific: '&cMake sure that you either have the &4{perm} &cpermission
+  or OP'
+onlyas_player: '&cToto funguje pouze jako hráč!'
+not_ingame: '&cMomentálně nejsi v probíhajícím kole!'
+not_ingame_player: '&4{player} &cnení ve hře!'
+not_supported: '&cToto se nepodporuje pro vaši verzi! Prosíme aktualizujete na verzi
+  &4{version} &cnebo vyšší'
+color_yellow: žlutá
+color_orange: oranžová
+color_red: červená
+color_blue: modrá
+color_magenta: magenta
+color_lightblue: světle modrá
+color_cyan: azurová
+color_lightgreen: světle zelená
+color_green: zelená
+color_purple: fialová
+color_pink: růžová
+color_white: bílá
+color_lightgray: světle šedá
+color_gray: šedá
+color_brown: hnědá
+color_black: černá
+missing_worldeditpoints: '&cChybí worldedit body!'
+saved_arena: '&aAréna &2{arena} &abyla uložena!'
+saved_bed: '&aPostel byla nastavena pro {colorcode}{color} &a tým v aréně &2{arena}'
+bed_notinside_arena: '&cNepodařilo se přidat postel, protože takm není žádná aréna.
+  Použijte "/bw arena setcorners" nebo "/bw arena setworld", abyste to napravil'
+exists_arena: '&cAréna &4{arena} &cjiz existuje!'
+spawner_bronze: bronz
+spawner_iron: železo
+spawner_iron_plural: Iron
+spawner_gold: zlato
+spawner_gold_plural: Gold
+spawner_diamond: Diamant
+spawner_diamond_plural: Diamonds
+spawner_emerald: Emerald
+spawner_emerald_plural: Emeralds
+added_spawner: '&aSpawner &2{spawnertype} &abyl úspěšně přidán do arény &2{arena}!'
+specialblock_added: '&aPřidán speciální block typu &2{type}'
+specialblock_alreadyadded: '&cJiž existuje block typu &4{type} &cZničením jej odstraníte'
+specialblock_removed: '&6Odebraný speciální blok typu &e{type}'
+removed_spawners: '&2{number} &aspawnery byli odebrány z {arena}!'
+start_round: '&aKolo právě začíná.'
+stop_round: '&aKolo bylo zastaveno.'
+kicked_player: '&aHráč &2{player} &abyl úspěšně vyhozen z &2{arena}'
+kicked_player_toplayer: '&cByl jsi vyhozen z tohoto kola!'
+list_arenas: '&eVšechny arény: &6'
+list_arenas_local: '&eLocal arenas: &6'
+list_arenas_remote: '&cRemote arenas: &6'
+only_betamember: '&cNemáš oprávnění se připojit protože bedwars je v beta verzi!'
+notavailable_color: '&cNeznámá barva &4{color}'
+joinmessage_stopped: '&cTato aréna je aktuálně zastavena!'
+joinmessage_reseting: '&cTato aréna se resetuje!'
+joinmessage_full: '&cTato aréna je momentálně plná!'
+joinmessage_running: '&cTato aréna byla již spuštěna!'
+joinmessage_alreadyinside: '&cUž jsi uvnitř arény!'
+joinmessage: '&6{player} se připojil do kola.'
+leavemessage: '&6{player} &ese odpojil z kola.'
+notfound_player: '&4{player} &cnebyl nalezen!'
+notfound_arena: '&cNeexistuje žádná aréna &4{arena}&c!'
+notfound_arena_loading: '&6(Aréna se právě načítá)'
+notfound_arena_validpicker: '&cThere''s no arena matching the picker: &4{picker}'
+notfound_author: '&cNeexistuje žádný autor &4{author}&c!'
+get_bed: '&aMáš postel {colorcode}{color}'
+getallbeds: '&aVšechny postele arény &2{arena}&a vám byli dány'
+countdown_start: '&6Odpočítávání začíná!'
+countdown_stop: '&6Odpočítávání bylo zastaveno!'
+countdown_counting: '&6Toto kolo začíná za &e{number} &6sekund!'
+countdown_changed: '&6Odpočítávání bylo změněno na &e{number} &6sekund!'
+countdown_voting_counting: '&6Hlasování o arénu končí za &e{number} &6sekund!'
+toofew_materials: '&cMáte příliš málo materiálů pro nakupování!'
+no_inventory_space: '&cYour inventory is already full!'
+tooless_players: '&cJe zde málo hráčů!'
+needmore_players_than: '&cPotřebujete víc hráčů než &4{amount}&c!'
+win_money: '&6Vyhráli jste &e{number}&6$!'
+player_notingameanymore: '&4{player} &cuž není ve hře!'
+player_notfound: '&4{player} &cnebyl nalezen!'
+player_cheating: '&6{player} &eByl vyhozen protože podváděl!'
+player_loosing: '&6{player} &eProhrál toto kolo!'
+players: Hráči
+team_won: '&eTeam {colorcode}{color} &evyhrál toto kolo!'
+team_notaddedyet: '&cTeam {teamcolor}{team} &cNebyl ještě přidán do arény &4{arena}&c!'
+changeteam_full: '&7Team {colorcode}{color} &7je plný!'
+changeteam_alreadyinside: '&7Již jsi členem teamu {colorcode}{color}!'
+changeteam_changed: '&7Nyni hraješ v teamu {colorcode}{color}'
+changeteam_none: '&7You left your team and will be assigned to a random one'
+changed_postitions: '&aBody arény byly úspěšně změněny!'
+changed_lobbylocation: '&aPozice arény &2{arena} &abyla úspěšně změněna!'
+changed_teamspawn: '&aPozice teamu {colorcode}{color} &abyla úspěšně změněna!'
+changed_arenaworld: '&aSvět arény &2{arena} &abyl změněn na &2{world}'
+spawn_ranking: '&aSocha žebříčku na místě &2{place} &abyla úspěšně vytvořena!'
+changed_gamedonelocation: '&2Lokace &abyla úspěšně změněna!'
+insidearena_gamedonelocation:
+- '&cThe hub position is inside the arena &4{arena}&c!'
+- '&cPlace it somewhere else - namely where you are supposed to get teleported to
+  when you leave the match'
+stats_info_entry: '&7{name}: &b{value}'
+stat_default_rank: Hodnost
+stat_default_win_streak: Aktuální vítězná série
+stat_default_top_win_streak: Top win streak
+stat_default_won: Vyhrál
+stat_default_lost: Prohrál
+stat_default_wl: W/L
+stat_default_roundsplayed: Odehraná kola
+stat_default_kills: Zabití
+stat_default_kill_streak: Current kill streak
+stat_default_top_kill_streak: Top kill streak
+stat_default_finalkills: Poslední Zabití
+stat_default_deaths: Smrtí
+stat_default_finaldeaths: Final Deaths
+stat_default_kd: K/D
+stat_default_final_kd: Final K/D
+stat_default_bedsdestroyed: Zničeno postelí
+stat_default_bedslost: Beds lost
+stat_default_playtime: Odehraný čas
+destroyed_bed_title: ''
+destroyed_bed_subtitle: '&fPostel teamu {teamcolor}{team} &fbyla zničena hráčem &7{player}&f!'
+destroyed_bed_subtitle_playerless: '{teamcolor}{team}&f''s bed has been destroyed!'
+destroyed_bed_own_title: ''
+destroyed_bed_own_subtitle: '&fTvoje postel byla zničena hráčem &7{player}&f!'
+destroyed_bed_chat: '%Prefix% %Destroyed_Bed_SubTitle%'
+destroyed_bed_chat_left: '%Prefix% {teamcolor}{team}&f''s bed has been destroyed as
+  they left the game.'
+destroyed_bed_chat_leftignoredrejoin: '%Prefix% {teamcolor}{team}&f''s bed has been
+  destroyed as they left and didn''t rejoin in time.'
+number_notone: '&4{number} &cnení číslo!'
+stats_by: Statistiky hráče {player}
+gui_achievements_title: '&6Ocenění'
+gui_selectteam_title: '&6Vybrat tým'
+gui_spectator_teleporter: '&eTeleport'
+gui_votearena_title: '&6Hlasuj pro arénu'
+gui_votearena_votes: '&b{number} &3hlasů'
+enabled_arena: '&aAréna &2{arena} &abyla &2aktivována!'
+disabled_arena: '&aAréna &2{arena} &abyla &4deaktivována!'
+disabling_gracefully_arena: '&eDisabling running match within &6{arena} &egracefully,
+  it may take a short moment...'
+create_arena: '&aAréna &2{arena} &abyla úspěšně vytvořena!'
+remove_arena: '&aAréna &2{arena} &abyla úspěšně odstraněna!'
+usage: '&6Použití: &e{usage}'
+search_update: Hledám aktualizace...
+offline_updateservice: Služba aktualizací je pravděpodobně vypnuta!
+inwork_job: Momentálně se na tom pracuje!
+newupdate: Byla nalezena nová aktualizace
+nonewupdate: Aktuálně není k dispozici žádná aktualizace tohoto zdroje!
+arena_hastobestopped:
+- '&cThe arena &4{arena}&c has to be stopped!'
+- '&6You may use the following command: &e{command}'
+arena_joinissue_worlddoesntexists: '&cAréna &4{arena}&c má problém: Svět neexistuje!'
+fixproblemsbeforeenabled: '&cPřed povolením prosím opravte tyto problémy'
+use_trueorfalse: '&cPoužij <true/false>!'
+reseting_now: '&aAréna &2{arena} &ase nyní generuje!'
+reseting_start_failed: '&cNepodařilo se spustit regeneraci arény &4{arena}'
+reseting_start_failed_alreadyrunning: '&cNepodařilo se spustit regeneraci arény &4{arena}&c
+  nyní probíhá již jedna regenerace'
+locateplayer_notinarena: '&4{player} &cis online, but is not inside an arena.'
+locateplayer_inarena:
+- '&3======= &b{player} &3======='
+- '&2Server: &a{server}'
+- '&2Activity: &a{activity}'
+- '&2Arena: &a{arena}'
+- '&2Arena Status: &a{arena-status} ({arena-players}/{arena-max-players})'
+locateplayer_click_to_spectate: '&e&lClick here to spectate {player}'
+notsameworld_arena: '&cNejste ve světě &4{arena} &c(&4{world}&c)!'
+problem_arena_world: '&cVyskytl se problém se světem arény &4{arena}&c!'
+fixproblemwith: '&eOprav problém použitím: &6'
+spawned_lobbyvillager: '&2lobbyvillager &abyl úspěšně vytvořen!'
+spawned_teamselectvillager: '&2teamselectvillager &abyl úspěšně vytvořen!'
+spawned_dealer: '&2Obchodnik &abyl úspěšně vytvořen!'
+spawned_upgradedealer: '&2Vylepšení obchodníka &abylo úspěšně vytvořeno!'
+notlooking_atsign: '&cNedíváš se na cedulku!'
+notlooking_atplayerhead: '&cNedíváš se na hlavu hráče!'
+sign_lobby: '&eLobby'
+sign_running: '&6Hraje se'
+sign_stopped: '&cKončí'
+sign_reseting: '&aRestart'
+enabled: Povoleno
+disabled: Zakázáno
+notallowed_beddestroy: '&cNemůžeš zničit vlastní postel!'
+notallowed_selectcolor: '&cNemáte oprávnění vybrat barvu {colorcode}{color}&c!'
+lobby_item_achievements: '&6Ocenění'
+lobby_item_forcestart: '&eRychlý start'
+lobby_item_leave: '&cOdpojení'
+lobby_item_leave_use: '&aYou will be teleported back to the lobby in {time} seconds'
+lobby_item_leave_cancel: '&c&lTeleport Canceled'
+lobby_item_selectteam: '&eVýběr týmu'
+lobby_item_votearena: '&eHlasovat pro arénu'
+lobby_printmapinfo_arenaname: Jméno arény
+lobby_printmapinfo_buildby: Postavil
+spectator_item_teleporter: '&eTeleport'
+spectator_item_changespeed: '&eZměnit rychlost'
+spectator_item_leave: '&cOdpojení'
+spectator_item_nextround: '&6Změnit arénu'
+arrow_damage: '{targetcolor}{target} &eis now at &c{health} &ehealth'
+trap: '&eNěkdo se chytil do tvé pasti!'
+magicmilk_use: '&eTraps will not be able to detect your for {time} seconds!'
+teleporter: '&eBudeš teleportován během pár vteřin...'
+teleporter_failed: '&cTeleportace byla přerušena!'
+bridge_notenoughmaterials: '&cPotřebuješ více materiálu &4{material}&c!'
+give_spawner: '&aGave &2{amount}&a of &2{spawner}&a to &2{target}'
+teleport_success: '&aByl jsi úspěšně teleportován do arény &2{arena}'
+lobby_waiting: '&6Čekání na &e{amount}&6...'
+lobby_enough: '&6V tomto kole je dost hráčů!'
+alreadyinside_arena: '&cJiž jsi v aréně!'
+noarenaforparty: '&cThere isn''t enough space available for all your party members'
+requires_worldedit: '&cPro toto bude nutné použít &4WorldEdit!'
+crashmessage_missingbed: Chybí lokace postelí
+crashmessage_missingteamspawn: Chybí lokace spawnu týmů
+crashmessage_missinglobbylocation: Chybí lokace lobby
+crashmessage_missinggamedonelocation: Chybí lokace pro konec
+crashmessage_missinggameworld: Nebyl nastaven svět hry
+crashmessage_missingcorners: Rohy nebyly nastaveny
+crashmessage_uppercorneroutofbounds: Upper corner is greater than the worlds's max
+  height
+crashmessage_lowercorneroutofbounds: Lower corner is less than the worlds's min height
+crashmessage_worldtypearenainmainworld: The arena's regeneration type is WORLD, and
+  the arena's world is the server's main world
+crashmessage_notloadedgameworld: Game world isn't loaded
+crashmessage_matchareacolliding: Match area collides with other arenas
+crashmessage_gamedonelocationinterfering: Vaše hub-pozice je v oblasti zápasu
+regeneration_done: '&aAréna &2{arena} &abyla úspěšně obnovena po &2{time} sekundách&a!'
+regeneration_stopped: '&cObnovení &4{arena}&c bylo zrušeno po &4{time} sekundách'
+regeneration_fail: '&cRegenerování arény &4{arena} &cse nezdařilo: &4{error}'
+worldedit_changed: '&aZměněna pozice {id} na &2x{x} y{y} z{z}'
+getpositionaxe: '&adal &2polohovou sekeru'
+tracker_trackedplayer: '&aTento kompas se nyní dívá na nejbližšího sledovaného nepřítele.'
+tracker_reusedelay: '&cPočkejte &4{time} sekund&c, dokud nebudete moci znovu použít
+  sledovač!'
+tracker_failed_onlyone: '&4Nezdařilo se sledovat nejbližšího nepřítele: &cJsi v tomto
+  kole jediným hráčem!'
+spectator_join: '&6Jsi spectator!'
+spectator_leave: '&6Už nejste divákem.'
+spectator_howtoquit: '&eOpustit toto kolo pomocí příkazu &6/bw opustit'
+recalculatestats_done: '&aHotovo po &2{time} sekundách&a.'
+endlobby_counting: '&6Teleportuji za &e{number} sekund &6do lobby'
+endlobby_bigtitle_win: '&6Victory!'
+endlobby_smalltitle_win: '&7Your team won this round!'
+endlobby_bigtitle_lose: '&cDefeat'
+endlobby_smalltitle_lose: '{teamcolor}&l{team} &fvyhrál toto kolo!'
+endlobby_bigtitle_nobody: ''
+endlobby_smalltitle_nobody: '&c&nNobody &fwon this round.'
+arenavoting_noavailablearenas: '&cNezbývá žádná aréna. Omlouváme se!'
+arenavoting_arenasupdated: '&6Areny v aréně hlasování byly aktualizovány.'
+arenavoting_recount_noarenatovote: '&cResetování odpočítání: Není zde žádná aréna,
+  pro kterou by bylo možné hlasovat!'
+arenavoting_end: 'Hlasování vyhrála následující aréna: &e{arena}'
+arenavoting_recount_toofewplayers: '&cPotřebujete &4{number}&c hrace na tomto arénu!'
+arenavoting_minplayers: Min. hráčů
+forcestart_already: '&cHra již odstartovala!'
+scoreboard_arenaname: Aréna
+scoreboard_arenamode: Mód
+scoreboard_players: Hráči
+scoreboard_arena: Aréna
+scoreboard_stats: Statistiky
+scoreboard_gamestats: Herní statistika
+scoreboard_yourteam: Váš tým
+scoreboard_teams: Týmy
+bed_onlydestroyablewith_tnt: '&cTuto postel můžete zničit pouze pomocí TNT!'
+itemspawner_hologram_title: '{spawnercolor}{spawner} &fspawn za &7{time} &fsekund!'
+maxplayers: Max. hráčů
+lobby_countdowntitle_goodluck: '&6Hodně štěstí!'
+minishop_title: '{title}&7 zmizí za &8{time} sekund'
+arenatype_notsupported: '&cToto není podporováno pro typ &4{type}&c arény &4{name}'
+arena_autosavedblocks: '&eBloky uvnitř arény byly automaticky uloženy!'
+ranking_unranked: Nehodnoceno
+wait_allarenasloaded: '&cPočkejte, dokud nebude každá aréna úspěšně načtena!'
+please_savearena: '&6Uložte svůj arénu pomocí: &e/bw arénou <arena name>'
+getsetuptool: '&aDostal jsi &2nástroj na nastavování'
+onetimepurchase: '&cMůžete si koupit pouze jednou!'
+arenasgui_title: '&bArény'
+arena_collidingarena:
+- '&cProsím změňte umístění arény.'
+- '&cJe protíná s arénou: &4{arena}'
+- '&6Pro změnu polohy použijte následující příkaz: &e{command}'
+backup_list: '&6Zálohovat soubory'
+backup_create_success: '&aVytvořil(a) zálohu s názvem &2{name}&a po &2{time} &assekundách'
+backup_create_exists: '&cJiž je záloha s názvem &4{name}'
+backup_delete_success: '&cJiž je záloha s názvem &4{name}'
+backup_unknown: '&cNeznámá strana &4{page}'
+backup_restore_success: '&aZáloha &2{name}&a po &2{time}&a sekundách úspěšně obnovena'
+backup_restore_ask:
+- '&6Opravdu chcete obnovit zálohu &e{name}&6?'
+- '&6Pokud ano, pak prosím napište stejný příkaz během následujících 10 sekund'
+scoreboard_bedstate_alive: '&aNaživu'
+scoreboard_bedstate_destroyed: '&cZničeno'
+death_spectate_respawnin_bigtitle: '&cYOU DIED!'
+death_spectate_respawnin_smalltitle: '&6Znovu za &e{time} &6sekund'
+spectator_changearena_noneavailable: '&cNení dostupná žádná aréna!'
+spectatoradd_failed_missinglocation: '&cPřidání vašeho diváka se nezdařilo, protože
+  nejsou k dispozici žádné body pro teleportování.'
+saveblocks_fail_players: '&4Ukládání bloků selhalo: &cNa světě jsou hráči.'
+createarena_fail_mainworld: '&cNení možné vytvořit arénu s typem světa ve vašem hlavním
+  světě!'
+saveblocks_start: '&6Spouštění bloků pro arénu &e{arena}&6. Odhadovaný čas: &e{time}'
+saveblocks_fail_alreadyrunning: '&4Nepodařilo se uložit bloky: &cOperace je již spuštěna.'
+saveblocks_fail_notstopped: '&4Uložení bloků selhalo: &cJe nezastaveno. (Zastavit
+  s /bw arena setenabled {arena} false)'
+saveblocks_fail_unknown: '&4Nepodařilo se uložit bloky: &cA podivná chyba typu {type}'
+regeneration_fail_savingblocks: '&4Nepodařilo se spustit regeneraci: &cIt''s právě
+  ukládající bloky.'
+deathmessage_killed_1: '{killerteamcolor}{killer} &7zabil &8{teamcolor}{player} &4❤{heartpercent}%'
+deathmessage_killed_2: '{killerteamcolor}{killer} &7zabil &8{teamcolor}{player} &4❤{heartpercent}%'
+deathmessage_killed_3: '{killerteamcolor}{killer} &7zabil &8{teamcolor}{player} &4❤{heartpercent}%'
+deathmessage_void_1: '{teamcolor}{player} &7spadl ze světa'
+deathmessage_void_2: '{teamcolor}{player} &7spadl po mostě a stále padá'
+deathmessage_explosion_1: '{teamcolor}{player} &7rozbil desítky kusů'
+deathmessage_explosion_2: '{teamcolor}{player} &7výbuch nahoře'
+deathmessage_fall_1: '{teamcolor}{player} &7rozbil všechny nohy'
+deathmessage_fall_2: '{teamcolor}{player} &7klesl z vysokého místa'
+deathmessage_fire_1: '{teamcolor}{player} &7byl spálen k smrti'
+deathmessage_fire_2: '{teamcolor}{player} &7byl spálen k smrti'
+deathmessage_default_1: '{teamcolor}{player} &7zemřel'
+spectator: Pozorovatel
+itemshop: Obchod s předměty
+motd_loading: Načítání...
+toggle_display_spawner_enable: '&eSpawnery arény &6{arena} &ejsou nyní viditelné.
+  Zopakováním příkazu toto deaktivujete.'
+toggle_display_spawner_disable: '&eSpawnery arény &6{arena} &ese již nebudou zobrazovat.'
+teamchest_title: Týmová truhla {team}
+playerprivateinventory_title: Ender Chest
+placeholderapi_stats_loading: Načítání...
+tnt_destroybed_name: TNT
+timer_ending_soon: '&eHra skončí za {minutes} minut'
+timer_ending: '&eShoda končí za {seconds} sekund'
+command_blocked: '&cNemůžeš použít tento příkaz při hraní bedwars'
+cancel: Zrušit
+apply: Použít
+authors: Autoři
+nobody: Nikdo
+customname_isenabled: Vlastní název je povolen
+customname: Vlastní název
+displayingname: Zobrazuje název
+list_spawners: '&6Množství spawnerů přidaných do arény {arena}: &e {spawners}'
+noarenaatpos: '&cNeexistuje žádná aréna na vaší aktuální pozici'
+multiplearenasatpos: '&cNa této pozici je několik arén: &4{arenas}'
+notinsidearena: '&cNejste uvnitř arény &4 {arena}'
+arenaname_contains_illegalchars: '&cJméno arény obsahuje nepodporované znaky'
+teamspawn_notyet: '&cSpawn pro &4{team}&c ještě nebyl nastaven v areně &4{arena}'
+holo_add: '&aVytvořil jsi hologram na &2{coord}'
+holo_list: '&6Hologramy v {world}: &e{holos}'
+holo_remove: '&aSmazal jsi hologram na &2{coord}'
+holo_removenotfound: '&cNeexistuje žádný hologram na daných souřadnicích ve světě
+  &4{world}'
+holo_removeall: '&aSmazal jsi &2{amount}&a hologramů ve světě &2{world}'
+unknown_world: '&cNeexistuje žádný svět s názvem &4 {world}'
+addon_load_not: '&cDaný soubor není addon'
+addon_load_already: '&cDaný addon je již načten'
+addon_load_unknown: '&cSoubor neexistuje. Ujistěte se že je umístěn v složce &4{folder}'
+addon_load: '&aAddon načten &2{addon}'
+addon_unload_notfound: '&cNeexistuje žádný addon s názvem &4{addon}'
+addon_unload_notaddon: '&4{plugin}&c is a plugin, but not an addon'
+addon_unload: '&aAddon &2{addon} vypnut'
+item_error_missinghandlerorcommand: '&4Prosím nahlaste tuto chybu admin: &cPoložka
+  {item} chybí obslužná rutina nebo příkaz. Nic se neděje při používání.'
+arenasgui_list: Rozvržení GUI Arén
+arenasgui_by: Postavil
+arenasgui_openfor: '&eOtevřel jsi arenasgui layout &6{layout} &ehráči &6{player}'
+unknown_layout: '&cUnknown rozvržení &4{layout}'
+migration_start: '&eZačala migrace &6 {origin} &e...'
+migration_success: '&aUspěšně migrováno &2{origin} &av &2{time}'
+migration_failure: '&cNepodařilo se přenést &4 {origin} &cpo {time}: &4 {error}'
+migration_failure_alreadyrunning: '&cProces migrace se stejným procesem je již běží.'
+playerdeath_cause_elimination: Eliminace
+rejoin_trying: '&eKontrolujeme dříve odehraný zápas'
+rejoin_alreadytrying: '&cJiž se pokoušíte o připojení do posledně hrané arény! Prosím
+  počkejte chvíli.'
+rejoin_failed_notactive: '&6Jdete pozdě, zápas už skončil'
+rejoin_failed_teamdead: '&6Nemůžete se znovu připojit do této arény protože váš tým
+  byl eliminován '
+rejoin_failed_unknown: '&6Snažili jsme se vás pustit dovnitř, ale možná to nepůjde
+  kvůli vnitřním pravidlům'
+rejoin_success: '&aAréna stále probíhá! Připojování k zápasu...'
+rejoin_success_global: '&6{player} &ese znovu připojil do týmu {teamcolor}{team}&e
+  a nyní je součástí zápasu'
+hubpos_inactive_bungee: '&6Pozice hub &enení aktivní, protože protože používáte BungeeCord
+  verzi'
+arenaconvert_onlyspecifctypes: '&cMůžete změnit pouze typ regenerace arény &4{arena}&c
+  to &4{types}'
+arenaconvert_done: '&aZměnit typ generace &2{arena} &aod {prev} do &2{new}'
+arenaproblem_savingblocks: '&cAréna právě ukládá své bloky. Zkuste to znovu za několik
+  vteřin'
+teamchat_enabled_hint: '&eČlenové vašeho týmu jsou jediní, kdo uvidí vaši zprávu.
+  Začněte s "&6&l{tag} &e" psát globálně'
+teamchat_disabled_solo_hint: '&eVaše zpráva bude viditelná pro všechny hráče (i bez
+  tagu), když budete hrát sólo'
+remotearena_unsupportedoperation: '&cYou may not perform the given operation to remote
+  arenas'
+connecting_server: '&eYou are about to connect with the server'
+remoteteleport_fail: '&cIt it is not possible to teleport to the server'
+tphubfail_nohub: '&cWe failed to teleport you to the hub as no server is available'
+try_again_shortly: '&ePlease try again shortly'
+server_full: '&cThe server is full'
+spectate_fail: '&cWe failed to add you as an spectator (Reason: {reason})'
+join_fail: '&cWe failed adding you to the arena (Reason: {reason})'
+erroraction_arenacloned: '&cYou may not perform that for cloned arenas'
+arenabulk_performingaction: '&eThe action is being executed for &6{amount} arenas'
+invalidatecache_alreadyempty: '&eThe player-data-cache is already empty'
+invalidatecache: '&eFollowing locally cached info has been cleared: &6{stats} stats&e,
+  &6{achievements} achievements&e and &6{properties} properties'
+playerdata_info_fetchtime: Fetch time
+playerdata_info_earnedachievements: Earned achievements
+playerdata_info_stats: Statistiky
+playerdata_info_game_stats: Herní statistika
+playerdata_info_properties: Properties
+playerdata_notfound: '&cWe couldn''t find any data for &4{target}'
+playerdata_stats_resetallplayer_warning:
+- '&4!!!WARNING!!!'
+- '&cAre you really sure you want to reset &4ALL stats&c for &4&lALL&c players who
+  have EVER played? If so, then please write the same command within the next {sec}
+  seconds. &nYou might want to create a backup.'
+playerdata_stats_resetplayer_warning:
+- '&4!!! VAROVÁNÍ!!!'
+- '& Jste si opravdu jisti, že chcete resetovat &4VŠECHNY statistiky &c hráče &4&l
+  {player} &c? Pokud ano, napište stejný příkaz během následujících {sec} sekund.'
+playerdata_stats_resetplayer_complete: '&aThe stats for {player} have successfully
+  been reset!'
+playerdata_stats_resetallplayer_complete: '&aThe stats of all players on the server/network
+  have been reset after {time}!'
+playerdata_stats_modify_complete: '&aSuccessfully updated ''{stat}'' to ''{new-val}''
+  for {player}. The player may need to re-log for rankings to update'
+playerdata_stats_modify_fail: '&cWe were unable to update the stat ''{stat}'' for
+  {player}!'
+playerdata_stats_notfound: '&cUnable to find a stats set called ''{stat}'''
+identifyarena_none: '&cThere is no arena at the given position'
+identifyarena_found: '&eFound arena &6{arena}'
+initsetup_welcome:
+- '&6Welcome welcome!'
+- '&eTo make the setup of &lMarcely''s Bedwars &eas easy as possible, we offer you
+  the opportunity to set it up via a web interface (using your browser).'
+- '&eNote that this is only for the initial setup. You can always configure anything
+  later on.'
+initsetup_web: I want to use the fancy web interface (Click or type command {cmd})
+initsetup_simple: I would rather just configure everything myself (Click or type command
+  {cmd})
+initsetup_connecting: '&ePlease wait a little bit, we are preparing it for you.'
+initsetup_connection_failure:
+- '&cSorry, but we could not connect to our service. A firewall may be blocking it.'
+- '&cPlease type the &4/mbedwars &ccommand and try again or skip the whole process
+  if it keeps failing.'
+initsetup_ready: '&eVisit this URL to start the setup process: &6{url}'
+initsetup_finish: '&eEverything is ready, have fun! Visit &6{url} &efor further help'
+click: '*Click*'
+members: Members
+no_members: No members
+antiabuse_statsnotcounted: '&cCertain stats weren''t counted as we detected potential
+  abuse. Please play fair!'
+player_trigger_upgradetrap_bigtitle: '&cTRAP TRIGGERED!'
+player_trigger_upgradetrap_smalltitle: '&fYour trap has been set off!'
+player_trigger_upgradetrap_chat: '&cSomeone has triggered one of your team''s traps!'
+achievement_get_title: Nové ocenění!
+
+
+###########################
+## Setup GUI
+###########################
+setupgui_nextpage: Další stránka
+setupgui_prevpage: Předchozí stránka
+setupgui_goback: Zpět
+setupgui_yousure: Opravdu?
+setupgui_noarenascreated: Nebyla vytvořena žádná aréna
+setupgui_mainbutton_modify: Úprava vytvořených arén
+setupgui_mainbutton_create: Vytvořit novou arénu
+setupgui_mainbutton_misc_tools: Misc tools
+setupgui_misctools_spawn_dealer:
+- Spawn Dealer
+- You can remove it by punching.
+setupgui_misctools_spawn_upgradedealer:
+- Spawn Upgrade Dealer
+- You can remove it by punching.
+setupgui_misctools_displayarenasatpos:
+- Identify an arena
+- Uses your current position.
+setupgui_misctools_setuptool:
+- Obtain the Setup Tool
+- Right click the item while holding in hand to use it.
+- Useful for quickly setting up arenas.
+setupgui_misctools_setcorner_1:
+- Set first corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_misctools_setcorner_2:
+- Set second corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_category_actions: Akce
+setupgui_category_modify: Upravit
+setupgui_category_spawners: Spawners
+setupgui_category_teams: Týmy
+setupgui_category_weather:
+- Weather
+- 'Active: {weather}'
+setupgui_category_time:
+- Time
+- 'Active: {time}'
+setupgui_button_enable: Zapnout
+setupgui_button_disable: Vypnout
+setupgui_button_regenerate: Regenerovat všechny bloky
+setupgui_button_teleport: Teleport do arény
+setupgui_button_enter: Vstupte do hry
+setupgui_button_enterspectator: Sledovat hru
+setupgui_button_configure: Nastavit
+setupgui_button_setlobby:
+- Nastavte lobby
+- Použije vaši aktuální pozici
+setupgui_button_rename: Změnit název
+setupgui_button_saveblocks: Uložení všech bloků a entit
+setupgui_button_setgameworld:
+- Nastavte herní svět
+- Využívá váš současný svět
+setupgui_button_saveregioncorners:
+- Save arena corners
+- Ujistěte se, že jste nastavili rohy pomocí {tool}
+setupgui_button_modifyregioncorners:
+- Set arena corner positions
+- Použije vaši aktuální pozici
+- ''
+- 'Left Click: Mark Corner 1'
+- 'Right Click: Mark Corner 2'
+setupgui_button_setspectatorspawn:
+- Nastavte spawn pro diváky
+- Použije vaši aktuální pozici
+setupgui_button_properties: Properties
+setupgui_button_delete: Smazat arénu
+setupgui_button_removeallspawners: Odstranit všechny přidané spawnery
+setupgui_button_displayspawners:
+- Zobrazit všechny spawnery
+- Přidá malý hologram nad kterýkoliv spawner
+setupgui_button_undisplayspawners: Skrýt všechny spawnery
+setupgui_button_getallbeds: Získejte postel každého týmu
+setupgui_spawnerbutton_obtainitems: '&fZískej {amount} itemů spawneru {spawner}'
+setupgui_spawnerbutton_add:
+- '&fPřidat {spawner} &fspawner'
+- Použije vaši aktuální pozici
+setupgui_spawnerbutton_removeall: '&fSmazat všechny spawnery na {spawner}'
+setupgui_teambutton_obtainbed: '&fZískej postel {team}'
+setupgui_teambutton_teleportspawn: '&fTeleport na spawnpoint týmu {team}'
+setupgui_teambutton_setspawn:
+- '&fNastavte spawnpoint pro {team}'
+- Použije vaši aktuální pozici
+setupgui_removearena_yes: '&a&lANO&f, smazat arenu &l{arena}'
+setupgui_removearena_no: '&c&lNE&f, zanechat arenu &l{arena}'
+setupgui_create_type_region:
+- Region
+- Omezte arénu pomocí borderu.
+- Hráči uvidí vizuální efekt borderu a nebudou ho moct opustit.
+- Tímto způsobem můžete také vytvořit více arén v jednom světě.
+- Podrobnější informace naleznete na wiki.
+setupgui_create_type_world:
+- Svět
+- Nebyl nastaven border, Pro hru bude použit celý svět.
+- Snadnější na nastavení ale může být těžší při regeneraci.
+- Podrobnější informace naleznete na wiki.
+setupgui_create_type_voting:
+- Hlasování
+- Není to skutečná aréna, ve které hrajete.
+- Místo toho používá pouze svou lobby, pro hlasování.
+- Hráči budou po skončení hlasování teleportováni do arény typu Svět nebo Region.
+- Podrobnější informace naleznete na wiki.
+setupgui_create_title: Vytvořit novou arénu
+setupgui_configure_title: Nastavení arény
+setupgui_configure_auto_detect_teams_complete: '&6{amount} &epotential teams have
+  been detected using your current position'
+setupgui_configure_playersperteam2:
+- '&6Max Players:'
+- '&7Current Max Players Per Team: &f{amount}'
+- '&7Current Max Arena Players: &f{total-max-players}'
+setupgui_configure_minplayers:
+- '&6Min Players: &f{amount}'
+- '&7Amount of players required to start'
+setupgui_configure_totalplayers: '&6Maximální počet hráčů v aréně: &f{amount}'
+setupgui_configure_arenasbelowinpool: '&3&l&bAreny uvnitř hlasování &3&l'
+setupgui_configure_noarenasinpool: '&cNejsou žádné areny v hlasování'
+setupgui_clicktorename: Klepnutím přejmenujte
+setupgui_rename_title: Přejmenovat arénu
+setupgui_confirm_action: '&6Potvrďte svou akci, kliknutím znovu na tlačítko během
+  několika sekund.'
+setupgui_configure_minplayers_toolow: ONLY FOR TESTING. With this, you may start a
+  match without any other player.
+setupgui_button_modifyregioncorners_reminder_save: '&eDon''t forget to click on the
+  "save arena corners" button, otherwise your changes won''t get applied.'
+setupgui_spawnerbutton_removenearbyspawners:
+- '&fRemove all nearby {spawner} &fspawners'
+- Použije vaši aktuální pozici
+setupgui_remotearena_info:
+- '&c[REMOTE]'
+- Managed by &o{server}
+
+
+###########################
+## Setup Tool
+###########################
+setuptool_freebuild: Place/Break blocks freely
+setuptool_spawner: Place/Edit spawner
+setuptool_selectteam: Select team
+setuptool_bed: Place bed
+setuptool_spawnpoint: Place spawn point
+setuptool_dealer: Spawn/Kill dealer
+setuptool_notinsidearena: '&cMust be inside an arena. &6&lClick here &cto manage arenas.
+  Teleport yourself to it and use the tool item again'
+setuptool_activated: '&aActivated &esetup tool for &6{arena}'
+setuptool_deactivated: '&cDeactivated &esetup tool. &6&lClick here &eto open the arena''s
+  setup GUI'
+setuptool_selecttype: Select type
+setuptool_placeagainconfirm: Place again to confirm
+setuptool_type_dealer: Dealer
+setuptool_type_upgradedealer: Upgrade Dealer
+setuptool_teamcomponent_bed: Bed
+setuptool_teamcomponent_spawnpoint: Spawn Point
+setuptool_spawnpoint_preview:
+- '&f&lSpawn Point Preview'
+- '{team}'
+- '&fDisappears in {time}'
+
+
+###########################
+## Shop Layouts
+###########################
+shop_d_hypixel_available: '&8Volno'
+shop_d_hypixel_clicktobrowse: '&eKlikni pro prohlížení!'
+shop_d_hypixel_items: '&8Itemy'
+shop_d_hypixel_clicktopurchase: '&eKlikni pro koupi!'
+shop_d_hypixel_maxed: '&aMAXED!'
+shop_d_hypixel_unlocked: '&aUNLOCKED'
+shop_d_hypixel_cost: '&7Cena: &f{amount}{type}'
+shop_d_hypixel_goback: '&aJít zpět'
+shop_d_hypixel_tooexpensive: '&cNemáš dostatek {type}!'
+shop_d_hivemc_clicktoview: '&b{icon} Klikni pro zobrazení &l{item}'
+shop_d_hivemc_goback: '&c&lJít zpět'
+shop_d_hivemc_returntomenu: '&7Zpět do menu'
+shop_d_hivemc_clicktogoback: '&b{icon} Klikni pro zpět'
+shop_d_hivemc_clicktobuy: '&b{icon} Klikni pro koupi'
+shop_d_hivemc_cost: '&6Cena'
+shop_d_rewinside_shoptype_new: Používáte nový a vylepšený obchod
+shop_d_rewinside_shoptype_old: Používáte starý obchod
+shop_d_rewinside_shoptype_switch: Klikněte zde pro přepnutí mezi verzemi
+shop_d_bergwerklabs_currentpage: '&bAktuální stránka'
+shop_d_bergwerklabs_changepage: '&bStránka {page}'
+shop_d_bergwerklabs_buy: '&aKoupit &7&o<Left click>'
+shop_d_bergwerklabs_buy_tooexpensive: '&7Příliš drahé!'
+shop_d_hypixelv2_clicktoview: '&eKlikni pro prohlížení!'
+shop_d_hypixelv2_seperator_categories: '&8⬆&7 Kategorie'
+shop_d_hypixelv2_seperator_items: '&8⬇&7 položek'
+shop_d_hypixelv2_quickbuy_pageitem: '&bRychle nakoupit'
+shop_d_hypixelv2_quickbuy_emptyslot_name: Prázdné pole
+shop_d_hypixelv2_quickbuy_emptyslot_description:
+- '&7Toto je slot rychlého nákupu!'
+- '&bKlikněte při krčení&7 na libovolný item'
+- '&7obchod přidat zde.'
+shop_d_hypixelv2_quickbuy_menu_title: Přidávám k rychlému nákupu...
+shop_d_hypixelv2_quickbuy_menu_set: '&eKliknutím nastavíte'
+shop_d_hypixelv2_quickbuy_menu_replace: '&eKlikněte a vyměňte!'
+shop_d_hypixelv2_quickbuy_menu_representing: '&ePřidání položky do rychlého slotu'
+shop_d_hypixelv2_quickbuy_add_item: '&bSneak click to add to Quick Buy'
+shop_d_hypixelv2_quickbuy_remove_item: '&bSneak click to remove from Quick Buy'
+
+
+###########################
+## Achievements
+###########################
+achievements_name_ragequit: rage quit
+achievements_name_winround: Vítěz
+achievements_name_loseround: Looser
+achievements_name_ownbeddestroyed: Vetřelec!
+achievements_name_bestbow: OP
+achievements_name_userescueplatform: To bylo těsné
+achievements_name_useendepearl: Enderman
+achievements_name_useminishop: 'Nákupní košík '
+achievements_name_killsomeonewithbow: Katniss
+achievements_name_winin3minutes: Už je konec?
+achievements_name_killsomeonewithhalfaheart: Šťastný útok
+achievements_name_win100rounds: Šampión
+achievements_name_usebridge: Stavitel mostu
+achievements_name_useguarddog: Policejní strážce
+achievements_name_effectmagnetshoes: Magnetická síla
+achievements_name_useteleporter: Nosím mě nahoru, scotty!
+achievements_name_usetntsheep: Boom, boom, dítě!
+achievements_name_usetracker: Najdu vás. A zabij vás.
+achievements_name_placetrap: Těžit
+achievements_name_runovertrap: JE TO PAST!
+achievements_name_spend200resources: Wealthy
+achievements_name_rankingintop3: E-Sport hráč
+achievements_name_goodkd: Profesionální hráč
+achievements_name_highplaytime: '#NoLife'
+achievements_name_writeggatend: Dobrá hra
+achievements_name_winwithoutbed: Nemůžeš se mě dotknout
+achievements_name_die10secsafterbeddestruction: Neudělali jste to!
+achievements_name_optaineveryachievement: Závislý
+achievements_name_usefireball: Pew pew!
+achievements_name_useinvispotion: Chodící duch
+achievements_text_ragequit: Opustit kolo
+achievements_text_winround: Vyhrajte alespoň jedno kolo
+achievements_text_loseround: Prohrajte jedno kolo
+achievements_text_ownbeddestroyed: Pokud vám někdo ničí postel
+achievements_text_bestbow: Kup nejlepší luk
+achievements_text_userescueplatform: Použij záchrannou platformu
+achievements_text_useendepearl: Použij enderpearlu
+achievements_text_useminishop: Použít minishop
+achievements_text_killsomeonewithbow: Zabij někoho lukem
+achievements_text_winin3minutes: Vyhrajte kolo za 3 minuty
+achievements_text_killsomeonewithhalfaheart: Zabij nepřítele s polovinou srdce
+achievements_text_win100rounds: Vyhrát 100 her
+achievements_text_usebridge: Použij most
+achievements_text_useguarddog: Přivolej na pomoc psí stráž
+achievements_text_effectmagnetshoes: Když tě tvé magnetické boty obránili proti knockbacku
+achievements_text_useteleporter: Použij teleport
+achievements_text_usetntsheep: Přivolej TNT ovci
+achievements_text_usetracker: Použij tracker
+achievements_text_placetrap: Postav jednu past
+achievements_text_runovertrap: Spustit past tím, že přes ni přeběhneš
+achievements_text_spend200resources: Spend 200 or more resources in the shop
+achievements_text_rankingintop3: Být v žebříčku Top 3
+achievements_text_goodkd: Mějte K/D vyšší než 5.0
+achievements_text_highplaytime: Hrajte alespoň 5 hodin
+achievements_text_writeggatend: Řekni "GG" na konci hry
+achievements_text_winwithoutbed: Vyhrajte se zničením postele
+achievements_text_die10secsafterbeddestruction: umři 10 sekund po zničení postele
+achievements_text_optaineveryachievement: Získat každý úspěch
+achievements_text_useinvispotion: Vypij lektvar neviditelnosti
+achievements_text_usefireball: Použij ohnivou kouli
+
+
+###########################
+## Shop
+###########################
+shop_buygroup_buy_lowertier: '&cPoložku vyšší úrovně již máte'
+shop_player_not_in_running_arena: '&cYou''re not in a running arena!'
+shop_price: 'Cena: &7{number} {spawnercolor}{spawnertype}'
+shop_page_block: Bloky
+shop_page_food: Jídlo
+shop_page_armor: Brnění
+shop_page_sword: Meče
+shop_page_bow: Luky
+shop_page_pickaxe: Krumpáče
+shop_page_potion: Lektvary
+shop_page_special: Speciality
+shop_page_extra: Extra
+shop_item_hardenedclay: Tvrzený jíl
+shop_item_endstone: Endstone
+shop_item_chest: Truhla
+shop_item_enderchest: 'Endertruhla '
+shop_item_ladder: Žebřík
+shop_item_web: Pavučina
+shop_item_apple: Jablko
+shop_item_grilledpork: Grilované vepřové maso
+shop_item_cake: Dort
+shop_item_goldenapple: Zlaté jablko
+shop_item_leatherhelmet: Kožená helma
+shop_item_leatherleggings: Kožené kalhoty
+shop_item_leatherboots: Kožené boty
+shop_item_chainmailchestplatelvl1: Kroužkový chestplate &7LVL 1
+shop_item_chainmailchestplatelvl2: Kroužkový chestplate &7LVL 2
+shop_item_chainmailchestplatelvl3: Kroužkový chestplate &7LVL 3
+shop_item_knockbackstick: Knockback tyč
+shop_item_swordlvl1: Meč &7Lvl 1
+shop_item_swordlvl2: Meč &7Lvl 2
+shop_item_swordlvl3: Meč &7Lvl 3
+shop_item_bowlvl1: Luk &7Lvl 1
+shop_item_bowlvl2: Luk &7Lvl 2
+shop_item_bowlvl3: Luk &7Lvl 3
+shop_item_arrow: Šíp
+shop_item_pickaxelvl1: Krumpáč &7Lvl 1
+shop_item_pickaxelvl2: Krumpáč &7Lvl 2
+shop_item_pickaxelvl3: Krumpáč &7Lvl 3
+shop_item_potionswiftness: Lektvar rychlosti
+shop_item_potionregeneration: Lektvar regenerace
+shop_item_potionhealing: Lektvar uzdravení
+shop_item_potionstrength: Lektvar síly
+shop_item_enderpearl: Enderpearl
+shop_item_teleporter: Teleportér
+shop_item_minishop: Malý obchod
+shop_item_rescueplatform: Záchranná plošina
+shop_item_tntsheep: Vybuchující ovečka
+shop_item_magnetshoes: Magnetické boty
+shop_item_trap: Past
+shop_item_bridge: Most
+shop_item_guarddog: hlidací pes
+shop_item_tracker: Traker
+shop_item_fishingrod: Rybářský prut
+shop_item_snowball: Sněhová koule
+shop_item_fireball: Ohnivá Koule
+shop_item_magicmilk: Magic Milk
+shop_item_tnt: TNT
+
+
+###########################
+## Upgrade Shop
+###########################
+upgradeshop: Obchod s vylepšením
+upgradeshop_buy_upgrade_broadcast: '&e{player} aktualizováno &6&e{upgrade}&e na &6LVL
+  {newlvl}'
+upgradeshop_buy_trap_broadcast: '&e{player} purchased &6{upgrade}'
+upgradeshop_toofew_materials: '&cYou don''t have enough materials to buy this!'
+upgradeshop_max_upgrade: '&cYou have already purchased this upgrade'
+upgradeshop_buystate_purchasable: '&eKlikni pro koupi!'
+upgradeshop_buystate_not_purchasable: '&cYou don''t have enough {price-type}&c!'
+upgradeshop_buystate_maximum: '&aUNLOCKED'
+upgradeshop_queuedtrap_icon:
+- '&aTrap #{queue-level}: {trap-name}'
+- '&7This trap will trigger'
+- '&7immediately after an'
+- '&7intruder enters your base'
+- ' '
+- '&7Note that is the intruder'
+- '&7Is using Magic Milk, this'
+- '&7trap may not trigger'
+upgradeshop_unqueuedtrap_icon:
+- '&cTrap #{queue-level}: No Trap!'
+- '&7Purchasing a trap will'
+- '&7queue it here. Its cost'
+- '&7may scale based on the'
+- '&7number of traps queued'
+upgradeshop_hypixel_separator:
+- '&8⬆ &7Purchasable'
+- '&8⬇ &7Traps Queue'
+upgradeshop_hypixel_traps_menu_button:
+- '&eBuy a trap'
+- '&7Purchased traps will be'
+- '&7queued below'
+- ' '
+- '&eUpgrades'
+upgradeshop_hypixel_back_button:
+- '&eReturn to Upgrades'
+- '&7Go back to view upgrades'
+- '&7and traps queue'
+- ' '
+- '&eClick to return!'
+upgradeshop_name_protection: Armor Protection
+upgradeshop_description_protection: Increases armor protection
+upgradeshop_name_featherfall: Feather Fall
+upgradeshop_description_featherfall: Gain less fall damage
+upgradeshop_name_haste: Haste
+upgradeshop_description_haste: All players in your team permanently gain the haste
+  effect
+upgradeshop_name_healrange: Léčení na základně
+upgradeshop_description_healrange: Léčí vás ve vaší základně
+upgradeshop_name_sworddamage: Ostrost
+upgradeshop_description_sworddamage: Zvyšuje poškození meče
+upgradeshop_name_spawnermultiplier: Násobitel Spawneru
+upgradeshop_description_spawnermultiplier: Zvyšuje rychlost spawnování itemů na vaší
+  bázi.
+upgradeshop_name_enemyalarmtrap: Alarm Trap
+upgradeshop_description_enemyalarmtrap: Removes Invisibility from infiltrating player
+upgradeshop_name_counteroffensivetrap: Counter Offensive Trap
+upgradeshop_description_counteroffensivetrap: Gives Speed II and Jump II too all team
+  members for 15 seconds
+upgradeshop_name_enemyminingfatigue: Mining Fatique
+upgradeshop_description_enemyminingfatigue: Sníží rychlost těžby pro nepřátele, kteří
+  vstupují do tvé základny
+upgradeshop_name_enemytrap: Regulérní Past
+upgradeshop_description_enemytrap: Gives blind and slowness effect to the attacker
+upgradeshop_trapremove_lore: '&eRight Click to remove! &8(No refund)'
+upgradeshop_trapremove: '&eRemoved &6{trap} &efrom the queue'
+
+
+###########################
+## Custom
+###########################
+mustserverjoinfromhub: '&cYou must join an arena from the hub'
+arena_joinissue_votingparticipating: '&cYou may not join this arena right now. It
+  is a part of an active voting pool'
+rejoin_failed_notparticipating: '&6You didn''t participate in any match yet'

@@ -1,0 +1,903 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww11
+#########################
+
+
+
+###########################
+## Miscellaneous
+###########################
+prefix: '&f[&cBed&fWars]'
+configurations_reload_start: '&aAyarlamalar yeniden yükleniyor!'
+configurations_reload_end: '&aAyarlar &2{time} saniyede yüklendi'
+configurations_reload_alreadyloading: '&cAyarlar hali hazırda tekrar yükleniyor!'
+info_madeby: Yapan kişi
+info_specialthanks: Special thanks
+info_website: Web sitesi
+info_version: Sürüm
+info_newestversion: En yeni sürüm
+page: Sayfa
+help: Yardım
+team: Takım
+none: yok
+unknown_page: '&cBilinmeyen Sayfa &4{page}'
+unknown_argument: '&cBilinmeyen Argüman &4{arg}'
+unknown_block: '&cBilinmeyen Blok &4{block}'
+unknown_place: '&cBilinmeyen Yer &4{place}'
+unknown_spawner: '&cBilinmeyen üretici &4{spawner}'
+version_new: '&aYeni bir sürüm bulundu! &2{version}'
+version_nonew: '&cYeni sürüm bulunmadı!'
+error_occurred: '&cBir hata oluştu!'
+error_occurred_syntax: '&cSyntax hatası oluştu: &6{message}'
+no_permissions: '&cDoğru yetkiye sahip değilsin!'
+no_permissions_specific: '&cMake sure that you either have the &4{perm} &cpermission
+  or OP'
+onlyas_player: '&cSadece oyuncu olduğunuzda çalışır!'
+not_ingame: '&cBir oyunda değilsiniz!'
+not_ingame_player: '&4{player} &coyunda değil!'
+not_supported: '&cBu, sürümünüz için desteklenmemektedir! Lütfen &4{version} &cveya
+  daha yukarı bir sürüme güncelleyin'
+color_yellow: sarı
+color_orange: turuncu
+color_red: kırmızı
+color_blue: mavi
+color_magenta: magenta
+color_lightblue: açık mavi
+color_cyan: turkuaz
+color_lightgreen: açık yeşil
+color_green: yeşil
+color_purple: mor
+color_pink: pembe
+color_white: beyaz
+color_lightgray: açık gri
+color_gray: gri
+color_brown: kahverengi
+color_black: siyah
+missing_worldeditpoints: '&cEksik worldedit alan seçimi!'
+saved_arena: '&aArena &2{arena}&a kaydedildi!'
+saved_bed: '&a{colorcode}{color} takımının yatağı &2{arena} ''da kaydedildi'
+bed_notinside_arena: '&cLokasyonda arena olmadığından yatak eklenemedi. "/bw arena
+  setcorners" veya "/bw arena setworld" komutlarıyla Arena düzenleyebilirsiniz'
+exists_arena: '&cArena &4{arena} &chali hazırda bulunmakta!'
+spawner_bronze: Bronz
+spawner_iron: Demir
+spawner_iron_plural: Iron
+spawner_gold: Altın
+spawner_gold_plural: Gold
+spawner_diamond: Elmas
+spawner_diamond_plural: Diamonds
+spawner_emerald: Emerald
+spawner_emerald_plural: Emeralds
+added_spawner: '&2{spawnertype} &aÜreticisi &2{arena} bölgesine başarıyla eklendi!'
+specialblock_added: '&2{type} &atipinde özel bir blok yaratıldı'
+specialblock_alreadyadded: '&cHali hazırda &4{type}&c tipinde bir blok var. Kırarak
+  kaldırabilirsiniz'
+specialblock_removed: '&e{type} &6tipindeki özel blok kaldırıldı'
+removed_spawners: '{arena} &aarenasından &2{number}&a üretici kaldırıldı'
+start_round: '&aTur başlıyor.'
+stop_round: '&aTur durduruldu.'
+kicked_player: '&2{player}&a, &2{arena} &aadlı arenadan atıldı'
+kicked_player_toplayer: '&cMaçtan atıldınız!'
+list_arenas: '&eArenalar: &6'
+list_arenas_local: '&eLocal arenas: &6'
+list_arenas_remote: '&cRemote arenas: &6'
+only_betamember: '&cBetadayken girmeye izniniz yok!'
+notavailable_color: '&cBilinmeyen renk &4{color}'
+joinmessage_stopped: '&cArena durduruldu!'
+joinmessage_reseting: '&cArena temizleniyor!'
+joinmessage_full: '&cArena dolu!'
+joinmessage_running: '&cArenada zaten bir oyun oynanıyor!'
+joinmessage_alreadyinside: '&cZaten arenadasınız!'
+joinmessage: '&6{player}&e, oyuna katıldı.'
+leavemessage: '&6{player}&e, oyundan ayrıldı.'
+notfound_player: '&4{player} &cbulunamadı!'
+notfound_arena: '&4{arena} &cadında bir arena bulunamadı!'
+notfound_arena_loading: '&6(Arena şu anda yükleniyor)'
+notfound_arena_validpicker: '&cThere''s no arena matching the picker: &4{picker}'
+notfound_author: '&cBurada &4{author} &cadıyla bir yazar yok!'
+get_bed: '{colorcode}{color} &ayatağı yerle bir ettin.'
+getallbeds: '&2{arena}&a arenasındaki bütün yataklar size verildi'
+countdown_start: '&6Geri sayın şu anda başlatılıyor!'
+countdown_stop: '&aGeri sayım durduruldu!'
+countdown_counting: '&6Bu tur &e{number} &6saniye içinde başlatılacak!'
+countdown_changed: '&6Geri sayım &e{number} &6saniye olarak değiştirildi!'
+countdown_voting_counting: '&6Arena oylaması &e{number} &6saniye içerisinde sona erecek!'
+toofew_materials: '&cBunu almak için çok az materyale sahipsin!'
+no_inventory_space: '&cYour inventory is already full!'
+tooless_players: '&cBu tur için yetersiz oyuncu sayısı!'
+needmore_players_than: '&4{amount} &coyuncudan daha fazla oyuncuya ihtiyacın var!'
+win_money: '&e{number} &6lira kazandın!'
+player_notingameanymore: '&4{player}&c, artık oyunda değil!'
+player_notfound: '&4{player} &cadlı oyuncu bulunamadı!'
+player_cheating: '&6{player} &ehile yaptığı için tekmelendi!'
+player_loosing: '&6{player}&e, bu turu kaybetti!'
+players: Oyuncular
+team_won: '{colorcode}{color} &etakım bu turu kazandı!'
+team_notaddedyet: '{teamcolor}{team}&c,&4{arena} &cadlı arenaya eklenemez!'
+changeteam_full: '{colorcode}{color} &7takım dolu!'
+changeteam_alreadyinside: '&7Zaten {colorcode}{color} &7takımın bir üyesinin!'
+changeteam_changed: '&7Şu anda {colorcode}{color} &7takımda oynuyorsun'
+changeteam_none: '&7You left your team and will be assigned to a random one'
+changed_postitions: '&aPozisyon, başarıyla değiştirildi!'
+changed_lobbylocation: '&2{arena} &aadlı arenanın lobi pozisyonu başarıyla değiştirildi!'
+changed_teamspawn: '{colorcode}{color} &atakımın doğma noktası başarıyla değiştirildi!'
+changed_arenaworld: '&2{arena} &aadlı arenanın dünyası, &2{world} olarak değiştirildi'
+spawn_ranking: '&aBir sıralama heykeli &2{place} &akonumuna yerleştirildi!'
+changed_gamedonelocation: '&2"gamedonelocation" &abaşarıyla değiştirildi!'
+insidearena_gamedonelocation:
+- '&cThe hub position is inside the arena &4{arena}&c!'
+- '&cPlace it somewhere else - namely where you are supposed to get teleported to
+  when you leave the match'
+stats_info_entry: '&7{name}: &b{value}'
+stat_default_rank: Rütbe
+stat_default_win_streak: Current win streak
+stat_default_top_win_streak: Top win streak
+stat_default_won: Kazanıldı
+stat_default_lost: Kaybedildi
+stat_default_wl: Kazanma/Kaybetme Oranı
+stat_default_roundsplayed: Oynanan turlar
+stat_default_kills: Öldürmeler
+stat_default_kill_streak: Current kill streak
+stat_default_top_kill_streak: Top kill streak
+stat_default_finalkills: Son Öldürmeler
+stat_default_deaths: Ölümler
+stat_default_finaldeaths: Final Deaths
+stat_default_kd: Öldürme/Ölüm Oranı
+stat_default_final_kd: Final K/D
+stat_default_bedsdestroyed: Kırılan Yataklar
+stat_default_bedslost: Beds lost
+stat_default_playtime: Oynanan Süre
+destroyed_bed_title: ''
+destroyed_bed_subtitle: '{teamcolor}{team} &fadlı takımın yatağı, &7{player} &ftarafından
+  kırıldı!'
+destroyed_bed_subtitle_playerless: '{teamcolor}{team}&f''s bed has been destroyed!'
+destroyed_bed_own_title: ''
+destroyed_bed_own_subtitle: '&fYatağın, &7{player} &ftarafından kırıldı!'
+destroyed_bed_chat: '%Prefix% %Destroyed_Bed_SubTitle%'
+destroyed_bed_chat_left: '%Prefix% {teamcolor}{team}&f''s bed has been destroyed as
+  they left the game.'
+destroyed_bed_chat_leftignoredrejoin: '%Prefix% {teamcolor}{team}&f''s bed has been
+  destroyed as they left and didn''t rejoin in time.'
+number_notone: '&4{number} &cbir sayı değil!'
+stats_by: '{player} tarafından istatistikler'
+gui_achievements_title: '&aBaşarımlar'
+gui_selectteam_title: '&aTakım Seç'
+gui_spectator_teleporter: '&eIşınlan'
+gui_votearena_title: '&6Bir arena için oyla'
+gui_votearena_votes: '&b{number} &3oy'
+enabled_arena: '&2{arena} &abaşarıyla &2aktif &aedildi!'
+disabled_arena: '&2{arena} &abaşarıyla &4devre dışı &abırakıldı!'
+disabling_gracefully_arena: '&eDisabling running match within &6{arena} &egracefully,
+  it may take a short moment...'
+create_arena: '&2{arena} &aadlı arena başarıyla oluşturuldu!'
+remove_arena: '&2{arena} &aadlı arena başarıyla silindi!'
+usage: '&6Kullanım: &e{usage}'
+search_update: Güncelleme aranıyor...
+offline_updateservice: Güncelleme servisi kapalı!
+inwork_job: Bu iş halihazırda çalışıyor
+newupdate: Güncelleme bulundu
+nonewupdate: Bir güncelleme bulunamadı!
+arena_hastobestopped:
+- '&cThe arena &4{arena}&c has to be stopped!'
+- '&6You may use the following command: &e{command}'
+arena_joinissue_worlddoesntexists: '&4{arena} &cadlı arenada bir sorun var: Dünya
+  bulunamadı!'
+fixproblemsbeforeenabled: '&cEtkinleştirmeden önce bunları düzeltin'
+use_trueorfalse: '&atrue &eveya &cfalse &ekullan!'
+reseting_now: '&2{arena} &aadlı arena şu anda oluşturuluyor!'
+reseting_start_failed: '&4{arena} &carenasının yenilenmesi başarısız oldu.'
+reseting_start_failed_alreadyrunning: '&4{arena}&carenasının yenilenmesi başlamadı
+  çünkü halihazırda yenilenme sürecinde!'
+locateplayer_notinarena: '&4{player} &cis online, but is not inside an arena.'
+locateplayer_inarena:
+- '&3======= &b{player} &3======='
+- '&2Server: &a{server}'
+- '&2Activity: &a{activity}'
+- '&2Arena: &a{arena}'
+- '&2Arena Status: &a{arena-status} ({arena-players}/{arena-max-players})'
+locateplayer_click_to_spectate: '&e&lClick here to spectate {player}'
+notsameworld_arena: '&4{arena} &cnın dünyası bu dünya değil: &c(&4{world}&c)!'
+problem_arena_world: '&4{arena} &cdünya haritasında problemler var!'
+fixproblemwith: '&eBu problemi düzeltmek için: &6'
+spawned_lobbyvillager: '&2Yükseltme Marketi &abaşarıyla yaratıldı!'
+spawned_teamselectvillager: '&2Takım Seçme Köylüsü &abaşarıyla yaratıldı!'
+spawned_dealer: '&2Market &abaşarıyla yaratıldı!'
+spawned_upgradedealer: '&2Yükseltme Marketi &abaşarıyla yaratıldı!'
+notlooking_atsign: '&cTabelaya bakmıyorsunuz!'
+notlooking_atplayerhead: '&cYou''re not looking at a player head!'
+sign_lobby: '&eLobi'
+sign_running: '&6Aktif'
+sign_stopped: '&cDurduruldu'
+sign_reseting: '&aTemizleniyor'
+enabled: Etkin
+disabled: Devre dışı
+notallowed_beddestroy: '&cKendi yatağını kıramazsın!'
+notallowed_selectcolor: '{colorcode}{color} &ctakımını seçemezsiniz!'
+lobby_item_achievements: '&6Başarımlar'
+lobby_item_forcestart: '&eZorla Başlat'
+lobby_item_leave: '&cAyrıl'
+lobby_item_leave_use: '&aYou will be teleported back to the lobby in {time} seconds'
+lobby_item_leave_cancel: '&c&lTeleport Canceled'
+lobby_item_selectteam: '&eTakım Seç'
+lobby_item_votearena: '&eArena oyla'
+lobby_printmapinfo_arenaname: Arena Ismi
+lobby_printmapinfo_buildby: Inşa Eden
+spectator_item_teleporter: '&eIşınlan'
+spectator_item_changespeed: '&eHızı değiştir'
+spectator_item_leave: '&cAyrıl'
+spectator_item_nextround: '&6Arena Değiştir'
+arrow_damage: '{targetcolor}{target} &eis now at &c{health} &ehealth'
+trap: '&eBirisi tuzağına takıldı!'
+magicmilk_use: '&eTraps will not be able to detect your for {time} seconds!'
+teleporter: '&eBirkaç saniye içinde ışınlanacaksınız...'
+teleporter_failed: '&cIşınlanma başarısız!'
+bridge_notenoughmaterials: '&cDaha fazla &4{material}&c ihtiyacın var'
+give_spawner: '&aGave &2{amount}&a of &2{spawner}&a to &2{target}'
+teleport_success: '&aBaşarıyla &2{arena} &aarenasına girdiniz.'
+lobby_waiting: '&e{amount}&6 kişi bekleniyor...'
+lobby_enough: '&6Maçın başlaması için yeterli sayıya ulaşıldı!'
+alreadyinside_arena: '&cHali hazırda arenadasın'
+noarenaforparty: '&cThere isn''t enough space available for all your party members'
+requires_worldedit: '&4WorldEdit &cgerekli'
+crashmessage_missingbed: Eksik yatak lokasyonları
+crashmessage_missingteamspawn: Eksik takım doğma noktaları
+crashmessage_missinglobbylocation: Eksik lobi lokasyonu
+crashmessage_missinggamedonelocation: Oyun bitiş lokasyonu eksik
+crashmessage_missinggameworld: Oyun dünyası henüz belirlenmedi
+crashmessage_missingcorners: Köşeler henüz ayarlanmadı
+crashmessage_uppercorneroutofbounds: Upper corner is greater than the worlds's max
+  height
+crashmessage_lowercorneroutofbounds: Lower corner is less than the worlds's max height
+crashmessage_worldtypearenainmainworld: The arena's regeneration type is WORLD, and
+  the arena's world is the server's main world
+crashmessage_notloadedgameworld: Game world isn't loaded
+crashmessage_matchareacolliding: Match area collides with other arenas
+crashmessage_gamedonelocationinterfering: Your hub-position is within the match area
+regeneration_done: '&2{arena} &2{time} &asaniye sonra temizlendi!'
+regeneration_stopped: '&4{arena}&c nın temizlenmesi &4{time} &csaniye sonra iptal
+  edildi.'
+regeneration_fail: '&cRegeneration of &4{arena}&c has failed: &4{error}'
+worldedit_changed: '&a{id} pozisyonu &2x{x} y{y} z{z} &a noktasına alındı'
+getpositionaxe: '&2Pozisyon baltası &averildi'
+tracker_trackedplayer: '&aPusula artık en yakın düşmanı takip ediyor'
+tracker_reusedelay: '&cPusulayı tekrar kullanmak için &4{time} saniye&c daha bekleyin!'
+tracker_failed_onlyone: '&4Yakındaki düşmanlar bulunamadı: &cMaçtaki tek kişisin!'
+spectator_join: '&6Artık izleyicisin!'
+spectator_leave: '&6Artık izleyici değilsin.'
+spectator_howtoquit: '&eMaçtan çıkmak için &6/bw leave &e komutunu kullanın'
+recalculatestats_done: '&2{time} &asaniye içinde hesaplandı.'
+endlobby_counting: '&e{number} saniye &6içinde lobiye ışınlanıyorsunuz'
+endlobby_bigtitle_win: '&6Victory!'
+endlobby_smalltitle_win: '&7Your team won this round!'
+endlobby_bigtitle_lose: '&cDefeat'
+endlobby_smalltitle_lose: '{teamcolor}&l{team} &fkazandı'
+endlobby_bigtitle_nobody: ''
+endlobby_smalltitle_nobody: '&c&nNobody &fwon this round.'
+arenavoting_noavailablearenas: '&cHiç arena kalmadı. Özür dileriz!'
+arenavoting_arenasupdated: '&6Oylamadaki arenalar güncellendi'
+arenavoting_recount_noarenatovote: '&cGeri sayım sıfırlanıyor: Oylanacak arena yok!'
+arenavoting_end: '&6Oylamayı kazanan arena: &e{arena}'
+arenavoting_recount_toofewplayers: '&cOyunun başlaması için &4{number}&c oyuncu gerekmekte!'
+arenavoting_minplayers: Min. Oyuncular
+forcestart_already: '&cOyun halihazirda başlıyor'
+scoreboard_arenaname: Arena
+scoreboard_arenamode: Mod
+scoreboard_players: Oyuncular
+scoreboard_arena: Arena
+scoreboard_stats: İstatislikler
+scoreboard_gamestats: Oyun İstatislikleri
+scoreboard_yourteam: Takımın
+scoreboard_teams: Takımlar
+bed_onlydestroyablewith_tnt: '&cBu yatağı sadece tnt ile yok edebilirsiniz!'
+itemspawner_hologram_title: '&7{time} &fsaniye içinde {spawnercolor}{spawner} &fçıkacak!'
+maxplayers: Maks. oyuncu
+lobby_countdowntitle_goodluck: '&6Bol Şanslar!'
+minishop_title: '{title} &8{time} &7saniye içinde yok olacak'
+arenatype_notsupported: '&4{type} &cbu arena için uygun değil'
+arena_autosavedblocks: '&eArena içindeki bloklar otomatik olarak kaydedildi!'
+ranking_unranked: Derecesiz
+wait_allarenasloaded: '&cTüm arenalar yüklenene kadar bekleyin!'
+please_savearena: '&6Arenayı kaydetmek için: &e/bw arena saveblocks <arena name>'
+getsetuptool: '&2Kurum aleti &averildi'
+onetimepurchase: '&cBunu yalnızca bir defa alabilirsin!'
+arenasgui_title: '&bArenalar'
+arena_collidingarena:
+- '&cLütfen arenanızın yerini değiştirin.'
+- '&cBir arena ile çakışıyor: &4{arena}'
+- '&6Konumu değiştirmek için bu komutu kullanın: &e{command}'
+backup_list: '&6Yedek Dosyaları'
+backup_create_success: '&2{name}&a isminde bir yedek dosyası &2{time} &asaniyede oluşturuldu'
+backup_create_exists: '&cHalihazırda &4{name}&c ismiyle bir yedek var'
+backup_delete_success: '&2{name} &aismindeki yedek silindi'
+backup_unknown: '&cBilinmeyen yedekleme &4{name}'
+backup_restore_success: '&2{name}&a isimli yedek &2{time}&a saniye sonunda başarıyla
+  geri yüklendi'
+backup_restore_ask:
+- '&e{name}&6 isimli yedeği geri yüklemek istediğinizden emin misiniz?'
+- '&6Eğer öyleyse, lütfen sonraki 10 saniye içinde aynı komutu yazın'
+scoreboard_bedstate_alive: '&aSağlam'
+scoreboard_bedstate_destroyed: '&cKırık'
+death_spectate_respawnin_bigtitle: '&cYOU DIED!'
+death_spectate_respawnin_smalltitle: '&e{time} &6saniye içinde yeniden doğacaksın'
+spectator_changearena_noneavailable: '&cBoş arena yok!'
+spectatoradd_failed_missinglocation: '&cIşınlanma noktası olmadığından izleyici olarak
+  katılamadınız.'
+saveblocks_fail_players: '&4Bloklar kaydedilemedi: &cDünyada hala oyuncular var.'
+createarena_fail_mainworld: '&cAna dünyanızın türü nedeniyle bir arena oluşturmak
+  mümkün değil!'
+saveblocks_start: '&e{arena} &6arenası için blok kaydetme işlemleri başlatıldı. Kalan
+  Süre: &e{time}'
+saveblocks_fail_alreadyrunning: '&4Bloklar kaydedilemedi: &cOperasyon halihazırda
+  devam etmekte.'
+saveblocks_fail_notstopped: '&4Bloklar kaydedilemedi: &cDurdurulmamış (/bw arena setenabled
+  {arena} false komutu ile durdurabilirsiniz)'
+saveblocks_fail_unknown: '&4Bloklar kaydedilemedi: &c{type} tipinde garip bir hata
+  oluştu'
+regeneration_fail_savingblocks: '&4Yenilenme başarısız: &cBloklar kaydediliyor.'
+deathmessage_killed_1: '{teamcolor}{player}&7, &8{killerteamcolor}{killer}&c[&4❤{heartpercent}%&c]
+  tarafından öldürüldü'
+deathmessage_killed_2: '{teamcolor}{player} &7ile mücadele kaybetti &8{killerteamcolor}{killer}
+  &4❤{heartpercent}%'
+deathmessage_killed_3: '{teamcolor}{player}&7, &8{killerteamcolor}{killer}&c[&4❤{heartpercent}%&c]
+  tarafından katledildi'
+deathmessage_void_1: '{teamcolor}{player} &7boşluğa düştü'
+deathmessage_void_2: '{teamcolor}{player}&7, yoldan düştü'
+deathmessage_explosion_1: '{teamcolor}{player}&7, patladı ve yüzlerce parçaya ayrıldı'
+deathmessage_explosion_2: '{teamcolor}{player} &7havaya Uçtu'
+deathmessage_fall_1: '{teamcolor}{player} &7bacaklarını kırdı'
+deathmessage_fall_2: '{teamcolor}{player} &7uçmaya çalıştı'
+deathmessage_fire_1: '{teamcolor}{player} &7yanarak öldü'
+deathmessage_fire_2: '{teamcolor}{player} &7kızardı'
+deathmessage_default_1: '{teamcolor}{player} &7öldü'
+spectator: İzleyici
+itemshop: Eşya Marketi
+motd_loading: Yükleniyor...
+toggle_display_spawner_enable: '&6{arena} &earenasındaki üreticiler artık gösteriliyor.
+  Devre dışı bırakmak için komutu tekrarlayın'
+toggle_display_spawner_disable: '&6{arena} &earenasındaki üreticiler artık görüntülenmeyecek'
+teamchest_title: '{team} Takımın Özel Sandığı'
+playerprivateinventory_title: Ender Chest
+placeholderapi_stats_loading: Yükleniyor...
+tnt_destroybed_name: TNT
+timer_ending_soon: '&eOyun, {minutes} dakika sonra sona erecek'
+timer_ending: '&eOyun, {seconds} saniye sonra sona erecek'
+command_blocked: '&cBedwars oynarken bu komutu çalıştıramazsınız'
+cancel: İptal
+apply: Uygula
+authors: Hazırlayanlar
+nobody: Hiç kimse
+customname_isenabled: Özel ad etkinleştirildi
+customname: Özel ad
+displayingname: Gösterilen isim
+list_spawners: '&6{arena} arenasına eklenen üreticiler: &e{spawners}'
+noarenaatpos: '&cMevcut konumunuzda arena yok'
+multiplearenasatpos: '&cBulunduğun pozisyonda birden fazla arena var: &4{arenas}'
+notinsidearena: '&4{arena} &ciçinde değilsin'
+arenaname_contains_illegalchars: '&cArena ismi geçersiz karakter bulunduruyor'
+teamspawn_notyet: '&4{arena} &carenasında &4{team}&c takımı için doğma noktası daha
+  ayarlanmadı'
+holo_add: '&2{coord} &anoktasına hologram eklendi'
+holo_list: '&6{world} ''deki hologramlar: &e{holos}'
+holo_remove: '&2{coord} &anoktasındaki hologram kaldırıldı'
+holo_removenotfound: '&4{world} &cdünyasında verilen kordinatlarda hologram yok'
+holo_removeall: '&2{world} &adünyasındaki &2{amount} &ahologram kaldırıldı'
+unknown_world: '&cBu ada sahip bir dünya yok &4{world}'
+addon_load_not: '&cVerilen dosya bir eklenti değil'
+addon_load_already: '&cBu eklenti hali hazırda yüklenmiş'
+addon_load_unknown: '&cDosya mevcut değil. &4{folder} klasörüne yerleştirdiğinizden
+  emin olun'
+addon_load: '&2{addon} &aektentisi yüklendi'
+addon_unload_notfound: '&4{addon} &cisminde bir eklenti yok'
+addon_unload_notaddon: '&4{plugin}&c is a plugin, but not an addon'
+addon_unload: '&2{addon} &aeklenti durduruldu'
+item_error_missinghandlerorcommand: '&4Lütfen Yöneticiye iletin: &c{item} eşyasının
+  kullanımı veya komutu eksik. Kullanıldığında çalışmıyor.'
+arenasgui_list: ArenasGUI Görünümü
+arenasgui_by: Tarafından
+arenasgui_openfor: '&6{player} &eiçin &6{layout}&e isimli ArenasGUI görünümü açıldı'
+unknown_layout: '&cBilinmeyen görünüm &4{layout}'
+migration_start: '&eStarted migration of &6{origin}&e...'
+migration_success: '&aSuccessfully migrated &2{origin}&a in &2{time}'
+migration_failure: '&cFailed to migrate &4{origin}&c after {time}: &4{error}'
+migration_failure_alreadyrunning: '&cA migration process with the same origin is already
+  running'
+playerdeath_cause_elimination: Oyundan atılma
+rejoin_trying: '&eWe''re checking the previously played match...'
+rejoin_alreadytrying: '&cYou''re already trying to rejoin your lastly played match!
+  Please wait a bit'
+rejoin_failed_notactive: '&6Çok geç kaldın, maçın süresi doldu'
+rejoin_failed_teamdead: '&6You can''t rejoin the active match as your team has been
+  eliminated'
+rejoin_failed_unknown: '&6We tried to let you in, but we may not due to internal rules'
+rejoin_success: '&aThe match is still running! We''re now re-adding you to the match...'
+rejoin_success_global: '&6{player} &ehas rejoined the {teamcolor}{team}&e''s team
+  and is now a part of the match'
+hubpos_inactive_bungee: '&6Hub Positions &eare not active as you''re solving it via
+  BungeeCord'
+arenaconvert_onlyspecifctypes: '&cYou may only change the regeneration type of the
+  arena &4{arena}&c to &4{types}'
+arenaconvert_done: '&aChanged the regeneration type of &2{arena}&a from {prev} to
+  &2{new}'
+arenaproblem_savingblocks: '&cArena şu anda blokları kaydediyor. Birkaç saniye sonra
+  tekrar deneyin'
+teamchat_enabled_hint: '&eYour team members are the only ones who are going to see
+  your message. Begin it with "&6&l{tag}&e" to write globally'
+teamchat_disabled_solo_hint: '&eYour message will be visible for all players (even
+  without a prefix) as you are playing solo'
+remotearena_unsupportedoperation: '&cYou may not perform the given operation to remote
+  arenas'
+connecting_server: '&eYou are about to connect with the server'
+remoteteleport_fail: '&cIt it is not possible to teleport to the server'
+tphubfail_nohub: '&cWe failed to teleport you to the hub as no server is available'
+try_again_shortly: '&ePlease try again shortly'
+server_full: '&cThe server is full'
+spectate_fail: '&cWe failed to add you as an spectator (Reason: {reason})'
+join_fail: '&cWe failed adding you to the arena (Reason: {reason})'
+erroraction_arenacloned: '&cYou may not perform that for cloned arenas'
+arenabulk_performingaction: '&eThe action is being executed for &6{amount} arenas'
+invalidatecache_alreadyempty: '&eThe player-data-cache is already empty'
+invalidatecache: '&eFollowing locally cached info has been cleared: &6{stats} stats&e,
+  &6{achievements} achievements&e and &6{properties} properties'
+playerdata_info_fetchtime: Fetch time
+playerdata_info_earnedachievements: Earned achievements
+playerdata_info_stats: İstatislikler
+playerdata_info_game_stats: Oyun İstatislikleri
+playerdata_info_properties: Properties
+playerdata_notfound: '&cWe couldn''t find any data for &4{target}'
+playerdata_stats_resetallplayer_warning:
+- '&4!!!WARNING!!!'
+- '&cAre you really sure you want to reset &4ALL stats&c for &4&lALL&c players who
+  have EVER played? If so, then please write the same command within the next {sec}
+  seconds. &nYou might want to create a backup.'
+playerdata_stats_resetplayer_warning:
+- '&4!!!WARNING!!!'
+- Are you really sure you want to reset &4ALL stats&c for the player &4&l{player}&c.
+  If so, then please write the same command within the next {sec} seconds.
+playerdata_stats_resetplayer_complete: '&aİstatistikler sonrasında başar {player}
+  ıyla sıfırlandı {time}!'
+playerdata_stats_resetallplayer_complete: '&aThe stats of all players on the server/network
+  have been reset after {time}!'
+playerdata_stats_modify_complete: '&aSuccessfully updated ''{stat}'' to ''{new-val}''
+  for {player}. The player may need to re-log for rankings to update'
+playerdata_stats_modify_fail: '&cWe were unable to update the stat ''{stat}'' for
+  {player}!'
+playerdata_stats_notfound: '&cUnable to find a stats set called ''{stat}'''
+identifyarena_none: '&cThere is no arena at the given position'
+identifyarena_found: '&eFound arena &6{arena}'
+initsetup_welcome:
+- '&6Welcome welcome!'
+- '&eTo make the setup of &lMarcely''s Bedwars &eas easy as possible, we offer you
+  the opportunity to set it up via a web interface (using your browser).'
+- '&eNote that this is only for the initial setup. You can always configure anything
+  later on.'
+initsetup_web: I want to use the fancy web interface (Click or type command {cmd})
+initsetup_simple: I would rather just configure everything myself (Click or type command
+  {cmd})
+initsetup_connecting: '&ePlease wait a little bit, we are preparing it for you.'
+initsetup_connection_failure:
+- '&cSorry, but we could not connect to our service. A firewall may be blocking it.'
+- '&cPlease type the &4/mbedwars &ccommand and try again or skip the whole process
+  if it keeps failing.'
+initsetup_ready: '&eVisit this URL to start the setup process: &6{url}'
+initsetup_finish: '&eEverything is ready, have fun! Visit &6{url} &efor further help'
+click: '*Click*'
+members: Members
+no_members: No members
+antiabuse_statsnotcounted: '&cCertain stats weren''t counted as we detected potential
+  abuse. Please play fair!'
+player_trigger_upgradetrap_bigtitle: '&cTRAP TRIGGERED!'
+player_trigger_upgradetrap_smalltitle: '&fYour trap has been set off!'
+player_trigger_upgradetrap_chat: '&cSomeone has triggered one of your team''s traps!'
+achievement_get_title: Yeni başarım!
+
+
+###########################
+## Setup GUI
+###########################
+setupgui_nextpage: Sonraki sayfa
+setupgui_prevpage: Önceki sayfa
+setupgui_goback: Geri dön
+setupgui_yousure: Emin misiniz?
+setupgui_noarenascreated: Şu ana kadar hiçbir arena yaratılmadı
+setupgui_mainbutton_modify: Oluşturulan arenayı değiştir
+setupgui_mainbutton_create: Yeni bir arena oluştur
+setupgui_mainbutton_misc_tools: Misc tools
+setupgui_misctools_spawn_dealer:
+- Spawn Dealer
+- You can remove it by punching.
+setupgui_misctools_spawn_upgradedealer:
+- Spawn Upgrade Dealer
+- You can remove it by punching.
+setupgui_misctools_displayarenasatpos:
+- Identify an arena
+- Uses your current position.
+setupgui_misctools_setuptool:
+- Obtain the Setup Tool
+- Right click the item while holding in hand to use it.
+- Useful for quickly setting up arenas.
+setupgui_misctools_setcorner_1:
+- Set first corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_misctools_setcorner_2:
+- Set second corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_category_actions: Eylemler
+setupgui_category_modify: Değiştir
+setupgui_category_spawners: Üreticiler
+setupgui_category_teams: Takımlar
+setupgui_category_weather:
+- Weather
+- 'Active: {weather}'
+setupgui_category_time:
+- Time
+- 'Active: {time}'
+setupgui_button_enable: Etkinleştir
+setupgui_button_disable: Devre dışı
+setupgui_button_regenerate: Tüm blokları yeniden oluştur
+setupgui_button_teleport: Arenaya ışınlan
+setupgui_button_enter: Oyuna gir
+setupgui_button_enterspectator: Oyunu izle
+setupgui_button_configure: Özelleştir
+setupgui_button_setlobby:
+- Lobi başlangıç noktasını belirle
+- Mevcut konumunuzu kullanır
+setupgui_button_rename: İsmi değiştir
+setupgui_button_saveblocks: Tüm blokları ve varlıkları kaydet
+setupgui_button_setgameworld:
+- Oyun dünyasını ayarla
+- Mevcut dünyayı kullan
+setupgui_button_saveregioncorners:
+- Save arena corners
+- '{tool} kullanarak köşeleri ayarladığınızdan emin olun'
+setupgui_button_modifyregioncorners:
+- Set arena corner positions
+- Mevcut konumunuzu kullanır
+- ''
+- 'Left Click: Mark Corner 1'
+- 'Right Click: Mark Corner 2'
+setupgui_button_setspectatorspawn:
+- İzleyiciler için başlangıç noktası belirle
+- Mevcut konumunuzu kullanır
+setupgui_button_properties: Properties
+setupgui_button_delete: Arenayı sil
+setupgui_button_removeallspawners: Bütün eklenen üreticileri kaldır
+setupgui_button_displayspawners:
+- Bütün üreticileri göster
+- Üreticilerin üstüne hologram ekle
+setupgui_button_undisplayspawners: Üreticileri gizle
+setupgui_button_getallbeds: Her takımın yatağını edin
+setupgui_spawnerbutton_obtainitems: '&f{amount} {spawner} al'
+setupgui_spawnerbutton_add:
+- '&f{spawner} &füreticisi ekle'
+- Mevcut konumunuzu kullanır
+setupgui_spawnerbutton_removeall: '&fBütün {spawner} &füreticilerini kaldır'
+setupgui_teambutton_obtainbed: '&f{team} &fyatağı al'
+setupgui_teambutton_teleportspawn: '{team}&takımının başlangıç noktasına ışınlan'
+setupgui_teambutton_setspawn:
+- '&f{team} için başlama noktasını belirle'
+- Mevcut konumunuzu kullanır
+setupgui_removearena_yes: '&a&lEVET&f, arenayı kaldır &l{arena}'
+setupgui_removearena_no: '&c&lHAYIR&f, arena kalsın &l{arena}'
+setupgui_create_type_region:
+- Bölge
+- Arenayı sınırla.
+- Oyuncular sınırın görsel efektini görecek ve bölgeyi terk edemeyecekler.
+- Bununla aynı zamanda tek bir dünyada birden fazla arena oluşturabilirsiniz.
+- Daha ayrıntılı bilgi için lütfen wikiyi ziyaret edin.
+setupgui_create_type_world:
+- Dünya
+- Sınır yok ve tüm dünyayı oyun için kullanıyor.
+- Kurulum daha kolay ancak rejenerasyon sırasında daha ağır olabilir.
+- Daha ayrıntılı bilgi için lütfen wikiyi ziyaret edin.
+setupgui_create_type_voting:
+- Oylama
+- Oynadığın gerçek bir arena değil.
+- Bunun yerine lobiyi sadece oylamak için kullanıyorsunuz.
+- Oyuncular oylama bittikten sonra dünya veya bölge türüne göre arenaya ışınlanacaktır.
+- Daha ayrıntılı bilgi için lütfen wikiyi ziyaret edin.
+setupgui_create_title: Yeni bir arena oluştur
+setupgui_configure_title: Arenayı yapılandır
+setupgui_configure_auto_detect_teams_complete: '&6{amount} &epotential teams have
+  been detected using your current position'
+setupgui_configure_playersperteam2:
+- '&6Max Players:'
+- '&7Current Max Players Per Team: &f{amount}'
+- '&7Current Max Arena Players: &f{total-max-players}'
+setupgui_configure_minplayers:
+- '&6Min Players: &f{amount}'
+- '&7Amount of players required to start'
+setupgui_configure_totalplayers: '&6Arenada maksimum oyuncu sayısı: &f{amount}'
+setupgui_configure_arenasbelowinpool: '&3&l⇩ &bOylama havuzu içindeki arenalar &3&l⇩'
+setupgui_configure_noarenasinpool: '&cHavuzda arena yok'
+setupgui_clicktorename: Yeniden adlandırmak için tıkla
+setupgui_rename_title: Arenayı yeniden adlandır
+setupgui_confirm_action: '&6Birkaç saniye içinde tekrar düğmeye tıklayarak eyleminizi
+  onaylayın'
+setupgui_configure_minplayers_toolow: ONLY FOR TESTING. With this, you may start a
+  match without any other player.
+setupgui_button_modifyregioncorners_reminder_save: '&eDon''t forget to click on the
+  "save arena corners" button, otherwise your changes won''t get applied.'
+setupgui_spawnerbutton_removenearbyspawners:
+- '&fRemove all nearby {spawner} &fspawners'
+- Mevcut konumunuzu kullanır
+setupgui_remotearena_info:
+- '&c[REMOTE]'
+- Managed by &o{server}
+
+
+###########################
+## Setup Tool
+###########################
+setuptool_freebuild: Place/Break blocks freely
+setuptool_spawner: Place/Edit spawner
+setuptool_selectteam: Select team
+setuptool_bed: Place bed
+setuptool_spawnpoint: Place spawn point
+setuptool_dealer: Spawn/Kill dealer
+setuptool_notinsidearena: '&cMust be inside an arena. &6&lClick here &cto manage arenas.
+  Teleport yourself to it and use the tool item again'
+setuptool_activated: '&aActivated &esetup tool for &6{arena}'
+setuptool_deactivated: '&cDeactivated &esetup tool. &6&lClick here &eto open the arena''s
+  setup GUI'
+setuptool_selecttype: Select type
+setuptool_placeagainconfirm: Place again to confirm
+setuptool_type_dealer: Dealer
+setuptool_type_upgradedealer: Upgrade Dealer
+setuptool_teamcomponent_bed: Bed
+setuptool_teamcomponent_spawnpoint: Spawn Point
+setuptool_spawnpoint_preview:
+- '&f&lSpawn Point Preview'
+- '{team}'
+- '&fDisappears in {time}'
+
+
+###########################
+## Shop Layouts
+###########################
+shop_d_hypixel_available: '&8Mevcut'
+shop_d_hypixel_clicktobrowse: '&eGöz atmak için tıkla!'
+shop_d_hypixel_items: '&8Eşyalar'
+shop_d_hypixel_clicktopurchase: '&eSatın almak için tıkla!'
+shop_d_hypixel_maxed: '&aMAXED!'
+shop_d_hypixel_unlocked: '&aUNLOCKED'
+shop_d_hypixel_cost: '&7Ücret: &f{color}{amount} {type}'
+shop_d_hypixel_goback: '&aGeri'
+shop_d_hypixel_tooexpensive: '&cYeteri kadar {type} yok!'
+shop_d_hivemc_clicktoview: '&b{icon} Incelemek için &l{item}'
+shop_d_hivemc_goback: '&c&lGeri'
+shop_d_hivemc_returntomenu: '&7Menüye dön'
+shop_d_hivemc_clicktogoback: '&b{icon} Geri dönmek için tıkla'
+shop_d_hivemc_clicktobuy: '&b{icon} Almak için tıkla'
+shop_d_hivemc_cost: '&6Ücret'
+shop_d_rewinside_shoptype_new: Yeni ve geliştirilmiş mağazayı kullanıyorsunuz
+shop_d_rewinside_shoptype_old: Eski mağazayı kullanıyorsunuz
+shop_d_rewinside_shoptype_switch: Versiyonlar arasında geçiş için tıklayın
+shop_d_bergwerklabs_currentpage: '&bMevcut Sayfa'
+shop_d_bergwerklabs_changepage: '&bSayfa {page}'
+shop_d_bergwerklabs_buy: '&aSatın Al &7&o<Left click>'
+shop_d_bergwerklabs_buy_tooexpensive: '&7Çok Pahalı!'
+shop_d_hypixelv2_clicktoview: '&eBakmak için tıkla!'
+shop_d_hypixelv2_seperator_categories: '&8⬆&7 Kategoriler'
+shop_d_hypixelv2_seperator_items: '&8⬇&7 Eşyalar'
+shop_d_hypixelv2_quickbuy_pageitem: '&bHemen Al'
+shop_d_hypixelv2_quickbuy_emptyslot_name: '&cBoş Alan!'
+shop_d_hypixelv2_quickbuy_emptyslot_description:
+- '&7Hemen Al yuvasıdır!'
+- '&7Eşya eklemek için &beğilme + sol klik'
+- '&7eklemek için &beğilme + sol klik'
+shop_d_hypixelv2_quickbuy_menu_title: Hemen Al'a ekleniyor...
+shop_d_hypixelv2_quickbuy_menu_set: '&eKoymak için tıkla!'
+shop_d_hypixelv2_quickbuy_menu_replace: '&eDeğiştirmek için tıkla!'
+shop_d_hypixelv2_quickbuy_menu_representing: '&eHemen Al''a eşya ekleniyor!'
+shop_d_hypixelv2_quickbuy_add_item: '&bSneak click to add to Quick Buy'
+shop_d_hypixelv2_quickbuy_remove_item: '&bSneak click to remove from Quick Buy'
+
+
+###########################
+## Achievements
+###########################
+achievements_name_ragequit: Rage-Quit
+achievements_name_winround: Kazanan
+achievements_name_loseround: Kaybeden
+achievements_name_ownbeddestroyed: Şanssız
+achievements_name_bestbow: OP Yay
+achievements_name_userescueplatform: Bu oldukça yakındı!
+achievements_name_useendepearl: Enderman
+achievements_name_useminishop: Seyyar Market
+achievements_name_killsomeonewithbow: Katniss
+achievements_name_winin3minutes: Zaten bitti mi?!
+achievements_name_killsomeonewithhalfaheart: Şanslı saldırı
+achievements_name_win100rounds: Şampiyon
+achievements_name_usebridge: Köprü mühendisi
+achievements_name_useguarddog: Cesur
+achievements_name_effectmagnetshoes: Manyetik durum
+achievements_name_useteleporter: Beni evime götür!
+achievements_name_usetntsheep: FIRE IN THE HOLE!!1!!1
+achievements_name_usetracker: Haksız saklambaç
+achievements_name_placetrap: Mayın tarlası
+achievements_name_runovertrap: BU BİR TUZAK!
+achievements_name_spend200resources: Varlıklı
+achievements_name_rankingintop3: ESpor oyuncusu
+achievements_name_goodkd: Seri katil
+achievements_name_highplaytime: '#Hayatsız'
+achievements_name_writeggatend: GG
+achievements_name_winwithoutbed: Dokunamazsın
+achievements_name_die10secsafterbeddestruction: Hadi bakalım!
+achievements_name_optaineveryachievement: Bağımlı
+achievements_name_usefireball: Pew pew!
+achievements_name_useinvispotion: Hayalet Yürüyücü
+achievements_text_ragequit: Devam eden oyundan ayrıl
+achievements_text_winround: Bir maç kazan
+achievements_text_loseround: Bir round kaybet
+achievements_text_ownbeddestroyed: Yatağın yok ediliyorsa
+achievements_text_bestbow: En iyi yayı üret
+achievements_text_userescueplatform: Bir defa Kurtarma platformunu kullan
+achievements_text_useendepearl: Enderpearl kullan
+achievements_text_useminishop: Bir defa Portatif Market kullan
+achievements_text_killsomeonewithbow: Birini yay ile öldür
+achievements_text_winin3minutes: 3 dakika içinde bir tur kazan
+achievements_text_killsomeonewithhalfaheart: Yarım kalbe sahipken bir rakip öldür
+achievements_text_win100rounds: 100 tur kazan
+achievements_text_usebridge: Bir defa Köprü eşyasını kullan
+achievements_text_useguarddog: Bir defa Bekçi Köpeği besle
+achievements_text_effectmagnetshoes: Mıknatıslı Ayakkabıları bir defa çalıştır
+achievements_text_useteleporter: Bir defa ışınlayıcı kullan
+achievements_text_usetntsheep: Bir defa Canlı Bomba kullan
+achievements_text_usetracker: Bir defa Takipçi kullan
+achievements_text_placetrap: Bir defa Tuzak kullan
+achievements_text_runovertrap: Bir tuzağa yakalan
+achievements_text_spend200resources: Dükkanda 200 veya daha fazla kaynak harcayın
+achievements_text_rankingintop3: İlk 3'te sıralama
+achievements_text_goodkd: 5.0'dan yüksek bir Öldürme/Ölme oranına sahip ol
+achievements_text_highplaytime: En az 5 saat oyna
+achievements_text_writeggatend: Tur sonunda &aGG &ryaz
+achievements_text_winwithoutbed: Yatağın yokken bir oyun kazan
+achievements_text_die10secsafterbeddestruction: Yatağın kırıldıktan sonra 10 saniye
+  içinde öl
+achievements_text_optaineveryachievement: Bunun dışında tüm başarıları elde et
+achievements_text_useinvispotion: Bir görünmezlik iksiri iç
+achievements_text_usefireball: Bir defa Ateş Topu kullan
+
+
+###########################
+## Shop
+###########################
+shop_buygroup_buy_lowertier: '&cZaten en yüksek aşamada bir eşyaya sahipsin'
+shop_player_not_in_running_arena: '&cYou''re not in a running arena!'
+shop_price: 'Ücret: &7{number} {spawnercolor}{spawnertype}'
+shop_page_block: Blok
+shop_page_food: Yemek
+shop_page_armor: Zırh
+shop_page_sword: Kılıç
+shop_page_bow: Yay
+shop_page_pickaxe: Kazma
+shop_page_potion: İksir
+shop_page_special: Özel
+shop_page_extra: Diğer
+shop_item_hardenedclay: Sertleştirilmiş Kil
+shop_item_endstone: End Taşı
+shop_item_chest: Sandık
+shop_item_enderchest: Enderchest
+shop_item_ladder: Merdiven
+shop_item_web: Ağ
+shop_item_apple: Elma
+shop_item_grilledpork: Pişmiş Et
+shop_item_cake: Kek
+shop_item_goldenapple: Altın Elma
+shop_item_leatherhelmet: Deri Kask
+shop_item_leatherleggings: Deri Pantolon
+shop_item_leatherboots: Deri Botlar
+shop_item_chainmailchestplatelvl1: Zincir Göğüslük &7SV 1
+shop_item_chainmailchestplatelvl2: Zincir Göğüslük &7SV 2
+shop_item_chainmailchestplatelvl3: Zincir Göğüslük &7SV 3
+shop_item_knockbackstick: Savurma Çubuğu
+shop_item_swordlvl1: Kılıç &7SV 1
+shop_item_swordlvl2: Kılıç &7SV 2
+shop_item_swordlvl3: Kılıç &7SV 3
+shop_item_bowlvl1: Yay &7SV 1
+shop_item_bowlvl2: Yay &7SV 2
+shop_item_bowlvl3: Yay &7SV 3
+shop_item_arrow: Ok
+shop_item_pickaxelvl1: Kazma &7SV 1
+shop_item_pickaxelvl2: Kazma &7SV 2
+shop_item_pickaxelvl3: Kazma &7SV 3
+shop_item_potionswiftness: Hız İksiri
+shop_item_potionregeneration: Yenilenme İksiri
+shop_item_potionhealing: Sağlık İksiri
+shop_item_potionstrength: Güç İksiri
+shop_item_enderpearl: Ender İncisi
+shop_item_teleporter: Işınlayıcı
+shop_item_minishop: Portatif Market
+shop_item_rescueplatform: Hızlı Platform
+shop_item_tntsheep: Canlı Bomba
+shop_item_magnetshoes: Mıknatıslı Ayakkabılar
+shop_item_trap: Tuzak
+shop_item_bridge: Köprü
+shop_item_guarddog: Bekçi Köpeği
+shop_item_tracker: Takipçi
+shop_item_fishingrod: Olta
+shop_item_snowball: Kartopu
+shop_item_fireball: Ateş Topu
+shop_item_magicmilk: Magic Milk
+shop_item_tnt: TNT
+
+
+###########################
+## Upgrade Shop
+###########################
+upgradeshop: Marketi yükselt
+upgradeshop_buy_upgrade_broadcast: '&e{player}, &6&e{upgrade}&e özelliğini &6{newlvl}
+  SV''ye yükseltti.'
+upgradeshop_buy_trap_broadcast: '&e{player} purchased &6{upgrade}'
+upgradeshop_toofew_materials: '&cYou don''t have enough materials to buy this!'
+upgradeshop_max_upgrade: '&cYou have already purchased this upgrade'
+upgradeshop_buystate_purchasable: '&eSatın almak için tıkla!'
+upgradeshop_buystate_not_purchasable: '&cYou don''t have enough {price-type}&c!'
+upgradeshop_buystate_maximum: '&aUNLOCKED'
+upgradeshop_queuedtrap_icon:
+- '&aTrap #{queue-level}: {trap-name}'
+- '&7This trap will trigger'
+- '&7immediately after an'
+- '&7intruder enters your base'
+- ' '
+- '&7Note that is the intruder'
+- '&7Is using Magic Milk, this'
+- '&7trap may not trigger'
+upgradeshop_unqueuedtrap_icon:
+- '&cTrap #{queue-level}: No Trap!'
+- '&7Purchasing a trap will'
+- '&7queue it here. Its cost'
+- '&7may scale based on the'
+- '&7number of traps queued'
+upgradeshop_hypixel_separator:
+- '&8⬆ &7Purchasable'
+- '&8⬇ &7Traps Queue'
+upgradeshop_hypixel_traps_menu_button:
+- '&eBuy a trap'
+- '&7Purchased traps will be'
+- '&7queued below'
+- ' '
+- '&eUpgrades'
+upgradeshop_hypixel_back_button:
+- '&eReturn to Upgrades'
+- '&7Go back to view upgrades'
+- '&7and traps queue'
+- ' '
+- '&eClick to return!'
+upgradeshop_name_protection: Armor Protection
+upgradeshop_description_protection: Increases armor protection
+upgradeshop_name_featherfall: Feather Fall
+upgradeshop_description_featherfall: Gain less fall damage
+upgradeshop_name_haste: Haste
+upgradeshop_description_haste: All players in your team permanently gain the haste
+  effect
+upgradeshop_name_healrange: Can İstasyonu
+upgradeshop_description_healrange: Takımının adasında bulunurken yenilenme efekti
+  verir
+upgradeshop_name_sworddamage: Keskinlik
+upgradeshop_description_sworddamage: Kılıç hasarını arttırır
+upgradeshop_name_spawnermultiplier: Üretici Güçlendirici
+upgradeshop_description_spawnermultiplier: Takımındaki üreticileri hızlandırır
+upgradeshop_name_enemyalarmtrap: Alarm Trap
+upgradeshop_description_enemyalarmtrap: Removes Invisibility from infiltrating player
+upgradeshop_name_counteroffensivetrap: Counter Offensive Trap
+upgradeshop_description_counteroffensivetrap: Gives Speed II and Jump II too all team
+  members for 15 seconds
+upgradeshop_name_enemyminingfatigue: Madenci Yorgunluğu
+upgradeshop_description_enemyminingfatigue: Takımınıza bir rakip geldiğinde daha yavaş
+  kazmasını sağlar
+upgradeshop_name_enemytrap: Tuzak
+upgradeshop_description_enemytrap: Gives blind and slowness effect to the attacker
+upgradeshop_trapremove_lore: '&eRight Click to remove! &8(No refund)'
+upgradeshop_trapremove: '&eRemoved &6{trap} &efrom the queue'
+
+
+###########################
+## Custom
+###########################
+mustserverjoinfromhub: '&cYou must join an arena from the hub'
+arena_joinissue_votingparticipating: '&cYou may not join this arena right now. It
+  is a part of an active voting pool'
+rejoin_failed_notparticipating: '&6You didn''t participate in any match yet'

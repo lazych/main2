@@ -1,0 +1,152 @@
+# Details about this layout
+header:
+  name: "default_solo"
+  version: "1.0"
+  author: "MBedwars Team"
+  min-version: "1.13"
+  height: 6
+  title: "%ArenasGUI_Title%"
+
+# Contains all elements that make up the look of the layout
+# Works like a pipeline: Starts from the top and goes to the bottom
+#
+# WIKI PAGE: https://s.marcely.de/mbww12
+#
+# RTIH = Relative To Inventory Height. Making the number minus causes the position to be relative to the height of the inventory
+#  Example: Is the inventory 5 height and you use "-2" as the value then the final y of the item would be 3 (5 + (-2) = 3) 
+#
+# Possible element types:
+# - single-deco
+#   Adds a single decoration item to the inventory
+#   Possible configs:
+#    -> x (needed)
+#    -> y (needed, supports RTIH)
+#    -> item (needed)
+#
+# - area-deco
+#   Fills an area with decoration items
+#    -> x1 (needed, must be less than or equal to x2)
+#    -> y1 (needed, must be less than or equal to y2)
+#    -> x2 (needed)
+#    -> y2 (needed, supports RTIH)
+#    -> item (needed)
+#
+# - fill-deco
+#   Fills complete everything with a decoration item
+#   Possible configs:
+#    -> item (needed)
+#
+# - border-layout
+#   Fills the borders of the inventory with a decoration item
+#   Possible configs:
+#    -> item (needed)
+#    -> left (optional, either true or false)
+#    -> right (optional, either true or false)
+#    -> top (optional, either true or false)
+#    -> bottom (optional, either true or false)
+#
+# - arenas-collection
+#   Used for displaying arenas within an area
+#   Possible configs:
+#    -> area:
+#       -> x1 (needed, must be less than or equal to x2)
+#       -> y1 (needed, must be less than or equal to x2)
+#       -> x2 (needed)
+#       -> y2 (needed, supports RTIH)
+#       -> distribution-x (optional: either left [default], right or center)
+#       -> distribution-y (optional: either top [default], bottom or center)
+#    -> click-sound (optional, none by default)
+#    -> set-icon-when (optional):
+#       - condition:
+#           PLACEHOLDERS: {display-name}, {name}, {players}, {max-players}, {teams}, {players-per-team}, {author}
+#           -> set-material (optional)
+#           -> set-durability (optional)
+#           -> set-amount (optional)
+#           -> set-nbt (optional)
+#           -> set-click-sound (optional)
+#    -> condition (optional)
+#    -> prev-page-button: (optional, a button for going to the previous page)
+#       -> x (needed)
+#       -> y (needed, supports RTIH)
+#       -> item (needed)
+#       -> click-sound (optional, none by default)
+#    -> next-page-button: (optional, a button for going to the next page)
+#       -> x (needed)
+#       -> y (needed, supports RTIH)
+#       -> item (needed)
+#       -> click-sound (optional, none by default)
+#
+# - changelayout-button
+#   A button that opens an other ArenasGUI layout once clicked
+#   Possible configs:
+#    -> x (needed)
+#    -> y (needed, supports RTIH)
+#    -> item (needed)
+#    -> layout (needed)
+#    -> click-sound (optional, none by default)
+#
+# - executecommand-button
+#   A button that executes a defined command once clicked
+#   Possible configs:
+#    -> x (needed)
+#    -> y (needed, supports RTIH)
+#    -> item (needed)
+#    -> command (needed, placeholders: {player}, {playeruuid})
+#    -> click-sound (optional, none by default)
+#    -> as-console (optional, false by default)
+#    -> close-inventory (optional, false by default. If you only want to close the inventory then leave value of command config empty)
+elements:
+  - type: area-deco
+    item: 'gray_stained_glass_pane {DisplayName:" "}'
+    x1: 0
+    y1: 1
+    x2: 8
+    y2: 1
+
+  - type: single-deco
+    item: 'yellow_stained_glass_pane {DisplayName:" "}'
+    x: 2
+    y: 1
+
+  - type: single-deco
+    item: 'player_head:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzM0N2I3YTVhNmJiNjQxOWQzM2ViNDYxMDI2NTBjYzkxYmZkYzE1OWQ4ZmYxZjU1OTk2ZDRmMGFkNWJjNzU4In19fQ== {DisplayName:"§eSolo"}'
+    x: 2
+    y: 0
+
+  - type: changelayout-button
+    item: 'player_head:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjEzYjc3OGM2ZTUxMjgwMjQyMTRmODU5YjRmYWRjNzczOGM3YmUzNjdlZTRiOWI4ZGJhZDc5NTRjZmYzYSJ9fX0= {DisplayName:"§fDuo"}'
+    layout: default_duo
+    x: 4
+    y: 0
+
+  - type: changelayout-button
+    item: 'player_head:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGI1MjdiMjRiNWQyYmNkYzc1NmY5OTVkMzRlYWU1NzlkNzQxNGIwYTVmMjZjNGZmYTRhNTU4ZWNhZjZiNyJ9fX0= {DisplayName:"§fQuadro"}'
+    layout: default_quadro
+    x: 6
+    y: 0
+
+  - type: arenas-collection
+    condition: "[players_per_team=1]"
+    area:
+      distribution-x: "center"
+      x1: 1
+      y1: 2
+      x2: 7
+      y2: -2
+    set-icon-when:
+      - condition: "[status=2]" # Lobby
+        set-nbt: '{DisplayName:"§f{display-name}", Lore:["§e%Sign_Lobby%", "§7{players} / {max-players}"]}'
+      - condition: "[status=3 | status=5]" # Running or Endlobby
+        set-nbt: '{DisplayName:"§f{display-name}", Lore:["§6%Sign_Running%", "§7{players} / {max-players}"]}'
+      - condition: "[status=4]" # Resetting
+        set-nbt: '{DisplayName:"§f{display-name}", Lore:["§b%Sign_Reseting%"]}'
+      - condition: "[]" # Everything else
+        set-nbt: '{DisplayName:"§f{display-name}", Lore:["§c%Sign_Stopped%"]}'
+    prev-page-button:
+      item: arrow {DisplayName:"§f%SetupGUI_PrevPage%"}
+      x: 0
+      y: -1
+    next-page-button:
+      item: arrow {DisplayName:"§f%SetupGUI_NextPage%"}
+      x: 8
+      y: -1

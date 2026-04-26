@@ -1,0 +1,28 @@
+{
+  "modules": [
+    {
+      "id": 3,
+      "name": "MySQL Driver Shaded",
+      "version": 9300,
+      "checksum": 3282640226
+    },
+    {
+      "id": 7,
+      "name": "MariaDB Driver Shaded",
+      "version": 354,
+      "checksum": 1672469373
+    },
+    {
+      "id": 8,
+      "name": "MSSQL Driver Shaded",
+      "version": 1280,
+      "checksum": 2580363496
+    },
+    {
+      "id": 9,
+      "name": "MongoDB DriverV5 Shaded",
+      "version": 551,
+      "checksum": 610116484
+    }
+  ]
+}

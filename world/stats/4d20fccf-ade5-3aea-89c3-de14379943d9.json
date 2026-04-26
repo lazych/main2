@@ -1,5 +1,8 @@
 {
   "stats": {
+    "minecraft:mined": {
+      "minecraft:decorated_pot": 1
+    },
     "minecraft:used": {
       "minecraft:oak_fence": 12,
       "minecraft:torchflower": 1,
@@ -11,9 +14,9 @@
       "minecraft:oak_hanging_sign": 2,
       "minecraft:white_stained_glass_pane": 45,
       "minecraft:dirt": 3,
-      "minecraft:decorated_pot": 4,
+      "minecraft:decorated_pot": 5,
       "minecraft:yellow_carpet": 28,
-      "minecraft:quartz_slab": 38,
+      "minecraft:quartz_slab": 39,
       "minecraft:oxeye_daisy": 3,
       "minecraft:oak_slab": 1,
       "minecraft:debug_stick": 4,
@@ -28,22 +31,24 @@
       "minecraft:white_tulip": 6
     },
     "minecraft:custom": {
-      "minecraft:sprint_one_cm": 21382,
-      "minecraft:time_since_rest": 38110,
-      "minecraft:walk_one_cm": 95937,
-      "minecraft:total_world_time": 55779,
-      "minecraft:leave_game": 3,
-      "minecraft:fly_one_cm": 275342,
-      "minecraft:crouch_one_cm": 7017,
-      "minecraft:sneak_time": 2672,
-      "minecraft:play_time": 55779,
-      "minecraft:deaths": 2,
-      "minecraft:jump": 138,
-      "minecraft:time_since_death": 38102
+      "minecraft:time_since_rest": 8254,
+      "minecraft:walk_one_cm": 99554,
+      "minecraft:leave_game": 4,
+      "minecraft:damage_taken": 240,
+      "minecraft:play_time": 65462,
+      "minecraft:jump": 151,
+      "minecraft:time_since_death": 8246,
+      "minecraft:sprint_one_cm": 23575,
+      "minecraft:total_world_time": 65462,
+      "minecraft:fly_one_cm": 280642,
+      "minecraft:crouch_one_cm": 7067,
+      "minecraft:sneak_time": 2714,
+      "minecraft:deaths": 3
     },
     "minecraft:picked_up": {
       "minecraft:oak_fence": 2,
-      "minecraft:oak_planks": 64
+      "minecraft:oak_planks": 64,
+      "minecraft:decorated_pot": 1
     }
   },
   "DataVersion": 4671

@@ -1,0 +1,102 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww17
+#########################
+
+yellow:
+  name: '%Color_Yellow%'
+  initials: autogenerate
+  chat-color: YELLOW
+  dye-color: YELLOW
+
+orange:
+  name: '%Color_Orange%'
+  initials: autogenerate
+  chat-color: GOLD
+  dye-color: ORANGE
+
+red:
+  name: '%Color_Red%'
+  initials: autogenerate
+  chat-color: RED
+  dye-color: RED
+
+blue:
+  name: '%Color_Blue%'
+  initials: autogenerate
+  chat-color: BLUE
+  dye-color: BLUE
+
+light-blue:
+  name: '%Color_LightBlue%'
+  initials: autogenerate
+  chat-color: AQUA
+  dye-color: LIGHT_BLUE
+
+cyan:
+  name: '%Color_Cyan%'
+  initials: autogenerate
+  chat-color: DARK_AQUA
+  dye-color: CYAN
+
+light-green:
+  name: '%Color_LightGreen%'
+  initials: autogenerate
+  chat-color: GREEN
+  dye-color: LIME
+
+green:
+  name: '%Color_Green%'
+  initials: autogenerate
+  chat-color: DARK_GREEN
+  dye-color: GREEN
+
+purple:
+  name: '%Color_Purple%'
+  initials: autogenerate
+  chat-color: DARK_PURPLE
+  dye-color: PURPLE
+
+pink:
+  name: '%Color_Pink%'
+  initials: autogenerate
+  chat-color: LIGHT_PURPLE
+  dye-color: PINK
+
+white:
+  name: '%Color_White%'
+  initials: autogenerate
+  chat-color: WHITE
+  dye-color: WHITE
+
+light-gray:
+  name: '%Color_LightGray%'
+  initials: autogenerate
+  chat-color: GRAY
+  dye-color: LIGHT_GRAY
+
+gray:
+  name: '%Color_Gray%'
+  initials: autogenerate
+  chat-color: DARK_GRAY
+  dye-color: GRAY
+
+brown:
+  name: '%Color_Brown%'
+  initials: autogenerate
+  chat-color: DARK_RED
+  dye-color: BROWN
+
+black:
+  name: '%Color_Black%'
+  initials: autogenerate
+  chat-color: BLACK
+  dye-color: BLACK
+
+magenta:
+  name: '%Color_Magenta%'
+  initials: autogenerate
+  chat-color: LIGHT_PURPLE
+  dye-color: MAGENTA
+
+
+# It is not possible to add custom teams

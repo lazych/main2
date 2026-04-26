@@ -1,0 +1,905 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww11
+#########################
+
+
+
+###########################
+## Miscellaneous
+###########################
+prefix: '&3[Bedwars]'
+configurations_reload_start: '&aКонфигурации перезагружаются!'
+configurations_reload_end: '&aКонфигурации перезагрузились за &2{time} секунд'
+configurations_reload_alreadyloading: '&cКонфигурация уже перезагружается!'
+info_madeby: Сделано
+info_specialthanks: Special thanks
+info_website: Сайт
+info_version: Версия
+info_newestversion: Новейшая версия
+page: Страница
+help: Помощь
+team: Группа
+none: ничего
+unknown_page: '&cНеизвестная страница &4{page}'
+unknown_argument: '&cНеизвестный аргумент &4{arg}'
+unknown_block: '&cНеизвестный блок &4{block}'
+unknown_place: '&cНеизвестное место &4{place}'
+unknown_spawner: '&cНеизвестный генератор &4{spawner}'
+version_new: '&aОбнаружена новая версия! &2{version}'
+version_nonew: '&cНовых версий не обнаружено!'
+error_occurred: '&cКритическая ошибка!'
+error_occurred_syntax: '&cПроизошла синтаксическая ошибка: &6{message}'
+no_permissions: '&cУ вас нет нужных прав!'
+no_permissions_specific: '&cMake sure that you either have the &4{perm} &cpermission
+  or OP'
+onlyas_player: '&cЭто работает только от имени игрока!'
+not_ingame: '&cВы не в игре!'
+not_ingame_player: '&4{player} &cне находится в игре!'
+not_supported: '&cЭто не поддерживается в вашей версии! Пожалуйста, обновите плагин
+  до версии &4{version} &cили новее'
+color_yellow: жёлтая
+color_orange: оранжевая
+color_red: красная
+color_blue: синяя
+color_magenta: magenta
+color_lightblue: светло-синяя
+color_cyan: голубая
+color_lightgreen: светло-зелёная
+color_green: зелёная
+color_purple: фиолетовая
+color_pink: розовая
+color_white: белая
+color_lightgray: светло-серая
+color_gray: серая
+color_brown: коричневая
+color_black: чёрная
+missing_worldeditpoints: '&cОшибка в координатах WorldEdit!'
+saved_arena: '&aАрена &2{arena} &aуспешно сохранена!'
+saved_bed: '&aКровать успешно сохранена для команды {colorcode}{color} &aна арене
+  &2{arena}'
+bed_notinside_arena: '&cНе удалось добавить кровать, так как на данном месте нет арены.
+  Используйте "/bw arena setcorners" или "/bw arena setworld" чтобы исправить это'
+exists_arena: '&cАрена &4{arena} &cуже существует!'
+spawner_bronze: бронза
+spawner_iron: железо
+spawner_iron_plural: Iron
+spawner_gold: золото
+spawner_gold_plural: Gold
+spawner_diamond: Алмаз
+spawner_diamond_plural: Diamonds
+spawner_emerald: Изумруд
+spawner_emerald_plural: Emeralds
+added_spawner: '&aГенератор &2{spawnertype} &aбыл успешно добавлен в арену &2{arena}!'
+specialblock_added: '&aДобавлен специальный блок типа &2{type}'
+specialblock_alreadyadded: '&cУже есть блок типа &4{type}&c. Сломайте его, чтобы удалить'
+specialblock_removed: '&6Удален специальный блок типа &e{type}'
+removed_spawners: '&2{number} &aгенераторов было удалено на арене {arena}!'
+start_round: '&aИгра началась.'
+stop_round: '&aИгра остановлена.'
+kicked_player: '&aИгрок &2{player} &aбыл успешно выкинут с арены &2{arena}'
+kicked_player_toplayer: '&cВы были кикнуты из этой игры!'
+list_arenas: '&eВсе арены: &6'
+list_arenas_local: '&eЛокальные арены: &6'
+list_arenas_remote: '&cУдаленные арены: &6'
+only_betamember: '&cВы не можете зайти на bedwars, когда он в beta режиме!'
+notavailable_color: '&cНеизвестный цвет &4{color}'
+joinmessage_stopped: '&cЭта арена сейчас остановлена!'
+joinmessage_reseting: '&cЭта арена сейчас перезагружается!'
+joinmessage_full: '&cЭта арена заполнена!'
+joinmessage_running: '&cЭта арена уже запущена!'
+joinmessage_alreadyinside: '&cВы уже на арене!'
+joinmessage: '&6{player} &eприсоединился к игре.'
+leavemessage: '&6{player} &eвышел из игры.'
+notfound_player: '&4{player} &cне найден!'
+notfound_arena: '&cАрены &4{arena} &cне существует!'
+notfound_arena_loading: '&6(В текущий момент Арена загружается)'
+notfound_arena_validpicker: '&cThere''s no arena matching the picker: &4{picker}'
+notfound_author: '&cНе найден автор с именем &4{author}&c!'
+get_bed: '&aУ Вас кровать {colorcode}{color}'
+getallbeds: '&aВам были выданы все кровати арены &2{arena}'
+countdown_start: '&6Начался обратный отсчёт времени!'
+countdown_stop: '&6Обратный отсчёт времени остановлен!'
+countdown_counting: '&6Игра начнётся через &e{number} &6сек.'
+countdown_changed: '&6Обратный отсчёт времени изменён на &e{number} &6сек.'
+countdown_voting_counting: '&6Голосование за арену закончится через &e{number} &6сек.'
+toofew_materials: '&cУ Вас недостаточно ресурсов для покупки этого!'
+no_inventory_space: '&cВаш инвентарь уже заполнен!'
+tooless_players: '&cВ раунде очень мало игроков!'
+needmore_players_than: '&cОсталось &4{amount}&c игроков!'
+win_money: '&6Вы выиграли &e{number}&6$!'
+player_notingameanymore: '&4{player} &cбольше не в игре!'
+player_notfound: '&4{player} &cне найден!'
+player_cheating: '&6{player} &eбыл кикнут, потому что использовал читы!'
+player_loosing: '&6{player} &eпроиграл этот раунд!'
+players: Игроки
+team_won: '&eКоманда {colorcode}{color} &eпобедила в этой игре!'
+team_notaddedyet: '&cКоманда {teamcolor}{team} &cещё не добавлена на арену &4{arena}&c!'
+changeteam_full: '&7Команда {colorcode}{color} &7уже заполнена!'
+changeteam_alreadyinside: '&7Вы уже являетесь членом команды {colorcode}{color}&7!'
+changeteam_changed: '&7Теперь вы играете за команду {colorcode}{color}'
+changeteam_none: '&7You left your team and will be assigned to a random one'
+changed_postitions: '&aТочки арены успешно изменены!'
+changed_lobbylocation: Положение лобби на арене &2{arena} &ahas было успешно изменено!
+changed_teamspawn: '&aКоординаты спавна команды {colorcode}{color} &aуспешно изменены!'
+changed_arenaworld: '&aМир арены &2{arena} &aуспешно изменён на &2{world}'
+spawn_ranking: '&aСтатуя рейтинга на месте &2{place} &aуспешно поставлена!'
+changed_gamedonelocation: '&aТочка &2завершения &aуспешно изменена!'
+insidearena_gamedonelocation:
+- '&cThe hub position is inside the arena &4{arena}&c!'
+- '&cPlace it somewhere else - namely where you are supposed to get teleported to
+  when you leave the match'
+stats_info_entry: '&7{name}: &b{value}'
+stat_default_rank: Ранг
+stat_default_win_streak: Вин Стрик
+stat_default_top_win_streak: Лучшая серия побед
+stat_default_won: Побед
+stat_default_lost: Поражений
+stat_default_wl: В/П
+stat_default_roundsplayed: Сыграно раундов
+stat_default_kills: Убийств
+stat_default_kill_streak: Текущая серия убийств
+stat_default_top_kill_streak: Лучшая серия убийств
+stat_default_finalkills: Финальные убийства
+stat_default_deaths: Смертей
+stat_default_finaldeaths: Последних Убийств
+stat_default_kd: У/С
+stat_default_final_kd: Финальный K/D
+stat_default_bedsdestroyed: Разрушено кроватей
+stat_default_bedslost: Потерянных кровать
+stat_default_playtime: Сыграно времени
+destroyed_bed_title: ''
+destroyed_bed_subtitle: '&fКровать команды {teamcolor}{team} &fбыла разрушена игроком
+  &7{player}&f!'
+destroyed_bed_subtitle_playerless: '&fКровать команды {teamcolor}{team}&f была разрушена!'
+destroyed_bed_own_title: ''
+destroyed_bed_own_subtitle: '&fВаша кровать была разрушена игроком &7{player}&f!'
+destroyed_bed_chat: '%Prefix% %Destroyed_Bed_SubTitle%'
+destroyed_bed_chat_left: '%Prefix% &fКровать команды {teamcolor}{team}&f была разрушена,
+  так как они вышли из игры.'
+destroyed_bed_chat_leftignoredrejoin: '%Prefix% &fКровать команды {teamcolor}{team}
+  &fбыла уничтожена, потому что они покинули игру и не перезашли вовремя.'
+number_notone: '&4{number} &cне число!'
+stats_by: Статистика игрока {player}
+gui_achievements_title: Отчивка
+gui_selectteam_title: '&6Выбор команды'
+gui_spectator_teleporter: '&eТелепортироваться'
+gui_votearena_title: '&6Проголосовать за арену'
+gui_votearena_votes: '&b{number} &3голосов'
+enabled_arena: '&aАрена &2{arena} &aтеперь &2включена!'
+disabled_arena: '&aАрена &2{arena} &aтеперь &4выключена!'
+disabling_gracefully_arena: '&Отключение бегового матча в течение &6{arena} &eэто
+  может занять некоторое время...'
+create_arena: '&aАрена &2{arena} &aбыла успешно создана!'
+remove_arena: '&aАрена &2{arena} &aбыла успешно удалена!'
+usage: '&6Использование: &e{usage}'
+search_update: Поиск новой версии...
+offline_updateservice: Сервис обновления вероятно выключен!
+inwork_job: Профессия находится на стадии работы!
+newupdate: Найдена новая версия
+nonewupdate: В настоящее время для этого ресурса нет обновлений!
+arena_hastobestopped:
+- '&cАрену &4{arena}&cнужно остановить!'
+- '&6Можно использовать следующую команду: &e{command}'
+arena_joinissue_worlddoesntexists: '&cВ Арене &4{arena}&c присутствует ошибка: Мир
+  не существует!'
+fixproblemsbeforeenabled: '&cПожалуйста, исправьте эти проблемы до включения'
+use_trueorfalse: '&cИспользуйте <true/false>!'
+reseting_now: '&aНачата регенерация арены &2{arena}&a!'
+reseting_start_failed: '&cНе удалось начать регенерацию арены &4{arena}'
+reseting_start_failed_alreadyrunning: '&cНе удалось начать процесс регенерации арены
+  &4{arena}&c, так как другой уже запущен'
+locateplayer_notinarena: ' &cИгрок &4{player} &cонлайн, но не находится на арене.'
+locateplayer_inarena:
+- '&3======= &b{player} &3======='
+- '&2Сервер: &a{server}'
+- '&2Активность: &a{activity}'
+- '&2Арена: &a{arena}'
+- '&2Статус арены: &a{arena-status} ({arena-players}/{arena-max-players})'
+locateplayer_click_to_spectate: '&e&lНажмите, что бы наблюдать за {player}'
+notsameworld_arena: '&cВы находитесь не в мире арены &4{arena} &c(&4{world}&c)!'
+problem_arena_world: '&cВозникла проблема с миром арены &4{arena}&c!'
+fixproblemwith: '&eИсправьте эту проблему с помощью: &6'
+spawned_lobbyvillager: '&2житель-лобби &aбыл успешно создан!'
+spawned_teamselectvillager: '&2житель-выбора-команды &aбыл успешно создан!'
+spawned_dealer: '&2Продавец &aбыл успешно создан!'
+spawned_upgradedealer: '&2Продавец улучшений &aбыл успешно создан!'
+notlooking_atsign: '&cВы не смотрите на табличку!'
+notlooking_atplayerhead: '&cВы не смотрите на голову игрока!'
+sign_lobby: '&eЛобби'
+sign_running: '&6В Игре'
+sign_stopped: '&cОстановлено'
+sign_reseting: '&aПерезапускается'
+enabled: Включено
+disabled: Выключено
+notallowed_beddestroy: '&cВы не можете уничтожить свою кровать!'
+notallowed_selectcolor: '&cВы не можете выбрать цвет {colorcode}{color}&c!'
+lobby_item_achievements: '&6Достижения'
+lobby_item_forcestart: '&eПринудительное начало'
+lobby_item_leave: '&cВыйти'
+lobby_item_leave_use: '&aВы будете телепортированы обратно в лобби через {time} секунд'
+lobby_item_leave_cancel: '&c&lТелепорт Отменён'
+lobby_item_selectteam: '&eВыбрать команду'
+lobby_item_votearena: '&eПроголосовать за арену'
+lobby_printmapinfo_arenaname: Название Арены
+lobby_printmapinfo_buildby: Построено
+spectator_item_teleporter: '&eТелепортация'
+spectator_item_changespeed: '&eИзменить скорость'
+spectator_item_leave: '&cВыйти'
+spectator_item_nextround: '&6Изменить арену'
+arrow_damage: '{targetcolor}{target} &eis now at &c{health} &ehealth'
+trap: '&eКто-то прошёлся по вашей ловушке!'
+magicmilk_use: '&eЛовушки не смогут обнаружить вас в течение {time} секунд!'
+teleporter: '&eТелепортация через пару секунд...'
+teleporter_failed: '&cТелепортация была прекращена!'
+bridge_notenoughmaterials: '&cВам необходимо больше материалов типа &4{material}&c!'
+give_spawner: '&aGave &2{amount}&a of &2{spawner}&a to &2{target}'
+teleport_success: '&aВы были успешно телепортированы на арену &2{arena}'
+lobby_waiting: '&6Ожидается ещё &e{amount} &6игроков...'
+lobby_enough: '&6В этой игре достаточно игроков!'
+alreadyinside_arena: '&cВы уже находитесь внутри арены!'
+noarenaforparty: '&cThere isn''t enough space available for all your party members'
+requires_worldedit: '&cДля этого необходим &4WorldEdit&c!'
+crashmessage_missingbed: Отсутствует местоположение кровати
+crashmessage_missingteamspawn: Отсутствуют точки появления команд
+crashmessage_missinglobbylocation: Отсутствует местоположение лобби
+crashmessage_missinggamedonelocation: Отсутствует местоположение завершённой игры
+crashmessage_missinggameworld: Игровой мир не был установлен
+crashmessage_missingcorners: Углы не были установлены
+crashmessage_uppercorneroutofbounds: Верхний угол больше максимальной высоты мира
+crashmessage_lowercorneroutofbounds: Нижний угол меньше максимальной высоты мира
+crashmessage_worldtypearenainmainworld: Тип регенерации арены — WORLD, а мир арены
+  — основной мир сервера
+crashmessage_notloadedgameworld: Game world isn't loaded
+crashmessage_matchareacolliding: Игровой регион пересекается с другими аренами
+crashmessage_gamedonelocationinterfering: Ваша позиция в хабе находится в зоне матча
+regeneration_done: '&aАрена &2{arena} &aбыла успешно отрегенерирована за &2{time}
+  секунд&a!'
+regeneration_stopped: '&cРегенерация арены &4{arena}&c была остановлена через &4{time}
+  секунд'
+regeneration_fail: '&cРегенерация &4{arena} &cне удалась: &4{error}'
+worldedit_changed: '&aИзменить положение {id} на &2x{x} y{y} z{z}'
+getpositionaxe: '&aВы получили &2топор выделения позиций'
+tracker_trackedplayer: '&aЭтот компас теперь указывает на ближайшего отслеживаемого
+  противника.'
+tracker_reusedelay: '&cПодождите &4{time} секунд&c, чтобы снова использовать отслеживатель!'
+tracker_failed_onlyone: '&4Не удалось отследить противника: &cВы единственный игрок!'
+spectator_join: '&6Вы перешли в режим наблюдателя!'
+spectator_leave: '&6Вы вышли из режима наблюдателя.'
+spectator_howtoquit: '&eПокиньте эту игру с помощью команды &6/bw leave'
+recalculatestats_done: '&aЗавершено после &2{time} секунд&a.'
+endlobby_counting: '&6Вы будете телепортированы в лобби через &e{number} секунд'
+endlobby_bigtitle_win: '&6Победа!'
+endlobby_smalltitle_win: '&7Ваша команда выиграла этот раунд!'
+endlobby_bigtitle_lose: '&cПоражение'
+endlobby_smalltitle_lose: '{teamcolor}&l{team} &fпобедили в этой игре!'
+endlobby_bigtitle_nobody: ''
+endlobby_smalltitle_nobody: '&c&nНикто &fне выиграл этот раунд.'
+arenavoting_noavailablearenas: '&cНе осталось свободных игр. Извините!'
+arenavoting_arenasupdated: '&6Арены для голосования были обновлены.'
+arenavoting_recount_noarenatovote: '&cПерезапуск обратного отсчёта: Отсутствует арена
+  для голосования!'
+arenavoting_end: '&6Следующая арена победила в голосовании: &e{arena}'
+arenavoting_recount_toofewplayers: '&cДля игры на этой арене нужно ещё &4{number}&c
+  игроков!'
+arenavoting_minplayers: Минимально игроков
+forcestart_already: '&cИгра уже начинается!'
+scoreboard_arenaname: Арена
+scoreboard_arenamode: Режим
+scoreboard_players: Игроки
+scoreboard_arena: Арена
+scoreboard_stats: Статистика
+scoreboard_gamestats: Игровая статистика
+scoreboard_yourteam: Ваша команда
+scoreboard_teams: Команды
+bed_onlydestroyablewith_tnt: '&cЭта кровать может быть уничтожена только с помощью
+  динамита!'
+itemspawner_hologram_title: '{spawnercolor}{spawner} &fсоздастся через &7{time} &fсекунд!'
+maxplayers: Макс. игроков
+lobby_countdowntitle_goodluck: '&6Удачи!'
+minishop_title: '{title}&7 исчезает через &8{time} секунд'
+arenatype_notsupported: '&cЭто не поддерживается для типа &4{type}&c арены &4{name}'
+arena_autosavedblocks: '&eБлоки внутри арены автоматически сохранены!'
+ranking_unranked: Без статуса
+wait_allarenasloaded: '&cИдёт загрузка всех арен, пожалуйста подождите!'
+please_savearena: '&6Обязательно сохраните свою арену с помощью: &e/bw arena saveblocks
+  <arena name>'
+getsetuptool: '&aВам был выдан &2инструмент настройки'
+onetimepurchase: '&cВы можете купить это только один раз!'
+arenasgui_title: '&bАрены'
+arena_collidingarena:
+- '&cПожалуйста, измените местоположение вашей арены.'
+- '&cпересекается с ареной: &4{arena}'
+- '&6Для изменения местоположения используйте следующую команду: &e{command}'
+backup_list: '&6Резервные копии'
+backup_create_success: '&aСоздана резервная копия с именем &2{name}&a после &2{time}
+  &aсекунд'
+backup_create_exists: '&cРезервная копия с именем &4{name} уже существует'
+backup_delete_success: '&aУдалена резервная копия с именем &2{name}'
+backup_unknown: '&cНеизвестная резервная копия &4{name}'
+backup_restore_success: '&aРезервная копия &2{name}&a после &2{time}&a успешно восстановлена'
+backup_restore_ask:
+- '&6Вы действительно уверены, что хотите восстановить резервную копию &e{name}&6?'
+- '&6Если так, то напишите ту же команду в течение следующих 10 секунд'
+scoreboard_bedstate_alive: '&aЖивой'
+scoreboard_bedstate_destroyed: '&cУничтожено'
+death_spectate_respawnin_bigtitle: '&cТЫ УМЕР!'
+death_spectate_respawnin_smalltitle: '&6Возрождение через &e{time} &6секунд'
+spectator_changearena_noneavailable: '&cНет свободных арен!'
+spectatoradd_failed_missinglocation: '&cНе удалось добавить вас в качестве наблюдателя,
+  так как нет доступных точек для телепортации вас.'
+saveblocks_fail_players: '&4Не удалось сохранить блоки: &cВ мире есть игроки.'
+createarena_fail_mainworld: '&cНевозможно создать арены с типом мира в вашем главном
+  мире!'
+saveblocks_start: '&6Начало операции сохранения блоков для арены &e{arena}&6. Примерное
+  время: &e{time}'
+saveblocks_fail_alreadyrunning: '&4Не удалось сохранить блоки: &cОперация уже запущена.'
+saveblocks_fail_notstopped: '&4Не удалось сохранить блоки: &cЭто не остановлено. (Верните
+  его с /bw arena setenabled {arena} false)'
+saveblocks_fail_unknown: '&4Не удалось сохранить блоки, так как произошла странная
+  ошибка: &c{type}'
+regeneration_fail_savingblocks: '&4Ошибка в регенирации карты: &cСохраняются блоки.'
+deathmessage_killed_1: '{teamcolor}{player} &7был убит &8{killerteamcolor}{killer}
+  &cс &4❤{heartpercent}%'
+deathmessage_killed_2: '{teamcolor}{player} &7снова проиграл битву &8{killerteamcolor}{killer}
+  &cс &4❤{heartpercent}%'
+deathmessage_killed_3: '{teamcolor}{player} &7был убит &8{killerteamcolor}{killer}
+  &cс &4❤{heartpercent}%'
+deathmessage_void_1: '{teamcolor}{player} &7выпал из мира'
+deathmessage_void_2: '{teamcolor}{player} &7упал с моста и все еще падает'
+deathmessage_explosion_1: '{teamcolor}{player} &7взорвался'
+deathmessage_explosion_2: '{teamcolor}{player} &7взорвал'
+deathmessage_fall_1: '{teamcolor}{player} &7сломал все ноги'
+deathmessage_fall_2: '{teamcolor}{player} &7упал с возвышенности'
+deathmessage_fire_1: '{teamcolor}{player} &7был сожжен заживо'
+deathmessage_fire_2: '{teamcolor}{player} &7был сожжен заживо'
+deathmessage_default_1: '{teamcolor}{player} &7умер'
+spectator: Наблюдатель
+itemshop: Магазин предметов
+motd_loading: Загрузка...
+toggle_display_spawner_enable: '&eСпаунеры арены &6{arena} &eтеперь отображаются для
+  всех. Повторите команду, чтобы их отключить'
+toggle_display_spawner_disable: '&eСпаунеры арены &6{arena} &eбольше не отображаются'
+teamchest_title: Командный Сундук {team}
+playerprivateinventory_title: Эндер-сундук
+placeholderapi_stats_loading: Загрузка...
+tnt_destroybed_name: Динамит
+timer_ending_soon: '&eИгра закончится через {minutes} минут(ы)'
+timer_ending: '&eМатч заканчивается через {seconds} секунд(ы)'
+command_blocked: '&cВы не можете выполнить эту команду во время игры Bedwars'
+cancel: Отмена
+apply: Применить
+authors: Авторы
+nobody: Никто
+customname_isenabled: Пользовательское название включено
+customname: Пользовательское название
+displayingname: Отображение названия
+list_spawners: '&6Количество генераторов добавленных на арену {arena}: &e{spawners}'
+noarenaatpos: '&cНа вашей позиции нет арен'
+multiplearenasatpos: '&cНа вашей позиции существует несколько арен: &4{arenas}'
+notinsidearena: '&cВы не находитесь на арене &4{arena}'
+arenaname_contains_illegalchars: '&cНазвание арены содержит недопустимые символы'
+teamspawn_notyet: '&cТочка появления команды &4{team}&c еще не установлена для арены
+  &4{arena}'
+holo_add: '&aДобавлена голограмма на &2{coord}'
+holo_list: '&6Голограммы в мире {world}: &e{holos}'
+holo_remove: '&aУдалена голограмма на &2{coord}'
+holo_removenotfound: '&cНа указанных координатах не найдена голограмма в мире &4{world}'
+holo_removeall: '&aУдалено &2{amount}&a голограмм в мире &2{world}'
+unknown_world: '&cНет мира с именем &4{world}'
+addon_load_not: '&cДанный файл не является аддоном'
+addon_load_already: '&cДанный аддон уже загружен'
+addon_load_unknown: '&cФайл не найден. Убедитесь, что он присутствует в папке &4{folder}'
+addon_load: '&aЗагружен аддон &2{addon}'
+addon_unload_notfound: '&cНе существует аддона с именем &4{addon}'
+addon_unload_notaddon: '&4{plugin}&c is a plugin, but not an addon'
+addon_unload: '&aВыгружен аддон &2{addon}'
+item_error_missinghandlerorcommand: '&4Сообщите об этой ошибке администратору: &cУ
+  предмета {item} отсутствует обработчик или команда. При использовании ничего не
+  происходит.'
+arenasgui_list: Схемы ArenasGUI
+arenasgui_by: от
+arenasgui_openfor: '&eОткрыта схема arenasgui &6{layout}&e для &6{player}'
+unknown_layout: '&cНеизвестная схема &4{layout}'
+migration_start: '&eНачалось перенаправление на &6{origin}&e...'
+migration_success: '&aУспешно мигрировано &2{origin}&a за &2{time}'
+migration_failure: '&cНе удалось перенаправить на &4{origin}&c за {time}: &4{error}'
+migration_failure_alreadyrunning: '&cПроцесс перенаправления на этот адрес уже идёт'
+playerdeath_cause_elimination: Ликвидация
+rejoin_trying: '&eПроверяются ранее сыгранные игры...'
+rejoin_alreadytrying: '&cВы уже пытаетесь вернуться в последнюю сыгранную игру! Подождите
+  немного'
+rejoin_failed_notactive: '&6Вы опоздали, игра закончена'
+rejoin_failed_teamdead: '&6Вы не можете вернуться в активную игру, так как ваша команда
+  ликвидирована'
+rejoin_failed_unknown: '&6Мы пытались вас впустить, но, возможно, это не сработало
+  из-за внутренних правил'
+rejoin_success: '&aИгра всё еще активна! Начинается процесс зачисления...'
+rejoin_success_global: '&6{player} &eвернулся в игру за команду {teamcolor}{team}'
+hubpos_inactive_bungee: '&6Точки Хаба &eнеактивны, так как вы решаете это через BungeeCord'
+arenaconvert_onlyspecifctypes: '&cВы можете изменить только тип регенерации арены
+  &4{arena} &c на &4{types}'
+arenaconvert_done: '&aИзменен тип регенерации &2{arena} &aс {prev} на &2{new}'
+arenaproblem_savingblocks: '&cВ данный момент арена сохраняет свои блоки. Повторите
+  попытку через несколько секунд'
+teamchat_enabled_hint: '&eВаше сообщение видят только члены вашей команды. Начните
+  его с "&e&l{tag}&e", чтобы писать в глобальный чат'
+teamchat_disabled_solo_hint: '&eВаше сообщение будет видно всем игрокам (даже без
+  префикса), так как вы играете в одиночку'
+remotearena_unsupportedoperation: '&cВы не можете выполнять данную операцию на удаленных
+  аренах'
+connecting_server: '&eВы сейчас подключаетесь к серверу'
+remoteteleport_fail: '&cНевозможно телепортироваться на сервер'
+tphubfail_nohub: '&cНе удалось телепортировать вас в хаб, так как сервер недоступен'
+try_again_shortly: '&eПовторите попытку в ближайшее время'
+server_full: '&cСервер полон'
+spectate_fail: '&cНе удалось вас подключить в роли наблюдателя (Причина: {reason})'
+join_fail: '&cНе удалось подключить вас к арене (Причина: {reason})'
+erroraction_arenacloned: '&cВы не можете выполнять это для клонированных арен'
+arenabulk_performingaction: '&eДействие выполняется для &6{amount} арен'
+invalidatecache_alreadyempty: '&eДанные игрока уже сброшены'
+invalidatecache: '&eОчищена следующая информация: &6{stats} статистика&e, &6{achievements}
+  достижения&e and &6{properties} настройки'
+playerdata_info_fetchtime: Время запроса
+playerdata_info_earnedachievements: Заработанные достижения
+playerdata_info_stats: Статистика
+playerdata_info_game_stats: Игровая статистика
+playerdata_info_properties: Свойства
+playerdata_notfound: '&cНе удалось найти информацию для &4{target}'
+playerdata_stats_resetallplayer_warning:
+- '&4!!!WARNING!!!'
+- '&cAre you really sure you want to reset &4ALL stats&c for &4&lALL&c players who
+  have EVER played? If so, then please write the same command within the next {sec}
+  seconds. &nYou might want to create a backup.'
+playerdata_stats_resetplayer_warning:
+- '&4!!! ПРЕДУПРЕЖДЕНИЕ!!!'
+- '&cВы действительно уверены, что хотите сбросить статистику &4для игрока &4&l {player}
+  &c? Если да, то напишите ту же команду в течение следующих секунд. {sec}'
+playerdata_stats_resetplayer_complete: '&aСтатистика для {player} была успешно обнулена
+  через {time}!'
+playerdata_stats_resetallplayer_complete: '&aСтатистика всех игроков на сервере/сети
+  была обнулена через {time}!'
+playerdata_stats_modify_complete: '&aSuccessfully updated ''{stat}'' to ''{new-val}''
+  for {player}. The player may need to re-log for rankings to update'
+playerdata_stats_modify_fail: '&cWe were unable to update the stat ''{stat}'' for
+  {player}!'
+playerdata_stats_notfound: '&cUnable to find a stats set called ''{stat}'''
+identifyarena_none: '&cThere is no arena at the given position'
+identifyarena_found: '&eFound arena &6{arena}'
+initsetup_welcome:
+- '&6Welcome welcome!'
+- '&eTo make the setup of &lMarcely''s Bedwars &eas easy as possible, we offer you
+  the opportunity to set it up via a web interface (using your browser).'
+- '&eNote that this is only for the initial setup. You can always configure anything
+  later on.'
+initsetup_web: I want to use the fancy web interface (Click or type command {cmd})
+initsetup_simple: I would rather just configure everything myself (Click or type command
+  {cmd})
+initsetup_connecting: '&ePlease wait a little bit, we are preparing it for you.'
+initsetup_connection_failure:
+- '&cSorry, but we could not connect to our service. A firewall may be blocking it.'
+- '&cPlease type the &4/mbedwars &ccommand and try again or skip the whole process
+  if it keeps failing.'
+initsetup_ready: '&eVisit this URL to start the setup process: &6{url}'
+initsetup_finish: '&eEverything is ready, have fun! Visit &6{url} &efor further help'
+click: '*Click*'
+members: Members
+no_members: No members
+antiabuse_statsnotcounted: '&cНекоторые статистические данные не были учтены, так
+  как мы обнаружили потенциальные злоупотребления. Пожалуйста, играйте честно!'
+player_trigger_upgradetrap_bigtitle: '&cЛОВУШКА СРАБОТАЛА!'
+player_trigger_upgradetrap_smalltitle: '&fВаша ловушка была использована!'
+player_trigger_upgradetrap_chat: '&cКто-то активировал одну из ловушек вашей команды!'
+achievement_get_title: Новое достижение!
+
+
+###########################
+## Setup GUI
+###########################
+setupgui_nextpage: Следующая страница
+setupgui_prevpage: Предыдущая страница
+setupgui_goback: Назад
+setupgui_yousure: Вы уверены?
+setupgui_noarenascreated: На данный момент арен нет
+setupgui_mainbutton_modify: Изменение существующих арен
+setupgui_mainbutton_create: Создать новую арену
+setupgui_mainbutton_misc_tools: Misc tools
+setupgui_misctools_spawn_dealer:
+- Spawn Dealer
+- You can remove it by punching.
+setupgui_misctools_spawn_upgradedealer:
+- Spawn Upgrade Dealer
+- You can remove it by punching.
+setupgui_misctools_displayarenasatpos:
+- Identify an arena
+- Uses your current position.
+setupgui_misctools_setuptool:
+- Получить инструмент настройки
+- Нажмите ПКМ на предмет, держа его в руке, чтобы использовать его.
+- Полезно для быстрой настройки арен.
+setupgui_misctools_setcorner_1:
+- Set first corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_misctools_setcorner_2:
+- Set second corner
+- Uses your current position.
+- Useful when setting up a region arena.
+setupgui_category_actions: Действия
+setupgui_category_modify: Изменить
+setupgui_category_spawners: Генераторы
+setupgui_category_teams: Команды
+setupgui_category_weather:
+- Weather
+- 'Active: {weather}'
+setupgui_category_time:
+- Time
+- 'Active: {time}'
+setupgui_button_enable: Включить
+setupgui_button_disable: Отключить
+setupgui_button_regenerate: Регенерировать все блоки
+setupgui_button_teleport: Телепортироваться на арену
+setupgui_button_enter: Войти в игру
+setupgui_button_enterspectator: Наблюдать за игрой
+setupgui_button_configure: Настроить
+setupgui_button_setlobby:
+- Установить спаун в лобби
+- Использует ваше текущее положение
+setupgui_button_rename: Изменить название
+setupgui_button_saveblocks: Сохранить все блоки и сущности
+setupgui_button_setgameworld:
+- Установить игровой мир
+- Использует ваш текущий мир
+setupgui_button_saveregioncorners:
+- Сохранить углы арены
+- Обязательно задайте углы с помощью {tool}
+setupgui_button_modifyregioncorners:
+- Установить угловые позиции арены
+- Использует вашу текущую позицию
+- ''
+- 'ЛКМ: Отметить угол 1'
+- 'ПКМ: Отметить угол 2'
+setupgui_button_setspectatorspawn:
+- Установить точку спауна для наблюдателей
+- Использует вашу текущую позицию
+setupgui_button_properties: Properties
+setupgui_button_delete: Удалить арену
+setupgui_button_removeallspawners: Удалить все добавленные генераторы
+setupgui_button_displayspawners:
+- Показать все генераторы
+- Добавляет небольшую голограмму над любым генератором
+setupgui_button_undisplayspawners: Скрыть все генераторы
+setupgui_button_getallbeds: Получить кровати всех команд
+setupgui_spawnerbutton_obtainitems: '&fПолучить {amount} предметов генератора {spawner}'
+setupgui_spawnerbutton_add:
+- '&fДобавить генератор {spawner}'
+- Использует вашу текущую позицию
+setupgui_spawnerbutton_removeall: '&fУдалить все генераторы {spawner}'
+setupgui_teambutton_obtainbed: '&fПолучить кровать {team}'
+setupgui_teambutton_teleportspawn: '&fТелепорт к точке спауна команды {team}'
+setupgui_teambutton_setspawn:
+- '&fУстановить точку спауна для {team}'
+- Использует вашу текущую позицию
+setupgui_removearena_yes: '&a&lДА&f, удалить арену &l{arena}'
+setupgui_removearena_no: '&c&lНЕТ&f, оставить арену &l{arena}'
+setupgui_create_type_region:
+- Регион
+- Ограничить арену границей.
+- Игроки увидят визуальный эффект границы и не смогут зайти за него.
+- Благодаря этому вы также можете создать несколько арен в одном мире.
+- Пожалуйста, посетите вики для получения более подробной информации.
+setupgui_create_type_world:
+- Мир
+- В этой арене нет границ и она использует весь мир для игры.
+- Легче в настройке, но может быть более тяжелой во время регенерации.
+- Пожалуйста, посетите вики для получения более подробной информации.
+setupgui_create_type_voting:
+- Голосование
+- Не настоящая арена в которой вы играете.
+- Вместо этого она использует только лобби для голосования.
+- Игроки будут телепортированы на арены типа World или Region после окончания голосования.
+- Пожалуйста, посетите вики для получения более подробной информации.
+setupgui_create_title: Создать новую арену
+setupgui_configure_title: Настройка арены
+setupgui_configure_auto_detect_teams_complete: '&6{amount} &eпотенциальных команд
+  было обнаружено по вашей текущей позиции'
+setupgui_configure_playersperteam2:
+- '&6Макс. игроков:'
+- '&7Текущее максимальное количество игроков в команде: &f {amount}'
+- '&7Текущее максимальное количество игроков на арене: &f{total-max-players}'
+setupgui_configure_minplayers:
+- '&6Мин. игроков: &f{amount}'
+- '&7Количество игроков, необходимое для старта'
+setupgui_configure_totalplayers: '&6Максимальное количество игроков на арене: &f{amount}'
+setupgui_configure_arenasbelowinpool: '&3&l⇩ &bАрены на голосовании &3&l⇩'
+setupgui_configure_noarenasinpool: '&cНет арен в списке'
+setupgui_clicktorename: Нажмите, чтобы переименовать
+setupgui_rename_title: Переименовать арену
+setupgui_confirm_action: '&6Подтвердите свое действие, еще раз нажав кнопку в течение
+  следующих нескольких секунд'
+setupgui_configure_minplayers_toolow: ИСКЛЮЧИТЕЛЬНО ДЛЯ ТЕСТИРОВАНИЯ. Таким образом,
+  вы можете начать матч без участия других игроков.
+setupgui_button_modifyregioncorners_reminder_save: '&eНе забудьте нажать на кнопку
+  "сохранить углы арены", иначе изменения не будут применены.'
+setupgui_spawnerbutton_removenearbyspawners:
+- '&fУдалить все {spawner} &fгенераторы поблизости'
+- Использует вашу текущую позицию
+setupgui_remotearena_info:
+- '&c[ДИСТАНЦИОННЫЙ]'
+- Управляется &o{server}
+
+
+###########################
+## Setup Tool
+###########################
+setuptool_freebuild: Свободно ставьте/ломайте блоки
+setuptool_spawner: Поставить/Изменить генератор
+setuptool_selectteam: Выберите команду
+setuptool_bed: Поставить кровать
+setuptool_spawnpoint: Поставить точку спавна
+setuptool_dealer: Создать/Убить торговца
+setuptool_notinsidearena: '&cНужно находиться на арене. &6&lНажмите сюда &cдля управления
+  аренами. Телепортируйтесь туда и снова используйте инструмент'
+setuptool_activated: '&aАктивирован &eинструмент настройки для &6{arena}'
+setuptool_deactivated: '&cДеактивирован &eинструмент настройки. &6&lНажмите здесь
+  &eдля открытия GUI настройки арены'
+setuptool_selecttype: Выберите тип
+setuptool_placeagainconfirm: Поставьте снова для подтверждения
+setuptool_type_dealer: Торговец
+setuptool_type_upgradedealer: Торговец Улучшений
+setuptool_teamcomponent_bed: Кровать
+setuptool_teamcomponent_spawnpoint: Точка Спавна
+setuptool_spawnpoint_preview:
+- Предварительный просмотр &f&lТочки Спавна
+- '{team}'
+- '&fИсчезает через {time}'
+
+
+###########################
+## Shop Layouts
+###########################
+shop_d_hypixel_available: '&8Доступно'
+shop_d_hypixel_clicktobrowse: '&eНажмите для просмотра!'
+shop_d_hypixel_items: '&8Предметы'
+shop_d_hypixel_clicktopurchase: '&eНажмите, чтобы приобрести!'
+shop_d_hypixel_maxed: '&aМАКСИМУМ!'
+shop_d_hypixel_unlocked: '&aРАЗБЛОКИРОВАНО'
+shop_d_hypixel_cost: '&7Стоимость: &f{color}{amount} {type}'
+shop_d_hypixel_goback: '&aВернитесь'
+shop_d_hypixel_tooexpensive: '&cУ вас недостаточно {type}!'
+shop_d_hivemc_clicktoview: '&b{icon} Нажмите, чтобы просмотреть &l{item}'
+shop_d_hivemc_goback: '&c&lВернуться обратно'
+shop_d_hivemc_returntomenu: '&7Вернуться в меню'
+shop_d_hivemc_clicktogoback: '&b{icon} Нажмите, чтобы вернуться обратно'
+shop_d_hivemc_clicktobuy: '&b{icon} Нажмите, чтобы купить'
+shop_d_hivemc_cost: '&6Цена'
+shop_d_rewinside_shoptype_new: Вы используете новый, улучшенный магазин
+shop_d_rewinside_shoptype_old: Вы используете старый магазин
+shop_d_rewinside_shoptype_switch: Нажмите сюда, чтобы переключиться между версиями
+shop_d_bergwerklabs_currentpage: '&bТекущая страница'
+shop_d_bergwerklabs_changepage: '&bСтраница {page}'
+shop_d_bergwerklabs_buy: '&aКупить &7&o<ЛКМ>'
+shop_d_bergwerklabs_buy_tooexpensive: '&7Слишком дорого!'
+shop_d_hypixelv2_clicktoview: '&eНажмите, чтобы посмотреть!'
+shop_d_hypixelv2_seperator_categories: '&8⬆&7 Категории'
+shop_d_hypixelv2_seperator_items: '&8⬇&7 Предметы'
+shop_d_hypixelv2_quickbuy_pageitem: '&bБытрый закуп'
+shop_d_hypixelv2_quickbuy_emptyslot_name: '&cПусто'
+shop_d_hypixelv2_quickbuy_emptyslot_description:
+- '&7Это слот быстрой покупки!'
+- '&bШифт+клик &7на предмет для'
+- '&7добавления предмета сюда.'
+shop_d_hypixelv2_quickbuy_menu_title: Добавить в Быстрые покупки...
+shop_d_hypixelv2_quickbuy_menu_set: '&eНажмите, чтобы установить!'
+shop_d_hypixelv2_quickbuy_menu_replace: '&eНажмите, чтобы заменить!'
+shop_d_hypixelv2_quickbuy_menu_representing: '%%yellow%%Добавить предмет в быстрый
+  слот!'
+shop_d_hypixelv2_quickbuy_add_item: '&bSneak click to add to Quick Buy'
+shop_d_hypixelv2_quickbuy_remove_item: '&bSneak click to remove from Quick Buy'
+
+
+###########################
+## Achievements
+###########################
+achievements_name_ragequit: Яростный выход
+achievements_name_winround: Победитель
+achievements_name_loseround: Неудачник
+achievements_name_ownbeddestroyed: Невезучий
+achievements_name_bestbow: Лучший лук
+achievements_name_userescueplatform: Это было близко!
+achievements_name_useendepearl: Эндермен
+achievements_name_useminishop: Покупающая мама
+achievements_name_killsomeonewithbow: Стрелец
+achievements_name_winin3minutes: Уже все?!
+achievements_name_killsomeonewithhalfaheart: Счастливый удар
+achievements_name_win100rounds: Чемпион
+achievements_name_usebridge: Строитель моста
+achievements_name_useguarddog: Полицейский
+achievements_name_effectmagnetshoes: Магнитное поле
+achievements_name_useteleporter: Телепортируй меня, Скотти!
+achievements_name_usetntsheep: Взрыв, взрыв, детка!
+achievements_name_usetracker: Я собираюсь тебя найти. И убить.
+achievements_name_placetrap: Шахта
+achievements_name_runovertrap: ЭТО ЛОВУШКА!
+achievements_name_spend200resources: Wealthy
+achievements_name_rankingintop3: Спортивный игрок
+achievements_name_goodkd: Профессионал
+achievements_name_highplaytime: '#БезЖизни'
+achievements_name_writeggatend: ГГ
+achievements_name_winwithoutbed: Вы не можете трогать это
+achievements_name_die10secsafterbeddestruction: Вы не смогли!
+achievements_name_optaineveryachievement: Зависимость
+achievements_name_usefireball: Пиу-пиу!
+achievements_name_useinvispotion: Призрак
+achievements_text_ragequit: Выйди из запущенного раунда
+achievements_text_winround: Выиграй хоть один раунд
+achievements_text_loseround: Проиграй один раунд
+achievements_text_ownbeddestroyed: Если кровать разрушена
+achievements_text_bestbow: Построй лучший форт
+achievements_text_userescueplatform: Используйте спасительную платформу хоть один
+  раз
+achievements_text_useendepearl: Используй эндерперл
+achievements_text_useminishop: Используй мини-магазин
+achievements_text_killsomeonewithbow: Убейте кого-нибудь с помощью лука
+achievements_text_winin3minutes: Победите в игре в течение 3-х минут
+achievements_text_killsomeonewithhalfaheart: Убей врага с половиной сердечка
+achievements_text_win100rounds: Выиграй 100 раундов
+achievements_text_usebridge: Используй мост
+achievements_text_useguarddog: Заспавните один раз сторожевую собаку
+achievements_text_effectmagnetshoes: Когда Ваши магнитные ботинки один раз не дали
+  Вам упасть
+achievements_text_useteleporter: Используйте телепортет один раз
+achievements_text_usetntsheep: Заспавните овцу с динамитом
+achievements_text_usetracker: Используйте локатор один раз
+achievements_text_placetrap: Поставьте ловушку один раз
+achievements_text_runovertrap: Избегите ловушку, перепрыгнув через неё
+achievements_text_spend200resources: Потратить 200 или более ресурсов в магазине
+achievements_text_rankingintop3: Будьте в тройке лучших в рейтинге
+achievements_text_goodkd: Имейте очки выше, чем 5.0
+achievements_text_highplaytime: Поиграйте как минимум 5 часов
+achievements_text_writeggatend: Напишите 'GG' в конце игры
+achievements_text_winwithoutbed: Выиграть с разрушенной кроватью
+achievements_text_die10secsafterbeddestruction: Умереть через 10 секунд после уничтожения
+  кровати
+achievements_text_optaineveryachievement: Оптимизировать каждое достижение
+achievements_text_useinvispotion: Выпить зелье невидимости
+achievements_text_usefireball: Используйте огненный шар один раз
+
+
+###########################
+## Shop
+###########################
+shop_buygroup_buy_lowertier: '&cУ вас уже есть элемент более высокого уровня'
+shop_player_not_in_running_arena: '&cВы не на запущенной арене!'
+shop_price: 'Цена: &7{number} {spawnercolor}{spawnertype}'
+shop_page_block: Блок
+shop_page_food: Еда
+shop_page_armor: Броня
+shop_page_sword: Меч
+shop_page_bow: Лук
+shop_page_pickaxe: Кирка
+shop_page_potion: Зелье
+shop_page_special: Специальное
+shop_page_extra: Дополнительное
+shop_item_hardenedclay: Терракота
+shop_item_endstone: Эндерняк
+shop_item_chest: Сундук
+shop_item_enderchest: Эндер-сундук
+shop_item_ladder: Лестница
+shop_item_web: Паутина
+shop_item_apple: Яблоко
+shop_item_grilledpork: Жаренная свинина
+shop_item_cake: Торт
+shop_item_goldenapple: Золотое яблоко
+shop_item_leatherhelmet: Кожаный шлем
+shop_item_leatherleggings: Кожаные поножи
+shop_item_leatherboots: Кожаные ботинки
+shop_item_chainmailchestplatelvl1: Кольчужный нагрудник &71 уровня
+shop_item_chainmailchestplatelvl2: Кольчужный нагрудник &72 уровня
+shop_item_chainmailchestplatelvl3: Кольчужный нагрудник &73 уровня
+shop_item_knockbackstick: Откидывающая палка
+shop_item_swordlvl1: Меч &71 уровня
+shop_item_swordlvl2: Меч &72 уровня
+shop_item_swordlvl3: Меч &73 уровня
+shop_item_bowlvl1: Лук &71 уровня
+shop_item_bowlvl2: Лук &72 уровня
+shop_item_bowlvl3: Лук &73 уровня
+shop_item_arrow: Стрела
+shop_item_pickaxelvl1: Кирка &71 уровня
+shop_item_pickaxelvl2: Кирка &72 уровня
+shop_item_pickaxelvl3: Кирка &73 уровня
+shop_item_potionswiftness: Зелья скорости
+shop_item_potionregeneration: Зелье регенерации
+shop_item_potionhealing: Зелье лечения
+shop_item_potionstrength: Зелье силы
+shop_item_enderpearl: Эндерперл
+shop_item_teleporter: Телепортер
+shop_item_minishop: Мини-магазин
+shop_item_rescueplatform: Спасательная платформа
+shop_item_tntsheep: Овца с динамитом
+shop_item_magnetshoes: Магнитные ботинки
+shop_item_trap: Ловушка
+shop_item_bridge: Мост
+shop_item_guarddog: Пёс-Охранник
+shop_item_tracker: Трекер
+shop_item_fishingrod: Удочка
+shop_item_snowball: Снежок
+shop_item_fireball: Огненный шар
+shop_item_magicmilk: Волшебное молоко
+shop_item_tnt: Динамит
+
+
+###########################
+## Upgrade Shop
+###########################
+upgradeshop: Магазин улучшений
+upgradeshop_buy_upgrade_broadcast: '&e{player} улучшил &6&e{upgrade}&e до &6УРОВНЯ
+  {newlvl}'
+upgradeshop_buy_trap_broadcast: '&e{player} purchased &6{upgrade}'
+upgradeshop_toofew_materials: '&cУ вас недостаточно материалов, чтобы купить это!'
+upgradeshop_max_upgrade: '&cВы уже купили это улучшение'
+upgradeshop_buystate_purchasable: '&eНажмите, чтобы приобрести!'
+upgradeshop_buystate_not_purchasable: '&cУ вас недостаточно {price-type}!'
+upgradeshop_buystate_maximum: '&aРАЗБЛОКИРОВАНО'
+upgradeshop_queuedtrap_icon:
+- '&aЛовушка #{queue-level}: {trap-name}'
+- '&7Эта ловушка активируется'
+- '&7сразу после того, как'
+- '&7враг проникает на вашу базу'
+- ' '
+- '&7Обратите внимание, что враг'
+- '&7Использует ли Волшебное Молоко, это'
+- '&7ловушка может не сработать'
+upgradeshop_unqueuedtrap_icon:
+- '&cЛовушка #{queue-level}: Ловушки нет!'
+- '&7Покупка ловушки'
+- '&7поставит его в очередь здесь. Его стоимость'
+- '&7может повыситься на основе'
+- '&7количества ловушек в очереди'
+upgradeshop_hypixel_separator:
+- '&8⬆ &7Можно купить'
+- '&8⬇ &7Очередь ловушек'
+upgradeshop_hypixel_traps_menu_button:
+- '&eПриобрести ловушку'
+- '&7Приобретенные ловушки будут'
+- '&7укзаны ниже'
+- ''
+- '&eУлучшения'
+upgradeshop_hypixel_back_button:
+- '&eВернуться к Улучшениям'
+- '&7Вернуться к просмотру улучшений'
+- '&7и очередь ловушек'
+- ''
+- '&eНажмите, чтобы вернуться!'
+upgradeshop_name_protection: Защита Брони
+upgradeshop_description_protection: Повышает бронезащиту
+upgradeshop_name_featherfall: Feather Fall
+upgradeshop_description_featherfall: Gain less fall damage
+upgradeshop_name_haste: Спешка
+upgradeshop_description_haste: Все игроки в вашей команде постоянно получают спешку
+upgradeshop_name_healrange: Место лечения
+upgradeshop_description_healrange: Лечит вас на вашей базе
+upgradeshop_name_sworddamage: Острота
+upgradeshop_description_sworddamage: Увеличивает урон, наносимый мечом
+upgradeshop_name_spawnermultiplier: Множитель ресурсов
+upgradeshop_description_spawnermultiplier: Увеличивает скорость появления ресурсов
+upgradeshop_name_enemyalarmtrap: Сигнальная ловушка
+upgradeshop_description_enemyalarmtrap: Снимает невидимость c проникающего игрока
+upgradeshop_name_counteroffensivetrap: Ловушка для контр-атаки
+upgradeshop_description_counteroffensivetrap: Дает всем членам команды Скорость II
+  и Прыгучесть II на 15 секунд
+upgradeshop_name_enemyminingfatigue: Усталость
+upgradeshop_description_enemyminingfatigue: Снижает скорость разрушения блоков для
+  врагов на вашей базе
+upgradeshop_name_enemytrap: Ловушка
+upgradeshop_description_enemytrap: Даёт атакующему эффект слепоты и медлительности
+upgradeshop_trapremove_lore: '&eRight Click to remove! &8(No refund)'
+upgradeshop_trapremove: '&eRemoved &6{trap} &efrom the queue'
+
+
+###########################
+## Custom
+###########################
+mustserverjoinfromhub: '&cYou must join an arena from the hub'
+arena_joinissue_votingparticipating: '&cВозможно, вы не присоединитесь к этой арене
+  прямо сейчас. Это часть активного избирательного пула'
+rejoin_failed_notparticipating: '&6You еще не участвовал ни в одном матче'

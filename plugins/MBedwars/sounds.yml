@@ -1,0 +1,473 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww16
+#########################
+
+countdown-counting:
+  name: ITEM.FLINTANDSTEEL.USE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+countdown-donecounting:
+  name: ENTITY.PLAYER.LEVELUP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+bed-destroy:
+  name: ENTITY.WITHER.DEATH
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+bed-destroy-enemy:
+  name: ENTITY.WITHER.DEATH
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+team-eliminated:
+  name: ENTITY.ENDER_DRAGON.HURT
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+setupgui-click-switch:
+  name: UI.BUTTON.CLICK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.2
+  pitch: 1.7
+
+setupgui-click-primary:
+  name: ENTITY.CHICKEN.EGG
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 0.5
+  pitch: 2.0
+
+setupgui-click-previous:
+  name: BLOCK.WOOL.BREAK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+setupgui-click-create:
+  name: ENTITY.PLAYER.LEVELUP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 0.3
+  pitch: 1.4
+
+setupgui-click-destroy:
+  name: ENTITY.ITEM.BREAK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 0.7
+
+setupgui-success:
+  name: BLOCK.NOTE_BLOCK.SNARE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 0.8
+  pitch: 2.0
+
+setupgui-failure:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 0.7
+
+setuptool-activate:
+  name: BLOCK.WOODEN_DOOR.OPEN
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 0.7
+  pitch: 1.4
+
+setuptool-deactivate:
+  name: BLOCK.WOODEN_DOOR.CLOSE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 0.7
+  pitch: 1.3
+
+villagershop-open:
+  name: UI.BUTTON.CLICK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+villagershop-click-page:
+  name: UI.BUTTON.CLICK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.05
+
+villagershop-buyfail-onetimepurchase:
+  name: BLOCK.NOTE_BLOCK.BASEDRUM
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+villagershop-buyfail-toofewmaterials:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+villagershop-buyfail-no-inventory-space:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+villagershop-buyfail-insufficient-permissions:
+  name: BLOCK.NOTE_BLOCK.HARP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+villagershop-buyfail-buygroup:
+  name: BLOCK.NOTE_BLOCK.BASEDRUM
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+villagershop-buyfail-not-in-running-arena:
+  name: BLOCK.NOTE_BLOCK.BASEDRUM
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+villagershop-buysuccess:
+  name: ENTITY.ITEM.PICKUP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+upgradeshop-open:
+  name: UI.BUTTON.CLICK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+upgradeshop-buyfail-toofewmaterials:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+upgradeshop-buyfail-maxlevel:
+  name: BLOCK.NOTE_BLOCK.BASEDRUM
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+upgradeshop-buysuccess:
+  name: ENTITY.ITEM.PICKUP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+spectator-leave:
+  name: ENTITY.CHICKEN.EGG
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+spectator-border:
+  name: BLOCK.NOTE_BLOCK.BASEDRUM
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+spectator-teleport-open:
+  name: ENTITY.HORSE.BREATHE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+spectator-teleport-use:
+  name: ITEM.FIRECHARGE.USE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+spectator-change-speed:
+  name: ENTITY.HORSE.SADDLE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+spectator-change-arena:
+  name: BLOCK.PORTAL.TRIGGER
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+spectator-change-arena-fail:
+  name: ENTITY.HORSE.JUMP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+extraitem-teleporter-use:
+  name: ENTITY.CHICKEN.EGG
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+extraitem-tntsheep-fuse:
+  name: ENTITY.TNT.PRIMED
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+extraitem-minishop-use:
+  name: ENTITY.EXPERIENCE_ORB.PICKUP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+extraitem-rescueplatform-use:
+  name: BLOCK.LAVA.EXTINGUISH
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+extraitem-rescueplatform-autobreak:
+  name: BLOCK.SLIME_BLOCK.BREAK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+extraitem-fireball-use:
+  name: ITEM.FIRECHARGE.USE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-leave:
+  name: ENTITY.CHICKEN.EGG
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+lobby-achievements-open:
+  name: ENTITY.CHICKEN.EGG
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-achievements-click:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+lobby-forcestart:
+  name: ENTITY.CAT.HISS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-selectteam-open:
+  name: ENTITY.FIREWORK_ROCKET.BLAST
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+lobby-selectteam-select:
+  name: ENTITY.SHEEP.AMBIENT
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+lobby-selectteam-undo:
+  name: ENTITY.HORSE.JUMP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 0.7
+
+lobby-selectteam-alreadyselected:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-selectteam-full:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-votearena-open:
+  name: ENTITY.FIREWORK_ROCKET.BLAST
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-votearena-vote:
+  name: ENTITY.PLAYER.LEVELUP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+lobby-votearena-alreadyvoted:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-votearena-notvoteable:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+lobby-outofmap:
+  name: ENTITY.CAT.HISS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+achievement-get:
+  name: ENTITY.PLAYER.LEVELUP
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+playerdeath-effect:
+  name: BLOCK.LAVA.EXTINGUISH
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 0.6
+  pitch: 1.0
+
+trap-cause:
+  name: ENTITY.ITEM.BREAK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+trap-owner:
+  name: ENTITY.GHAST.WARN
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+bridge-build:
+  name: BLOCK.STONE.BREAK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+teleporter-counting:
+  name: BLOCK.NOTE_BLOCK.BELL
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 2.0
+
+entity-villager-death:
+  name: ENTITY.VILLAGER.DEATH
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+entity-player-hurt:
+  name: ENTITY.PLAYER.HURT
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+entity-player-death:
+  name: ENTITY.PLAYER.DEATH
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+entity-armor-stand-hit:
+  name: ENTITY.ARMOR_STAND.HIT
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+entity-armor-stand-break:
+  name: ENTITY.ARMOR_STAND.BREAK
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+timer-ending:
+  name: BLOCK.NOTE_BLOCK.BASS
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 1.0
+
+fireball-out-of-bounds:
+  name: ENTITY.GENERIC.EXPLODE
+  is-active: true
+  is-custom-resourcepack: false
+  volume: 1.0
+  pitch: 0.7
+

@@ -1,0 +1,60 @@
+bedwars:rage_quit:
+  enabled: true
+bedwars:win_round:
+  enabled: true
+bedwars:lose_round:
+  enabled: true
+bedwars:own_bed_destroyed:
+  enabled: true
+bedwars:op_bow:
+  enabled: true
+bedwars:use_rescue_platform:
+  enabled: true
+bedwars:use_enderpearl:
+  enabled: true
+bedwars:use_minishop:
+  enabled: true
+bedwars:use_fireball:
+  enabled: true
+bedwars:use_invis_potion:
+  enabled: true
+bedwars:use_guarddog:
+  enabled: true
+bedwars:kill_with_bow:
+  enabled: true
+bedwars:win_within_time:
+  enabled: true
+bedwars:kill_with_half_heart:
+  enabled: true
+bedwars:win_100_rounds:
+  enabled: true
+bedwars:use_bridge:
+  enabled: true
+bedwars:use_magnet_shoes:
+  enabled: true
+bedwars:use_teleporter:
+  enabled: true
+bedwars:use_tntsheep:
+  enabled: true
+bedwars:use_tracker:
+  enabled: true
+bedwars:place_trap:
+  enabled: true
+bedwars:walk_over_trap:
+  enabled: true
+bedwars:spend_200_resources:
+  enabled: true
+bedwars:ranking_top_3:
+  enabled: true
+bedwars:good_kd:
+  enabled: true
+bedwars:high_play_time:
+  enabled: true
+bedwars:write_gg_endlobby:
+  enabled: true
+bedwars:win_without_bed:
+  enabled: true
+bedwars:die_10secs_bed_destructed:
+  enabled: true
+bedwars:obtain_every_achievement:
+  enabled: true

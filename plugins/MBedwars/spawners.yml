@@ -1,0 +1,62 @@
+#########################
+## Visit the wiki page for further info: https://s.marcely.de/mbww2
+#########################
+
+iron: # The id of the spawner. Used for storing them. Do not change it after going to production with it!
+  name: '&7%Spawner_Iron%' # The name that will be displayed. %<entry>% will be taken from the messages file
+  plural-name: "&7%Spawner_Iron_Plural%" # The plural name (for 2+ items) that will be displayed. %<entry>% will be taken from the messages file
+  icon: iron_ingot # The icon that'll be displayed in e.g. the shop
+  dropping-materials: # The materials which get dropped with this spawner
+    - iron_ingot
+  spawn-delay: 1.5 # The period in seconds until it spawns something
+  spawn-radius: 0 # Will spawn it somewhere randomly in this radius
+  merging: false # Spigot automatically merges items for performance reasons. Setting this to false disables this if there aren't too many lying around
+  tranquil: false # true: Items don't get "pushed" away randomly once they spawn
+  max-nearby-items: 40 # After how many items it'll stop spawning any further until they get picked up
+  spawn-at-start: 2 # How many items should be spawned at the start of the round
+
+gold:
+  name: '&6%Spawner_Gold%'
+  plural-name: "&6%Spawner_Gold_Plural%"
+  icon: gold_ingot
+  dropping-materials:
+    - gold_ingot
+  spawn-delay: 6.0
+  spawn-radius: 0
+  merging: false
+  tranquil: false
+  max-nearby-items: 8
+  spawn-at-start: 0
+
+diamond:
+  name: '&b%Spawner_Diamond%'
+  plural-name: "&b%Spawner_Diamond_Plural%"
+  icon: diamond
+  dropping-materials:
+    - diamond
+  hologram: diamond_block
+  spawn-delay: 30.0
+  spawn-effect: MOBSPAWNER_FLAMES
+  spawn-radius: 0
+  merging: true
+  tranquil: true
+  max-nearby-items: 4
+  spawn-at-start: 0
+
+emerald:
+  name: '&a%Spawner_Emerald%'
+  plural-name: "&a%Spawner_Emerald_Plural%"
+  icon: emerald
+  dropping-materials:
+    - emerald
+  hologram: emerald_block
+  spawn-delay: 50.0
+  spawn-effect: MOBSPAWNER_FLAMES
+  spawn-radius: 0
+  merging: true
+  tranquil: true
+  max-nearby-items: 4
+  spawn-at-start: 0
+
+# You're able to add custom spawners by simply copy & pasting the existing ones
+# Only make sure that there aren't multiple spawners with the same id

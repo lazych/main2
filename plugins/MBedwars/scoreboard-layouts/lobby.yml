@@ -1,0 +1,50 @@
+# ======= LOBBY SCOREBOARD =======
+#
+# Placeholders for every config:
+#      {arena}, {players}, {maxplayers}, {teams}, {maxplayersinteam}, {date},
+#      {bedstate}, {team}, {teamcolor}, {ip}, {teamsleft}, {stats:rank}, {stats:wins},
+#      {stats:bedsdestroyed}, {stats:roundsplayed}, {stats:playtime}, {stats:kd},
+#      {stats:wl}, {stats:loses}, {stats:kills}, {stats:deaths}, {server:onlineplayers},
+#       {plugin:version}
+#      INGAME BOARD ONLY:
+#      {gstats:kills}, {gstats:deaths}, {gstats:bedsdestroyed} {gstats:kd}
+#
+# Extra placeholders for title config:
+#      {countdown}, {running-time}
+#
+# Extra placeholders for eachteam config:
+#      {color}, {name}, {playersinteam}, {heart}, {firstletter}, {team-indicator}
+
+
+# Set if this scoreboard should be displayed or not
+enabled: true
+
+# The default scoreboard layout for this scoreboard type
+default:
+  title: '&3   Bedwars &7- &a&lLobby   &r'
+  top-lines:
+  - ''
+  - '&7» &3%Scoreboard_Arena%'
+  - '&a %Scoreboard_ArenaName% &b{arena}'
+  - '&a %Scoreboard_ArenaMode% &b{teams}x{maxplayersinteam}'
+  - '&a %Scoreboard_Players% &b{players}/{maxplayers}'
+  bottom-lines:
+  - ''
+  - '&7» &3%Scoreboard_Stats%'
+  - '&a %Stat_Default_Rank% &b#{stats:rank}'
+  - '&a %Stat_Default_Kills% &b{stats:kills}'
+  - '&a %Stat_Default_Deaths% &b{stats:deaths}'
+  - ''
+  - '&7{ip}'
+
+
+# Here you can add scoreboards that may override the default board in certain arenas
+overriding-boards:
+  '[teams=100]':
+    title: ExampleOverrideLayout
+    top-lines:
+    - Top Lines
+    each-team: ''
+    bottom-lines:
+    - Bottom Lines
+

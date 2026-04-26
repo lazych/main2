@@ -113,10 +113,10 @@ jobs:
         if [ ! -d "minecraft-data/world" ] || [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
           echo "World directory is empty, attempting restore from repository..."
 
-          # Restore world directly from repo's server-data/world/ directory
-          if [ -d "server-data/world" ] && [ -n "$(ls -A server-data/world 2>/dev/null)" ]; then
-            echo "Restoring world from server-data/world/..."
-            cp -r server-data/world/* minecraft-data/world/
+          # Restore world directly from repo's world/ directory
+          if [ -d "world" ] && [ -n "$(ls -A world 2>/dev/null)" ]; then
+            echo "Restoring world from world/..."
+            cp -r world/* minecraft-data/world/
             echo "World restored from repository"
           else
             echo "No world data found in repository"
@@ -330,9 +330,9 @@ jobs:
         # Save world data
         if [ -d "minecraft-data/world" ] && [ -n "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
           echo "Saving world data..."
-          mkdir -p server-data/world
-          rm -rf server-data/world/*
-          cp -r minecraft-data/world/* server-data/world/
+          mkdir -p world
+          rm -rf world/*
+          cp -r minecraft-data/world/* world/
         fi
         
         # Save server configs to repo root
@@ -348,15 +348,8 @@ jobs:
           cp -r minecraft-data/plugins/* plugins/ 2>/dev/null || true
         fi
         
-        # Save player data
-        if [ -d "minecraft-data/world/playerdata" ]; then
-          echo "Saving player data..."
-          mkdir -p server-data/playerdata
-          cp -r minecraft-data/world/playerdata/* server-data/playerdata/ 2>/dev/null || true
-        fi
-        
         # Add everything to git
-        git add -A server-data/ plugins/ server.properties ops.json whitelist.json banned-players.json banned-ips.json 2>/dev/null || true
+        git add -A world/ plugins/ server.properties ops.json whitelist.json banned-players.json banned-ips.json 2>/dev/null || true
         
         # Commit changes
         git diff --staged --quiet || git commit -m "Server data saved - $(date +'%Y-%m-%d %H:%M:%S')"

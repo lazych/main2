@@ -107,23 +107,22 @@ jobs:
           mkdir -p minecraft-data/plugins
         fi
         
-    - name: Restore world from repository (if cache empty)
+    - name: Restore worlds from repository (if cache empty)
       run: |
-        echo "Checking if world needs to be restored from repository..."
-        if [ ! -d "minecraft-data/world" ] || [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
-          echo "World directory is empty, attempting restore from repository..."
-
-          # Restore world directly from repo's world/ directory
-          if [ -d "world" ] && [ -n "$(ls -A world 2>/dev/null)" ]; then
-            echo "Restoring world from world/..."
-            cp -r world/* minecraft-data/world/
-            echo "World restored from repository"
-          else
-            echo "No world data found in repository"
+        echo "Checking if worlds need to be restored from repository..."
+        # Restore all world directories (world, world_nether, world_the_end, custom worlds)
+        for WORLD_DIR in world*/; do
+          if [ -d "$WORLD_DIR" ] && [ -n "$(ls -A "$WORLD_DIR" 2>/dev/null)" ]; then
+            if [ ! -d "minecraft-data/$WORLD_DIR" ] || [ -z "$(ls -A "minecraft-data/$WORLD_DIR" 2>/dev/null)" ]; then
+              echo "Restoring $WORLD_DIR from repository..."
+              mkdir -p "minecraft-data/$WORLD_DIR"
+              cp -r "$WORLD_DIR"* "minecraft-data/$WORLD_DIR"
+              echo "$WORLD_DIR restored"
+            else
+              echo "$WORLD_DIR already exists in cache, skipping"
+            fi
           fi
-        else
-          echo "World directory exists, skipping restore"
-        fi
+        done
         
     - name: Copy plugins from repository (COMPLETE)
       run: |
@@ -327,13 +326,16 @@ jobs:
         
         # --- Copy server files directly to repo ---
         
-        # Save world data
-        if [ -d "minecraft-data/world" ] && [ -n "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
-          echo "Saving world data..."
-          mkdir -p world
-          rm -rf world/*
-          cp -r minecraft-data/world/* world/
-        fi
+        # Save all world directories (world, world_nether, world_the_end, custom worlds)
+        for WORLD_DIR in minecraft-data/world*/; do
+          if [ -d "$WORLD_DIR" ] && [ -n "$(ls -A "$WORLD_DIR" 2>/dev/null)" ]; then
+            WORLD_NAME=$(basename "$WORLD_DIR")
+            echo "Saving $WORLD_NAME..."
+            mkdir -p "$WORLD_NAME"
+            rm -rf "$WORLD_NAME"/*
+            cp -r "$WORLD_DIR"* "$WORLD_NAME/"
+          fi
+        done
         
         # Save server configs to repo root
         cp minecraft-data/server.properties server.properties 2>/dev/null || true
@@ -348,8 +350,8 @@ jobs:
           cp -r minecraft-data/plugins/* plugins/ 2>/dev/null || true
         fi
         
-        # Add everything to git
-        git add -A world/ plugins/ server.properties ops.json whitelist.json banned-players.json banned-ips.json 2>/dev/null || true
+        # Add everything to git (world* catches all world dirs)
+        git add -A world*/ plugins/ server.properties ops.json whitelist.json banned-players.json banned-ips.json 2>/dev/null || true
         
         # Commit changes
         git diff --staged --quiet || git commit -m "Server data saved - $(date +'%Y-%m-%d %H:%M:%S')"

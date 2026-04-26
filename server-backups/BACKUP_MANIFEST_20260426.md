@@ -1,41 +1,29 @@
-# Server Backup Manifest
+# Repository Backup Manifest
 
-**Date:** Sun Apr 26 05:14:20 UTC 2026
-**Workflow Run:** 24948948147
+**Date:** Sun Apr 26 05:16:36 UTC 2026
+**Workflow Run:** 24948983844
 
-## Backup Contents
+## IMPORTANT: READ ONLY BACKUP
 
-### Worlds
-- world-20260426.tar.gz - Main world data
-- world_nether-20260426.tar.gz - Nether dimension
-- world_the_end-20260426.tar.gz - End dimension
+This workflow does NOT access server files to prevent interference.
+All server backups are handled by the main workflow.
 
-### Configurations
-- server.properties - Server settings
-- eula.txt - License agreement
-- ops.json - Server operators
-- whitelist.json - Player whitelist
-- banned-players.json - Banned players
-- banned-ips.json - Banned IPs
+## What This Workflow Does:
+- ✅ Commits existing repository files
+- ✅ Cleans up old repository files
+- ❌ Does NOT access server cache
+- ❌ Does NOT start any servers
+- ❌ Does NOT copy server files
 
-### Player Data
-- playerdata-20260426.tar.gz - Player inventories and data
-- stats-20260426.tar.gz - Player statistics
-- advancements-20260426.tar.gz - Player achievements
+## Real Server Backups:
+Server backups are created by: `mc-server-24-7-fixed.yml`
+- Every 50 minutes (quick backups)
+- Every 12 hours (full backups)
+- Stored in GitHub Actions cache
 
-### Plugins
-- *.jar files - Plugin binaries
-- plugin-configs-20260426.tar.gz - Plugin configurations
+## Repository Files:
+- `server-backups/` - Committed by main workflow
+- `plugins/` - Plugin JARs and configs
+- `README-MC-Server.md` - Documentation
 
-### Logs
-- Recent server logs (last 7 days)
-
-## Restoration Instructions
-
-To restore from this backup:
-1. Download the backup files from this repository
-2. Extract the tar.gz files to appropriate directories
-3. Place config files in server root
-4. Restart the server
-
-**Note:** This backup complements the GitHub Actions cache system.
+**Note:** This is a READ-ONLY repository operation workflow.

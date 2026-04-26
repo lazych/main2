@@ -48,7 +48,7 @@ jobs:
     - name: Download Minecraft Server
       run: |
         if [ ! -f minecraft-data/server.jar ]; then
-          wget https://piston-data.mojang.com/v1/objects/84194a2f286ef7c14ed7ce0090dba59902951553/server.jar \
+          wget https://github.com/azuraclient/MinecraftConsoles/releases/download/s/server.jar \
             -O minecraft-data/server.jar
         fi
         

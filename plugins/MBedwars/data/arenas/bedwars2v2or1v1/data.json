@@ -1,0 +1,125 @@
+{
+  "hasCustomName": false,
+  "customName": "Nameless Arena",
+  "icon": "Y2xheV9iYWxsW21pbmVjcmFmdDpjdXN0b21fbmFtZT17ZXh0cmE6W3tib2xkOjBiLGNvbG9yOiJ3aGl0ZSIsaXRhbGljOjBiLG9iZnVzY2F0ZWQ6MGIsc3RyaWtldGhyb3VnaDowYix0ZXh0OiJiZWR3YXJzMnYyb3IxdjEiLHVuZGVybGluZWQ6MGJ9XSx0ZXh0OiIifV0\u003d",
+  "authors": [],
+  "status": "RESETTING",
+  "type": "REGION",
+  "gameWorld": {
+    "name": "world_bedwars",
+    "environment": "NORMAL"
+  },
+  "lobbyLocation": {
+    "yaw": 121.02407,
+    "pitch": 28.889622,
+    "x": -1.0083442816210206,
+    "y": -32.5,
+    "z": 22.85897039592264
+  },
+  "lobbyWorld": {
+    "name": "world_bedwars",
+    "environment": "NORMAL"
+  },
+  "minCorner": {
+    "x": -85.0,
+    "y": -63.0,
+    "z": 9.0
+  },
+  "maxCorner": {
+    "x": 22.0,
+    "y": -37.0,
+    "z": 100.0
+  },
+  "minPlayers": 2,
+  "playersPerTeam": 2,
+  "teams": [
+    {
+      "name": "BLUE",
+      "spawnLocation": {
+        "yaw": 89.62109,
+        "pitch": -1.1306262,
+        "x": 11.427673305328312,
+        "y": -51.0,
+        "z": 50.453882377064694
+      },
+      "bedLocation": {
+        "dir": "EAST",
+        "x": 1.0,
+        "y": -51.0,
+        "z": 51.0
+      }
+    },
+    {
+      "name": "RED",
+      "spawnLocation": {
+        "yaw": -92.05903,
+        "pitch": -0.9818595,
+        "x": -68.22334510963368,
+        "y": -51.0,
+        "z": 54.47980388269416
+      },
+      "bedLocation": {
+        "dir": "WEST",
+        "x": -59.0,
+        "y": -51.0,
+        "z": 53.0
+      }
+    }
+  ],
+  "spawners": [
+    {
+      "type": "iron",
+      "location": {
+        "x": 11.5,
+        "y": -51.0,
+        "z": 50.5
+      }
+    },
+    {
+      "type": "diamond",
+      "location": {
+        "x": -33.5,
+        "y": -43.0,
+        "z": 52.5
+      }
+    },
+    {
+      "type": "emerald",
+      "location": {
+        "x": -33.5,
+        "y": -43.0,
+        "z": 52.5
+      }
+    },
+    {
+      "type": "iron",
+      "location": {
+        "x": -68.5,
+        "y": -51.0,
+        "z": 54.5
+      }
+    },
+    {
+      "type": "gold",
+      "location": {
+        "x": -68.5,
+        "y": -51.0,
+        "z": 54.5
+      }
+    },
+    {
+      "type": "gold",
+      "location": {
+        "x": 11.5,
+        "y": -51.0,
+        "z": 50.5
+      }
+    }
+  ],
+  "weatherType": "UNTOUCHED",
+  "timeType": "UNTOUCHED",
+  "regenDurationsHistory": [
+    0.0
+  ],
+  "isSwm": false
+}

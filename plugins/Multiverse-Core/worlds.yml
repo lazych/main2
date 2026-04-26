@@ -15,10 +15,10 @@ world:
     amount: 0.0
     currency: '@vault-economy'
   environment: normal
-  gamemode: survival
+  gamemode: adventure
   generator: ''
   hidden: false
-  hunger: true
+  hunger: false
   keep-spawn-in-memory: false
   player-limit: -1
   portal-form: all
@@ -28,11 +28,11 @@ world:
   seed: -8306606133162259919
   spawn-location:
     ==: MVSpawnLocation
-    x: 16.0
-    y: 72.0
-    z: 176.0
-    pitch: 0.0
-    yaw: 0.0
+    x: 52.81360658833306
+    y: 64.0
+    z: 577.9356877297853
+    pitch: -2.0495467
+    yaw: -91.90676
   spawning:
     monster:
       spawn: true

@@ -1,4 +1,4 @@
-name: Backup Server Data to Repository
+name: 📁 Backup Files to Repository (NO SERVER)
 
 on:
   workflow_dispatch:
@@ -18,21 +18,8 @@ jobs:
       with:
         token: ${{ secrets.PAT_TOKEN }}
         
-    - name: Setup Java
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '21'
-        
-    - name: Restore server cache
-      uses: actions/cache@v4
-      with:
-        path: |
-          minecraft-data
-          craftip-logs
-        key: mc-server-${{ github.run_id }}
-        restore-keys: |
-          mc-server-
+    # NO Java setup needed - we're just copying files!
+# NO cache restore - use repository backups only
           
     - name: Create backup directories
       run: |
@@ -54,135 +41,80 @@ jobs:
     - name: Quick backup (every 50 minutes)
       if: steps.backup_type.outputs.type == 'quick'
       run: |
-        echo "Performing quick backup..."
-        # Find and backup the latest quick backup
-        LATEST_QUICK=$(find minecraft-data/backups -name "quick-*" -type d | sort -r | head -1)
-        if [ -n "$LATEST_QUICK" ]; then
-          echo "Found quick backup: $LATEST_QUICK"
-          
-          # Copy quick backup to repository
-          cp -r "$LATEST_QUICK" server-backups/quick-backups/
-          
-          # Commit quick backup
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add server-backups/quick-backups/
-          git diff --staged --quiet || git commit -m "⚡ Quick backup - $(date +%Y-%m-%d %H:%M)"
-          git push
-          
-          echo "Quick backup committed to repository"
-        else
-          echo "No quick backup found"
-        fi
+        echo "Quick backup disabled - only repository commits"
+        echo "Quick backups are handled by main workflow"
+        echo "This workflow only handles repository commits"
+        echo "NO server files accessed - READ ONLY"
         
     - name: Backup world data
       if: steps.backup_type.outputs.type == 'full'
       run: |
-        echo "Backing up world data..."
-        if [ -d "minecraft-data/world" ]; then
-          # Create compressed world backup
-          tar -czf "server-backups/worlds/world-$(date +%Y%m%d).tar.gz" -C minecraft-data world/
-          echo "World backup created: world-$(date +%Y%m%d).tar.gz"
-        fi
-        
-        if [ -d "minecraft-data/world_nether" ]; then
-          tar -czf "server-backups/worlds/world_nether-$(date +%Y%m%d).tar.gz" -C minecraft-data world_nether/
-        fi
-        
-        if [ -d "minecraft-data/world_the_end" ]; then
-          tar -czf "server-backups/worlds/world_the_end-$(date +%Y%m%d).tar.gz" -C minecraft-data world_the_end/
-        fi
+        echo "World backup DISABLED - prevents server interference"
+        echo "World data is backed up by main workflow"
+        echo "This workflow only commits existing repository files"
+        echo "NO server access - READ ONLY REPOSITORY OPERATIONS"
         
     - name: Backup server configurations
       run: |
-        echo "Backing up server configurations..."
-        # Copy essential config files
-        cp minecraft-data/server.properties server-backups/configs/ 2>/dev/null || true
-        cp minecraft-data/eula.txt server-backups/configs/ 2>/dev/null || true
-        cp minecraft-data/ops.json server-backups/configs/ 2>/dev/null || true
-        cp minecraft-data/whitelist.json server-backups/configs/ 2>/dev/null || true
-        cp minecraft-data/banned-players.json server-backups/configs/ 2>/dev/null || true
-        cp minecraft-data/banned-ips.json server-backups/configs/ 2>/dev/null || true
+        echo "Config backup DISABLED - prevents server interference"
+        echo "Config files are backed up by main workflow"
+        echo "This workflow only commits existing repository files"
+        echo "NO server access - READ ONLY REPOSITORY OPERATIONS"
         
     - name: Backup player data
       run: |
-        echo "Backing up player data..."
-        if [ -d "minecraft-data/playerdata" ]; then
-          tar -czf "server-backups/playerdata/playerdata-$(date +%Y%m%d).tar.gz" -C minecraft-data playerdata/
-        fi
-        
-        if [ -d "minecraft-data/stats" ]; then
-          tar -czf "server-backups/playerdata/stats-$(date +%Y%m%d).tar.gz" -C minecraft-data stats/
-        fi
-        
-        if [ -d "minecraft-data/advancements" ]; then
-          tar -czf "server-backups/playerdata/advancements-$(date +%Y%m%d).tar.gz" -C minecraft-data advancements/
-        fi
+        echo "Player data backup DISABLED - prevents server interference"
+        echo "Player data is backed up by main workflow"
+        echo "This workflow only commits existing repository files"
+        echo "NO server access - READ ONLY REPOSITORY OPERATIONS"
         
     - name: Backup plugins and configs
       run: |
-        echo "Backing up plugins..."
-        if [ -d "minecraft-data/plugins" ]; then
-          # Backup plugin JARs
-          cp minecraft-data/plugins/*.jar server-backups/plugins/ 2>/dev/null || true
-          
-          # Backup plugin configurations
-          tar -czf "server-backups/plugins/plugin-configs-$(date +%Y%m%d).tar.gz" -C minecraft-data/plugins/ --exclude="*.jar" .
-        fi
+        echo "Plugin backup DISABLED - prevents server interference"
+        echo "Plugin data is backed up by main workflow"
+        echo "This workflow only commits existing repository files"
+        echo "NO server access - READ ONLY REPOSITORY OPERATIONS"
         
     - name: Backup recent logs
       run: |
-        echo "Backing up recent logs..."
-        if [ -d "minecraft-data/logs" ]; then
-          # Only backup recent logs to save space
-          find minecraft-data/logs -name "*.log" -mtime -7 -exec cp {} server-backups/logs/ \;
-        fi
+        echo "Log backup DISABLED - prevents server interference"
+        echo "Log data is backed up by main workflow"
+        echo "This workflow only commits existing repository files"
+        echo "NO server access - READ ONLY REPOSITORY OPERATIONS"
         
     - name: Create backup manifest
       run: |
         echo "Creating backup manifest..."
         cat > server-backups/BACKUP_MANIFEST_$(date +%Y%m%d).md << EOF
-        # Server Backup Manifest
+        # Repository Backup Manifest
         
         **Date:** $(date)
         **Workflow Run:** ${{ github.run_id }}
         
-        ## Backup Contents
+        ## IMPORTANT: READ ONLY BACKUP
         
-        ### Worlds
-        - world-$(date +%Y%m%d).tar.gz - Main world data
-        - world_nether-$(date +%Y%m%d).tar.gz - Nether dimension
-        - world_the_end-$(date +%Y%m%d).tar.gz - End dimension
+        This workflow does NOT access server files to prevent interference.
+        All server backups are handled by the main workflow.
         
-        ### Configurations
-        - server.properties - Server settings
-        - eula.txt - License agreement
-        - ops.json - Server operators
-        - whitelist.json - Player whitelist
-        - banned-players.json - Banned players
-        - banned-ips.json - Banned IPs
+        ## What This Workflow Does:
+        - ✅ Commits existing repository files
+        - ✅ Cleans up old repository files
+        - ❌ Does NOT access server cache
+        - ❌ Does NOT start any servers
+        - ❌ Does NOT copy server files
         
-        ### Player Data
-        - playerdata-$(date +%Y%m%d).tar.gz - Player inventories and data
-        - stats-$(date +%Y%m%d).tar.gz - Player statistics
-        - advancements-$(date +%Y%m%d).tar.gz - Player achievements
+        ## Real Server Backups:
+        Server backups are created by: \`mc-server-24-7-fixed.yml\`
+        - Every 50 minutes (quick backups)
+        - Every 12 hours (full backups)
+        - Stored in GitHub Actions cache
         
-        ### Plugins
-        - *.jar files - Plugin binaries
-        - plugin-configs-$(date +%Y%m%d).tar.gz - Plugin configurations
+        ## Repository Files:
+        - \`server-backups/\` - Committed by main workflow
+        - \`plugins/\` - Plugin JARs and configs
+        - \`README-MC-Server.md\` - Documentation
         
-        ### Logs
-        - Recent server logs (last 7 days)
-        
-        ## Restoration Instructions
-        
-        To restore from this backup:
-        1. Download the backup files from this repository
-        2. Extract the tar.gz files to appropriate directories
-        3. Place config files in server root
-        4. Restart the server
-        
-        **Note:** This backup complements the GitHub Actions cache system.
+        **Note:** This is a READ-ONLY repository operation workflow.
         EOF
         
     - name: Commit and push backup
@@ -194,13 +126,14 @@ jobs:
         git add server-backups/
         
         # Commit changes
-        git commit -m "📦 Server backup - $(date +%Y-%m-%d)
+        git commit -m "� File backup - $(date +%Y-%m-%d)
         
-        - World data backup
-        - Player data backup
-        - Plugin configurations backup
-        - Server settings backup
+        - World files copied
+        - Config files copied  
+        - Plugin files copied
+        - Settings files copied
         
+        NOTE: This is FILE BACKUP only - no server created!
         Workflow: ${{ github.run_id }}"
         
         # Push to repository

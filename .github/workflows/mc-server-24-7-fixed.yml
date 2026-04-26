@@ -92,19 +92,18 @@ jobs:
           echo "Using cached server.properties"
         fi
         
-    - name: Initialize ops.json
+    - name: Initialize server JSON configs
       run: |
-        # Only create ops.json if it doesn't exist (preserve existing ops)
-        if [ ! -f minecraft-data/ops.json ]; then
-          echo '[]' > minecraft-data/ops.json
-        fi
-        
-    - name: Initialize whitelist.json
-      run: |
-        # Only create whitelist.json if it doesn't exist (preserve existing whitelist)
-        if [ ! -f minecraft-data/whitelist.json ]; then
-          echo '[]' > minecraft-data/whitelist.json
-        fi
+        # Copy JSON configs from repo if they exist
+        for config in ops.json whitelist.json banned-players.json banned-ips.json; do
+          if [ -f "$config" ]; then
+            echo "Using repository $config"
+            cp "$config" minecraft-data/
+          elif [ ! -f "minecraft-data/$config" ]; then
+            echo "No $config found, creating default..."
+            echo '[]' > "minecraft-data/$config"
+          fi
+        done
         
     - name: Setup plugins directory
       run: |

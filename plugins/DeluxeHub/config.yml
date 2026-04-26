@@ -145,17 +145,17 @@ announcements:
     test1:
       - "&r"
       - "&e&lANNOUNCEMENT"
-      - "&7Rate this plugin 5 stars on Spigot!"
+      - "&7I HATE CRAFT IP RANDOM IP"
       - "&r"
     test2:
       - "&r"
       - "&e&lANNOUNCEMENT"
-      - "&7This plugin was created by &eItzSave & ItsLewizzz"
+      - "&7IS AZURA, RETAARD?"
       - "&r"
     test3:
       - "&r"
       - "&e&lANNOUNCEMENT"
-      - "&7Configure these messages in the &bconfig.yml"
+      - "&7Lazy.jsx.pm Free cheats sources and methods for devs"
       - "&r"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -328,19 +328,17 @@ custom_join_items:
         - "[MESSAGE] &r"
         - "[MESSAGE] &e&lServer Information"
         - "[MESSAGE] &r"
-        - "[MESSAGE] &bWebsite: &fwww.examplemc.net"
-        - "[MESSAGE] &cStore: &fbuy.examplemc.net"
-        - "[MESSAGE] &dDiscord: &fdiscord.examplemc.net"
+        - "[MESSAGE] &fThis server is running in a github actions for free!"
         - "[MESSAGE] &r"
-    server_selector:
-      material: NETHER_STAR
-      amount: 1
-      slot: 4
-      display_name: "&eServer Selector"
-      lore:
-        - "&7Right-click to open the server selector!"
-      actions:
-        - "[MENU] serverselector"
+#    server_selector:
+#      material: NETHER_STAR
+#      amount: 1
+#      slot: 4
+#      display_name: "&eServer Selector"
+#      lore:
+#        - "&7Right-click to open the server selector!"
+#      actions:
+#        - "[MENU] serverselector"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | PLAYER HIDER                             |

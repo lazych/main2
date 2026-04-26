@@ -1,9 +1,9 @@
 {
   "hasCustomName": false,
   "customName": "Nameless Arena",
-  "icon": "Y2xheV9iYWxsW21pbmVjcmFmdDpjdXN0b21fbmFtZT17ZXh0cmE6W3tib2xkOjBiLGNvbG9yOiJ3aGl0ZSIsaXRhbGljOjBiLG9iZnVzY2F0ZWQ6MGIsc3RyaWtldGhyb3VnaDowYix0ZXh0OiJiZWR3YXJzMnYyb3IxdjEiLHVuZGVybGluZWQ6MGJ9XSx0ZXh0OiIifV0\u003d",
+  "icon": "Y2xheV9iYWxsW21pbmVjcmFmdDpjdXN0b21fbmFtZT17ZXh0cmE6W3tib2xkOjBiLGNvbG9yOiJ3aGl0ZSIsaXRhbGljOjBiLG9iZnVzY2F0ZWQ6MGIsc3RyaWtldGhyb3VnaDowYix0ZXh0OiJiZWR3YXJzMnYyb3IxdjEiLHVuZGVybGluZWQ6MGJ9XSx0ZXh0OiIifSxtaW5lY3JhZnQ6dG9vbHRpcF9kaXNwbGF5PXtoaWRkZW5fY29tcG9uZW50czpbIm1pbmVjcmFmdDplbmNoYW50bWVudHMiLCJtaW5lY3JhZnQ6YXR0cmlidXRlX21vZGlmaWVycyIsIm1pbmVjcmFmdDp1bmJyZWFrYWJsZSIsIm1pbmVjcmFmdDpjYW5fYnJlYWsiLCJtaW5lY3JhZnQ6Y2FuX3BsYWNlX29uIiwibWluZWNyYWZ0OmNvbnRhaW5lciIsIm1pbmVjcmFmdDpmaXJld29ya3MiLCJtaW5lY3JhZnQ6YmxvY2tfc3RhdGUiLCJtaW5lY3JhZnQ6d3JpdHRlbl9ib29rX2NvbnRlbnQiLCJtaW5lY3JhZnQ6Y2hhcmdlZF9wcm9qZWN0aWxlcyIsIm1pbmVjcmFmdDpibG9ja19lbnRpdHlfZGF0YSIsIm1pbmVjcmFmdDpwYWludGluZy92YXJpYW50IiwibWluZWNyYWZ0Omluc3RydW1lbnQiLCJtaW5lY3JhZnQ6anVrZWJveF9wbGF5YWJsZSIsIm1pbmVjcmFmdDpjb250YWluZXJfbG9vdCIsIm1pbmVjcmFmdDpmaXJld29ya19leHBsb3Npb24iLCJtaW5lY3JhZnQ6cG90X2RlY29yYXRpb25zIiwibWluZWNyYWZ0OnRyb3BpY2FsX2Zpc2gvcGF0dGVybiIsIm1pbmVjcmFmdDpiZWVzIiwibWluZWNyYWZ0OmJ1bmRsZV9jb250ZW50cyIsIm1pbmVjcmFmdDpwb3Rpb25fY29udGVudHMiLCJtaW5lY3JhZnQ6bWFwX2lkIiwibWluZWNyYWZ0OmJhbm5lcl9wYXR0ZXJucyIsIm1pbmVjcmFmdDpzdG9yZWRfZW5jaGFudG1lbnRzIl19XQ\u003d\u003d",
   "authors": [],
-  "status": "RESETTING",
+  "status": "LOBBY",
   "type": "REGION",
   "gameWorld": {
     "name": "world_bedwars",
@@ -34,22 +34,6 @@
   "playersPerTeam": 2,
   "teams": [
     {
-      "name": "BLUE",
-      "spawnLocation": {
-        "yaw": 89.62109,
-        "pitch": -1.1306262,
-        "x": 11.427673305328312,
-        "y": -51.0,
-        "z": 50.453882377064694
-      },
-      "bedLocation": {
-        "dir": "EAST",
-        "x": 1.0,
-        "y": -51.0,
-        "z": 51.0
-      }
-    },
-    {
       "name": "RED",
       "spawnLocation": {
         "yaw": -92.05903,
@@ -63,6 +47,22 @@
         "x": -59.0,
         "y": -51.0,
         "z": 53.0
+      }
+    },
+    {
+      "name": "BLUE",
+      "spawnLocation": {
+        "yaw": 89.62109,
+        "pitch": -1.1306262,
+        "x": 11.427673305328312,
+        "y": -51.0,
+        "z": 50.453882377064694
+      },
+      "bedLocation": {
+        "dir": "EAST",
+        "x": 1.0,
+        "y": -51.0,
+        "z": 51.0
       }
     }
   ],
@@ -119,6 +119,8 @@
   "weatherType": "UNTOUCHED",
   "timeType": "UNTOUCHED",
   "regenDurationsHistory": [
+    0.0,
+    0.001,
     0.0
   ],
   "isSwm": false

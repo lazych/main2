@@ -1,37 +1,40 @@
 {
   "stats": {
     "minecraft:picked_up": {
-      "minecraft:gold_ingot": 33,
+      "minecraft:gold_ingot": 50,
       "minecraft:blue_terracotta": 1,
-      "minecraft:diamond": 4,
-      "minecraft:emerald": 3,
-      "minecraft:iron_ingot": 130
+      "minecraft:diamond": 8,
+      "minecraft:emerald": 5,
+      "minecraft:iron_ingot": 199
     },
     "minecraft:mined": {
+      "minecraft:red_bed": 1,
       "minecraft:blue_terracotta": 1,
       "minecraft:blue_bed": 1
     },
-    "minecraft:used": {
-      "minecraft:stone_sword": 33,
-      "minecraft:stone_pickaxe": 2
-    },
     "minecraft:custom": {
-      "minecraft:time_since_rest": 10394,
-      "minecraft:walk_one_cm": 17060,
+      "minecraft:time_since_rest": 15048,
+      "minecraft:walk_one_cm": 38092,
       "minecraft:leave_game": 1,
-      "minecraft:damage_taken": 160,
-      "minecraft:damage_dealt": 927,
-      "minecraft:play_time": 11436,
-      "minecraft:jump": 65,
-      "minecraft:time_since_death": 10386,
-      "minecraft:sprint_one_cm": 13686,
-      "minecraft:fall_one_cm": 2350,
-      "minecraft:total_world_time": 11436,
-      "minecraft:fly_one_cm": 11395,
-      "minecraft:crouch_one_cm": 211,
-      "minecraft:sneak_time": 45,
-      "minecraft:deaths": 1,
-      "minecraft:player_kills": 4
+      "minecraft:damage_taken": 170,
+      "minecraft:damage_dealt": 1157,
+      "minecraft:play_time": 29395,
+      "minecraft:jump": 290,
+      "minecraft:time_since_death": 15042,
+      "minecraft:sprint_one_cm": 44215,
+      "minecraft:fall_one_cm": 10630,
+      "minecraft:total_world_time": 29395,
+      "minecraft:fly_one_cm": 64318,
+      "minecraft:walk_on_water_one_cm": 1465,
+      "minecraft:crouch_one_cm": 414,
+      "minecraft:sneak_time": 68,
+      "minecraft:deaths": 3,
+      "minecraft:player_kills": 5
+    },
+    "minecraft:used": {
+      "minecraft:stone_sword": 40,
+      "minecraft:stone_pickaxe": 2,
+      "minecraft:blue_terracotta": 100
     }
   },
   "DataVersion": 4671

@@ -1,30 +1,52 @@
 {
   "stats": {
-    "minecraft:dropped": {
-      "minecraft:rotten_flesh": 3
+    "minecraft:killed_by": {
+      "minecraft:player": 7
     },
     "minecraft:picked_up": {
       "minecraft:wooden_axe": 1,
       "minecraft:oak_fence": 2,
-      "minecraft:gold_ingot": 35,
+      "minecraft:gold_ingot": 56,
       "minecraft:emerald_block": 1,
       "minecraft:oak_planks": 64,
       "minecraft:chest": 1,
       "minecraft:decorated_pot": 1,
-      "minecraft:iron_ingot": 147,
+      "minecraft:iron_ingot": 234,
       "minecraft:quartz_slab": 1,
       "minecraft:rotten_flesh": 3,
       "minecraft:quartz_block": 1
     },
-    "minecraft:mined": {
-      "minecraft:decorated_pot": 1
-    },
-    "minecraft:killed_by": {
-      "minecraft:player": 6
-    },
     "minecraft:killed": {
       "minecraft:slime": 2,
       "minecraft:zombie": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:rotten_flesh": 3
+    },
+    "minecraft:mined": {
+      "minecraft:decorated_pot": 1
+    },
+    "minecraft:custom": {
+      "minecraft:damage_resisted": 135,
+      "minecraft:time_since_rest": 17663,
+      "minecraft:walk_one_cm": 213781,
+      "minecraft:leave_game": 7,
+      "minecraft:walk_under_water_one_cm": 300,
+      "minecraft:mob_kills": 3,
+      "minecraft:damage_taken": 2097,
+      "minecraft:play_time": 183511,
+      "minecraft:damage_dealt": 427,
+      "minecraft:jump": 506,
+      "minecraft:time_since_death": 17656,
+      "minecraft:drop": 2,
+      "minecraft:sprint_one_cm": 75769,
+      "minecraft:fall_one_cm": 7454,
+      "minecraft:total_world_time": 183511,
+      "minecraft:fly_one_cm": 824030,
+      "minecraft:walk_on_water_one_cm": 3195,
+      "minecraft:crouch_one_cm": 12277,
+      "minecraft:sneak_time": 5220,
+      "minecraft:deaths": 12
     },
     "minecraft:used": {
       "minecraft:diamond_block": 13,
@@ -77,28 +99,6 @@
       "minecraft:quartz_stairs": 145,
       "minecraft:flower_pot": 1,
       "minecraft:bedrock": 1
-    },
-    "minecraft:custom": {
-      "minecraft:damage_resisted": 135,
-      "minecraft:time_since_rest": 1228,
-      "minecraft:walk_one_cm": 201026,
-      "minecraft:leave_game": 6,
-      "minecraft:walk_under_water_one_cm": 300,
-      "minecraft:mob_kills": 3,
-      "minecraft:damage_taken": 1860,
-      "minecraft:play_time": 161328,
-      "minecraft:damage_dealt": 417,
-      "minecraft:jump": 320,
-      "minecraft:time_since_death": 1220,
-      "minecraft:drop": 2,
-      "minecraft:sprint_one_cm": 59422,
-      "minecraft:fall_one_cm": 434,
-      "minecraft:total_world_time": 161328,
-      "minecraft:fly_one_cm": 785920,
-      "minecraft:walk_on_water_one_cm": 190,
-      "minecraft:crouch_one_cm": 12277,
-      "minecraft:sneak_time": 5220,
-      "minecraft:deaths": 11
     }
   },
   "DataVersion": 4671

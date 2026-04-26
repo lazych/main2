@@ -26,7 +26,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '25'
+        java-version: '21'
         
     - name: Setup Rust
       uses: dtolnay/rust-toolchain@stable
@@ -66,7 +66,13 @@ jobs:
         if [ -f server.properties ]; then
           echo "Using repository server.properties"
           cp server.properties minecraft-data/
-        elif [ ! -f minecraft-data/server.properties ]; then
+        fi
+        if [ -f server-icon.png ]; then
+          echo "Using repository server-icon.png"
+          cp server-icon.png minecraft-data/
+        fi
+        
+        if [ ! -f minecraft-data/server.properties ]; then
           echo "No server.properties found, creating default..."
           cat > minecraft-data/server.properties << EOF
         motd=GitHub Actions Minecraft Server
@@ -339,6 +345,7 @@ jobs:
         
         # Save server configs to repo root
         cp minecraft-data/server.properties server.properties 2>/dev/null || true
+        cp minecraft-data/server-icon.png server-icon.png 2>/dev/null || true
         cp minecraft-data/ops.json ops.json 2>/dev/null || true
         cp minecraft-data/whitelist.json whitelist.json 2>/dev/null || true
         cp minecraft-data/banned-players.json banned-players.json 2>/dev/null || true
@@ -351,7 +358,7 @@ jobs:
         fi
         
         # Add everything to git (world* catches all world dirs)
-        git add -A world*/ plugins/ server.properties ops.json whitelist.json banned-players.json banned-ips.json 2>/dev/null || true
+        git add -A world*/ plugins/ server.properties server-icon.png ops.json whitelist.json banned-players.json banned-ips.json 2>/dev/null || true
         
         # Commit changes
         git diff --staged --quiet || git commit -m "Server data saved - $(date +'%Y-%m-%d %H:%M:%S')"

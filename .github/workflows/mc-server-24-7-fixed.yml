@@ -254,9 +254,34 @@ jobs:
           sleep 30
           LOOP_COUNTER=$((LOOP_COUNTER + 1))
           
-          # Save cache every 100 iterations (about 50 minutes)
+          # Save to repository every 100 iterations (about 50 minutes)
           if [ $((LOOP_COUNTER % 100)) -eq 0 ]; then
-            echo "Saving progress..."
+            echo "Saving progress to repository..."
+            # Create quick backup of critical files
+            QUICK_BACKUP="minecraft-data/backups/quick-$(date +%Y%m%d_%H%M%S)"
+            mkdir -p "$QUICK_BACKUP"
+            
+            # Backup essential files only (quick backup)
+            cp minecraft-data/server.properties "$QUICK_BACKUP/" 2>/dev/null || true
+            cp minecraft-data/ops.json "$QUICK_BACKUP/" 2>/dev/null || true
+            cp minecraft-data/whitelist.json "$QUICK_BACKUP/" 2>/dev/null || true
+            
+            # Quick world backup (level.dat only)
+            if [ -f "minecraft-data/world/level.dat" ]; then
+              mkdir -p "$QUICK_BACKUP/world"
+              cp minecraft-data/world/level.dat "$QUICK_BACKUP/world/" 2>/dev/null || true
+            fi
+            
+            echo "Quick backup created: $QUICK_BACKUP"
+            
+            # Trigger repository backup (non-blocking)
+            curl -X POST \
+              -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/${{ github.repository }}/dispatches \
+              -d '{"event_type":"quick_backup_trigger","client_payload":{"run_id":"${{ github.run_id }}","type":"quick_backup"}}' \
+              --max-time 10 \
+              || echo "Quick backup trigger failed (non-critical)"
           fi
         done
         

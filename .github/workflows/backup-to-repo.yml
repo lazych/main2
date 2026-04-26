@@ -3,7 +3,7 @@ name: Backup Server Data to Repository
 on:
   workflow_dispatch:
   repository_dispatch:
-    types: [backup_trigger]
+    types: [backup_trigger, quick_backup_trigger]
   schedule:
     # Backup daily at 3 AM UTC
     - cron: '0 3 * * *'
@@ -36,7 +36,41 @@ jobs:
         mkdir -p server-backups/plugins
         mkdir -p server-backups/logs
         
+    - name: Check backup type
+      id: backup_type
+      run: |
+        if [ "${{ github.event.client_payload.type }}" = "quick_backup" ]; then
+          echo "type=quick" >> $GITHUB_OUTPUT
+        else
+          echo "type=full" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Quick backup (every 50 minutes)
+      if: steps.backup_type.outputs.type == 'quick'
+      run: |
+        echo "Performing quick backup..."
+        # Find and backup the latest quick backup
+        LATEST_QUICK=$(find minecraft-data/backups -name "quick-*" -type d | sort -r | head -1)
+        if [ -n "$LATEST_QUICK" ]; then
+          echo "Found quick backup: $LATEST_QUICK"
+          
+          # Copy quick backup to repository
+          cp -r "$LATEST_QUICK" server-backups/quick-backups/
+          
+          # Commit quick backup
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add server-backups/quick-backups/
+          git diff --staged --quiet || git commit -m "⚡ Quick backup - $(date +%Y-%m-%d %H:%M)"
+          git push
+          
+          echo "Quick backup committed to repository"
+        else
+          echo "No quick backup found"
+        fi
+        
     - name: Backup world data
+      if: steps.backup_type.outputs.type == 'full'
       run: |
         echo "Backing up world data..."
         if [ -d "minecraft-data/world" ]; then

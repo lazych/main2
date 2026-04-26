@@ -1,4 +1,3 @@
-# Wiki Page: https://s.marcely.de/mbww7
 ##### IMPORTANT #### #
 # Names surrounded with % will be taken from the messages file.
 # Make sure when creating something new to remove the %!
@@ -26,11 +25,12 @@ layout-name-bedrock: equally
 stacked-buygroups: []
 
 # Configure the pages, items, products and prices here
+# Reordered and grouped to feel more like the classic Hypixel BedWars shop.
 pages:
-  '%Shop_Page_Block%':
+  '%Shop_Page_Blocks%':
     icon: sandstone
     items:
-    - name: '%Shop_Item_Wool%'
+    - name: 'Wooool'
       icon: white_wool
       caps-multiply: 32
       products:
@@ -41,7 +41,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 4
-      
+
     - name: '%Shop_Item_Endstone%'
       icon: end_stone
       caps-multiply: 6
@@ -53,7 +53,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 8
-      
+
     - name: '%Shop_Item_Chest%'
       icon: chest
       caps-multiply: 2
@@ -65,7 +65,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 1
-      
+
     - name: '%Shop_Item_Enderchest%'
       icon: ender_chest
       products:
@@ -76,7 +76,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 1
-      
+
     - name: '%Shop_Item_Ladder%'
       icon: ladder
       caps-multiply: 3
@@ -88,7 +88,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 1
-      
+
     - name: '%Shop_Item_Web%'
       icon: cobweb
       caps-multiply: 3
@@ -100,58 +100,54 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 10
-      
-    
-  '%Shop_Page_Food%':
-    icon: apple
+
+  '%Shop_Page_Melee%':
+    icon: wooden_sword
     items:
-    - name: '%Shop_Item_Apple%'
-      icon: apple
-      caps-multiply: 8
+    - name: '%Shop_Item_KnockbackStick%'
+      icon: stick[minecraft:enchantments={"minecraft:knockback":1}]
       products:
       - type: item
-        material: apple
+        material: stick[minecraft:enchantments={"minecraft:knockback":1}]
         amount: 1
       prices:
       - type: spawner-item
         spawner-id: iron
-        amount: 1
-      
-    - name: '%Shop_Item_GrilledPork%'
-      icon: cooked_porkchop
-      caps-multiply: 8
+        amount: 30
+
+    - name: '%Shop_Item_SwordLVL1%'
+      icon: wooden_sword
       products:
       - type: item
-        material: cooked_porkchop
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: iron
-        amount: 4
-      
-    - name: '%Shop_Item_Cake%'
-      icon: cake
-      products:
-      - type: item
-        material: cake
+        material: wooden_sword
         amount: 1
       prices:
       - type: spawner-item
         spawner-id: gold
-        amount: 3
-      
-    - name: '%Shop_Item_GoldenApple%'
-      icon: golden_apple
+        amount: 2
+
+    - name: '%Shop_Item_SwordLVL2%'
+      icon: stone_sword
       products:
       - type: item
-        material: golden_apple
+        material: stone_sword
+        amount: 1
+      prices:
+      - type: spawner-item
+        spawner-id: gold
+        amount: 5
+
+    - name: '%Shop_Item_SwordLVL3%'
+      icon: iron_sword
+      products:
+      - type: item
+        material: iron_sword
         amount: 1
       prices:
       - type: spawner-item
         spawner-id: emerald
-        amount: 1
-      
-    
+        amount: 2
+
   '%Shop_Page_Armor%':
     icon: iron_chestplate
     items:
@@ -165,7 +161,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 5
-      
+
     - name: '%Shop_Item_LeatherLeggings%'
       icon: leather_leggings[minecraft:enchantments={"minecraft:protection":1}]
       products:
@@ -176,7 +172,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 5
-      
+
     - name: '%Shop_Item_LeatherBoots%'
       icon: leather_boots[minecraft:enchantments={"minecraft:protection":1}]
       products:
@@ -187,7 +183,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 5
-      
+
     - name: '%Shop_Item_ChainmailChestplateLVL1%'
       icon: chainmail_chestplate
       products:
@@ -198,7 +194,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 1
-      
+
     - name: '%Shop_Item_ChainmailChestplateLVL2%'
       icon: chainmail_chestplate[minecraft:enchantments={"minecraft:protection":1}]
       products:
@@ -209,7 +205,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 3
-      
+
     - name: '%Shop_Item_ChainmailChestplateLVL3%'
       icon: chainmail_chestplate[minecraft:enchantments={"minecraft:projectile_protection":1,"minecraft:protection":1}]
       products:
@@ -220,7 +216,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 7
-      
+
     - name: '%Shop_Item_MagnetShoes%'
       icon: chainmail_boots[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"MagnetShoes"}}}]
       products:
@@ -231,106 +227,8 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 5
-      
-    
-  '%Shop_Page_Sword%':
-    icon: wooden_sword
-    items:
-    - name: '%Shop_Item_KnockbackStick%'
-      icon: stick[minecraft:enchantments={"minecraft:knockback":1}]
-      products:
-      - type: item
-        material: stick[minecraft:enchantments={"minecraft:knockback":1}]
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: iron
-        amount: 30
-      
-    - name: '%Shop_Item_SwordLVL1%'
-      icon: wooden_sword
-      products:
-      - type: item
-        material: wooden_sword
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: gold
-        amount: 2
-      
-    - name: '%Shop_Item_SwordLVL2%'
-      icon: stone_sword
-      products:
-      - type: item
-        material: stone_sword
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: gold
-        amount: 5
-      
-    - name: '%Shop_Item_SwordLVL3%'
-      icon: iron_sword
-      products:
-      - type: item
-        material: iron_sword
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: emerald
-        amount: 2
-      
-    
-  '%Shop_Page_Bow%':
-    icon: bow
-    items:
-    - name: '%Shop_Item_BowLVL1%'
-      icon: bow
-      products:
-      - type: item
-        material: bow
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: gold
-        amount: 15
-      
-    - name: '%Shop_Item_BowLVL2%'
-      icon: bow[minecraft:enchantments={"minecraft:power":1}]
-      products:
-      - type: item
-        material: bow[minecraft:enchantments={"minecraft:power":1}]
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: emerald
-        amount: 3
-      
-    - name: '%Shop_Item_BowLVL3%'
-      icon: bow[minecraft:enchantments={"minecraft:power":1,"minecraft:punch":1}]
-      products:
-      - type: item
-        material: bow[minecraft:enchantments={"minecraft:power":1,"minecraft:punch":1}]
-        amount: 1
-      prices:
-      - type: spawner-item
-        spawner-id: emerald
-        amount: 6
-      
-    - name: '%Shop_Item_Arrow%'
-      icon: arrow
-      caps-multiply: 3
-      products:
-      - type: item
-        material: arrow
-        amount: 5
-      prices:
-      - type: spawner-item
-        spawner-id: gold
-        amount: 1
-      
-    
-  '%Shop_Page_Pickaxe%':
+
+  '%Shop_Page_Tools%':
     icon: stone_pickaxe
     items:
     - name: '%Shop_Item_PickaxeLVL1%'
@@ -343,7 +241,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 7
-      
+
     - name: '%Shop_Item_PickaxeLVL2%'
       icon: stone_pickaxe[minecraft:enchantments={"minecraft:efficiency":1}]
       products:
@@ -354,7 +252,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 4
-      
+
     - name: '%Shop_Item_PickaxeLVL3%'
       icon: golden_pickaxe[minecraft:enchantments={"minecraft:efficiency":1}]
       products:
@@ -366,8 +264,55 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 2
-      
-    
+
+  '%Shop_Page_Ranged%':
+    icon: bow
+    items:
+    - name: '%Shop_Item_BowLVL1%'
+      icon: bow
+      products:
+      - type: item
+        material: bow
+        amount: 1
+      prices:
+      - type: spawner-item
+        spawner-id: gold
+        amount: 15
+
+    - name: '%Shop_Item_BowLVL2%'
+      icon: bow[minecraft:enchantments={"minecraft:power":1}]
+      products:
+      - type: item
+        material: bow[minecraft:enchantments={"minecraft:power":1}]
+        amount: 1
+      prices:
+      - type: spawner-item
+        spawner-id: emerald
+        amount: 3
+
+    - name: '%Shop_Item_BowLVL3%'
+      icon: bow[minecraft:enchantments={"minecraft:power":1,"minecraft:punch":1}]
+      products:
+      - type: item
+        material: bow[minecraft:enchantments={"minecraft:power":1,"minecraft:punch":1}]
+        amount: 1
+      prices:
+      - type: spawner-item
+        spawner-id: emerald
+        amount: 6
+
+    - name: '%Shop_Item_Arrow%'
+      icon: arrow
+      caps-multiply: 3
+      products:
+      - type: item
+        material: arrow
+        amount: 5
+      prices:
+      - type: spawner-item
+        spawner-id: gold
+        amount: 1
+
   '%Shop_Page_Potion%':
     icon: potion
     items:
@@ -381,7 +326,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 4
-      
+
     - name: '%Shop_Item_PotionRegeneration%'
       icon: potion:regeneration:900:0[minecraft:potion_contents={custom_color:13458603,custom_effects:[{ambient:1b,duration:900,id:"minecraft:regeneration",show_icon:1b}]}]
       products:
@@ -392,7 +337,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 4
-      
+
     - name: '%Shop_Item_PotionHealing%'
       icon: potion:heal:1:0[minecraft:potion_contents={custom_color:16262179,custom_effects:[{ambient:1b,duration:1,id:"minecraft:instant_health",show_icon:1b}]}]
       products:
@@ -403,7 +348,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 5
-      
+
     - name: '%Shop_Item_PotionStrength%'
       icon: potion:increase_damage:3600:0[minecraft:potion_contents={custom_color:16762624,custom_effects:[{ambient:1b,duration:3600,id:"minecraft:strength",show_icon:1b}]}]
       products:
@@ -414,9 +359,8 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 4
-      
-    
-  '%Shop_Page_Special%':
+
+  '%Shop_Page_Utility%':
     icon: tnt
     items:
     - name: '%Shop_Item_Teleporter%'
@@ -429,7 +373,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 2
-      
+
     - name: '%Shop_Item_Minishop%'
       icon: villager_spawn_egg[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"MiniShop"}}}]
       products:
@@ -440,7 +384,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 2
-      
+
     - name: '%Shop_Item_Rescueplatform%'
       icon: slime_block[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"RescuePlatform"}}}]
       products:
@@ -451,7 +395,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 3
-      
+
     - name: '%Shop_Item_Tntsheep%'
       icon: sheep_spawn_egg[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"TNTSheep"}}}]
       products:
@@ -462,7 +406,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 24
-      
+
     - name: '%Shop_Item_Trap%'
       icon: stone_pressure_plate[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"Trap"}}}]
       products:
@@ -473,7 +417,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 1
-      
+
     - name: '%Shop_Item_Bridge%'
       icon: blue_dye[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"Bridge"}}}]
       caps-multiply: 2
@@ -485,7 +429,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 1
-      
+
     - name: '%Shop_Item_GuardDog%'
       icon: wolf_spawn_egg[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"GuardDog"}}}]
       products:
@@ -496,7 +440,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 1
-      
+
     - name: '%Shop_Item_Tracker%'
       icon: compass[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"Tracker"}}}]
       products:
@@ -507,7 +451,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 2
-      
+
     - name: '%Shop_Item_Fireball%'
       icon: fire_charge[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"Fireball"}}}]
       products:
@@ -518,7 +462,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 32
-      
+
     - name: '%Shop_Item_MagicMilk%'
       icon: milk_bucket[minecraft:custom_data={PublicBukkitValues:{marcelys-bedwars:{custom-type:"special-item",id:"MagicMilk"}}}]
       products:
@@ -529,11 +473,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 4
-      
-    
-  '%Shop_Page_Extra%':
-    icon: fishing_rod
-    items:
+
     - name: '%Shop_Item_TNT%'
       icon: tnt
       products:
@@ -544,7 +484,7 @@ pages:
       - type: spawner-item
         spawner-id: gold
         amount: 2
-      
+
     - name: '%Shop_Item_Enderpearl%'
       icon: ender_pearl
       products:
@@ -555,7 +495,7 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 4
-      
+
     - name: '%Shop_Item_Snowball%'
       icon: snowball
       products:
@@ -566,7 +506,7 @@ pages:
       - type: spawner-item
         spawner-id: iron
         amount: 8
-      
+
     - name: '%Shop_Item_FishingRod%'
       icon: fishing_rod
       products:
@@ -577,5 +517,3 @@ pages:
       - type: spawner-item
         spawner-id: emerald
         amount: 2
-      
-    

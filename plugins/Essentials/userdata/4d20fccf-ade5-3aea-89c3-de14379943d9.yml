@@ -11,13 +11,13 @@ powertoolsenabled: true
 accepting-pay: true
 baltop-exempt: false
 timestamps:
-  lastteleport: 0
+  lastteleport: 1777216454772
   lastheal: 0
   mute: 0
   jail: 0
   onlinejail: 0
   logout: 1777213917309
-  login: 1777214932570
+  login: 1777215570131
 money: '0'
 last-account-name: Polye
 logoutlocation:
@@ -28,3 +28,11 @@ logoutlocation:
   z: 102.28024516175519
   yaw: -131.23326110839844
   pitch: 16.793197631835938
+lastlocation:
+  world: 53c65316-1835-4d75-a9b5-356aa765e564
+  world-name: world
+  x: -86.03044556166334
+  y: 101.24433245806536
+  z: 152.10620358395036
+  yaw: -51.38408660888672
+  pitch: 26.101051330566406

@@ -50,14 +50,19 @@ items:
     slot: 11
     amount: 1
     glow: true
-    display_name: '&eFactions'
+    display_name: '&Rape town'
     lore:
-      - '&7Join now!'
-      - '&aPlaceholderAPI support!'
+      - '&7Get raped or be raped'
     actions:
       - '[CLOSE]'
-      - '[MESSAGE] &7Sending you to: &eFactions'
-      - '[PROXY] factions'
+      - '[MESSAGE] &7Sending you to: &eRAPE TOWN'
+      - '[MESSAGE]  '
+      - '[MESSAGE]  '
+      - '[MESSAGE]  '
+      - '[MESSAGE]  '
+      - '[MESSAGE]  '
+      - '[MESSAGE]  '
+      - '[MESSAGE] go fuck off retard'
       # For multi-world servers using Multiverse-Core, use the action:
       # - '[CONSOLE] mvtp %player% world'
   survival:
@@ -65,11 +70,11 @@ items:
     slot: 15
     amount: 1
     glow: false
-    display_name: '&aSurvival'
+    display_name: '&bedwars'
     lore:
       - '&7Join now!'
-      - '&aMulti lore support too!'
+
     actions:
       - '[CLOSE]'
-      - '[MESSAGE] &7Sending you to: &eSurvival'
-      - '[PROXY] survival'
+      - '[MESSAGE] &7Sending you to: &bedwars'
+      - '[CONSOLE] mvtp %player% world_bedwars'

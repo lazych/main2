@@ -177,13 +177,12 @@ earnachievement-message:
 teambalance: true
 
 # If this config is enabled then the configs which start with 'giveitems-on-' will work
-giveitems-on-enabled: false
+giveitems-on-enabled: true
 
 # Specify here which items should be given on round start
 # 'giveitems-on-enabled' has to be enabled for that!
 giveitems-on-roundstart:
 - wooden_sword
-- apple 5
 
 # Specify here which armor items should be set to the inventory slots on round start
 # 'giveitems-on-enabled' has to be enabled for that!
@@ -195,12 +194,12 @@ giveitems-on-roundstart-armor:
 # Specify here which items should be given on respawn
 # 'giveitems-on-enabled' has to be enabled for that!
 giveitems-on-respawn:
-- wooden_axe
-- apple 4
-
+- wooden_sword
 # Specify here which armor items should be set to the inventory slots on respawn
 # 'giveitems-on-enabled' has to be enabled for that!
 giveitems-on-respawn-armor:
+- leather_boots
+- leather_leggings
 - leather_helmet
 
 # Specify here which potion effects the player shall gain after he respawns

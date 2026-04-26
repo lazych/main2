@@ -30,12 +30,12 @@ pages:
   '%Shop_Page_Block%':
     icon: sandstone
     items:
-    - name: '%Shop_Item_HardenedClay%'
-      icon: white_terracotta
+    - name: '%Shop_Item_Wool%'
+      icon: white_wool
       caps-multiply: 32
       products:
       - type: item
-        material: white_terracotta
+        material: white_wool
         amount: 8
       prices:
       - type: spawner-item

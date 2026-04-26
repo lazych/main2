@@ -1,40 +1,56 @@
 {
   "stats": {
-    "minecraft:picked_up": {
-      "minecraft:gold_ingot": 50,
-      "minecraft:blue_terracotta": 1,
-      "minecraft:diamond": 8,
-      "minecraft:emerald": 5,
-      "minecraft:iron_ingot": 199
+    "minecraft:dropped": {
+      "minecraft:stick": 1
     },
-    "minecraft:mined": {
-      "minecraft:red_bed": 1,
-      "minecraft:blue_terracotta": 1,
-      "minecraft:blue_bed": 1
+    "minecraft:killed_by": {
+      "minecraft:player": 1
     },
     "minecraft:custom": {
-      "minecraft:time_since_rest": 15048,
-      "minecraft:walk_one_cm": 38092,
-      "minecraft:leave_game": 1,
-      "minecraft:damage_taken": 170,
-      "minecraft:damage_dealt": 1157,
-      "minecraft:play_time": 29395,
-      "minecraft:jump": 290,
-      "minecraft:time_since_death": 15042,
-      "minecraft:sprint_one_cm": 44215,
-      "minecraft:fall_one_cm": 10630,
-      "minecraft:total_world_time": 29395,
-      "minecraft:fly_one_cm": 64318,
-      "minecraft:walk_on_water_one_cm": 1465,
-      "minecraft:crouch_one_cm": 414,
-      "minecraft:sneak_time": 68,
-      "minecraft:deaths": 3,
-      "minecraft:player_kills": 5
+      "minecraft:time_since_rest": 2419,
+      "minecraft:walk_one_cm": 116656,
+      "minecraft:leave_game": 4,
+      "minecraft:damage_taken": 406,
+      "minecraft:damage_dealt": 2775,
+      "minecraft:play_time": 70112,
+      "minecraft:jump": 718,
+      "minecraft:time_since_death": 2400,
+      "minecraft:drop": 1,
+      "minecraft:sprint_one_cm": 93432,
+      "minecraft:fall_one_cm": 20075,
+      "minecraft:total_world_time": 70112,
+      "minecraft:fly_one_cm": 137145,
+      "minecraft:walk_on_water_one_cm": 2092,
+      "minecraft:crouch_one_cm": 939,
+      "minecraft:sneak_time": 387,
+      "minecraft:deaths": 9,
+      "minecraft:player_kills": 12
+    },
+    "minecraft:mined": {
+      "minecraft:red_bed": 2,
+      "minecraft:blue_terracotta": 1,
+      "minecraft:red_wool": 3,
+      "minecraft:blue_bed": 2
+    },
+    "minecraft:picked_up": {
+      "minecraft:red_wool": 3,
+      "minecraft:gold_ingot": 241,
+      "minecraft:blue_terracotta": 1,
+      "minecraft:diamond": 12,
+      "minecraft:blue_wool": 182,
+      "minecraft:emerald": 7,
+      "minecraft:iron_ingot": 896
     },
     "minecraft:used": {
+      "minecraft:red_wool": 292,
       "minecraft:stone_sword": 40,
+      "minecraft:chainmail_chestplate": 1,
+      "minecraft:chest": 1,
+      "minecraft:wooden_sword": 48,
+      "minecraft:end_stone": 4,
       "minecraft:stone_pickaxe": 2,
-      "minecraft:blue_terracotta": 100
+      "minecraft:blue_terracotta": 100,
+      "minecraft:blue_wool": 162
     }
   },
   "DataVersion": 4671

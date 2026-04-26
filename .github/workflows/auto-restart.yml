@@ -103,9 +103,29 @@ jobs:
         mkdir -p minecraft-data/logs
         mkdir -p craftip-logs
         
-        # Copy plugins from repository
+        # Restore world from repository (if needed)
+        echo "Checking if world needs to be restored from repository..."
+        if [ ! -d "minecraft-data/world" ] || [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
+          echo "World directory is empty, attempting restore from repository..."
+          if [ -d "server-backups/worlds" ]; then
+            LATEST_WORLD=$(find server-backups/worlds -name "world-*.tar.gz" | sort -r | head -1)
+            if [ -n "$LATEST_WORLD" ]; then
+              echo "Restoring world from: $LATEST_WORLD"
+              tar -xzf "$LATEST_WORLD" -C minecraft-data/
+              echo "World restored from repository backup"
+            else
+              echo "No world backup found in repository"
+            fi
+          fi
+        else
+          echo "World directory exists, skipping restore"
+        fi
+        
+        # Copy plugins from repository (COMPLETE)
         if [ -d "plugins" ]; then
-          cp plugins/*.jar minecraft-data/plugins/ 2>/dev/null || echo "No .jar files found"
+          # Copy ENTIRE plugins directory (not just .jar files)
+          cp -r plugins/* minecraft-data/plugins/ 2>/dev/null || echo "No plugin files found"
+          echo "COMPLETE plugin directory copied from repository"
         fi
         
         # Build CraftIP client

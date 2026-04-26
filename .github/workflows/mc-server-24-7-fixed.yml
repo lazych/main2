@@ -97,17 +97,45 @@ jobs:
           mkdir -p minecraft-data/plugins
         fi
         
-    - name: Copy plugins from repository
+    - name: Restore world from repository (if cache empty)
+      run: |
+        echo "Checking if world needs to be restored from repository..."
+        if [ ! -d "minecraft-data/world" ] || [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
+          echo "World directory is empty, attempting restore from repository..."
+          if [ -d "server-backups/worlds" ]; then
+            # Find latest world backup
+            LATEST_WORLD=$(find server-backups/worlds -name "world-*.tar.gz" | sort -r | head -1)
+            if [ -n "$LATEST_WORLD" ]; then
+              echo "Restoring world from: $LATEST_WORLD"
+              tar -xzf "$LATEST_WORLD" -C minecraft-data/
+              echo "World restored from repository backup"
+            else
+              echo "No world backup found in repository"
+            fi
+          fi
+        else
+          echo "World directory exists, skipping restore"
+        fi
+        
+    - name: Copy plugins from repository (COMPLETE)
       run: |
         echo "Copying plugins from repository to server directory..."
         if [ -d "plugins" ]; then
-          # Copy all .jar files from repository plugins directory
-          cp plugins/*.jar minecraft-data/plugins/ 2>/dev/null || echo "No .jar files found in plugins directory"
-          echo "Repository plugins copied to server"
+          # Copy ENTIRE plugins directory (not just .jar files)
+          cp -r plugins/* minecraft-data/plugins/ 2>/dev/null || echo "No plugin files found"
+          echo "COMPLETE plugin directory copied from repository"
           
-          # List copied plugins
-          echo "Copied plugins:"
-          ls -la minecraft-data/plugins/*.jar 2>/dev/null || echo "No plugins found"
+          # List copied items
+          echo "Copied plugin contents:"
+          ls -la minecraft-data/plugins/ 2>/dev/null || echo "No plugins directory"
+          
+          # Show what was copied
+          echo "Plugin JARs:"
+          ls -la minecraft-data/plugins/*.jar 2>/dev/null || echo "No .jar files"
+          echo "Plugin configs:"
+          find minecraft-data/plugins -name "*.yml" -o -name "*.json" -o -name "*.conf" 2>/dev/null || echo "No config files"
+          echo "Plugin data folders:"
+          find minecraft-data/plugins -type d -name "data" -o -name "config" 2>/dev/null || echo "No data folders"
         else
           echo "No plugins directory found in repository"
         fi

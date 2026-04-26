@@ -49,10 +49,10 @@ check-updates: true
 # Disable specific worlds
 disabled-worlds:
   # Should we invert the list making it a whitelist rather than a blacklist?
-  invert: false
+  invert: true
   # List your disabled worlds HERE or "worlds: []" to disable
   worlds:
-    - world_nether
+    - world
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | ANTI-WORLD DOWNLOADER                    | 
@@ -334,13 +334,7 @@ custom_join_items:
       lore:
         - "&7Right-click to see information about the server!"
       actions:
-        - "[MESSAGE] &r"
-        - "[MESSAGE] &e&lServer Information"
-        - "[MESSAGE] &r"
-        - "[MESSAGE] &bWebsite: &fwww.examplemc.net"
-        - "[MESSAGE] &cStore: &fbuy.examplemc.net"
-        - "[MESSAGE] &dDiscord: &fdiscord.examplemc.net"
-        - "[MESSAGE] &r"
+        - "[MESSAGE] I hope you get raped :)"
     server_selector:
       material: NETHER_STAR
       amount: 1

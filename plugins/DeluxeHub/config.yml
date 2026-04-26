@@ -113,14 +113,13 @@ tablist:
   # Modify the header of the tablist
   header:
     - ""
-    - "&d&lDeluxeHub &7(%online%/%online_max%)"
+    - "&d&lGithub actions &7(%online%/%online_max%)"
     - ""
 
   # Modify the footer of the tablist
   footer:
     - ""
-    - "&6&lWebsite &fwww.examplemc.net"
-    - "&e&lStore &fbuy.examplemc.net"
+    - "&6&lREPO &fgithub.com/azuraclient/main2"
     - ""
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#

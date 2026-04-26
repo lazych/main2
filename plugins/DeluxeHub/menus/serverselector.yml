@@ -52,22 +52,24 @@ items:
     glow: true
     display_name: '&eFactions'
     lore:
-      - 'huh Do I exist?'
+      - '&7Join now!'
+      - '&aPlaceholderAPI support!'
     actions:
       - '[CLOSE]'
-      - '[MESSAGE] &7Sending you to nothing'
+      - '[MESSAGE] &7Sending you to: &eFactions'
       - '[PROXY] factions'
       # For multi-world servers using Multiverse-Core, use the action:
-      # - '[CONSOLE] mvtp %player% world_bedwars'
+      # - '[CONSOLE] mvtp %player% world'
   survival:
     material: GRASS_BLOCK
     slot: 15
     amount: 1
     glow: false
-    display_name: '&aBedwars'
+    display_name: '&aSurvival'
     lore:
       - '&7Join now!'
+      - '&aMulti lore support too!'
     actions:
       - '[CLOSE]'
       - '[MESSAGE] &7Sending you to: &eSurvival'
-      - '[CONSOLE] mvtp %player% world_bedwars'
+      - '[PROXY] survival'

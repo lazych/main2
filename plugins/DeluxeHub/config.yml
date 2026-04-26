@@ -49,10 +49,10 @@ check-updates: true
 # Disable specific worlds
 disabled-worlds:
   # Should we invert the list making it a whitelist rather than a blacklist?
-  invert: true
+  invert: false
   # List your disabled worlds HERE or "worlds: []" to disable
   worlds:
-    - world
+    - world_nether
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | ANTI-WORLD DOWNLOADER                    | 
@@ -113,13 +113,14 @@ tablist:
   # Modify the header of the tablist
   header:
     - ""
-    - "&d&lGithub actions &7(%online%/%online_max%)"
+    - "&d&lDeluxeHub &7(%online%/%online_max%)"
     - ""
 
   # Modify the footer of the tablist
   footer:
     - ""
-    - "&6&lREPO &fgithub.com/azuraclient/main2"
+    - "&6&lWebsite &fwww.examplemc.net"
+    - "&e&lStore &fbuy.examplemc.net"
     - ""
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -333,7 +334,13 @@ custom_join_items:
       lore:
         - "&7Right-click to see information about the server!"
       actions:
-        - "[MESSAGE] I hope you get raped :)"
+        - "[MESSAGE] &r"
+        - "[MESSAGE] &e&lServer Information"
+        - "[MESSAGE] &r"
+        - "[MESSAGE] &bWebsite: &fwww.examplemc.net"
+        - "[MESSAGE] &cStore: &fbuy.examplemc.net"
+        - "[MESSAGE] &dDiscord: &fdiscord.examplemc.net"
+        - "[MESSAGE] &r"
     server_selector:
       material: NETHER_STAR
       amount: 1

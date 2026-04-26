@@ -1,23 +1,5 @@
 {
   "stats": {
-    "minecraft:custom": {
-      "minecraft:sprint_one_cm": 14381,
-      "minecraft:time_since_rest": 8637,
-      "minecraft:walk_one_cm": 63025,
-      "minecraft:total_world_time": 26306,
-      "minecraft:leave_game": 1,
-      "minecraft:fly_one_cm": 168647,
-      "minecraft:crouch_one_cm": 5563,
-      "minecraft:sneak_time": 1399,
-      "minecraft:play_time": 26306,
-      "minecraft:deaths": 2,
-      "minecraft:jump": 82,
-      "minecraft:time_since_death": 8629
-    },
-    "minecraft:picked_up": {
-      "minecraft:oak_fence": 2,
-      "minecraft:oak_planks": 64
-    },
     "minecraft:used": {
       "minecraft:oak_fence": 12,
       "minecraft:torchflower": 1,
@@ -37,6 +19,24 @@
       "minecraft:white_tulip": 6,
       "minecraft:dirt": 3,
       "minecraft:decorated_pot": 4
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 17738,
+      "minecraft:time_since_rest": 18042,
+      "minecraft:walk_one_cm": 66966,
+      "minecraft:total_world_time": 35711,
+      "minecraft:leave_game": 2,
+      "minecraft:fly_one_cm": 172253,
+      "minecraft:crouch_one_cm": 5563,
+      "minecraft:sneak_time": 1399,
+      "minecraft:play_time": 35711,
+      "minecraft:deaths": 2,
+      "minecraft:jump": 105,
+      "minecraft:time_since_death": 18034
+    },
+    "minecraft:picked_up": {
+      "minecraft:oak_fence": 2,
+      "minecraft:oak_planks": 64
     }
   },
   "DataVersion": 4671

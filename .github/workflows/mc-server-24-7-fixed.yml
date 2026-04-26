@@ -8,6 +8,10 @@ on:
     # Keep server alive - run every 5 hours
     - cron: '0 */5 * * *'
 
+# Grant write permissions so we can push backups
+permissions:
+  contents: write
+
 jobs:
   minecraft-server:
     runs-on: ubuntu-latest
@@ -108,13 +112,26 @@ jobs:
         echo "Checking if world needs to be restored from repository..."
         if [ ! -d "minecraft-data/world" ] || [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ]; then
           echo "World directory is empty, attempting restore from repository..."
-          if [ -d "server-backups/worlds" ]; then
-            # Find latest world backup
+
+          # Check final-backups for world.tar.gz (this is where the workflow stores them)
+          if [ -d "server-backups/final-backups" ]; then
+            LATEST_BACKUP_DIR=$(find server-backups/final-backups -maxdepth 1 -type d -name "final-*" | sort -r | head -1)
+            if [ -n "$LATEST_BACKUP_DIR" ] && [ -f "$LATEST_BACKUP_DIR/world.tar.gz" ]; then
+              echo "Restoring world from: $LATEST_BACKUP_DIR/world.tar.gz"
+              tar -xzf "$LATEST_BACKUP_DIR/world.tar.gz" -C minecraft-data/
+              echo "World restored from repository backup"
+            else
+              echo "No world.tar.gz found in final-backups"
+            fi
+          fi
+
+          # Fallback: check server-backups/worlds for legacy format
+          if [ -z "$(ls -A minecraft-data/world 2>/dev/null)" ] && [ -d "server-backups/worlds" ]; then
             LATEST_WORLD=$(find server-backups/worlds -name "world-*.tar.gz" | sort -r | head -1)
             if [ -n "$LATEST_WORLD" ]; then
-              echo "Restoring world from: $LATEST_WORLD"
+              echo "Restoring world from legacy backup: $LATEST_WORLD"
               tar -xzf "$LATEST_WORLD" -C minecraft-data/
-              echo "World restored from repository backup"
+              echo "World restored from legacy repository backup"
             else
               echo "No world backup found in repository"
             fi
@@ -215,70 +232,69 @@ jobs:
         cd minecraft-data/backups
         ls -t | tail -n +6 | xargs -r rm -rf
         
-        # Repository backup DISABLED - prevents server interference
-        echo "Repository backup disabled - backup workflow was interfering with server"
-        echo "Server backups are stored in GitHub Actions cache only"
-        echo "No repository commits to prevent server conflicts"
-        
     - name: Keep services alive (FIXED)
       run: |
         echo "Starting monitoring loop..."
+        WORK_DIR="$(pwd)"
         # Add loop counter to prevent infinite loops (5 hours max)
         LOOP_COUNTER=0
         MAX_LOOPS=600  # 5 hours * 60 minutes * 60 seconds / 30 seconds
         
         while [ $LOOP_COUNTER -lt $MAX_LOOPS ]; do
-          # Check if Minecraft server is still running
-          if ! kill -0 $(cat minecraft-data/minecraft.pid 2>/dev/null) 2>/dev/null; then
+          # Check if Minecraft server is still running (use absolute paths)
+          if ! kill -0 $(cat "$WORK_DIR/minecraft-data/minecraft.pid" 2>/dev/null) 2>/dev/null; then
             echo "Minecraft server died, restarting..."
-            cd minecraft-data
+            cd "$WORK_DIR/minecraft-data"
             java -Xmx2G -Xms1G -jar server.jar nogui &
             echo $! > minecraft.pid
+            cd "$WORK_DIR"
             sleep 30
           fi
           
           # Check if CraftIP client is still running
-          if ! kill -0 $(cat craftip/craftip.pid 2>/dev/null) 2>/dev/null; then
+          if ! kill -0 $(cat "$WORK_DIR/craftip/craftip.pid" 2>/dev/null) 2>/dev/null; then
             echo "CraftIP client died, restarting..."
-            cd craftip
+            cd "$WORK_DIR/craftip"
             ./target/release/client localhost:25565 &
             echo $! > craftip.pid
+            cd "$WORK_DIR"
           fi
           
           # Show status every 10 minutes
           if [ $(($(date +%s) % 600)) -lt 30 ]; then
             echo "=== Status Check ==="
-            echo "Minecraft PID: $(cat minecraft-data/minecraft.pid 2>/dev/null || echo 'Not found')"
-            echo "CraftIP PID: $(cat craftip/craftip.pid 2>/dev/null || echo 'Not found')"
+            echo "Minecraft PID: $(cat "$WORK_DIR/minecraft-data/minecraft.pid" 2>/dev/null || echo 'Not found')"
+            echo "CraftIP PID: $(cat "$WORK_DIR/craftip/craftip.pid" 2>/dev/null || echo 'Not found')"
             ss -tlnp | grep :25565 || echo "Port 25565 not listening"
             
             echo "=== Server Files Status ==="
-            echo "server.properties: $([ -f minecraft-data/server.properties ] && echo 'Exists' || echo 'Missing')"
-            echo "eula.txt: $([ -f minecraft-data/eula.txt ] && echo 'Exists' || echo 'Missing')"
-            echo "ops.json: $([ -f minecraft-data/ops.json ] && echo 'Exists' || echo 'Missing')"
-            echo "whitelist.json: $([ -f minecraft-data/whitelist.json ] && echo 'Exists' || echo 'Missing')"
-            echo "plugins directory: $([ -d minecraft-data/plugins ] && echo 'Exists' || echo 'Missing')"
-            echo "world directory: $([ -d minecraft-data/world ] && echo 'Exists' || echo 'Missing')"
+            echo "server.properties: $([ -f "$WORK_DIR/minecraft-data/server.properties" ] && echo 'Exists' || echo 'Missing')"
+            echo "eula.txt: $([ -f "$WORK_DIR/minecraft-data/eula.txt" ] && echo 'Exists' || echo 'Missing')"
+            echo "ops.json: $([ -f "$WORK_DIR/minecraft-data/ops.json" ] && echo 'Exists' || echo 'Missing')"
+            echo "whitelist.json: $([ -f "$WORK_DIR/minecraft-data/whitelist.json" ] && echo 'Exists' || echo 'Missing')"
+            echo "plugins directory: $([ -d "$WORK_DIR/minecraft-data/plugins" ] && echo 'Exists' || echo 'Missing')"
+            echo "world directory: $([ -d "$WORK_DIR/minecraft-data/world" ] && echo 'Exists' || echo 'Missing')"
             
             # Create backup every 5 hours (matches workflow duration)
             if [ $(($(date +%s) % 18000)) -lt 30 ]; then
               echo "=== Creating Scheduled Backup ==="
-              BACKUP_DIR="minecraft-data/backups/$(date +%Y%m%d_%H%M%S)"
+              BACKUP_DIR="$WORK_DIR/minecraft-data/backups/$(date +%Y%m%d_%H%M%S)"
               mkdir -p "$BACKUP_DIR"
-              cp minecraft-data/server.properties "$BACKUP_DIR/" 2>/dev/null || true
-              cp minecraft-data/ops.json "$BACKUP_DIR/" 2>/dev/null || true
-              cp minecraft-data/whitelist.json "$BACKUP_DIR/" 2>/dev/null || true
-              if [ -d "minecraft-data/plugins" ]; then
-                cp -r minecraft-data/plugins "$BACKUP_DIR/"
+              cp "$WORK_DIR/minecraft-data/server.properties" "$BACKUP_DIR/" 2>/dev/null || true
+              cp "$WORK_DIR/minecraft-data/ops.json" "$BACKUP_DIR/" 2>/dev/null || true
+              cp "$WORK_DIR/minecraft-data/whitelist.json" "$BACKUP_DIR/" 2>/dev/null || true
+              if [ -d "$WORK_DIR/minecraft-data/plugins" ]; then
+                cp -r "$WORK_DIR/minecraft-data/plugins" "$BACKUP_DIR/"
               fi
-              if [ -d "minecraft-data/world" ]; then
-                cp -r minecraft-data/world "$BACKUP_DIR/"
+              if [ -d "$WORK_DIR/minecraft-data/world" ]; then
+                cp -r "$WORK_DIR/minecraft-data/world" "$BACKUP_DIR/"
               fi
               echo "Scheduled backup created at: $BACKUP_DIR"
               
               # Keep only last 3 scheduled backups
-              cd minecraft-data/backups
+              cd "$WORK_DIR/minecraft-data/backups"
               ls -t | tail -n +4 | xargs -r rm -rf
+              cd "$WORK_DIR"
             fi
           fi
           
@@ -289,26 +305,21 @@ jobs:
           if [ $((LOOP_COUNTER % 100)) -eq 0 ]; then
             echo "Saving progress to repository..."
             # Create quick backup of critical files
-            QUICK_BACKUP="minecraft-data/backups/quick-$(date +%Y%m%d_%H%M%S)"
+            QUICK_BACKUP="$WORK_DIR/minecraft-data/backups/quick-$(date +%Y%m%d_%H%M%S)"
             mkdir -p "$QUICK_BACKUP"
             
             # Backup essential files only (quick backup)
-            cp minecraft-data/server.properties "$QUICK_BACKUP/" 2>/dev/null || true
-            cp minecraft-data/ops.json "$QUICK_BACKUP/" 2>/dev/null || true
-            cp minecraft-data/whitelist.json "$QUICK_BACKUP/" 2>/dev/null || true
+            cp "$WORK_DIR/minecraft-data/server.properties" "$QUICK_BACKUP/" 2>/dev/null || true
+            cp "$WORK_DIR/minecraft-data/ops.json" "$QUICK_BACKUP/" 2>/dev/null || true
+            cp "$WORK_DIR/minecraft-data/whitelist.json" "$QUICK_BACKUP/" 2>/dev/null || true
             
             # Quick world backup (level.dat only)
-            if [ -f "minecraft-data/world/level.dat" ]; then
+            if [ -f "$WORK_DIR/minecraft-data/world/level.dat" ]; then
               mkdir -p "$QUICK_BACKUP/world"
-              cp minecraft-data/world/level.dat "$QUICK_BACKUP/world/" 2>/dev/null || true
+              cp "$WORK_DIR/minecraft-data/world/level.dat" "$QUICK_BACKUP/world/" 2>/dev/null || true
             fi
             
             echo "Quick backup created: $QUICK_BACKUP"
-            
-            # Repository backup DISABLED - prevents server interference
-            echo "Quick repository backup disabled - prevents server conflicts"
-            echo "Server backups stored in GitHub Actions cache only"
-            echo "No repository commits to prevent server interference"
           fi
         done
         
@@ -369,17 +380,8 @@ jobs:
         # Add to git
         git add server-backups/final-backups/
         
-        # Commit changes
-        git diff --staged --quiet || git commit -m "🏁 Final server backup - $(date +%Y-%m-%d %H:%M:%S)
-        
-        Server instance ended after $LOOP_COUNTER iterations
-        - World data backup
-        - Player data backup  
-        - Plugin configurations backup
-        - Server settings backup
-        
-        This backup preserves server state between workflow runs.
-        Workflow: ${{ github.run_id }}"
+        # Commit changes (fix the multi-line commit message syntax)
+        git diff --staged --quiet || git commit -m "Final server backup - $(date +'%Y-%m-%d %H:%M:%S')"
         
         # Push to repository
         git push || echo "Push failed (repository may be locked)"
